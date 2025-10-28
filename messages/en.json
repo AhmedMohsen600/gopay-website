@@ -1,0 +1,37 @@
+{
+  "common": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "language": "Language",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More"
+  },
+  "home": {
+    "title": "Welcome to GoPay",
+    "subtitle": "Fast, Secure, and Simple Payment Solutions",
+    "description": "Transform your business with our modern payment platform. Accept payments from anywhere in the world with ease.",
+    "features": {
+      "title": "Why Choose GoPay?",
+      "security": {
+        "title": "Bank-Level Security",
+        "description": "Your transactions are protected with enterprise-grade encryption"
+      },
+      "speed": {
+        "title": "Lightning Fast",
+        "description": "Process payments in seconds, not minutes"
+      },
+      "global": {
+        "title": "Global Reach",
+        "description": "Accept payments from 150+ countries worldwide"
+      }
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}
+
