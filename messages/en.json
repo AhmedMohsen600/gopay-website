@@ -5,26 +5,41 @@
     "services": "Services",
     "contact": "Contact",
     "language": "Language",
-    "getStarted": "Get Started",
-    "learnMore": "Learn More"
+    "getStarted": "Get started",
+    "pricingsPlans": "Pricings & Plans"
+  },
+  "header": {
+    "brand": "GoPay",
+    "home": "Home",
+    "whoWeAre": "Who We Are",
+    "features": "Features",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "newsAndBlog": "News & Blog",
+    "contactUs": "Contact Us",
+    "signIn": "Sign In",
+    "getStarted": "Get started",
+    "language": "Language"
   },
   "home": {
-    "title": "Welcome to GoPay",
-    "subtitle": "Fast, Secure, and Simple Payment Solutions",
-    "description": "Transform your business with our modern payment platform. Accept payments from anywhere in the world with ease.",
+    "title": "Everything you need to",
+    "titleHighlight": "bill, collect, grow.",
+    "subtitle": "Payments, invoicing, and payouts made simple, secure, and fast.",
+    "description": "",
+    "trustedBy": "Trusted by leading businesses across the region",
     "features": {
       "title": "Why Choose GoPay?",
       "security": {
         "title": "Bank-Level Security",
-        "description": "Your transactions are protected with enterprise-grade encryption"
+        "description": "Your transactions are protected with enterprise-grade encryption and compliance standards"
       },
       "speed": {
-        "title": "Lightning Fast",
-        "description": "Process payments in seconds, not minutes"
+        "title": "Lightning Fast Payments",
+        "description": "Process payments instantly with our optimized infrastructure"
       },
       "global": {
-        "title": "Global Reach",
-        "description": "Accept payments from 150+ countries worldwide"
+        "title": "Global Coverage",
+        "description": "Accept payments in multiple currencies from customers worldwide"
       }
     }
   },
@@ -34,4 +49,3 @@
     "terms": "Terms of Service"
   }
 }
-

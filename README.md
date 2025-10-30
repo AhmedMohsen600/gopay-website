@@ -9,6 +9,7 @@ A modern payment website built with Next.js 15 and Tailwind CSS v4.
 - **shadcn/ui** - Re-usable component library
 - **TypeScript** - Type-safe JavaScript
 - **Turbopack** - Fast bundler for development and production
+- **Framer Motion** - Production-ready animation library for React
 - **next-intl** - Internationalization (i18n) with English and Arabic support
 - **Phosphor Icons** - Beautiful, flexible icon library
 - **Google Fonts** - Figtree (EN) and Tajawal (AR)
@@ -55,11 +56,11 @@ This project supports multiple languages out of the box:
 2. Use the `useTranslations` hook in your components:
 
 ```tsx
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
 export default function MyComponent() {
-  const t = useTranslations('common');
-  return <h1>{t('title')}</h1>;
+  const t = useTranslations("common");
+  return <h1>{t("title")}</h1>;
 }
 ```
 
@@ -115,6 +116,39 @@ Custom color palette with semantic naming for consistent design:
 
 📚 **Full Color Guide:** [docs/COLORS.md](docs/COLORS.md)
 
+## Animations
+
+Powerful animations with **Framer Motion**:
+
+```tsx
+"use client";
+import { motion } from "framer-motion";
+
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5 }}
+>
+  Smooth fade in!
+</motion.div>;
+```
+
+**Features:** Gestures, scroll animations, layout transitions, 60fps performance
+
+📚 **Animation Guide:** [docs/ANIMATIONS.md](docs/ANIMATIONS.md)
+
+## Header
+
+Global navigation bar with glassmorphic design:
+
+- **Fixed positioning** at top of page
+- **Responsive** - Desktop and mobile layouts
+- **Animated** mobile menu with backdrop blur
+- **Multi-language** with automatic RTL support
+- **Action buttons** - Sign In and Get Started
+
+📚 **Header Documentation:** [docs/HEADER.md](docs/HEADER.md)
+
 ## Getting Started
 
 ### Development
@@ -126,6 +160,7 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) to view the site.
 
 **Test different languages:**
+
 - English: [http://localhost:3000/en](http://localhost:3000/en)
 - Arabic: [http://localhost:3000/ar](http://localhost:3000/ar) (RTL)
 
@@ -172,20 +207,48 @@ npx shadcn@latest add card
 npx shadcn@latest add dialog
 ```
 
+## Header Component
+
+The header is a **fixed, glassmorphic navigation bar** that appears on all pages:
+
+### Features:
+- ✅ **Fixed positioning** with backdrop blur effect
+- ✅ **Glassmorphic design** (semi-transparent with blur)
+- ✅ **Responsive** - Desktop and mobile layouts
+- ✅ **Animated mobile menu** with Framer Motion
+- ✅ **Multi-language support** with automatic RTL
+- ✅ **Action buttons** - Sign In and Get Started
+
+### Structure:
+```tsx
+<Header>
+  ├── Logo/Brand
+  ├── Desktop Actions (Sign In, Get Started, Language)
+  └── Mobile Menu Toggle
+      └── Mobile Drawer (Actions + Language)
+</Header>
+```
+
+The header is included in the root layout (`app/[locale]/layout.tsx`) and appears on all pages automatically.
+
 ## Project Structure
 
 ```
 gopay-website/
 ├── app/
 │   ├── [locale]/         # Localized routes
-│   │   ├── layout.tsx    # Locale layout with i18n provider
+│   │   ├── layout.tsx    # Locale layout with Header & i18n
 │   │   └── page.tsx      # Localized home page
 │   ├── globals.css       # Tailwind v4 theme
 │   ├── layout.tsx        # Root layout
 │   └── page.tsx          # Root redirect to default locale
 ├── components/
+│   ├── Header.tsx        # Global header component
 │   ├── LanguageSwitcher.tsx  # Language switcher dropdown
-│   └── ui/               # shadcn/ui components (future)
+│   └── ui/               # shadcn/ui components
+│       ├── button.tsx    # Button component
+│       ├── typography.tsx # Typography component
+│       └── animated-arrow.tsx # Animated arrow for buttons
 ├── i18n/
 │   ├── request.ts        # i18n configuration
 │   └── routing.ts        # Routing configuration
@@ -194,6 +257,10 @@ gopay-website/
 │   └── ar.json          # Arabic translations
 ├── lib/
 │   └── utils.ts         # Utility functions
+├── docs/                # Documentation
+│   ├── ANIMATIONS.md    # Framer Motion guide
+│   ├── COLORS.md        # Color system guide
+│   └── ICONS_AND_FONTS.md # Icons & fonts guide
 ├── middleware.ts        # Locale detection middleware
 └── public/              # Static assets
 ```

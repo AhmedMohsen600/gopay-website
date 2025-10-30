@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { Header } from "@/components/Header";
 import "../globals.css";
 
 // English font - Figtree
@@ -53,9 +54,17 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
-      <body className={`${fontClass} font-sans antialiased`}>
+      <body className={`${fontClass} font-sans antialiased bg-bg text-text-5`}>
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <Header />
+          <main className="pt-16">{children}</main>
+          <footer className="border-t bg-bg-grey border-stroke-1 mt-24">
+            <div className="container mx-auto px-4 py-8 text-center">
+              <p className="text-sm text-text-3">
+                © {new Date().getFullYear()} GoPay. All rights reserved.
+              </p>
+            </div>
+          </footer>
         </NextIntlClientProvider>
       </body>
     </html>
