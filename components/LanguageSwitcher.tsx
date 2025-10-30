@@ -1,12 +1,18 @@
-'use client';
+"use client";
 
-import { useLocale } from 'next-intl';
-import { usePathname, useRouter } from '@/i18n/routing';
-import { routing } from '@/i18n/routing';
+import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "@/i18n/routing";
+import { Globe } from "@phosphor-icons/react/dist/ssr";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+} from "@/components/ui/select";
 
 const languageNames: Record<string, string> = {
-  en: '🇬🇧 English',
-  ar: '🇸🇦 العربية',
+  en: "English",
+  ar: "عربي",
 };
 
 export default function LanguageSwitcher() {
@@ -19,28 +25,24 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <div className="relative inline-block">
-      <select
-        value={locale}
-        onChange={(e) => handleChange(e.target.value)}
-        className="appearance-none bg-background border border-border rounded-lg px-4 py-2 pr-8 cursor-pointer hover:border-primary transition-colors focus:outline-none focus:ring-2 focus:ring-ring"
-      >
-        {routing.locales.map((loc) => (
-          <option key={loc} value={loc}>
-            {languageNames[loc]}
-          </option>
-        ))}
-      </select>
-      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-muted-foreground">
-        <svg
-          className="fill-current h-4 w-4"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
+    <Select value={locale} onValueChange={handleChange}>
+      <SelectTrigger className="w-auto gap-0 border-0 bg-transparent hover:bg-bg-grey p-0">
+        <Globe className="text-text-5 size-[22px]" />
+      </SelectTrigger>
+      <SelectContent className="bg-white shadow-[0px_0px_32px_0px_rgba(0,0,0,0.08)]">
+        <SelectItem
+          value="en"
+          className="data-[state=checked]:bg-secondary data-[state=checked]:text-white cursor-pointer"
         >
-          <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-        </svg>
-      </div>
-    </div>
+          English
+        </SelectItem>
+        <SelectItem
+          value="ar"
+          className="data-[state=checked]:bg-secondary data-[state=checked]:text-white cursor-pointer"
+        >
+          عربي
+        </SelectItem>
+      </SelectContent>
+    </Select>
   );
 }
-
