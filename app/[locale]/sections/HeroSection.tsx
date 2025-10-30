@@ -29,9 +29,9 @@ const clientLogos = [
   { src: "/images/clients/17.png", alt: "Client 17" },
   { src: "/images/clients/18.png", alt: "Client 18" },
   { src: "/images/clients/19.png", alt: "Client 19" },
-  { src: "/images/clients/20.png", alt: "Client 20" },
-  { src: "/images/clients/21.png", alt: "Client 21" },
-  { src: "/images/clients/22.png", alt: "Client 22" },
+  // { src: "/images/clients/20.png", alt: "Client 20" },
+  // { src: "/images/clients/21.png", alt: "Client 21" },
+  // { src: "/images/clients/22.png", alt: "Client 22" },
 ];
 
 export function HeroSection() {
