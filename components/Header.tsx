@@ -59,18 +59,36 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className={`group flex items-center gap-1 text-base font-normal transition-colors ${
-                  isActive(item.href) ? "text-text-5" : "text-text-5"
+                  isActive(item.href) ? "text-secondary" : "text-text-5"
                 }`}
               >
                 {!item.hasDropdown ? (
-                  <span className="relative inline-flex overflow-hidden h-[1.2em]">
-                    <span className="transition-all duration-300 ease-out group-hover:-translate-y-full group-hover:opacity-0">
+                  <motion.span
+                    className="relative inline-block overflow-hidden"
+                    initial="rest"
+                    whileHover="hover"
+                  >
+                    <motion.span
+                      className="inline-block"
+                      variants={{
+                        rest: { y: 0, opacity: 1 },
+                        hover: { y: "-100%", opacity: 0 },
+                      }}
+                      transition={{ duration: 0.3, ease: "easeOut" }}
+                    >
                       {item.label}
-                    </span>
-                    <span className="absolute top-full transition-all duration-300 ease-out opacity-0 group-hover:top-0 group-hover:opacity-100">
+                    </motion.span>
+                    <motion.span
+                      className="absolute top-0 left-0 inline-block"
+                      variants={{
+                        rest: { y: "100%", opacity: 0 },
+                        hover: { y: 0, opacity: 1 },
+                      }}
+                      transition={{ duration: 0.3, ease: "easeOut" }}
+                    >
                       {item.label}
-                    </span>
-                  </span>
+                    </motion.span>
+                  </motion.span>
                 ) : (
                   <>
                     {item.label}
