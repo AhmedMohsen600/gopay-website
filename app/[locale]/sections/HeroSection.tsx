@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 import { Typography } from "@/components/ui/typography";
 import { Button } from "@/components/ui/button";
 import { AnimatedArrow } from "@/components/ui/animated-arrow";
@@ -37,6 +38,19 @@ export function HeroSection() {
   const t = useTranslations("home");
   const tc = useTranslations("common");
 
+  const fadeInUpVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  const fadInUpForSpan = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  const titleHighlight = t("titleHighlight");
+  const words = titleHighlight.split(" ");
+
   return (
     <>
       {/* Floating background - outside main content */}
@@ -52,15 +66,66 @@ export function HeroSection() {
               variant="h2"
               className="text-4xl md:text-6xl lg:text-[75px] tracking-tight leading-tight font-normal"
             >
-              {t("title")}
+              {/* Title appears first */}
+              <motion.span
+                variants={fadeInUpVariants}
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="inline-block"
+              >
+                {t("title")}
+              </motion.span>
               <br />
-              <span className="italic font-bold">{t("titleHighlight")}</span>
-            </Typography>
-            <Typography className="text-dark" variant="p18">
-              {t("subtitle")}
+              {/* TitleHighlight words appear one by one */}
+              <span className="italic font-bold">
+                {words.map((word, index) => (
+                  <motion.span
+                    key={index}
+                    variants={fadInUpForSpan}
+                    initial="hidden"
+                    animate="visible"
+                    transition={{
+                      duration: 0.6,
+                      ease: "easeOut",
+                      delay: 0.7 + index * 0.2,
+                    }}
+                    className="inline-block mr-[0.25em]"
+                  >
+                    {word}
+                  </motion.span>
+                ))}
+              </span>
             </Typography>
 
-            <div className="flex gap-4 justify-center flex-wrap pt-6">
+            {/* Subtitle */}
+            <motion.div
+              variants={fadeInUpVariants}
+              initial="hidden"
+              animate="visible"
+              transition={{
+                duration: 0.6,
+                ease: "easeOut",
+                delay: 1.3, // After all title words
+              }}
+            >
+              <Typography className="text-dark" variant="p18">
+                {t("subtitle")}
+              </Typography>
+            </motion.div>
+
+            {/* Buttons */}
+            <motion.div
+              className="flex gap-4 justify-center flex-wrap pt-6"
+              variants={fadeInUpVariants}
+              initial="hidden"
+              animate="visible"
+              transition={{
+                duration: 0.6,
+                ease: "easeOut",
+                delay: 1.5,
+              }}
+            >
               <Button className="w-fit text-base">
                 {tc("getStarted")}
                 <AnimatedArrow />
@@ -69,14 +134,26 @@ export function HeroSection() {
                 {tc("pricingsPlans")}
                 <AnimatedArrow className="text-current" />
               </Button>
-            </div>
+            </motion.div>
           </div>
-          <div className="mt-[90px] w-full flex flex-col items-center justify-center -z-40">
+
+          {/* Trusted by section */}
+          <motion.div
+            className="mt-[90px] w-full flex flex-col items-center justify-center -z-40"
+            variants={fadeInUpVariants}
+            initial="hidden"
+            animate="visible"
+            transition={{
+              duration: 0.6,
+              ease: "easeOut",
+              delay: 1.7,
+            }}
+          >
             <Typography variant="h5" className="text-dark mb-4">
               {t("trustedBy")}
             </Typography>
             <LogosMarquee logos={clientLogos} speed={70} />
-          </div>
+          </motion.div>
         </div>
       </section>
     </>
