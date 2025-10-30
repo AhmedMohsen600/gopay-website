@@ -1,0 +1,84 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+import { Typography } from "@/components/ui/typography";
+import { Button } from "@/components/ui/button";
+import { AnimatedArrow } from "@/components/ui/animated-arrow";
+import { HeroBackground } from "@/components/HeroBackground";
+import { HeroBlurBackgrounds } from "@/components/HeroBlurBackgrounds";
+import { LogosMarquee } from "@/components/LogosMarquee";
+
+const clientLogos = [
+  { src: "/images/clients/01.png", alt: "Client 1" },
+  { src: "/images/clients/02.png", alt: "Client 2" },
+  { src: "/images/clients/03.png", alt: "Client 3" },
+  { src: "/images/clients/04.png", alt: "Client 4" },
+  { src: "/images/clients/05.png", alt: "Client 5" },
+  { src: "/images/clients/06.png", alt: "Client 6" },
+  { src: "/images/clients/07.png", alt: "Client 7" },
+  { src: "/images/clients/08.png", alt: "Client 8" },
+  { src: "/images/clients/09.png", alt: "Client 9" },
+  { src: "/images/clients/10.png", alt: "Client 10" },
+  { src: "/images/clients/11.png", alt: "Client 11" },
+  { src: "/images/clients/12.png", alt: "Client 12" },
+  { src: "/images/clients/13.png", alt: "Client 13" },
+  { src: "/images/clients/14.png", alt: "Client 14" },
+  { src: "/images/clients/15.png", alt: "Client 15" },
+  { src: "/images/clients/16.png", alt: "Client 16" },
+  { src: "/images/clients/17.png", alt: "Client 17" },
+  { src: "/images/clients/18.png", alt: "Client 18" },
+  { src: "/images/clients/19.png", alt: "Client 19" },
+  { src: "/images/clients/20.png", alt: "Client 20" },
+  { src: "/images/clients/21.png", alt: "Client 21" },
+  { src: "/images/clients/22.png", alt: "Client 22" },
+];
+
+export function HeroSection() {
+  const t = useTranslations("home");
+  const tc = useTranslations("common");
+
+  return (
+    <>
+      {/* Floating background - outside main content */}
+      <HeroBackground />
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center">
+        <div className="relative container mx-auto px-4 py-20">
+          {/* Animated blur backgrounds */}
+          <HeroBlurBackgrounds />
+
+          <div className="relative z-10 max-w-5xl mx-auto text-center">
+            <Typography
+              variant="h2"
+              className="text-4xl md:text-6xl lg:text-[75px] tracking-tight leading-tight font-normal"
+            >
+              {t("title")}
+              <br />
+              <span className="italic font-bold">{t("titleHighlight")}</span>
+            </Typography>
+            <Typography className="text-dark" variant="p18">
+              {t("subtitle")}
+            </Typography>
+
+            <div className="flex gap-4 justify-center flex-wrap pt-6">
+              <Button className="w-fit text-base">
+                {tc("getStarted")}
+                <AnimatedArrow />
+              </Button>
+              <Button variant="outline" className="text-base w-fit">
+                {tc("pricingsPlans")}
+                <AnimatedArrow className="text-current" />
+              </Button>
+            </div>
+          </div>
+          <div className="mt-[90px] w-full flex flex-col items-center justify-center -z-40">
+            <Typography variant="h5" className="text-dark mb-4">
+              {t("trustedBy")}
+            </Typography>
+            <LogosMarquee logos={clientLogos} speed={70} />
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
