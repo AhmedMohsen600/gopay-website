@@ -56,7 +56,7 @@ export function HeroSection() {
       {/* Floating background - outside main content */}
       <HeroBackground />
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center">
+      <section className="relative min-h-screen overflow-hidden flex items-center">
         <div className="relative container mx-auto px-4 py-20">
           {/* Animated blur backgrounds */}
           <HeroBlurBackgrounds />
