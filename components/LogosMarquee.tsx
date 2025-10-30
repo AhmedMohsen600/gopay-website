@@ -20,45 +20,47 @@ export function LogosMarquee({ logos, speed = 40 }: LogosMarqueeProps) {
   const locale = useLocale();
   const isRTL = locale === "ar";
   const scrollerRef = useRef<HTMLDivElement>(null);
-  const animationRef = useRef<number | undefined>(undefined);
 
-  const duplicatedLogos = [...logos, ...logos];
+  const duplicatedLogos = [...logos, ...logos, ...logos];
 
   useEffect(() => {
     const scroller = scrollerRef.current;
     if (!scroller) return;
 
-    let scrollPosition = 0;
-    const scrollSpeed = speed / 100;
+    let position = 0;
+    let animationId: number;
 
     const animate = () => {
-      if (!scroller) return;
+      position += speed / 100;
 
-      if (isRTL) {
-        scrollPosition += scrollSpeed;
-        if (scrollPosition >= scroller.scrollWidth / 2) scrollPosition = 0;
-      } else {
-        scrollPosition += scrollSpeed;
-        if (scrollPosition >= scroller.scrollWidth / 2) scrollPosition = 0;
+      const resetPoint = scroller.scrollWidth / 3;
+      if (position >= resetPoint) {
+        position = 0;
       }
 
       scroller.style.transform = `translateX(${
-        isRTL ? scrollPosition : -scrollPosition
+        isRTL ? position : -position
       }px)`;
-      animationRef.current = requestAnimationFrame(animate);
+      animationId = requestAnimationFrame(animate);
     };
 
-    animationRef.current = requestAnimationFrame(animate);
+    animationId = requestAnimationFrame(animate);
 
     return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
+      cancelAnimationFrame(animationId);
     };
   }, [speed, isRTL]);
 
   return (
-    <div className="relative max-w-[1000px] w-full overflow-hidden">
+    <div
+      className="relative max-w-[1000px] w-full overflow-hidden"
+      style={{
+        maskImage:
+          "linear-gradient(to right, transparent, black 96px, black calc(100% - 96px), transparent)",
+        WebkitMaskImage:
+          "linear-gradient(to right, transparent, black 96px, black calc(100% - 96px), transparent)",
+      }}
+    >
       <div ref={scrollerRef} className="flex will-change-transform">
         {duplicatedLogos.map((logo, index) => (
           <div

@@ -58,13 +58,28 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`flex items-center gap-1 text-base font-normal transition-colors hover:text-primary ${
+                className={`group flex items-center gap-1 text-base font-normal transition-colors ${
                   isActive(item.href) ? "text-text-5" : "text-text-5"
                 }`}
               >
-                {item.label}
-                {item.hasDropdown && (
-                  <CaretDown size={16} weight="bold" className="text-text-5" />
+                {!item.hasDropdown ? (
+                  <span className="relative inline-flex overflow-hidden h-[1.2em]">
+                    <span className="transition-all duration-300 ease-out group-hover:-translate-y-full group-hover:opacity-0">
+                      {item.label}
+                    </span>
+                    <span className="absolute top-full transition-all duration-300 ease-out opacity-0 group-hover:top-0 group-hover:opacity-100">
+                      {item.label}
+                    </span>
+                  </span>
+                ) : (
+                  <>
+                    {item.label}
+                    <CaretDown
+                      size={16}
+                      weight="bold"
+                      className="text-text-5"
+                    />
+                  </>
                 )}
               </Link>
             ))}
