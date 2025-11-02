@@ -55,7 +55,45 @@
       }
     }
   },
+  "cta": {
+    "title": "هل أنت مستعد للسيطرة على أموالك؟",
+    "customersApp": "تطبيق العملاء",
+    "getItOn": "احصل عليه من",
+    "downloadOn": "قم بالتحميل من",
+    "billerApp": "تطبيق الفواتير",
+    "comingSoon": "قريباً"
+  },
   "footer": {
+    "cta": {
+      "title": "هل أنت مستعد للسيطرة على أموالك؟",
+      "customerApp": "تطبيق العملاء",
+      "billerApp": "تطبيق الفواتير",
+      "comingSoon": "قريباً"
+    },
+    "aboutGoPay": {
+      "title": "عن جو باي",
+      "whatIsGoPay": "ما هو جو باي؟",
+      "signUp": "التسجيل (ابدأ الآن)",
+      "signIn": "تسجيل الدخول"
+    },
+    "aboutIFS": {
+      "title": "عن IFS",
+      "aboutCompany": "عن الشركة",
+      "news": "الأخبار",
+      "location": "الموقع"
+    },
+    "resources": {
+      "title": "الموارد",
+      "serviceLicense": "رخصة الخدمة",
+      "faqs": "الأسئلة الشائعة",
+      "terms": "الشروط والأحكام",
+      "dataProtection": "سياسة حماية البيانات"
+    },
+    "contact": {
+      "title": "التواصل",
+      "helpSupport": "المساعدة والدعم"
+    },
+    "copyright": "جو باي. جميع الحقوق محفوظة.",
     "rights": "جميع الحقوق محفوظة.",
     "privacy": "سياسة الخصوصية",
     "terms": "شروط الخدمة"
