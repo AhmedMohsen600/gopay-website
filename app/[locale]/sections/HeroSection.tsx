@@ -8,6 +8,7 @@ import { AnimatedArrow } from "@/components/ui/animated-arrow";
 import { HeroBackground } from "@/components/HeroBackground";
 import { HeroBlurBackgrounds } from "@/components/HeroBlurBackgrounds";
 import { LogosMarquee } from "@/components/LogosMarquee";
+import { PaymentStatsSection } from "./PaymentStatsSection";
 
 const clientLogos = [
   { src: "/images/clients/01.png", alt: "Client 1" },
@@ -56,11 +57,10 @@ export function HeroSection() {
       {/* Floating background - outside main content */}
       <HeroBackground />
       {/* Hero Section */}
-      <section className="relative min-h-screen overflow-hidden flex items-center">
-        <div className="relative container mx-auto px-4 py-20">
+      <section className="relative min-h-[90vh] items-center">
+        <div className="relative container mx-auto px-4 pt-52">
           {/* Animated blur backgrounds */}
           <HeroBlurBackgrounds />
-
           <div className="relative z-10 max-w-5xl mx-auto text-center">
             <Typography
               variant="h2"
@@ -139,7 +139,7 @@ export function HeroSection() {
 
           {/* Trusted by section */}
           <motion.div
-            className="mt-[90px] w-full flex flex-col items-center justify-center -z-40"
+            className="mt-[90px] w-full flex flex-col items-center justify-center z-50"
             variants={fadeInUpVariants}
             initial="hidden"
             animate="visible"
@@ -155,6 +155,7 @@ export function HeroSection() {
             <LogosMarquee logos={clientLogos} speed={70} />
           </motion.div>
         </div>
+        <PaymentStatsSection />
       </section>
     </>
   );
