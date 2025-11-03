@@ -58,7 +58,7 @@ export function HeroSection() {
       <HeroBackground />
       {/* Hero Section */}
       <section className="relative min-h-[90vh] items-center">
-        <div className="relative container mx-auto px-4 pt-52">
+        <div className="relative container mx-auto pt-[160px]">
           {/* Animated blur backgrounds */}
           <HeroBlurBackgrounds />
           <div className="relative z-10 max-w-5xl mx-auto text-center">
