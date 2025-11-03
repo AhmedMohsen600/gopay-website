@@ -31,6 +31,9 @@ const typographyVariants = cva("", {
 
       // P - 14px / 1.4
       p14: "text-sm font-normal leading-[1.4]",
+
+      // P - 12px / 1.4
+      p12: "text-xs font-normal leading-[1.4]",
     },
   },
   defaultVariants: {
@@ -56,6 +59,7 @@ const variantElementMap: Record<string, ElementType> = {
   p18: "p",
   p16: "p",
   p14: "p",
+  p12: "p",
 };
 
 const Typography = forwardRef<HTMLElement, TypographyProps>(

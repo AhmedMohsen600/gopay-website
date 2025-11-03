@@ -27,6 +27,18 @@
     "subtitle": "المدفوعات والفواتير والتحويلات بطريقة بسيطة وآمنة وسريعة.",
     "description": "",
     "trustedBy": "موثوق به من قبل الشركات الرائدة في المنطقة",
+    "paymentStats": {
+      "oneTimePayments": "المدفوعات لمرة واحدة",
+      "paid": "مدفوعة",
+      "unpaid": "غير مدفوعة",
+      "duePayments": "مدفوعات مستحقة",
+      "totalPayments": "إجمالي المدفوعات",
+      "recurringPayments": "المدفوعات المتكررة",
+      "totalAccounts": "إجمالي الحسابات",
+      "recurringPaid": "مدفوعة",
+      "offlinePayments": "المدفوعات غير المتصلة",
+      "dailyTransferAmount": "مبلغ التحويل اليومي"
+    },
     "features": {
       "title": "لماذا تختار جو باي؟",
       "security": {

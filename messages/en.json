@@ -27,6 +27,18 @@
     "subtitle": "Payments, invoicing, and payouts made simple, secure, and fast.",
     "description": "",
     "trustedBy": "Trusted by leading businesses across the region",
+    "paymentStats": {
+      "oneTimePayments": "One-Time Payments",
+      "paid": "Paid",
+      "unpaid": "Unpaid",
+      "duePayments": "Due Payments",
+      "totalPayments": "Total Payments",
+      "recurringPayments": "Recurring Payments",
+      "totalAccounts": "Total Accounts",
+      "recurringPaid": "Paid",
+      "offlinePayments": "Offline Payments",
+      "dailyTransferAmount": "Daily Transfer Amount"
+    },
     "features": {
       "title": "Why Choose GoPay?",
       "security": {
