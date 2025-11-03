@@ -58,7 +58,7 @@ export default async function LocaleLayout({
       <body className={`${fontClass} font-sans antialiased bg-bg text-text-5`}>
         <NextIntlClientProvider messages={messages}>
           <Header />
-          <main className="pt-16">{children}</main>
+          <main>{children}</main>
           <Footer />
         </NextIntlClientProvider>
       </body>
