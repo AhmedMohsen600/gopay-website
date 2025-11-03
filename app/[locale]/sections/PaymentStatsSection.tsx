@@ -52,6 +52,12 @@ export function PaymentStatsSection() {
     [0, 0.25, 0.5, 0.75, 1],
     [0.4, 0.6, 0.8, 0.95, 1]
   );
+  // Mobile/Tablet scale (with 1.1 base scale from Framer)
+  const iphoneScaleMobile = useTransform(
+    scrollYProgress,
+    [0, 0.25, 0.5, 0.75, 1],
+    [0.44, 0.66, 0.88, 1.045, 1.1]
+  );
   const iphoneRotate = useTransform(
     scrollYProgress,
     [0, 0.3, 0.7, 1],
@@ -59,15 +65,57 @@ export function PaymentStatsSection() {
   );
 
   return (
-    <section ref={sectionRef} className="relative mx-auto max-w-[1200px]">
-      <div className="container mx-auto">
+    <section
+      ref={sectionRef}
+      className="relative mx-4 lg:mt-0 mt-[100px] lg:mx-auto max-w-[1200px]"
+    >
+      <div className="container  mx-auto">
+        {/* Mobile/Tablet - Static Image with iPhone */}
+        <motion.div
+          variants={fadeInUpVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="lg:hidden relative"
+        >
+          <Image
+            src="/images/home/dashboard.png"
+            alt="GoPay Payment Dashboard"
+            width={1200}
+            height={800}
+            className="w-full h-auto rounded-xl"
+            priority
+          />
+          {/* iPhone overlay for mobile/tablet */}
+          <motion.div
+            className="absolute left-1/2 top-[120%] pointer-events-none"
+            style={{
+              scale: iphoneScaleMobile,
+              x: "-50%",
+              translateY: "-50%",
+              willChange: "transform",
+            }}
+          >
+            <Image
+              src="/images/home/iphone.png"
+              alt="GoPay Mobile App"
+              width={540}
+              height={1112}
+              className="drop-shadow-2xl w-[100px] h-auto"
+              priority
+            />
+          </motion.div>
+        </motion.div>
+
+        {/* Desktop - Interactive Cards */}
         <motion.div
           style={{
             scale,
             opacity,
             willChange: "transform, opacity",
           }}
-          className="bg-white rounded-xl p-6 space-y-[32px] relative"
+          className="hidden lg:block bg-white rounded-xl p-6 space-y-[32px] relative"
         >
           {paymentSections.map((section) => (
             <div key={section.sectionTitleKey}>
@@ -104,6 +152,7 @@ export function PaymentStatsSection() {
             </div>
           ))}
 
+          {/* iPhone Image - Desktop Only */}
           <motion.div
             style={{
               y: iphoneY,
@@ -117,7 +166,7 @@ export function PaymentStatsSection() {
               stiffness: 50,
               damping: 20,
             }}
-            className="absolute left-1/2 -translate-x-1/2 top-[91.5%] -translate-y-1/2 hidden lg:block pointer-events-none z-10"
+            className="absolute left-1/2 -translate-x-1/2 top-[91.5%] -translate-y-1/2 pointer-events-none z-10"
           >
             <Image
               src="/images/home/iphone.png"
