@@ -57,8 +57,8 @@ export function HeroSection() {
       {/* Floating background - outside main content */}
       <HeroBackground />
       {/* Hero Section */}
-      <section className="relative lg:min-h-[90vh] overflow-hidden items-center">
-        <div className="relative container mx-auto pt-52">
+      <section className="relative p-[180px_16px_240px] overflow-hidden items-center">
+        <div className="relative container mx-auto">
           {/* Animated blur backgrounds */}
           <HeroBlurBackgrounds />
           <div className="relative z-10 max-w-5xl mx-auto text-center">
@@ -155,8 +155,8 @@ export function HeroSection() {
             <LogosMarquee logos={clientLogos} speed={70} />
           </motion.div>
         </div>
+        <PaymentStatsSection />
       </section>
-      <PaymentStatsSection />
     </>
   );
 }
