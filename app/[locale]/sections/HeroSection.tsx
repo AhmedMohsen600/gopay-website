@@ -57,8 +57,8 @@ export function HeroSection() {
       {/* Floating background - outside main content */}
       <HeroBackground />
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] items-center">
-        <div className="relative container mx-auto pt-[160px]">
+      <section className="relative min-h-[90vh] overflow-hidden items-center">
+        <div className="relative container mx-auto pt-52">
           {/* Animated blur backgrounds */}
           <HeroBlurBackgrounds />
           <div className="relative z-10 max-w-5xl mx-auto text-center">
