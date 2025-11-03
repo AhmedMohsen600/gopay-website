@@ -134,7 +134,10 @@ export function StatCard({
                 <Typography variant="p12" className="font-medium text-primary">
                   {hoverData.month}
                 </Typography>
-                <Typography variant="p12" className="font-semibold text-text-3">
+                <Typography
+                  variant="p12"
+                  className="font-semibold text-[#68727D]"
+                >
                   {hoverData.value.toLocaleString()}
                 </Typography>
               </div>
