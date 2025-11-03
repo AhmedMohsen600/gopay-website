@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useLocale } from "next-intl";
 import { useEffect, useRef } from "react";
+import { cn } from "@/lib/utils";
 
 interface Logo {
   src: string;
@@ -14,9 +15,14 @@ interface LogosMarqueeProps {
   speed?: number;
   pauseOnHover?: boolean;
   gradient?: boolean;
+  className?: string;
 }
 
-export function LogosMarquee({ logos, speed = 40 }: LogosMarqueeProps) {
+export function LogosMarquee({
+  logos,
+  speed = 40,
+  className,
+}: LogosMarqueeProps) {
   const locale = useLocale();
   const isRTL = locale === "ar";
   const scrollerRef = useRef<HTMLDivElement>(null);
@@ -61,11 +67,14 @@ export function LogosMarquee({ logos, speed = 40 }: LogosMarqueeProps) {
           "linear-gradient(to right, transparent, black 96px, black calc(100% - 96px), transparent)",
       }}
     >
-      <div ref={scrollerRef} className="flex will-change-transform">
+      <div
+        ref={scrollerRef}
+        className={cn("flex gap-[27.08px] will-change-transform", className)}
+      >
         {duplicatedLogos.map((logo, index) => (
           <div
             key={index}
-            className="shrink-0 px-8"
+            className="shrink-0"
             style={{ pointerEvents: "none" }}
           >
             <Image
