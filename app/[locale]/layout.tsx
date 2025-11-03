@@ -55,7 +55,9 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
-      <body className={`${fontClass} font-sans antialiased bg-bg text-text-5`}>
+      <body
+        className={`${fontClass} font-sans antialiased bg-white text-text-5`}
+      >
         <NextIntlClientProvider messages={messages}>
           <Header />
           <main>{children}</main>
