@@ -67,7 +67,7 @@ export function PaymentStatsSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative mx-4 lg:mt-0 mt-[100px] lg:mx-auto max-w-[1200px]"
+      className="relative mt-[90px] lg:mx-auto max-w-[1200px]"
     >
       <div className="container  mx-auto">
         {/* Mobile/Tablet - Static Image with iPhone */}
