@@ -61,7 +61,7 @@ export function PaymentStatsSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative mt-[90px] flex justify-center items-center"
+      className="relative mt-[90px] mx-auto max-w-[1200px]"
     >
       <div className="container">
         <motion.div
