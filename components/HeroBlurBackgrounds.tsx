@@ -37,7 +37,7 @@ export function HeroBlurBackgrounds() {
         className="absolute rounded-full will-change-transform pointer-events-none"
         style={{
           backgroundColor: "#E3AAA1",
-          opacity: 0.1,
+          opacity: 0.18,
           filter: "blur(120px)",
           width: "450px",
           height: "450px",
