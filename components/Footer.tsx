@@ -231,7 +231,7 @@ export function Footer() {
         <div className="mt-8 text-center">
           <Typography
             variant="p14"
-            className="text-white/60 text-xs md:text-sm"
+            className="text-[#7e8195] text-xs md:text-sm"
           >
             © {t("copyright")}
           </Typography>

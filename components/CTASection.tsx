@@ -89,7 +89,7 @@ export function CTASection() {
           >
             <Typography
               variant="p16"
-              className="text-white/80 xl:text-base lg:text-sm text-sm"
+              className="text-white/80 xl:text-base lg:text-sm text-sm mb-2"
             >
               {t("billerApp")}
             </Typography>
