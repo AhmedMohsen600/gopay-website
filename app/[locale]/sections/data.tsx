@@ -41,7 +41,7 @@ export const paymentSections: PaymentSection[] = [
         id: "paid",
         icon: <PaidIcon />,
         titleKey: "paid",
-        amount: "₦212,548,104.54",
+        amount: "212,548,104.54",
         count: "164,233",
         chartData: [
           30, 34, 32, 36, 33, 37, 35, 39, 36, 38, 37, 40, 38, 41, 39, 42,
@@ -52,7 +52,7 @@ export const paymentSections: PaymentSection[] = [
         id: "unpaid",
         icon: <UnpaidIcon />,
         titleKey: "unpaid",
-        amount: "₦163,548,104.54",
+        amount: "163,548,104.54",
         count: "96,031",
         chartData: [
           55, 48, 52, 45, 50, 47, 53, 49, 55, 51, 48, 52, 48, 54, 50, 56,
@@ -63,7 +63,7 @@ export const paymentSections: PaymentSection[] = [
         id: "due",
         icon: <DuePaymentsIcon />,
         titleKey: "duePayments",
-        amount: "₦112,560,030.54",
+        amount: "112,560,030.54",
         count: "63,174",
         chartData: [
           40, 45, 42, 48, 52, 58, 55, 62, 68, 65, 70, 67, 72, 68, 74, 71,
@@ -74,7 +74,7 @@ export const paymentSections: PaymentSection[] = [
         id: "total",
         icon: <TotalPaymentsIcon />,
         titleKey: "totalPayments",
-        amount: "₦214,223,072.29",
+        amount: "214,223,072.29",
         count: "145,390",
         chartData: [
           50, 54, 58, 56, 62, 68, 72, 75, 78, 82, 85, 88, 84, 90, 87, 92,
@@ -90,7 +90,7 @@ export const paymentSections: PaymentSection[] = [
         id: "totalAccounts",
         icon: <TotalAccountsIcon />,
         titleKey: "totalAccounts",
-        amount: "₦1,275,369.00",
+        amount: "1,275,369.00",
         count: "123",
         chartData: [
           60, 65, 58, 70, 68, 72, 65, 75, 70, 78, 72, 80, 75, 82, 78, 85,
@@ -101,7 +101,7 @@ export const paymentSections: PaymentSection[] = [
         id: "recurringPaid",
         icon: <PaidRecurringIcon />,
         titleKey: "recurringPaid",
-        amount: "₦985,240.00",
+        amount: "378,469.20",
         count: "89",
         chartData: [
           50, 55, 60, 58, 65, 62, 68, 70, 72, 75, 78, 76, 80, 82, 85, 88,
@@ -112,8 +112,8 @@ export const paymentSections: PaymentSection[] = [
         id: "offlinePayments",
         icon: <OfflinePaymentsIcon />,
         titleKey: "offlinePayments",
-        amount: "₦145,890.00",
-        count: "24",
+        amount: "27,565,019.00",
+        count: "18,867",
         chartData: [
           40, 38, 42, 45, 43, 48, 46, 50, 52, 48, 55, 53, 58, 56, 60, 62,
         ],
@@ -123,8 +123,8 @@ export const paymentSections: PaymentSection[] = [
         id: "dailyTransferAmount",
         icon: <DailyTransferIcon />,
         titleKey: "dailyTransferAmount",
-        amount: "₦1,130,130.00",
-        count: "113",
+        amount: "28,271,970.05",
+        count: "15,961",
         chartData: [
           55, 60, 58, 65, 70, 68, 75, 72, 78, 82, 80, 85, 88, 86, 90, 92,
         ],
