@@ -70,7 +70,7 @@ export function PaymentStatsSection() {
             opacity,
             willChange: "transform, opacity",
           }}
-          className="bg-white rounded-lg p-6 space-y-8 relative"
+          className="bg-white rounded-xl p-6 space-y-[32px] relative"
         >
           {paymentSections.map((section) => (
             <div key={section.sectionTitleKey}>
@@ -107,7 +107,6 @@ export function PaymentStatsSection() {
             </div>
           ))}
 
-          {/* iPhone Image - Centered horizontally, positioned over recurring section */}
           <motion.div
             style={{
               y: iphoneY,
