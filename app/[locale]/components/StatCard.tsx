@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Typography } from "@/components/ui/typography";
 import { MiniLineChart } from "./MiniLineChart";
+import { SarIcon } from "./icons/sarIcon";
 
 interface StatCardProps {
   id: string;
@@ -56,6 +57,7 @@ export function StatCard({
         {/* Amount and Count Pill */}
         <div className="bg-[#F7F7FC] rounded-full p-[6px_6px_6px_10px] mb-4 flex justify-between items-center gap-2">
           <div className="flex items-center gap-1">
+            <SarIcon />
             <Typography variant="p14" className="font-medium text-primary">
               {amount}
             </Typography>
