@@ -27,6 +27,10 @@
     "subtitle": "Payments, invoicing, and payouts made simple, secure, and fast.",
     "description": "",
     "trustedBy": "Trusted by leading businesses across the region",
+    "paymentChannels": {
+      "title": "Our payment channels",
+      "providedBy": "Provided by: Our Strategic Partners"
+    },
     "paymentStats": {
       "oneTimePayments": "One-Time Payments",
       "paid": "Paid",
