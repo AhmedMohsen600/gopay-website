@@ -63,7 +63,7 @@ export function PaymentStatsSection() {
       ref={sectionRef}
       className="relative mt-[90px] mx-auto max-w-[1200px]"
     >
-      <div className="container">
+      <div className="container mx-auto">
         <motion.div
           style={{
             scale,
