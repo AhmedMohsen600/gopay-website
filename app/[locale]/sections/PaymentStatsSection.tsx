@@ -85,6 +85,7 @@ export function PaymentStatsSection() {
             width={1200}
             height={800}
             className="w-full h-auto rounded-xl"
+            style={{ boxShadow: "0 1px 20px 0 rgba(40, 45, 78, 0.05)" }}
             priority
           />
           {/* iPhone overlay for mobile/tablet */}
@@ -114,6 +115,7 @@ export function PaymentStatsSection() {
             scale,
             opacity,
             willChange: "transform, opacity",
+            boxShadow: "0 1px 20px 0 rgba(40, 45, 78, 0.05)",
           }}
           className="hidden lg:block bg-white rounded-xl p-6 space-y-[32px] relative"
         >
