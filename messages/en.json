@@ -55,7 +55,52 @@
       }
     }
   },
+  "cta": {
+    "title": "Ready to Take Control of Your Finance?",
+    "customersApp": "Customers Application",
+    "getItOn": "GET IT ON",
+    "downloadOn": "Download on the",
+    "billerApp": "Biller App",
+    "comingSoon": "COMING SOON"
+  },
   "footer": {
+    "cta": {
+      "title": "Ready to Take Control of Your Finance?",
+      "customerApp": "Customers Application",
+      "billerApp": "Biller App",
+      "comingSoon": "COMING SOON"
+    },
+    "aboutGoPay": {
+      "title": "About GoPay",
+      "whatIsGoPay": "What is GoPay?",
+      "signUp": "Sign Up (Get Started)",
+      "signIn": "Sign In"
+    },
+    "aboutIFS": {
+      "title": "About IFS",
+      "aboutCompany": "About Company",
+      "news": "News",
+      "location": "Location"
+    },
+    "resources": {
+      "title": "Resources",
+      "serviceLicense": "Service License",
+      "faqs": "FAQs",
+      "terms": "Terms & Conditions",
+      "dataProtection": "Data Protection Policy"
+    },
+    "contact": {
+      "title": "Contact",
+      "helpSupport": "Help & Support"
+    },
+    "companyInfo": {
+      "name": "IFS Company",
+      "commercialReg": "Commercial Registration No. 1010895871",
+      "license": "Licensed and regulated by the Saudi Central Bank | License No. 43033966",
+      "phone": "8001180024",
+      "email": "care@gopay.sa"
+    },
+    "copyright": "All rights reserved to Integrated Financial Solutions Company",
     "rights": "All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"
