@@ -93,7 +93,14 @@
       "title": "Contact",
       "helpSupport": "Help & Support"
     },
-    "copyright": "GoPay. All rights reserved.",
+    "companyInfo": {
+      "name": "IFS Company",
+      "commercialReg": "Commercial Registration No. 1010895871",
+      "license": "Licensed and regulated by the Saudi Central Bank | License No. 43033966",
+      "phone": "8001180024",
+      "email": "care@gopay.sa"
+    },
+    "copyright": "All rights reserved to Integrated Financial Solutions Company",
     "rights": "All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"

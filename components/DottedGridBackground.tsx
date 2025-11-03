@@ -1,11 +1,12 @@
 export function DottedGridBackground() {
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none top-[-303px] flex justify-center">
+    <div className="absolute inset-0  pointer-events-none">
       <svg
+        xmlns="http://www.w3.org/2000/svg"
         width="724"
         height="724"
-        xmlns="http://www.w3.org/2000/svg"
-        className="opacity-80   "
+        className="opacity-100 absolute sm:top-[-362px] xl:top-[-303px] top-[-460px]"
+        style={{ left: "calc(50% - 362px)" }}
       >
         {/* 4 concentric circles - centered, large enough to overflow */}
         <circle
