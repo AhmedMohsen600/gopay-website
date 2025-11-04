@@ -26,7 +26,7 @@ export function PaymentChannelSection() {
     <section className="relative p-[50px_16px_0px]">
       <div className="container mx-auto px-4">
         <motion.div
-          className="w-full flex flex-col items-center justify-center"
+          className="w-full flex flex-col  items-center justify-center"
           variants={fadeInUpVariants}
           initial="hidden"
           whileInView="visible"
