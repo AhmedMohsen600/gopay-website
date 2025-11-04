@@ -76,6 +76,49 @@
       "offlinePayments": "Offline Payments",
       "dailyTransferAmount": "Daily Transfer Amount"
     },
+    "impact": {
+      "gopay": "GoPay",
+      "and": "and",
+      "gopayPlus": "GoPay+",
+      "title": "Real Impact",
+      "description": "GoPay and GoPay+ practically cuts effort and days outstanding while realizing measurable savings straight onto the bottom line",
+      "paymentSuccessRate": {
+        "title": "Payment Success Rate",
+        "description": "Auto-notifications and easier payment channels boost on-time collections",
+        "metric": "+30%",
+        "metricLabel": "more invoices cleared on or before due date"
+      },
+      "dso": {
+        "title": "Days-Sales-Outstanding (DSO)",
+        "description": "Faster cash-conversion improves working capital by ~ SAR 1M per 100M turnover",
+        "metric": "-3 to -6",
+        "metricLabel": "days on average"
+      },
+      "costPerCollection": {
+        "title": "Cost-per-collection",
+        "description": "Fixed, low SADAD rails replace percentage card fees and banking charges",
+        "metric": "-70%",
+        "metricLabel": "vs. card gateways / cheques"
+      },
+      "financeTeamProductivity": {
+        "title": "Finance-team productivity",
+        "description": "Headcount freed for analysis, budgeting, and growth tasks",
+        "metric": "+40%",
+        "metricLabel": "invoices processed per FTE"
+      },
+      "reconciliationEffort": {
+        "title": "Reconciliation effort",
+        "description": "Finance staff spend minutes, not hours, closing the day-book",
+        "metric": "-65%",
+        "metricLabel": "manual matching time"
+      },
+      "complianceOverhead": {
+        "title": "Compliance Overhead",
+        "description": "Built in E-Invoice archive and SADAD traceability remove manual filing",
+        "metric": "-80%",
+        "metricLabel": "less time preparing ZATCA / audit reports"
+      }
+    },
     "features": {
       "title": "Why Choose GoPay?",
       "security": {
