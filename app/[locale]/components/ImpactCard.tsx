@@ -44,7 +44,7 @@ export function ImpactCard({
     >
       <div>
         {/* Title */}
-        <Typography variant="h3" className="text-white mb-4 font-bold">
+        <Typography variant="h3" className="text-white tracking-tighter mb-4">
           {title}
         </Typography>
 
