@@ -3,6 +3,7 @@
 import { ArrowRight, ArrowLeft } from "@phosphor-icons/react/dist/ssr";
 import { useLocale } from "next-intl";
 import { Icon } from "@phosphor-icons/react";
+import { cn } from "@/lib/utils";
 
 interface AnimatedArrowProps {
   className?: string;
@@ -31,21 +32,27 @@ export function AnimatedArrow({
       <ArrowIcon
         size={size}
         weight={weight}
-        className={`absolute transition-all duration-300 ease-out ${
-          isRTL
-            ? "translate-x-0 opacity-100 group-hover:-translate-x-5 group-hover:opacity-0"
-            : "translate-x-0 opacity-100 group-hover:translate-x-5 group-hover:opacity-0"
-        } ${className}`}
+        className={cn(
+          `absolute transition-all duration-300 ease-out ${
+            isRTL
+              ? "translate-x-0 opacity-100 group-hover:-translate-x-5 group-hover:opacity-0"
+              : "translate-x-0 opacity-100 group-hover:translate-x-5 group-hover:opacity-0"
+          }`,
+          className
+        )}
       />
       {/* Second arrow - hidden initially, slides in on hover */}
       <ArrowIcon
         size={size}
         weight={weight}
-        className={`absolute transition-all duration-300 ease-out ${
-          isRTL
-            ? "translate-x-5 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"
-            : "-translate-x-5 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"
-        } ${className}`}
+        className={cn(
+          `absolute transition-all duration-300 ease-out ${
+            isRTL
+              ? "translate-x-5 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"
+              : "-translate-x-5 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"
+          }`,
+          className
+        )}
       />
     </span>
   );
