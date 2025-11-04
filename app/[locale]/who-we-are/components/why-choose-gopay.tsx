@@ -3,12 +3,12 @@ import { Typography } from "@/components/ui/typography";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import {
-  ArrowsOut,
-  Cpu,
-  ArrowsClockwise,
-  Briefcase,
-  ShieldCheck,
-} from "@phosphor-icons/react/dist/ssr";
+  ArrowsOutIcon,
+  CpuIcon,
+  ArrowsClockwiseIcon,
+  BriefcaseIcon,
+  ShieldCheckIcon,
+} from "@phosphor-icons/react";
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -60,27 +60,27 @@ export function WhyChooseGoPay() {
 
   const features = [
     {
-      icon: <ArrowsOut size={48} weight="duotone" />,
+      icon: <ArrowsOutIcon size={48} weight="duotone" />,
       titleKey: "integratedSolution.title",
       descriptionKey: "integratedSolution.description",
     },
     {
-      icon: <Cpu size={48} weight="duotone" />,
+      icon: <CpuIcon size={48} weight="duotone" />,
       titleKey: "innovativeTechnology.title",
       descriptionKey: "innovativeTechnology.description",
     },
     {
-      icon: <ArrowsClockwise size={48} weight="duotone" />,
+      icon: <ArrowsClockwiseIcon size={48} weight="duotone" />,
       titleKey: "flexiblePlatform.title",
       descriptionKey: "flexiblePlatform.description",
     },
     {
-      icon: <Briefcase size={48} weight="duotone" />,
+      icon: <BriefcaseIcon size={48} weight="duotone" />,
       titleKey: "effectiveTools.title",
       descriptionKey: "effectiveTools.description",
     },
     {
-      icon: <ShieldCheck size={48} weight="duotone" />,
+      icon: <ShieldCheckIcon size={48} weight="duotone" />,
       titleKey: "trustedLicensed.title",
       descriptionKey: "trustedLicensed.description",
     },
