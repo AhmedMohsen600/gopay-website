@@ -19,7 +19,7 @@ export function GopayProductSuiteSection() {
   const getContainerPadding = (productId: string) => {
     switch (productId) {
       case "gopay":
-        return "p-0";
+        return "p-0 sm:p-0 md:p-0 md:p-0 min-h-[200px] sm:min-h-[250px] md:min-h-[310px] flex items-end justify-center";
       case "goinvoice":
         return "";
       case "gosplit":
