@@ -4,6 +4,8 @@ import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { Typography } from "@/components/ui/typography";
 import { Button } from "@/components/ui/button";
+import { AnimatedArrow } from "@/components/ui/animated-arrow";
+import { CaretLeft, CaretRight } from "@phosphor-icons/react/dist/ssr";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -27,7 +29,7 @@ export function ProductCard({
   tagClassName,
   title,
   description,
-  buttonText = "Know More >",
+  buttonText = "Know More",
   onButtonClick,
   imgUrl,
   className,
@@ -96,6 +98,7 @@ export function ProductCard({
         {/* Button */}
         <Button className="w-fit mt-4" onClick={onButtonClick}>
           {buttonText}
+          <AnimatedArrow rtlIcon={CaretLeft} icon={CaretRight} />
         </Button>
       </div>
 
