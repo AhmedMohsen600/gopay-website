@@ -81,7 +81,7 @@ export function ProductCard({
           {/* Title */}
           <Typography
             variant="h3"
-            className="text-text-5 text-[24px] sm:text-[28px] md:text-[34.5px] leading-[1.2]"
+            className="text-text-5 text-[24px] sm:text-[28px] md:text-[35px] tracking-tighter leading-[1.2]"
           >
             {title}
           </Typography>
@@ -89,7 +89,7 @@ export function ProductCard({
           {/* Description */}
           <Typography
             variant="p14"
-            className="text-text-3 text-[13px] sm:text-[14px] md:text-[15.1px] mt-2 leading-[1.2]"
+            className="text-text-3 sm:text-[14px] md:text-base mt-2 tracking-tight leading-[1.2]"
           >
             {description}
           </Typography>
