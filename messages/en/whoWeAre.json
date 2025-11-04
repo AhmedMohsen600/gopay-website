@@ -15,5 +15,29 @@
     "titlePart1": "GoPay's",
     "titlePart2": "Vision",
     "description": "We aim to revolutionize the way companies in Saudi Arabia manage payment and collection operations. We are committed to providing secure, user-friendly, and efficient digital solutions that automate financial processes, reduce operational costs, and enhance customer experience. Our goal is to be the trusted partner for businesses aspiring to succeed in the digital economy"
+  },
+  "whyChoose": {
+    "titlePart1": "Why Choose",
+    "titlePart2": "GoPay?",
+    "integratedSolution": {
+      "title": "Integrated Solution",
+      "description": "A single platform to manage invoices, payment requests, and money transfers."
+    },
+    "innovativeTechnology": {
+      "title": "Innovative Technology",
+      "description": "Advanced solutions designed to improve efficiency and reduce costs."
+    },
+    "flexiblePlatform": {
+      "title": "Flexible Platform",
+      "description": "Customizable options to suit all types and sizes of businesses."
+    },
+    "effectiveTools": {
+      "title": "Effective Tools",
+      "description": "Streamlined financial operations, better decision-making, and improved customer communication."
+    },
+    "trustedLicensed": {
+      "title": "Trusted & Licensed",
+      "description": "Officially licensed by SAMA and an authorized intermediary through the SADAD system."
+    }
   }
 }
