@@ -132,3 +132,36 @@ export const paymentSections: PaymentSection[] = [
     ],
   },
 ];
+
+export interface ProductCardData {
+  id: string;
+  imagePath?: string; // Optional: path to the visual content image
+}
+
+export const productSuiteData: ProductCardData[] = [
+  {
+    id: "gopay",
+    imagePath:
+      "https://framerusercontent.com/images/3W8VMxNI3mLuPxBop0eJIskq4.png?width=1024&height=677",
+  },
+  {
+    id: "goinvoice",
+    imagePath:
+      "https://framerusercontent.com/images/8QZ9CFJ6kIU0Hh7V0AO0auNAoU.png?width=1190&height=1684",
+  },
+  {
+    id: "gosplit",
+    imagePath:
+      "https://framerusercontent.com/images/DtDFaDVKYf5tTSECoCxchhNvRI.png?width=1060&height=428",
+  },
+  {
+    id: "goonline",
+    imagePath:
+      "https://framerusercontent.com/images/dltRp4qIsFlPJXK0LAtdmFuymU.png?width=1060&height=394",
+  },
+  {
+    id: "gopayPlus",
+    imagePath:
+      "https://framerusercontent.com/images/pekNvaXoQZmZLXJYvEO1C7vjGU.png?width=548&height=836",
+  },
+];
