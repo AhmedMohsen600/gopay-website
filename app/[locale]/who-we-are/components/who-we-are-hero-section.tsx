@@ -12,7 +12,7 @@ export function WhoWeAreHeroSection() {
     visible: { opacity: 1, y: 0 },
   };
   return (
-    <section className="relative min-h-[50vh] px-6 md:min-h-[70vh] flex flex-col gap-3 md:gap-4 justify-center items-center mx-auto bg-[linear-gradient(#e6ebf2_5%,#fff_100%)]">
+    <section className="relative min-h-[50vh] overflow-hidden px-6 md:min-h-[70vh] flex flex-col gap-3 md:gap-4 justify-center items-center mx-auto bg-[linear-gradient(#e6ebf2_5%,#fff_100%)]">
       <div className="absolute inset-0 z-0">
         <HeroBlurBackgrounds />
       </div>
@@ -57,6 +57,7 @@ export function WhoWeAreHeroSection() {
           {t("description")}
         </Typography>
       </motion.div>
+      <div className="absolute bottom-0 left-0 w-full h-[182px] bg-linear-to-t from-white to-transparent" />
     </section>
   );
 }
