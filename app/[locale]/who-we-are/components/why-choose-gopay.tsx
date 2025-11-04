@@ -2,16 +2,7 @@
 import { Typography } from "@/components/ui/typography";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import {
-  ArrowsOutIcon,
-  CpuIcon,
-  ArrowsClockwiseIcon,
-  BriefcaseIcon,
-  ShieldCheckIcon,
-  ArrowSquareInIcon,
-  CodeBlockIcon,
-  ToolboxIcon,
-} from "@phosphor-icons/react";
+import { WHY_CHOOSE_FEATURES } from "../data";
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -63,34 +54,6 @@ export function WhyChooseGoPay() {
     visible: { opacity: 1, y: 0 },
   };
 
-  const features = [
-    {
-      icon: <CodeBlockIcon size={48} weight="regular" />,
-      titleKey: "integratedSolution.title",
-      descriptionKey: "integratedSolution.description",
-    },
-    {
-      icon: <CpuIcon size={48} weight="regular" />,
-      titleKey: "innovativeTechnology.title",
-      descriptionKey: "innovativeTechnology.description",
-    },
-    {
-      icon: <ArrowSquareInIcon size={48} weight="regular" />,
-      titleKey: "flexiblePlatform.title",
-      descriptionKey: "flexiblePlatform.description",
-    },
-    {
-      icon: <ToolboxIcon size={48} weight="regular" />,
-      titleKey: "effectiveTools.title",
-      descriptionKey: "effectiveTools.description",
-    },
-    {
-      icon: <ShieldCheckIcon size={48} weight="regular" />,
-      titleKey: "trustedLicensed.title",
-      descriptionKey: "trustedLicensed.description",
-    },
-  ];
-
   return (
     <section className="relative py-14 md:py-20 md:px-16 xl:py-[160px] px-6 xl:px-[120px] bg-[linear-gradient(180deg,#182130_5%,#282d4e_75%)]">
       <div className="max-w-[1000px] mx-auto">
@@ -115,7 +78,7 @@ export function WhyChooseGoPay() {
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3  gap-6">
           {/* First 3 items */}
-          {features.slice(0, 3).map((feature, index) => (
+          {WHY_CHOOSE_FEATURES.slice(0, 3).map((feature, index) => (
             <FeatureCard
               key={index}
               icon={feature.icon}
@@ -127,7 +90,7 @@ export function WhyChooseGoPay() {
 
           {/* Last 2 items - wrap together to fill the row */}
           <div className="md:col-span-3 grid grid-cols-1  md:grid-cols-2 gap-6">
-            {features.slice(3, 5).map((feature, index) => (
+            {WHY_CHOOSE_FEATURES.slice(3, 5).map((feature, index) => (
               <FeatureCard
                 key={index + 3}
                 icon={feature.icon}
