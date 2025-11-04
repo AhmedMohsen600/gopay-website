@@ -8,6 +8,9 @@ import {
   ArrowsClockwiseIcon,
   BriefcaseIcon,
   ShieldCheckIcon,
+  ArrowSquareInIcon,
+  CodeBlockIcon,
+  ToolboxIcon,
 } from "@phosphor-icons/react";
 
 interface FeatureCardProps {
@@ -31,21 +34,23 @@ function FeatureCard({ icon, title, description, delay }: FeatureCardProps) {
         whileInView="visible"
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut", delay }}
-        className="bg-[#F5F5F5] rounded-xl p-6 md:p-8 flex flex-col gap-4 h-full"
+        className="bg-[#fffc] rounded-2xl  md:p-5 flex flex-col gap-4 h-[150px] md:h-[200px] xl:h-[243px] p-4 xl:p-5"
       >
-        <div className="text-primary">{icon}</div>
-        <Typography
-          variant="h5"
-          className="font-bold text-text-5 md:text-xl text-lg"
-        >
-          {title}
-        </Typography>
-        <Typography
-          variant="p16"
-          className="text-text-3 md:text-base text-sm leading-relaxed"
-        >
-          {description}
-        </Typography>
+        <div className="text-primary  [&>svg]:size-7">{icon}</div>
+        <div className="flex flex-col gap-2 mt-auto">
+          <Typography
+            variant="h5"
+            className="font-medium text-[#1a1d21] md:text-lg  xl:text-2xl text-base leading-tight tracking-tight"
+          >
+            {title}
+          </Typography>
+          <Typography
+            variant="p16"
+            className="text-text-3 xl:text-base md:text-sm text-xs leading-relaxed tracking-tight  "
+          >
+            {description}
+          </Typography>
+        </div>
       </motion.div>
     </div>
   );
@@ -54,41 +59,41 @@ function FeatureCard({ icon, title, description, delay }: FeatureCardProps) {
 export function WhyChooseGoPay() {
   const t = useTranslations("whoWeAre.whyChoose");
   const fadeInUpVariants = {
-    hidden: { opacity: 1, y: 90 },
+    hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0 },
   };
 
   const features = [
     {
-      icon: <ArrowsOutIcon size={48} weight="duotone" />,
+      icon: <CodeBlockIcon size={48} weight="regular" />,
       titleKey: "integratedSolution.title",
       descriptionKey: "integratedSolution.description",
     },
     {
-      icon: <CpuIcon size={48} weight="duotone" />,
+      icon: <CpuIcon size={48} weight="regular" />,
       titleKey: "innovativeTechnology.title",
       descriptionKey: "innovativeTechnology.description",
     },
     {
-      icon: <ArrowsClockwiseIcon size={48} weight="duotone" />,
+      icon: <ArrowSquareInIcon size={48} weight="regular" />,
       titleKey: "flexiblePlatform.title",
       descriptionKey: "flexiblePlatform.description",
     },
     {
-      icon: <BriefcaseIcon size={48} weight="duotone" />,
+      icon: <ToolboxIcon size={48} weight="regular" />,
       titleKey: "effectiveTools.title",
       descriptionKey: "effectiveTools.description",
     },
     {
-      icon: <ShieldCheckIcon size={48} weight="duotone" />,
+      icon: <ShieldCheckIcon size={48} weight="regular" />,
       titleKey: "trustedLicensed.title",
       descriptionKey: "trustedLicensed.description",
     },
   ];
 
   return (
-    <section className="relative py-16 md:py-20 lg:py-24 px-6 md:px-16 bg-primary">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative py-14 md:py-20 md:px-16 xl:py-[160px] px-6 xl:px-[120px] bg-[linear-gradient(180deg,#182130_5%,#282d4e_75%)]">
+      <div className="max-w-[1000px] mx-auto">
         {/* Title */}
         <motion.div
           variants={fadeInUpVariants}
@@ -96,19 +101,19 @@ export function WhyChooseGoPay() {
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-center mb-12 md:mb-16"
+          className="text-center  mb-8"
         >
           <Typography
             variant="h2"
-            className="font-medium xl:text-[50px] md:text-[40px] text-[32px]"
+            className="font-medium xl:text-[50px] md:text-[36px] text-2xl text-white tracking-tight leading-tight"
           >
             <span className="text-white">{t("titlePart1")} </span>
-            <span className="text-secondary">{t("titlePart2")}</span>
+            <span className="text-secondary">{t("titlePart2")}</span> ?
           </Typography>
         </motion.div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3  gap-6">
           {/* First 3 items */}
           {features.slice(0, 3).map((feature, index) => (
             <FeatureCard
@@ -121,7 +126,7 @@ export function WhyChooseGoPay() {
           ))}
 
           {/* Last 2 items - wrap together to fill the row */}
-          <div className="lg:col-span-3 lg:grid lg:grid-cols-2 lg:gap-6 md:gap-8">
+          <div className="md:col-span-3 grid grid-cols-1  md:grid-cols-2 gap-6">
             {features.slice(3, 5).map((feature, index) => (
               <FeatureCard
                 key={index + 3}
