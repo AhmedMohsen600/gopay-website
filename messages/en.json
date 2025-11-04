@@ -31,6 +31,39 @@
       "title": "Our payment channels",
       "providedBy": "Provided by: Our Strategic Partners"
     },
+    "productSuite": {
+      "title": "Product Suite",
+      "gopay": "GoPay",
+      "description": "GoPay is a comprehensive B2B billing and collection ecosystem designed to streamline payment processes, drive cash flow visibility, and ensure regulatory compliance in Saudi Arabia. Below are the key products and their business value:",
+      "buttonText": "Know More",
+      "products": {
+        "gopay": {
+          "tag": "GoPay",
+          "title": "GoPay - Core Collections Platform",
+          "description": "GoPay is the flagship SADAD-integrated solution for issuing invoices and collecting payments across all sectors."
+        },
+        "goinvoice": {
+          "tag": "GoInvoice",
+          "title": "GoInvoice – ZATCA-Compliant E-Invoicing",
+          "description": "GoInvoice enables organizations to issue, archive, and report VAT-compliant invoices in line with ZATCA Phase 1 and 2."
+        },
+        "gosplit": {
+          "tag": "GoSplit",
+          "title": "GoSplit - Multi-Payout Mechanism",
+          "description": "For marketplaces, gig platforms, or commission-based models, GoSplit distributes funds to multiple beneficiaries in real-time."
+        },
+        "goonline": {
+          "tag": "GoOnline",
+          "title": "GoOnline - E-commerce Gateway (via Partnerships)",
+          "description": "GoOnline allows merchants to accept digital payments online using a secure and scalable gateway."
+        },
+        "gopayPlus": {
+          "tag": "GoPay+",
+          "title": "GoPay+ - Enterprise Financial Orchestration",
+          "description": "GoPay+ is a corporate-grade automation layer that digitizes and unifies receivables, payments, and reconciliation."
+        }
+      }
+    },
     "paymentStats": {
       "oneTimePayments": "One-Time Payments",
       "paid": "Paid",
