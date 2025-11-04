@@ -78,7 +78,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="mt-24 relative">
+    <footer className=" relative">
       {/* CTA Section */}
       <CTASection />
 
