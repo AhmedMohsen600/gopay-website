@@ -2,3 +2,4 @@
 export { HeroSection } from "./HeroSection";
 export { PaymentStatsSection } from "./PaymentStatsSection";
 export { PaymentChannelSection } from "./PaymentChannelSection";
+export { GopayProductSuiteSection } from "./GopayProductSuiteSection";
