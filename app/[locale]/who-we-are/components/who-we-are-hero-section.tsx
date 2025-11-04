@@ -3,8 +3,10 @@ import { HeroBlurBackgrounds } from "@/components/HeroBlurBackgrounds";
 import { Badge } from "@/components/ui/badge";
 import { Typography } from "@/components/ui/typography";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export function WhoWeAreHeroSection() {
+  const t = useTranslations("whoWeAre");
   const fadeInUpVariants = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0 },
@@ -22,7 +24,7 @@ export function WhoWeAreHeroSection() {
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
         className="  z-10"
       >
-        <Badge>Who We Are</Badge>
+        <Badge>{t("badge")}</Badge>
       </motion.div>
       <motion.div
         variants={fadeInUpVariants}
@@ -36,7 +38,8 @@ export function WhoWeAreHeroSection() {
           variant="h1"
           className="font-medium xl:text-[62px] md:text-[50px] text-[34px]"
         >
-          <span className="text-secondary">GoPay </span>Service
+          <span className="text-secondary">{t("titlePart1")} </span>
+          {t("titlePart2")}
         </Typography>
       </motion.div>
       <motion.div
@@ -51,11 +54,7 @@ export function WhoWeAreHeroSection() {
           variant="p18"
           className=" text-center max-w-[700px] lg:text-lg md:text-[15px] text-[13px] text-primary tracking-tight leading-tight "
         >
-          GoPay Service is a leading platform providing specialized
-          technological solutions for electronic payment and collection
-          services. It is offered by Inclusive Financial Solutions (IFS) and is
-          officially licensed by the Saudi Central Bank (SAMA) as a payment
-          intermediary through the SADAD system.
+          {t("description")}
         </Typography>
       </motion.div>
     </section>
