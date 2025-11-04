@@ -2,6 +2,18 @@
   "badge": "Who We Are",
   "titlePart1": "GoPay",
   "titlePart2": "Service",
-  "description": "GoPay Service is a leading platform providing specialized technological solutions for electronic payment and collection services. It is offered by Inclusive Financial Solutions (IFS) and is officially licensed by the Saudi Central Bank (SAMA) as a payment intermediary through the SADAD system."
+  "description": "GoPay Service is a leading platform providing specialized technological solutions for electronic payment and collection services. It is offered by Inclusive Financial Solutions (IFS) and is officially licensed by the Saudi Central Bank (SAMA) as a payment intermediary through the SADAD system.",
+  "whatIsGoPay": {
+    "badge": "What is GoPay?",
+    "titlePart1": "About",
+    "titlePart2": "GoPay",
+    "leftText": "GoPay is a pioneering platform in delivering specialized technological solutions for electronic payment and collection services. It is provided by Inclusive Financial Solutions (IFS) and is officially licensed by the Saudi Central Bank (SAMA) as a payment intermediary through the SADAD system.",
+    "rightText": "The service enables businesses and entrepreneurs in the Kingdom—regardless of their size or sector—to access advanced and innovative tools that streamline financial processes such as invoicing and collections. This contributes to business growth, cost reduction, and enhanced operational efficiency through full digital transformation, in compliance with official regulatory requirements in the Kingdom."
+  },
+  "vision": {
+    "badge": "How We Think?",
+    "titlePart1": "GoPay's",
+    "titlePart2": "Vision",
+    "description": "We aim to revolutionize the way companies in Saudi Arabia manage payment and collection operations. We are committed to providing secure, user-friendly, and efficient digital solutions that automate financial processes, reduce operational costs, and enhance customer experience. Our goal is to be the trusted partner for businesses aspiring to succeed in the digital economy"
+  }
 }
-
