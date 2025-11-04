@@ -1,6 +1,10 @@
 "use client";
 
-import { HeroSection, PaymentChannelSection } from "./sections";
+import {
+  GoPayImpactShowcaseSection,
+  HeroSection,
+  PaymentChannelSection,
+} from "./sections";
 import { GopayProductSuiteSection } from "./sections/GopayProductSuiteSection";
 
 export default function Home() {
@@ -9,6 +13,7 @@ export default function Home() {
       <HeroSection />
       <PaymentChannelSection />
       <GopayProductSuiteSection />
+      <GoPayImpactShowcaseSection />
       {/** OTHER SECTIONS HERE SHOSHO */}
     </>
   );
