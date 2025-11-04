@@ -4,16 +4,16 @@ import { motion } from "framer-motion";
 
 export function HeroBlurBackgrounds() {
   return (
-    <>
+    <div className="absolute inset-0 h-screen">
       {/* Blur 1 - Purple - 20% opacity */}
       <motion.div
-        className="absolute rounded-full will-change-transform pointer-events-none"
+        className="absolute rounded-full will-change-transform pointer-events-none "
         style={{
           backgroundColor: "#B3ADFF",
-          opacity: 0.1,
-          filter: "blur(120px)",
-          width: "500px",
-          height: "500px",
+          opacity: 0.2,
+          filter: "blur(100px)",
+          width: "771px",
+          height: "621px",
           top: "50%",
           left: "50%",
           translateX: "-50%",
@@ -37,8 +37,8 @@ export function HeroBlurBackgrounds() {
         className="absolute rounded-full will-change-transform pointer-events-none"
         style={{
           backgroundColor: "#E3AAA1",
-          opacity: 0.1,
-          filter: "blur(120px)",
+          opacity: 0.3,
+          filter: "blur(100px)",
           width: "450px",
           height: "450px",
           top: "50%",
@@ -65,7 +65,7 @@ export function HeroBlurBackgrounds() {
         style={{
           backgroundColor: "#FFC896",
           opacity: 0.3,
-          filter: "blur(120px)",
+          filter: "blur(100px)",
           width: "400px",
           height: "400px",
           top: "50%",
@@ -85,6 +85,6 @@ export function HeroBlurBackgrounds() {
           ease: "linear",
         }}
       />
-    </>
+    </div>
   );
 }

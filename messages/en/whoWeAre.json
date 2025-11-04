@@ -1,0 +1,56 @@
+{
+  "badge": "Who We Are",
+  "titlePart1": "GoPay",
+  "titlePart2": "Service",
+  "description": "GoPay Service is a leading platform providing specialized technological solutions for electronic payment and collection services. It is offered by Inclusive Financial Solutions (IFS) and is officially licensed by the Saudi Central Bank (SAMA) as a payment intermediary through the SADAD system.",
+  "whatIsGoPay": {
+    "badge": "What is GoPay?",
+    "titlePart1": "About",
+    "titlePart2": "GoPay",
+    "leftText": "GoPay is a pioneering platform in delivering specialized technological solutions for electronic payment and collection services. It is provided by Inclusive Financial Solutions (IFS) and is officially licensed by the Saudi Central Bank (SAMA) as a payment intermediary through the SADAD system.",
+    "rightText": "The service enables businesses and entrepreneurs in the Kingdom—regardless of their size or sector—to access advanced and innovative tools that streamline financial processes such as invoicing and collections. This contributes to business growth, cost reduction, and enhanced operational efficiency through full digital transformation, in compliance with official regulatory requirements in the Kingdom."
+  },
+  "vision": {
+    "badge": "How We Think?",
+    "titlePart1": "GoPay's",
+    "titlePart2": "Vision",
+    "description": "We aim to revolutionize the way companies in Saudi Arabia manage payment and collection operations. We are committed to providing secure, user-friendly, and efficient digital solutions that automate financial processes, reduce operational costs, and enhance customer experience. Our goal is to be the trusted partner for businesses aspiring to succeed in the digital economy"
+  },
+  "whyChoose": {
+    "titlePart1": "Why Choose",
+    "titlePart2": "GoPay",
+    "integratedSolution": {
+      "title": "Integrated Solution",
+      "description": "A single platform to manage invoices, payment requests, and money transfers."
+    },
+    "innovativeTechnology": {
+      "title": "Innovative Technology",
+      "description": "Advanced solutions designed to improve efficiency and reduce costs."
+    },
+    "flexiblePlatform": {
+      "title": "Flexible Platform",
+      "description": "Customizable options to suit all types and sizes of businesses."
+    },
+    "effectiveTools": {
+      "title": "Effective Tools",
+      "description": "Streamlined financial operations, better decision-making, and improved customer communication."
+    },
+    "trustedLicensed": {
+      "title": "Trusted & Licensed",
+      "description": "Officially licensed by SAMA and an authorized intermediary through the SADAD system."
+    }
+  },
+  "aboutIFS": {
+    "titlePart1": "About",
+    "titlePart2": "Inclusive",
+    "titlePart3": "Financial Solutions",
+    "titlePart4": "(IFS)",
+    "description": "Inclusive Financial Solutions (IFS) is a leading Saudi fintech company established in 2017 and licensed by the Saudi Central Bank (SAMA) to provide advanced electronic payment solutions. IFS is committed to supporting Saudi Vision 2030 by promoting financial inclusion and enabling the transition toward a cashless economy. Through its innovative technologies such as GoPay, IFS empowers businesses of all sizes to optimize their financial operations, improve efficiency, and achieve sustainable growth.",
+    "websiteLink": "Inclusive Financial Solutions (IFS) Website",
+    "websiteUrl": "#"
+  },
+  "samaLicense": {
+    "imagePath": "/images/sama-license.jpg",
+    "imageAlt": "Saudi Central Bank License Document"
+  }
+}

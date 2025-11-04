@@ -41,7 +41,7 @@ export function Header() {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, y: { duration: 0.5 } }}
-        className="sticky top-6 mx-auto  z-50 w-full max-w-[1200px]"
+        className="fixed top-6 inset-x-0 mx-auto z-50 w-full max-w-[1200px]"
       >
         <nav
           className="backdrop-blur-xl h-[66.4px] bg-white/24 lg:w-[1200px] lg:rounded-xl px-6 py-3 flex items-center sm:justify-between gap-[10px]"
