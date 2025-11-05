@@ -133,6 +133,11 @@
         "title": "Global Coverage",
         "description": "Accept payments in multiple currencies from customers worldwide"
       }
+    },
+    "howGopayWorks": {
+      "title": "How",
+      "gopay": "GoPay",
+      "worksExplained": "Works – Explained"
     }
   },
   "cta": {
