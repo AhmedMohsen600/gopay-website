@@ -27,7 +27,7 @@ const typographyVariants = cva("", {
       p18: "text-[13px] md:text-lg font-normal leading-[1.4]",
 
       // P - 16px / 1.4
-      p16: "text-[12px] md:text-base font-normal leading-[1.4]",
+      p16: "xl:text-base md:text-sm text-xs font-normal text-text-3 leading-tight tracking-tight",
 
       // P - 14px / 1.4
       p14: "text-sm font-normal leading-[1.4]",
