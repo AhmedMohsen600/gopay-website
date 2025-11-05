@@ -141,6 +141,40 @@
     },
     "clients": {
       "title": "Our Clients"
+    },
+    "whyClients": {
+      "title": {
+        "part1": "Why Clients Trust",
+        "gopay": "GoPay",
+        "part2": "to Power Payments"
+      },
+      "description": "Discover how AI automation enhances efficiency, reduces costs, and drives business growth with smarter, faster processes.",
+      "features": {
+        "easyToUse": {
+          "title": "Easy to Use",
+          "description": "GoPay simplifies payments and invoicing with an intuitive interface, no technical skills required."
+        },
+        "allInOne": {
+          "title": "All-in-One Platform",
+          "description": "Manage invoices and transfers in one place with all the tools to run payments seamlessly."
+        },
+        "smartScalable": {
+          "title": "Smart, Scalable Technology",
+          "description": "GoPay automates workflows to boost efficiency and scale businesses of any size."
+        },
+        "flexible": {
+          "title": "Flexible for Any Business",
+          "description": "GoPay adapts to any business, customizable for your industry and scale."
+        },
+        "developers": {
+          "title": "Designed for Developers",
+          "description": "Developers can integrate and customize payments easily with GoPay's clear APIs and SDKs."
+        },
+        "licensed": {
+          "title": "Licensed & Secure",
+          "description": "Licensed by the Saudi Central Bank and SADAD, ensuring secure, compliant transactions."
+        }
+      }
     }
   },
   "cta": {
