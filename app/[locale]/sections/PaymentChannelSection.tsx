@@ -23,7 +23,7 @@ export function PaymentChannelSection() {
   };
 
   return (
-    <section className="relative p-[50px_16px_0px]">
+    <section className="relative overflow-hidden p-[50px_16px_0px]">
       <div className="container mx-auto px-4">
         <motion.div
           className="w-full flex flex-col  items-center justify-center"
