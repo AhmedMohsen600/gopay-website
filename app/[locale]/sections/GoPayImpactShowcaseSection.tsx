@@ -56,7 +56,7 @@ export function GoPayImpactShowcaseSection() {
       </div>
 
       {/* Impact Cards Grid */}
-      <div className="container mx-auto max-w-[1000px]">
+      <div className="container mx-auto px-6 md:px-0 max-w-[1000px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {impactCardsData.map((card, index) => (
             <ImpactCard
