@@ -43,7 +43,7 @@ export function PaymentChannelSection() {
 
           {/* Payment Channel Logos Marquee */}
           <div className="p-2.5">
-            <LogosMarquee logos={paymentChannelLogos} speed={50} />
+            <LogosMarquee logos={paymentChannelLogos} />
           </div>
           {/* Provided By Text */}
           <Typography
