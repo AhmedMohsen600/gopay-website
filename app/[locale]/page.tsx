@@ -6,6 +6,7 @@ import {
   PaymentChannelSection,
 } from "./sections";
 import { GopayProductSuiteSection } from "./sections/GopayProductSuiteSection";
+import { HowGopayWorksSection } from "./sections/HowGopayWorksSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <PaymentChannelSection />
       <GopayProductSuiteSection />
       <GoPayImpactShowcaseSection />
+      <HowGopayWorksSection />
       {/** OTHER SECTIONS HERE SHOSHO */}
     </>
   );
