@@ -35,10 +35,11 @@ export function CTASection() {
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut" }}
+            className="max-w-[570px] mx-auto"
           >
             <Typography
               variant="h2"
-              className="text-white text-[24px] sm:text-[36px]  xl:text-[50px] font-medium leading-[1.1em] "
+              className="text-white text-[24px] sm:text-[36px]  xl:text-[50px] font-medium leading-tight tracking-tighter "
             >
               {t("title")}
             </Typography>
