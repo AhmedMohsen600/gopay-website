@@ -152,7 +152,7 @@ export function HeroSection() {
             <Typography variant="h5" className="text-dark text-center mb-4">
               {t("trustedBy")}
             </Typography>
-            <LogosMarquee logos={clientLogos} speed={70} />
+            <LogosMarquee logos={clientLogos} />
           </motion.div>
         </div>
         <PaymentStatsSection />
