@@ -165,3 +165,35 @@ export const productSuiteData: ProductCardData[] = [
       "https://framerusercontent.com/images/pekNvaXoQZmZLXJYvEO1C7vjGU.png?width=548&height=836",
   },
 ];
+
+export interface ImpactCardData {
+  id: string;
+  iconType: "up" | "down";
+}
+
+export const impactCardsData: ImpactCardData[] = [
+  {
+    id: "paymentSuccessRate",
+    iconType: "up",
+  },
+  {
+    id: "dso",
+    iconType: "down",
+  },
+  {
+    id: "costPerCollection",
+    iconType: "down",
+  },
+  {
+    id: "financeTeamProductivity",
+    iconType: "up",
+  },
+  {
+    id: "reconciliationEffort",
+    iconType: "down",
+  },
+  {
+    id: "complianceOverhead",
+    iconType: "down",
+  },
+];
