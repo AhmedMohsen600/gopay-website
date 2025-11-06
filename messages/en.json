@@ -191,6 +191,22 @@
       "citiesCoveredValue": "5+",
       "endCustomers": "End Customers",
       "endCustomersValue": "351K+"
+    },
+    "gopaySolutions": {
+      "gopay": "GoPay",
+      "solutions": "Solutions",
+      "subtitle": "Discover how GoPay can transform your business",
+      "buttonText": "Know More About Our Solutions",
+      "items": {
+        "integratedDashboard": "Integrated Dashboard",
+        "multiplePaymentModes": "Multiple Payment Modes",
+        "certifiedEInvoicing": "Certified E-Invoicing",
+        "customSenderId": "Custom Sender ID (SMS/Email)",
+        "payoutDistribution": "Payout & Distribution",
+        "realTimeTracking": "Real-Time Tracking & Alerts",
+        "directSystemIntegration": "Direct System Integration",
+        "customInvoiceDesign": "Custom Invoice Design"
+      }
     }
   },
   "cta": {
