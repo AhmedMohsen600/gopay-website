@@ -21,7 +21,7 @@ const typographyVariants = cva("", {
       h5: "text-[16px] md:text-[24px] font-medium leading-[1.1]",
 
       // H6 - 20px / 1.1
-      h6: "text-[13px] md:text-[20px] font-medium leading-[1.1]",
+      h6: "xl:text-xl md:text-[15px] text-[13px] font-medium leading-none tracking-tight",
 
       // P - 18px / 1.4
       p18: "text-[13px] md:text-lg font-normal leading-[1.4]",
@@ -31,7 +31,7 @@ const typographyVariants = cva("", {
 
       // P - 14px / 1.4
       p14: "text-sm font-normal leading-[1.4]",
-
+      p13: "text-[13px] leading-tight tracking-tight",
       // P - 12px / 1.4
       p12: "text-xs font-normal leading-[1.4]",
     },
@@ -59,6 +59,7 @@ const variantElementMap: Record<string, ElementType> = {
   p18: "p",
   p16: "p",
   p14: "p",
+  p13: "p",
   p12: "p",
 };
 
