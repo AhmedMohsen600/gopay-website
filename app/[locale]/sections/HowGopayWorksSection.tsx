@@ -8,38 +8,39 @@ import { useRef, useEffect, useState } from "react";
 export function HowGopayWorksSection() {
   const t = useTranslations("home.howGopayWorks");
   const sectionRef = useRef<HTMLDivElement>(null);
-  const [maxScale, setMaxScale] = useState(1.6);
+  const [startWidth, setStartWidth] = useState(1209.6);
+  const [maxScale, setMaxScale] = useState(1.2);
 
-  // Calculate max scale based on viewport width
+  // Calculate responsive width and scale
   useEffect(() => {
-    const calculateMaxScale = () => {
+    const calculateScale = () => {
       const viewportWidth = window.innerWidth;
-      const startWidth = 1209.6;
 
-      const calculatedScale = viewportWidth / startWidth;
-      setMaxScale(Math.min(calculatedScale, 2));
+      // On mobile/tablet, start at 80% width, on desktop use 1209.6px
+      const initialWidth = viewportWidth < 1024 ? viewportWidth * 0.8 : 1209.6;
+      setStartWidth(initialWidth);
+
+      // Calculate scale to reach 100% viewport width
+      const calculatedScale = viewportWidth / initialWidth;
+      setMaxScale(calculatedScale);
     };
 
-    calculateMaxScale();
-    window.addEventListener("resize", calculateMaxScale);
-    return () => window.removeEventListener("resize", calculateMaxScale);
+    calculateScale();
+    window.addEventListener("resize", calculateScale);
+    return () => window.removeEventListener("resize", calculateScale);
   }, []);
 
   // Track scroll progress of the section
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start 0.5", "end 0.2"], // Start animation when section is halfway in viewport, end when almost out
+    offset: ["start end", "center center"], // Start when entering viewport, end when centered
   });
 
-  // Map scroll progress to scale - grows from 1 to maxScale (100% viewport width)
-  const scale = useTransform(
-    scrollYProgress,
-    [0, 1], // Smooth transition from start to end
-    [1, maxScale] // Scale from original size to viewport width
-  );
+  // As you scroll DOWN, video grows from small (1) to large (maxScale)
+  const scale = useTransform(scrollYProgress, [0, 1], [1, maxScale]);
 
   return (
-    <section ref={sectionRef} className="bg-white py-40 min-h-screen">
+    <section ref={sectionRef} className="bg-white py-14 md:py-40 min-h-screen">
       {/* Title Section */}
       <div className="container mx-auto px-4">
         <div className="text-center mb-28">
@@ -50,11 +51,11 @@ export function HowGopayWorksSection() {
         </div>
       </div>
 
-      {/* Video Section - scales from 1209.6px to full viewport width */}
+      {/* Video Section - scales from start width to full viewport width */}
       <div className="flex justify-center">
         <motion.div
-          style={{ scale }}
-          className="relative overflow-hidden w-[1209.6px]"
+          style={{ scale, width: startWidth }}
+          className="relative overflow-hidden"
         >
           <video
             className="w-full h-auto"

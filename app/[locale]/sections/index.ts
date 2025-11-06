@@ -4,3 +4,6 @@ export { PaymentStatsSection } from "./PaymentStatsSection";
 export { PaymentChannelSection } from "./PaymentChannelSection";
 export { GopayProductSuiteSection } from "./GopayProductSuiteSection";
 export { GoPayImpactShowcaseSection } from "./GoPayImpactShowcaseSection";
+export { OurClientsSection } from "./OurClientsSection";
+export { HowGopayWorksSection } from "./HowGopayWorksSection";
+export { WhyClientsSection } from "./WhyClientsSection";

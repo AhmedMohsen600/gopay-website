@@ -23,7 +23,7 @@ export function PaymentChannelSection() {
   };
 
   return (
-    <section className="relative p-[50px_16px_0px]">
+    <section className="relative overflow-hidden p-[50px_16px_0px]">
       <div className="container mx-auto px-4">
         <motion.div
           className="w-full flex flex-col  items-center justify-center"
@@ -43,7 +43,7 @@ export function PaymentChannelSection() {
 
           {/* Payment Channel Logos Marquee */}
           <div className="p-2.5">
-            <LogosMarquee logos={paymentChannelLogos} speed={50} />
+            <LogosMarquee logos={paymentChannelLogos} />
           </div>
           {/* Provided By Text */}
           <Typography
