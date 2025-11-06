@@ -175,6 +175,22 @@
           "description": "Licensed by the Saudi Central Bank and SADAD, ensuring secure, compliant transactions."
         }
       }
+    },
+    "gopayInNumbers": {
+      "gopay": "GoPay",
+      "inNumbers": "In Numbers",
+      "totalTransactions": "Total Transactions",
+      "totalTransactionsValue": "5B+",
+      "strategicPartners": "Strategic Partners",
+      "strategicPartnersValue": "15+",
+      "beneficiarySectors": "Beneficiary Sectors",
+      "beneficiarySectorsValue": "25+",
+      "issuers": "Issuers",
+      "issuersValue": "200+",
+      "citiesCovered": "Cities Covered",
+      "citiesCoveredValue": "5+",
+      "endCustomers": "End Customers",
+      "endCustomersValue": "351K+"
     }
   },
   "cta": {
