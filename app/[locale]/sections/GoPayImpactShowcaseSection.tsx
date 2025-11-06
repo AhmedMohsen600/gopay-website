@@ -17,7 +17,7 @@ export function GoPayImpactShowcaseSection() {
   return (
     <section className="relative bg-primary py-[120px]">
       {/* Header */}
-      <div className="container flex flex-col max-w-[800px] mx-auto items-center justify-center mb-12 sm:mb-14 md:mb-16">
+      <div className="container px-6 md:px-0 flex flex-col max-w-[800px] mx-auto items-center justify-center mb-8 md:mb-16">
         <motion.div
           variants={fadeInUpVariants}
           initial="hidden"
@@ -48,7 +48,7 @@ export function GoPayImpactShowcaseSection() {
         >
           <Typography
             variant="p18"
-            className="text-center max-w-[640px] text-[#c9c9c9]"
+            className="text-center max-w-auto md:max-w-[640px] text-[#c9c9c9]"
           >
             {t("description")}
           </Typography>
