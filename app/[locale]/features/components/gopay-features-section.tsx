@@ -1,5 +1,5 @@
 import { featuresCardData } from "../data";
-import FeatureCard from "./feature-card/feature-card";
+import FeatureCard from "./feature-card";
 export function GoPayFeaturesSection() {
   return (
     <section className="max-w-[1440px] mx-auto xl:px-10 xl:pt-16 xl:pb-[120px] md:px-16 md:py-20 py-14 px-6 ">
