@@ -18,6 +18,9 @@ interface PaymentCardProps {
   features: string[];
   imageUrl?: string;
   imageAlt?: string;
+  badge?: string;
+  title?: string;
+  description?: string;
 }
 export default function PaymentCard({
   isFullRow,
@@ -25,6 +28,9 @@ export default function PaymentCard({
   features,
   imageUrl,
   imageAlt,
+  badge,
+  title,
+  description,
 }: PaymentCardProps) {
   return (
     <motion.div
@@ -48,7 +54,7 @@ export default function PaymentCard({
           "inline-flex items-center justify-center w-fit px-3 h-8 rounded-sm bg-secondary text-white text-sm font-medium"
         )}
       >
-        test
+        {badge}
       </div>
       <div className="xl:gap-8 md:gap-6 gap-4 flex flex-col group-hover:gap-10 transition-all duration-200">
         {/* Description area */}
@@ -63,14 +69,9 @@ export default function PaymentCard({
               variant="h3"
               className="font-medium xl:text-[35px] md:text-[26px] text-lg leading-none tracking-tight"
             >
-              GoPay - Core Collections Platform
+              {title}
             </Typography>
-            <Typography variant={"p16"}>
-              GoPay is the flagship SADAD-integrated solution for issuing
-              invoices and collecting payments across all sectors. It empowers
-              SMEs, enterprises, and government entities to automate their
-              receivables and simplify reconciliation.
-            </Typography>
+            <Typography variant={"p16"}>{description}</Typography>
           </div>
           {/* Key features area */}
           <div className="w-full">
