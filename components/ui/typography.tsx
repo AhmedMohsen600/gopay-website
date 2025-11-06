@@ -9,25 +9,25 @@ const typographyVariants = cva("", {
       h1: "text-[62px] font-bold leading-[1.2]",
 
       // H2 - 50px / 1.1
-      h2: "text-[50px] font-bold leading-[1.1]",
+      h2: "text-[24px] md:text-[50px] font-bold leading-[1.1]",
 
       // H3 - 35px / 1.1
-      h3: "text-[35px] font-semibold leading-[1.1]",
+      h3: "text-[18px] md:text-[35px] font-semibold leading-[1.1]",
 
       // H4 - 26px / 1.1
       h4: "text-[26px] font-semibold leading-[1.1]",
 
       // H5 - 24px / 1.1
-      h5: "text-[24px] font-medium leading-[1.1]",
+      h5: "text-[16px] md:text-[24px] font-medium leading-[1.1]",
 
       // H6 - 20px / 1.1
       h6: "text-[20px] font-medium leading-[1.1]",
 
       // P - 18px / 1.4
-      p18: "text-lg font-normal leading-[1.4]",
+      p18: "text-[13px] md:text-lg font-normal leading-[1.4]",
 
       // P - 16px / 1.4
-      p16: "text-base font-normal leading-[1.4]",
+      p16: "text-[12px] md:text-base font-normal leading-[1.4]",
 
       // P - 14px / 1.4
       p14: "text-sm font-normal leading-[1.4]",
