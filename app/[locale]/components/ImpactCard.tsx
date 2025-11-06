@@ -40,7 +40,7 @@ export function ImpactCard({
         ease: "easeOut",
         delay,
       }}
-      className="bg-[#373c5b] rounded-3xl border border-[#60637c] min-h-[320px] flex flex-col justify-between p-7"
+      className="bg-[#373c5b] rounded-3xl border border-[#60637c] min-h-[210px] md:min-h-[320px] flex flex-col justify-between p-5 md:p-7"
     >
       <div>
         {/* Title */}
