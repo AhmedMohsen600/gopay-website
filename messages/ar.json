@@ -175,6 +175,22 @@
           "description": "مرخص من البنك المركزي السعودي وسداد، مما يضمن معاملات آمنة ومتوافقة."
         }
       }
+    },
+    "gopayInNumbers": {
+      "gopay": "جو باي",
+      "inNumbers": "بالأرقام",
+      "totalTransactions": "إجمالي المعاملات",
+      "totalTransactionsValue": "5B+",
+      "strategicPartners": "الشركاء الاستراتيجيون",
+      "strategicPartnersValue": "15+",
+      "beneficiarySectors": "القطاعات المستفيدة",
+      "beneficiarySectorsValue": "25+",
+      "issuers": "المُصدرون",
+      "issuersValue": "200+",
+      "citiesCovered": "المدن المشمولة",
+      "citiesCoveredValue": "5+",
+      "endCustomers": "العملاء النهائيون",
+      "endCustomersValue": "351K+"
     }
   },
   "cta": {

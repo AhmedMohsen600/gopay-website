@@ -5,6 +5,7 @@ import { TotalPaymentsIcon } from "./totalPaymentsIcons";
 import { TotalAccountsIcon } from "./totalAccounts";
 import { PaidRecurringIcon } from "./paidRecurringIcon";
 import { DailyTransferIcon } from "./dailyTransferIcon";
+import { SarIcon } from "./sarIcon";
 
 export {
   PaidIcon,
@@ -14,4 +15,5 @@ export {
   TotalAccountsIcon,
   PaidRecurringIcon,
   DailyTransferIcon,
+  SarIcon,
 };
