@@ -14,11 +14,55 @@ import {
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
 import { PentagonIcon } from "lucide-react";
+import {
+  solutionsCardData,
+  SolutionCardConfig,
+  SolutionImageConfig,
+} from "../data";
 
 const fadeInUpVariants = {
   hidden: { opacity: 0, y: 200 },
   visible: { opacity: 1, y: 0 },
 };
+
+// Icon map to convert icon names to actual components
+const iconMap: Record<string, React.ReactNode> = {
+  DatabaseIcon: <DatabaseIcon size={28} className="text-secondary" />,
+  CreditCardIcon: <CreditCardIcon size={28} className="text-secondary" />,
+  ChatDotsIcon: <ChatDotsIcon size={28} className="text-secondary" />,
+  BankIcon: <BankIcon size={28} className="text-secondary" />,
+  AlarmIcon: <AlarmIcon size={28} className="text-secondary" />,
+  ComputerTowerIcon: <ComputerTowerIcon size={28} className="text-secondary" />,
+  PentagonIcon: <PentagonIcon size={28} className="text-secondary" />,
+};
+
+// Helper function to render image based on config
+function renderImage(config: SolutionImageConfig) {
+  const imageClassName = config.objectFit
+    ? `object-${config.objectFit} ${config.objectPosition || ""}`
+    : "";
+
+  return (
+    <div className="relative ">
+      <AspectRatio
+        ratio={config.ratio}
+        className="rounded-t-2xl overflow-hidden"
+      >
+        <Image
+          src={config.imageUrl}
+          alt={config.imageAlt}
+          fill
+          className={imageClassName}
+        />
+      </AspectRatio>
+      {config.gradientOverlay && (
+        <div
+          className={`absolute ${config.gradientOverlay.bottom} left-0 right-0 ${config.gradientOverlay.height} z-10 flex items-center justify-center bg-[linear-gradient(#f8f9fc00_62.3979%,#f8f9fc_100%)]`}
+        ></div>
+      )}
+    </div>
+  );
+}
 
 export function GoPaySolutionsSection() {
   const t = useTranslations("features.solutions");
@@ -42,111 +86,26 @@ export function GoPaySolutionsSection() {
           transition={{ duration: 0.4, ease: "easeOut" }}
           className="grid md:grid-cols-9 gap-8 grid-cols-1 "
         >
-          {/* Row 1 */}
-          <SolutionsCard
-            icon={<DatabaseIcon size={28} className="text-secondary" />}
-            description={t("multiplePaymentModes.description")}
-            title={t("multiplePaymentModes.title")}
-            iconBreak={false}
-            className="md:col-span-9"
-            beforeTitle={
-              <div className="relative ">
-                <AspectRatio
-                  ratio={2.64706}
-                  className="rounded-t-2xl overflow-hidden"
-                >
-                  <Image
-                    src="https://framerusercontent.com/images/rKG4hmwFQbCDpPgynjihtxy2E.png?scale-down-to=2048&width=2880&height=1088"
-                    alt="GoPay Solutions"
-                    fill
-                  />
-                </AspectRatio>
-                <div className="absolute -bottom-0.5 left-0 right-0 h-[363px] z-10 flex items-center justify-center bg-[linear-gradient(#f8f9fc00_62.3979%,#f8f9fc_100%)]"></div>
-              </div>
-            }
-          />
-          {/* Row 2 */}
-          <SolutionsCard
-            icon={<CreditCardIcon size={28} className="text-secondary" />}
-            description={t("integratedDashboard.description")}
-            title={t("integratedDashboard.title")}
-            iconBreak
-            className="md:col-span-4 xl:h-[400px] md:h-[378px]"
-            afterDescription={
-              <div className="relative ">
-                <AspectRatio
-                  ratio={2.47664}
-                  className="rounded-t-2xl overflow-hidden"
-                >
-                  <Image
-                    src="https://framerusercontent.com/images/DtDFaDVKYf5tTSECoCxchhNvRI.png?scale-down-to=512&width=1060&height=428"
-                    alt="GoPay Solutions"
-                    fill
-                  />
-                </AspectRatio>
-              </div>
-            }
-          />
-          <SolutionsCard
-            icon={<CreditCardIcon size={28} className="text-secondary" />}
-            description={t("certifiedEInvoicing.description")}
-            title={t("certifiedEInvoicing.title")}
-            iconBreak
-            className="md:col-span-5 xl:h-[400px] md:h-[378px]"
-            afterDescription={
-              <div className="relative ">
-                <AspectRatio
-                  ratio={2.5}
-                  className="rounded-t-2xl overflow-hidden"
-                >
-                  <Image
-                    src="https://framerusercontent.com/images/Ny9D1jpQ9mlArXkxEhzMH8hLg.png?scale-down-to=512&width=1190&height=556"
-                    alt="GoPay Solutions"
-                    fill
-                    className="object-contain object-center"
-                  />
-                </AspectRatio>
-                <div className="absolute -bottom-4 left-0 right-0 h-[203px] z-10 flex items-center justify-center bg-[linear-gradient(#f8f9fc00_62.3979%,#f8f9fc_100%)]"></div>
-              </div>
-            }
-          />
-          {/* Row 3 */}
-          <SolutionsCard
-            icon={<ChatDotsIcon size={28} className="text-secondary" />}
-            description={t("customSenderId.description")}
-            title={t("customSenderId.title")}
-            iconBreak
-            className="md:col-span-5 xl:h-[223px] md:h-[174px]"
-          />
-          <SolutionsCard
-            icon={<BankIcon size={28} className="text-secondary" />}
-            description={t("payoutDistribution.description")}
-            title={t("payoutDistribution.title")}
-            iconBreak
-            className="md:col-span-4 xl:h-[223px] md:h-[174px]"
-          />
-          {/* Row4 */}
-          <SolutionsCard
-            icon={<AlarmIcon size={28} className="text-secondary" />}
-            description={t("realTimeTracking.description")}
-            title={t("realTimeTracking.title")}
-            iconBreak
-            className="md:col-span-3 md:h-[243px]"
-          />
-          <SolutionsCard
-            icon={<ComputerTowerIcon size={28} className="text-secondary" />}
-            description={t("directSystemIntegration.description")}
-            title={t("directSystemIntegration.title")}
-            iconBreak
-            className="md:col-span-3 md:h-[243px]"
-          />
-          <SolutionsCard
-            icon={<PentagonIcon size={28} className="text-secondary" />}
-            description={t("customInvoiceDesign.description")}
-            title={t("customInvoiceDesign.title")}
-            iconBreak
-            className="md:col-span-3 md:h-[243px]"
-          />
+          {solutionsCardData.map((solution: SolutionCardConfig, index) => (
+            <SolutionsCard
+              key={index}
+              icon={iconMap[solution.iconName]}
+              description={t(solution.descriptionKey)}
+              title={t(solution.titleKey)}
+              iconBreak={solution.iconBreak}
+              className={solution.className}
+              beforeTitle={
+                solution.beforeTitleImage
+                  ? renderImage(solution.beforeTitleImage)
+                  : undefined
+              }
+              afterDescription={
+                solution.afterDescriptionImage
+                  ? renderImage(solution.afterDescriptionImage)
+                  : undefined
+              }
+            />
+          ))}
         </motion.div>
       </div>
     </section>
