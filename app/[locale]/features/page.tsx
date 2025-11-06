@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Typography } from "@/components/ui/typography";
 import { useTranslations } from "next-intl";
 import { GoPayFeaturesSection } from "./components/gopay-features-section";
+import { GoPaySolutionsSection } from "./components/gopay-solutions-section";
 
 export default function FeaturesPage() {
   const t = useTranslations("features");
@@ -26,6 +27,7 @@ export default function FeaturesPage() {
         description={t("description")}
       />
       <GoPayFeaturesSection />
+      <GoPaySolutionsSection />
     </div>
   );
 }
