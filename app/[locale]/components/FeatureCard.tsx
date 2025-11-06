@@ -14,7 +14,7 @@ export function FeatureCard({
   description,
 }: FeatureCardProps) {
   return (
-    <div className="relative h-[217.34px] bg-[#fcfbfe] rounded-lg p-5 border border-[#f9f8fd] group overflow-hidden">
+    <div className="relative h-auto md:h-[217.34px] bg-[#fcfbfe] rounded-lg p-3 md:p-5 border border-[#f9f8fd] group">
       {/* Hover gradient background effect */}
       <div
         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-lg"
@@ -27,18 +27,24 @@ export function FeatureCard({
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-between h-full">
         {/* Icon */}
-        <div className="mb-4">
-          <Icon className="w-7 h-7 text-secondary" />
+        <div className="mb-2.5 md:mb-4">
+          <Icon className="md:w-7 md:h-7 w-4 h-4 text-secondary" />
         </div>
 
         {/* Title */}
         <div>
-          <Typography variant="h5" className="text-text-5 mb-2.5 font-semibold">
+          <Typography
+            variant="h5"
+            className="text-text-5 mb-1.5 md:mb-2.5 font-semibold"
+          >
             {title}
           </Typography>
 
           {/* Description */}
-          <Typography variant="p16" className="text-text-3 tracking-tight">
+          <Typography
+            variant="p16"
+            className="text-text-3 tracking-tighter md:tracking-tight"
+          >
             {description}
           </Typography>
         </div>
