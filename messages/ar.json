@@ -191,6 +191,22 @@
       "citiesCoveredValue": "5+",
       "endCustomers": "العملاء النهائيون",
       "endCustomersValue": "351K+"
+    },
+    "gopaySolutions": {
+      "gopay": "جو باي",
+      "solutions": "الحلول",
+      "subtitle": "اكتشف كيف يمكن لجو باي تحويل أعمالك",
+      "buttonText": "اعرف المزيد عن حلولنا",
+      "items": {
+        "integratedDashboard": "لوحة تحكم متكاملة",
+        "multiplePaymentModes": "طرق دفع متعددة",
+        "certifiedEInvoicing": "فوترة إلكترونية معتمدة",
+        "customSenderId": "معرف مرسل مخصص (SMS/Email)",
+        "payoutDistribution": "الدفع والتوزيع",
+        "realTimeTracking": "تتبع وتنبيهات فورية",
+        "directSystemIntegration": "تكامل مباشر للنظام",
+        "customInvoiceDesign": "تصميم فاتورة مخصص"
+      }
     }
   },
   "cta": {
