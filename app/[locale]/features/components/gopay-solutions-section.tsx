@@ -1,5 +1,6 @@
 "use client";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 import { Typography } from "@/components/ui/typography";
 import { SolutionsCard } from "./solutions-card";
 import {
@@ -13,6 +14,11 @@ import {
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
 import { PentagonIcon } from "lucide-react";
+
+const fadeInUpVariants = {
+  hidden: { opacity: 0, y: 200 },
+  visible: { opacity: 1, y: 0 },
+};
 
 export function GoPaySolutionsSection() {
   const t = useTranslations("features.solutions");
@@ -28,7 +34,14 @@ export function GoPaySolutionsSection() {
             {t("description")}
           </Typography>
         </div>
-        <div className="grid md:grid-cols-9 gap-8 grid-cols-1 ">
+        <motion.div
+          variants={fadeInUpVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="grid md:grid-cols-9 gap-8 grid-cols-1 "
+        >
           {/* Row 1 */}
           <SolutionsCard
             icon={<DatabaseIcon size={28} className="text-secondary" />}
@@ -134,7 +147,7 @@ export function GoPaySolutionsSection() {
             iconBreak
             className="md:col-span-3 md:h-[243px]"
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
