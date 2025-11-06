@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { Typography } from "@/components/ui/typography";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -32,6 +33,7 @@ export default function PaymentCard({
   title,
   description,
 }: PaymentCardProps) {
+  const t = useTranslations("features");
   return (
     <motion.div
       variants={fadeInUpVariants}
@@ -77,7 +79,7 @@ export default function PaymentCard({
           {/* Key features area */}
           <div className="w-full">
             <Typography variant="h6" className=" mb-2 text-[#1a1d21]">
-              Key Features:
+              {t("keyFeatures")}
             </Typography>
             <div className="">
               {features.map((feature, index) => (
