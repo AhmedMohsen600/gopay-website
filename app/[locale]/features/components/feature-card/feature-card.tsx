@@ -56,12 +56,13 @@ export default function PaymentCard({
       >
         {badge}
       </div>
-      <div className="xl:gap-8 md:gap-6 gap-4 flex flex-col group-hover:gap-10 transition-all duration-200">
+      <div className="xl:gap-8 md:gap-6 gap-4 flex flex-col group-hover:gap-10 transition-all duration-200  h-full justify-between">
         {/* Description area */}
         <div
           className={cn(
-            "flex flex-col gap-4",
-            isFullRow && "xl:flex-row xl:justify-between xl:gap-[88px]"
+            "flex flex-col gap-4 ",
+            isFullRow && "xl:flex-row xl:justify-between xl:gap-[88px]",
+            !isFullRow && ""
           )}
         >
           <div className="w-full space-y-2">
