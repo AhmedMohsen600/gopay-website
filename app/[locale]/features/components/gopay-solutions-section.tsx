@@ -1,3 +1,5 @@
+"use client";
+import { useTranslations } from "next-intl";
 import { Typography } from "@/components/ui/typography";
 import { SolutionsCard } from "./solutions-card";
 import {
@@ -13,24 +15,25 @@ import Image from "next/image";
 import { PentagonIcon } from "lucide-react";
 
 export function GoPaySolutionsSection() {
+  const t = useTranslations("features.solutions");
   return (
     <section className="xl:px-10 xl:py-[120px] md:px-16 md:py-20 px-6 py-14 ">
       <div className="max-w-[1000px] mx-auto">
         <div className="mb-14">
           <Typography variant="h2" className="text-center text-text-5 mb-3">
-            <span className="text-[#F2994A]">GoPay</span>
-            <span> Solutions</span>
+            <span className="text-[#F2994A]">{t("titlePart1")}</span>
+            <span> {t("titlePart2")}</span>
           </Typography>
           <Typography variant="p18" className="text-center  ">
-            Discover how GoPay can transform your business
+            {t("description")}
           </Typography>
         </div>
         <div className="grid md:grid-cols-9 gap-8 grid-cols-1 ">
           {/* Row 1 */}
           <SolutionsCard
             icon={<DatabaseIcon size={28} className="text-secondary" />}
-            description="Enables issuing various types of invoices (one-time or recurring) with payment methods tailored to the business type and services offered."
-            title="Multiple Payment Modes"
+            description={t("multiplePaymentModes.description")}
+            title={t("multiplePaymentModes.title")}
             iconBreak={false}
             className="md:col-span-9"
             beforeTitle={
@@ -52,8 +55,8 @@ export function GoPaySolutionsSection() {
           {/* Row 2 */}
           <SolutionsCard
             icon={<CreditCardIcon size={28} className="text-secondary" />}
-            description="The platform offers a fully integrated control panel with detailed insights across all transactions to help manage operations and make informed decisions efficiently."
-            title="Integrated Dashboard"
+            description={t("integratedDashboard.description")}
+            title={t("integratedDashboard.title")}
             iconBreak
             className="md:col-span-4 xl:h-[400px] md:h-[378px]"
             afterDescription={
@@ -73,8 +76,8 @@ export function GoPaySolutionsSection() {
           />
           <SolutionsCard
             icon={<CreditCardIcon size={28} className="text-secondary" />}
-            description="Allows businesses to create structured, compliant electronic invoices in line with ZATCA regulations, suitable for multiple use cases and sectors."
-            title="Certified E-Invoicing"
+            description={t("certifiedEInvoicing.description")}
+            title={t("certifiedEInvoicing.title")}
             iconBreak
             className="md:col-span-5 xl:h-[400px] md:h-[378px]"
             afterDescription={
@@ -97,38 +100,37 @@ export function GoPaySolutionsSection() {
           {/* Row 3 */}
           <SolutionsCard
             icon={<ChatDotsIcon size={28} className="text-secondary" />}
-            description="Allows customizing the sender name on notifications, matching the brand identity of the business."
-            title="Custom Sender ID (SMS/Email)"
+            description={t("customSenderId.description")}
+            title={t("customSenderId.title")}
             iconBreak
             className="md:col-span-5 xl:h-[223px] md:h-[174px]"
           />
           <SolutionsCard
             icon={<BankIcon size={28} className="text-secondary" />}
-            description="Flexible options for managing collected funds, whether to distribute, retain, or transfer to bank accounts."
-            title="Payout & Distribution"
+            description={t("payoutDistribution.description")}
+            title={t("payoutDistribution.title")}
             iconBreak
             className="md:col-span-4 xl:h-[223px] md:h-[174px]"
           />
           {/* Row4 */}
           <SolutionsCard
             icon={<AlarmIcon size={28} className="text-secondary" />}
-            description="The system tracks all issued invoices in real-time, from creation to payment collection, and supports automated notifications and reminders.
-"
-            title="Real-Time Tracking & Alerts"
+            description={t("realTimeTracking.description")}
+            title={t("realTimeTracking.title")}
             iconBreak
             className="md:col-span-3 md:h-[243px]"
           />
           <SolutionsCard
             icon={<ComputerTowerIcon size={28} className="text-secondary" />}
-            description="Offers technical API integration between GoPay and third-party systems to streamline invoicing and payment processes."
-            title="Direct System Integration"
+            description={t("directSystemIntegration.description")}
+            title={t("directSystemIntegration.title")}
             iconBreak
             className="md:col-span-3 md:h-[243px]"
           />
           <SolutionsCard
             icon={<PentagonIcon size={28} className="text-secondary" />}
-            description="Businesses can customize invoice layouts and fields based on industry needs, service types, and preferred formats."
-            title="Custom Invoice Design"
+            description={t("customInvoiceDesign.description")}
+            title={t("customInvoiceDesign.title")}
             iconBreak
             className="md:col-span-3 md:h-[243px]"
           />

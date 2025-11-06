@@ -1,26 +1,22 @@
+"use client";
+import { useTranslations } from "next-intl";
 import { featuresCardData } from "../data";
 import FeatureCard from "./feature-card";
 export function GoPayFeaturesSection() {
+  const t = useTranslations("features");
   return (
     <section className="max-w-[1440px] mx-auto xl:px-10 xl:pt-16 xl:pb-[120px] md:px-16 md:py-20 py-14 px-6 ">
       <div className="grid md:grid-cols-2 grid-cols-1 max-w-[1000px] mx-auto gap-6">
-        {featuresCardData.map((feature: (typeof featuresCardData)[0]) => (
+        {featuresCardData.map((feature, index) => (
           <FeatureCard
-            key={feature.title}
-            imageVariant={
-              feature.imageVariant as
-                | "dark-bg"
-                | "light-1"
-                | "light-2"
-                | "light-3"
-                | "light-4"
-            }
-            features={feature.features}
+            key={index}
+            imageVariant={feature.imageVariant}
+            features={feature.featuresKeys.map((key) => t(key))}
             imageUrl={feature.imageUrl}
-            imageAlt={feature.imageAlt}
-            badge={feature.badge}
-            title={feature.title}
-            description={feature.description}
+            imageAlt={t(feature.imageAltKey)}
+            badge={t(feature.badgeKey)}
+            title={t(feature.titleKey)}
+            description={t(feature.descriptionKey)}
             isFullRow={feature.fullRow}
           />
         ))}
