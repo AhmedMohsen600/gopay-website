@@ -21,7 +21,7 @@ const typographyVariants = cva("", {
       h5: "text-[16px] md:text-[24px] font-medium leading-[1.1]",
 
       // H6 - 20px / 1.1
-      h6: "text-[20px] font-medium leading-[1.1]",
+      h6: "text-[13px] md:text-[20px] font-medium leading-[1.1]",
 
       // P - 18px / 1.4
       p18: "text-[13px] md:text-lg font-normal leading-[1.4]",

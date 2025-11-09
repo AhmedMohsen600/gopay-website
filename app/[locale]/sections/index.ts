@@ -8,3 +8,4 @@ export { GopayInNumbersSection } from "./GopayInNumbersSection";
 export { OurClientsSection } from "./OurClientsSection";
 export { HowGopayWorksSection } from "./HowGopayWorksSection";
 export { WhyClientsSection } from "./WhyClientsSection";
+export { GopaySolutionsSection } from "./GopaySolutionsSection";

@@ -20,7 +20,7 @@ interface LogosMarqueeProps {
 
 export function LogosMarquee({
   logos,
-  speed = 200,
+  speed = 100,
   className,
 }: LogosMarqueeProps) {
   const locale = useLocale();
