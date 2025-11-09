@@ -38,7 +38,7 @@ export function NewsCard({
         />
       </div>
 
-      <div className="flex flex-col gap-6 min-h-[240px] p-3 md:p-5">
+      <div className="flex flex-col gap-6 min-h-[141.4px] md:min-h-[240px] p-3 md:p-5">
         <div className="flex-1 ">
           <Typography className="mb-2 tracking-tight" variant="h5">
             {title}
