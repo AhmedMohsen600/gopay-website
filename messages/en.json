@@ -23,7 +23,7 @@
   },
   "home": {
     "title": "Everything you need to",
-    "titleHighlight": "bill, collect, grow.",
+    "titleHighlight": "bill, collect & grow.",
     "subtitle": "Payments, invoicing, and payouts made simple, secure, and fast.",
     "description": "",
     "trustedBy": "Trusted by leading businesses across the region",
@@ -206,6 +206,27 @@
         "realTimeTracking": "Real-Time Tracking & Alerts",
         "directSystemIntegration": "Direct System Integration",
         "customInvoiceDesign": "Custom Invoice Design"
+      }
+    },
+    "news": {
+      "title": {
+        "highlight": "GoPay",
+        "rest": "News"
+      },
+      "subtitle": "Latest news from our community",
+      "items": {
+        "schoolExpo": {
+          "title": "Media Coverage of GoPay Booth at #School_Expo",
+          "description": "Media coverage of the GoPay booth at #School_Expo, held for four days at Riyadh Front for Conferences and Exhibitions in August.",
+          "date": "August 24, 2025",
+          "imageAlt": "People taking notes during a meeting at a wooden table"
+        },
+        "seamlessExhibition": {
+          "title": "GoPay Participation in Seamless Exhibition",
+          "description": "Media coverage of the GoPay booth at #School_Expo, held for four days at Riyadh Front for Conferences and Exhibitions in August.",
+          "date": "January 9, 2025",
+          "imageAlt": "Audience attending the Seamless Exhibition conference"
+        }
       }
     }
   },
