@@ -208,6 +208,28 @@
         "customInvoiceDesign": "Custom Invoice Design"
       }
     },
+    "developers": {
+      "title": {
+        "highlight": "GoPay",
+        "rest": "for Developers"
+      },
+      "subtitle": "Welcome to the GoPay Developer Portal, your gateway to seamless integration of GoPay's billing and payment solutions with your applications and business systems.",
+      "card": {
+        "title": "API Documentation",
+        "description": "Start integrating with our RESTful APIs using secure authentication protocols and comprehensive documentation.",
+        "imageAlt": "GoPay API documentation code preview"
+      },
+      "tag": "GoPay Development",
+      "heading": "Start Integrating",
+      "description": "Build seamless payment and billing experiences with GoPay's developer-friendly APIs. Automate invoicing, integrate with SADAD, and trigger real-time SMS/email alerts. Use our sandbox to test, explore Postman collections, and connect via REST APIs.",
+      "features": [
+        "Fast setup",
+        "ZATCA-compliant invoicing",
+        "Real-time notifications",
+        "Secure SADAD payments"
+      ],
+      "buttonText": "Explore API Docs"
+    },
     "news": {
       "title": {
         "highlight": "GoPay",
