@@ -6,3 +6,4 @@ export { ProductCard } from "./ProductCard";
 export { ImpactCard } from "./ImpactCard";
 export { FeatureCard } from "./FeatureCard";
 export { SolutionCard } from "./SolutionCard";
+export { NewsCard } from "./NewsCard";
