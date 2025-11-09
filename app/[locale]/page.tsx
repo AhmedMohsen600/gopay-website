@@ -10,6 +10,7 @@ import {
   GopayInNumbersSection,
   GopaySolutionsSection,
 } from "./sections";
+import { GopayForDevelopersSection } from "./sections/GopayForDevelopersSection";
 import { GopayNewsSection } from "./sections/GopayNewsSection";
 import { GopayProductSuiteSection } from "./sections/GopayProductSuiteSection";
 
@@ -26,6 +27,7 @@ export default function Home() {
       <GopayInNumbersSection />
       <GopaySolutionsSection />
       <GopayNewsSection />
+      <GopayForDevelopersSection />
       {/** OTHER SECTIONS HERE SHOSHO */}
     </>
   );
