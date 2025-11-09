@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Typography } from "@/components/ui/typography";
 import { NewsCard } from "../components";
@@ -28,6 +29,32 @@ export function GopayNewsSection() {
     },
   ];
 
+  const gridVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.12,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 110, scale: 0.75 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        type: "spring" as const,
+        stiffness: 140,
+        damping: 18,
+        mass: 0.6,
+      },
+    },
+  };
+
   return (
     <section className="md:py-[120px] py-14 bg-white px-6 md:px-10">
       <div className="container mx-auto">
@@ -39,18 +66,25 @@ export function GopayNewsSection() {
           <Typography variant="p18">{t("subtitle")}</Typography>
         </div>
 
-        <div className="grid gap-6 mx-auto max-w-[1000px] md:grid-cols-2">
+        <motion.div
+          className="grid gap-6 mx-auto max-w-[1000px] md:grid-cols-2"
+          variants={gridVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-120px", amount: 0.25 }}
+        >
           {newsItems.map((item) => (
-            <NewsCard
-              key={item.id}
-              imageSrc={item.imageSrc}
-              imageAlt={item.imageAlt}
-              title={item.title}
-              description={item.description}
-              date={item.date}
-            />
+            <motion.div key={item.id} variants={cardVariants}>
+              <NewsCard
+                imageSrc={item.imageSrc}
+                imageAlt={item.imageAlt}
+                title={item.title}
+                description={item.description}
+                date={item.date}
+              />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
