@@ -192,9 +192,35 @@ Customer: The end-user who receives the (service or product) from the biller and
     },
     {
       question:
-        "Can GoPay be directly integrated with the compan's internal system?",
+        "Can GoPay be directly integrated with the company's internal system?",
       answer:
         "Yes, GoPay allows electronic integration (APIs) between the GoPay system and your company's system.",
+    },
+    {
+      question: "What languages does the GoPay service support?",
+      answer: "The GoPay system supports both Arabic and English.",
+    },
+    {
+      question: "Does GoPay operate throughout the week?",
+      answer:
+        "Yes, GoPay operates throughout the week. However, settlement and transfer of collected amounts are processed during official working days and hours (Sunday to Thursday).",
+    },
+    {
+      question:
+        "Is a commercial registration or freelance license required to obtain the service?",
+      answer:
+        "Yes, to open a payments account and register for GoPay, you need to provide your business identification documents (Commercial Registration, License, Ministerial Resolution, Freelance License, etc.).",
+    },
+    {
+      question:
+        "Will the customer be notified of the invoice or financial claim via SMS?",
+      answer:
+        "Yes, customers are notified of invoices and financial claims through the SMS notification service.",
+    },
+    {
+      question: "Is there a testing environment for trying GoPay services?",
+      answer:
+        "Yes, GoPay provides businesses that wish to open an account with a testing environment for electronic integration (APIs). This allows them to perform integration, test transactions, and ensure that all selected features are activated.",
     },
   ];
 
