@@ -28,12 +28,12 @@ export function Footer() {
         {
           href: "https://app.gopay.sa/registration.html",
           labelKey: "aboutGoPay.signUp",
-          isInternal: false,
+          isInternal: true,
         },
         {
           href: "https://app.gopay.sa/wbiller/#/login",
           labelKey: "aboutGoPay.signIn",
-          isInternal: false,
+          isInternal: true,
         },
       ],
     },

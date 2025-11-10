@@ -37,6 +37,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
   // Add namespaces here as you split them from the flat file
   const namespaceFiles = [
     "whoWeAre",
+    "features",
     // Add more namespaces here as you split them:
     // "common", "header", "home", "cta", "footer"
   ];

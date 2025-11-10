@@ -1,0 +1,107 @@
+{
+  "badge": "Our Features",
+  "titlePart1": "GoPay",
+  "titlePart2": "Product Suite",
+  "description": "GoPay is a comprehensive B2B billing and collection ecosystem designed to streamline payment processes, drive cash flow visibility, and ensure regulatory compliance in Saudi Arabia. Below are the key products and their business value:",
+  "keyFeatures": "Key Features:",
+  "products": {
+    "gopay": {
+      "title": "GoPay - Core Collections Platform",
+      "description": "GoPay is the flagship SADAD-integrated solution for issuing invoices and collecting payments across all sectors. It empowers SMEs, enterprises, and government entities to automate their receivables and simplify reconciliation.",
+      "features": [
+        "Single integration to SADAD (national bill payment rail)",
+        "Automated payment references and real-time reconciliation",
+        "ERP & API-ready for full automation",
+        "SMS/email reminders to reduce overdue invoices",
+        "Full ZATCA compliance built-in"
+      ],
+      "imageAlt": "GoPay - Core Collections Platform",
+      "badge": "GoPay"
+    },
+    "golnvoice": {
+      "title": "Golnvoice - ZATCA-Compliant E-Invoicing",
+      "description": "Golnvoice enables organizations to issue, archive, and report VAT-compliant invoices in line with ZATCA Phase 1 and 2. It serves as the digital invoice engine within GoPay's ecosystem.",
+      "features": [
+        "QR-enabled VAT invoices (B2B & B2C)",
+        "Compliant e-archiving for audits",
+        "Seamless ERP & GoPay integration",
+        "Supports independent professionals and enterprises alike"
+      ],
+      "imageAlt": "Golnvoice - ZATCA-Compliant E-Invoicing",
+      "badge": "Golnvoice"
+    },
+    "gosplit": {
+      "title": "GoSplit - Multi-Payout Mechanism",
+      "description": "For marketplaces, gig platforms, or commission-based models, GoSplit distributes funds to multiple beneficiaries in real-time with full traceability and rule-based logic.",
+      "features": [
+        "Automated multi-party payout workflows",
+        "Beneficiary notifications & receipts",
+        "Audit-ready reporting"
+      ],
+      "imageAlt": "GoSplit - Multi-Payout Mechanism",
+      "badge": "GoSplit"
+    },
+    "goonline": {
+      "title": "GoOnline - E-commerce Gateway (via Partnerships)",
+      "description": "GoOnline allows merchants to accept digital payments online using a secure and scalable gateway. Integrated via our payment partners, it supports subscription models and checkout flows.",
+      "features": [
+        "QR-enabled VAT invoices (B2B & B2C)",
+        "Compliant e-archiving for audits",
+        "Seamless ERP & GoPay integration",
+        "Supports independent professionals and enterprises alike"
+      ],
+      "imageAlt": "GoOnline - E-commerce Gateway",
+      "badge": "GoOnline"
+    },
+    "gopayPlus": {
+      "title": "GoPay+ - Enterprise Financial Orchestration",
+      "description": "GoPay+ is a corporate-grade automation layer that digitizes and unifies receivables, payments, and reconciliation into a single regulated workflow. Ideal for businesses managing large-scale B2B billing, milestone payments, and trade finance.",
+      "features": [
+        "Context-aware invoicing: Handles milestones, penalties, partials",
+        "Real-time SADAD references & ERP sync",
+        "Rule-based reconciliation (auto-knockoff, exceptions)",
+        "Consolidated dashboard for receivables & cash flow",
+        "Secure, API-driven integration with accounting and banking systems"
+      ],
+      "imageAlt": "GoPay+ - Enterprise Financial Orchestration",
+      "badge": "GoPay+"
+    }
+  },
+  "solutions": {
+    "titlePart1": "GoPay",
+    "titlePart2": "Solutions",
+    "description": "Discover how GoPay can transform your business",
+    "multiplePaymentModes": {
+      "title": "Multiple Payment Modes",
+      "description": "Enables issuing various types of invoices (one-time or recurring) with payment methods tailored to the business type and services offered."
+    },
+    "integratedDashboard": {
+      "title": "Integrated Dashboard",
+      "description": "The platform offers a fully integrated control panel with detailed insights across all transactions to help manage operations and make informed decisions efficiently."
+    },
+    "certifiedEInvoicing": {
+      "title": "Certified E-Invoicing",
+      "description": "Allows businesses to create structured, compliant electronic invoices in line with ZATCA regulations, suitable for multiple use cases and sectors."
+    },
+    "customSenderId": {
+      "title": "Custom Sender ID (SMS/Email)",
+      "description": "Allows customizing the sender name on notifications, matching the brand identity of the business."
+    },
+    "payoutDistribution": {
+      "title": "Payout & Distribution",
+      "description": "Flexible options for managing collected funds, whether to distribute, retain, or transfer to bank accounts."
+    },
+    "realTimeTracking": {
+      "title": "Real-Time Tracking & Alerts",
+      "description": "The system tracks all issued invoices in real-time, from creation to payment collection, and supports automated notifications and reminders."
+    },
+    "directSystemIntegration": {
+      "title": "Direct System Integration",
+      "description": "Offers technical API integration between GoPay and third-party systems to streamline invoicing and payment processes."
+    },
+    "customInvoiceDesign": {
+      "title": "Custom Invoice Design",
+      "description": "Businesses can customize invoice layouts and fields based on industry needs, service types, and preferred formats."
+    }
+  }
+}
