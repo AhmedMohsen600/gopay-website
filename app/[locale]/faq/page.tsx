@@ -222,6 +222,31 @@ Customer: The end-user who receives the (service or product) from the biller and
       answer:
         "Yes, GoPay provides businesses that wish to open an account with a testing environment for electronic integration (APIs). This allows them to perform integration, test transactions, and ensure that all selected features are activated.",
     },
+    {
+      question: "Does GoPay offer the ability to issue recurring invoices?",
+      answer:
+        "Yes, GoPay enables businesses to issue recurring invoices to their customers in a unique and innovative way, helping them manage billing and collections efficiently.",
+    },
+    {
+      question:
+        "What is the difference between issuing a one-time invoice and a recurring invoice?",
+      answer: `One-time invoice:
+These are invoices or payment claims issued with a variable SADAD number that can be used only once. The SADAD number expires once the customer settles the invoice.
+(Examples: invoices for “purchases of goods” such as cars, construction materials, furniture, etc.)
+
+Recurring invoice:
+These are invoices or payment claims issued with a fixed SADAD number assigned by the biller to the customer. This allows the customer to register the SADAD number in their bank account to regularly view and settle outstanding amounts.
+(Examples: invoices for “services and subscriptions” such as electricity, water, telecommunications, etc.)`,
+    },
+    {
+      question:
+        "If a customer pays only part of the invoice, will the remaining amount be added to the next invoice?",
+      answer: `For one-time invoices:
+The unpaid amount will remain under the same SADAD number until the invoice or payment claim is fully settled.
+
+For recurring invoices:
+The outstanding amount will accumulate under the customer’s SADAD number, either as a debit or credit balance, depending on the due invoices and amounts already paid.`,
+    },
   ];
 
   return (
