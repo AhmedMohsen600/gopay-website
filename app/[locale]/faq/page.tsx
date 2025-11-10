@@ -373,6 +373,67 @@ Connect to the live production environment to receive payments from the SADAD sy
         </>
       ),
     },
+    {
+      question: "How to file a complaint?",
+      answer: (
+        <>
+          Customers can submit their complaints through one of the following
+          channels:
+          <br />
+          <br />
+          - Toll-free phone number
+          <br />- Website
+          <br />- Email
+          <br />- Mobile applications
+          <br />
+          <br />
+          Steps for filing a complaint:
+          <br />
+          <br />
+          Via Toll-Free Phone:
+          <br />- The customer informs the agent of their wish to file a
+          complaint.
+          <br />- The customer provides the required identification data for
+          verification.
+          <br />- The customer explains their complaint in detail.
+          <br />- If supporting documents are available, the agent provides the
+          dedicated email for complaints so the documents can be sent.
+          <br />- The agent confirms the accuracy of the registered
+          communication channels with the customer. If the customer wishes to
+          use new channels, they are recorded and verified.
+          <br />
+          <br />
+          Via Website:
+          <br />- The customer selects the “Support &amp; Assistance” option.
+          <br />- The customer fills in all required fields and mandatory
+          information.
+          <br />- The customer explains their complaint in detail in the
+          designated field.
+          <br />- The customer clicks “Submit” to send the complaint.
+          <br />
+          <br />
+          Via Email:
+          <br />- The customer provides all required identification data in the
+          email.
+          <br />- The customer explains their complaint in detail.
+          <br />- The customer attaches all supporting documents with the email.
+          <br />
+          <br />
+          Via Mobile Applications:
+          <br />- The customer selects the “Contact Us” option.
+          <br />- The customer fills in all required fields and mandatory
+          information.
+          <br />- The customer explains their complaint in detail in the
+          designated field.
+          <br />- The customer clicks “Submit” to send the complaint.
+          <br />
+          <br />
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            For more details, click here.
+          </a>
+        </>
+      ),
+    },
   ];
 
   return (
