@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import { motion } from "framer-motion";
 import { Typography } from "@/components/ui/typography";
 import { Accordion } from "@/components/ui/accordion";
@@ -8,14 +8,14 @@ import { HeroSection } from "@/components/HeroSection";
 import { buildFaqItems } from "./data";
 
 export default function FAQPage() {
-  const t = useTranslations("faq");
+  const locale = useLocale();
 
   const fadeInUpVariants = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0 },
   };
 
-  const faqItems = buildFaqItems(t);
+  const faqItems = buildFaqItems(locale);
 
   return (
     <>
