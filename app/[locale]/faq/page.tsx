@@ -270,6 +270,28 @@ The outstanding amount will accumulate under the customer's SADAD number, either
       answer:
         "No. The company's name appears only in the SMS and email notifications sent to the customer. Customers can match the invoice or claim amount with the figure shown in their bank account when searching by the SADAD number provided.",
     },
+    {
+      question:
+        "How can the company view details of the amounts deposited into its bank account?",
+      answer:
+        "The company is provided with daily settlement reports that include full details of deposited amounts, fees, and deducted taxes.",
+    },
+    {
+      question: "Why is GoPay considered secure?",
+      answer:
+        "GoPay processes payments and collections through secure, authorized banking channels supervised by the Saudi Central Bank. The SADAD system collects the payments into a central account, and GoPay then transfers these amounts directly into the companies' bank accounts.",
+    },
+    {
+      question:
+        "What amounts are deducted from the collected payments of the business?",
+      answer: `GoPay deducts the service fee along with the Value Added Tax (VAT) for each transaction executed, in addition to a SARIE transfer fee if the business's bank account is outside Riyad Bank. 
+(All executed transactions are consolidated at the end of each day and transferred in one batch to the business's bank account.)`,
+    },
+    {
+      question: "Is there a technical guide for integrating with GoPay?",
+      answer:
+        "Yes, GoPay provides businesses with a comprehensive integration guide for direct electronic integration with the service.",
+    },
   ];
 
   return (

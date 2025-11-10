@@ -59,7 +59,7 @@ function AccordionItem({
             onClick={onToggle}
           >
             <div className=" px-3.5 py-3 md:px-4.5 md:py-4 xl:px-5 xl:py-4.5">
-              <div className="text-text-3 leading-relaxed cursor-pointer [&_a]:text-link [&_a]:underline [&_a]:hover:opacity-80 [&_a]:transition-opacity [&_ol]:list-decimal [&_ol]:list-inside [&_ol]:space-y-2 [&_ul]:list-disc [&_ul]:list-inside [&_ul]:space-y-2">
+              <div className="text-text-3   cursor-pointer [&_a]:text-link [&_a]:underline [&_a]:hover:opacity-80 [&_a]:transition-opacity [&_ol]:list-decimal [&_ol]:list-inside [&_ol]:space-y-2 [&_ul]:list-disc [&_ul]:list-inside [&_ul]:space-y-2">
                 {typeof answer === "string" ? (
                   <Typography variant="p16" className="text-text-3 ">
                     {answer}
