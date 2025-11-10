@@ -97,7 +97,7 @@ export function PricingCard({
         <motion.div
           initial={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
-          transition={{ duration: 0.2 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
         >
           <Typography
             variant="p16"
@@ -115,7 +115,7 @@ export function PricingCard({
             <motion.div
               initial={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.2 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
             >
               <Typography
                 variant="p14"
@@ -134,7 +134,7 @@ export function PricingCard({
           <motion.div
             initial={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
             className="flex-1 mb-5"
           >
             <ul className="space-y-2">
