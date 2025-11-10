@@ -100,7 +100,7 @@ export function HeroSection({
             variant="h1"
             className={cn(heroTitleVariants({ variant }))}
           >
-            {title}fff
+            {title}
           </Typography>
         ) : (
           title
