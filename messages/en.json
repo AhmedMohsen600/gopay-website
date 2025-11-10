@@ -19,7 +19,9 @@
     "contactUs": "Contact Us",
     "signIn": "Sign In",
     "getStarted": "Get started",
-    "language": "Language"
+    "language": "Language",
+    "gopay": "GoPay",
+    "goInvoices": "Go Invoices"
   },
   "home": {
     "title": "Everything you need to",
@@ -250,6 +252,154 @@
           "imageAlt": "Audience attending the Seamless Exhibition conference"
         }
       }
+    }
+  },
+  "pricing": {
+    "gopay": {
+      "badge": "Pricing",
+      "titlePart1": "GoPay",
+      "titlePart2": "Plans",
+      "description": "Use GoPay free for one time or upgrade and more options",
+      "tabs": {
+        "basic": "Basic Packages",
+        "business": "Business Packages"
+      },
+      "billedYearly": "Billed yearly",
+      "subscribe": "Subscribe",
+      "basicPackages": {
+        "starter": {
+          "name": "Starter",
+          "price": "99",
+          "subtitle": "Essential Tools for mini businesses",
+          "description": "Essential tools for individuals managing basic financial needs.",
+          "features": [
+            "Free service subscription",
+            "Additional features and discounted prices",
+            "Open a biller account in the SADAD system"
+          ]
+        },
+        "basic": {
+          "name": "Basic",
+          "price": "199",
+          "subtitle": "Ideal for Small Businesses",
+          "description": "Upgrade your financial management with added features.",
+          "features": [
+            "Free service subscription",
+            "Additional features and discounted prices",
+            "Open a biller account in the SADAD system"
+          ]
+        },
+        "pro": {
+          "name": "Pro",
+          "price": "499",
+          "subtitle": "Maximize Business Efficiency",
+          "description": "Designed for users who need advanced tools to maximize their financial potential.",
+          "features": [
+            "Free service subscription",
+            "Additional features and discounted prices",
+            "Open a biller account in the SADAD system"
+          ],
+          "isPopular": true
+        }
+      },
+      "businessPackages": {
+        "proPlus": {
+          "name": "Pro+",
+          "price": "799",
+          "features": [
+            "Free service subscription",
+            "Additional features and discounted prices",
+            "Open a biller account in the SADAD system"
+          ]
+        },
+        "premium": {
+          "name": "Premium",
+          "price": "3,749",
+          "features": [
+            "Free service subscription",
+            "Additional features and discounted prices",
+            "Open a biller account in the SADAD system"
+          ]
+        },
+        "premiumPlus": {
+          "name": "Premium+",
+          "price": "6,999",
+          "features": [
+            "Free service subscription",
+            "Additional features and discounted prices",
+            "Open a biller account in the SADAD system"
+          ]
+        }
+      },
+      "featuresComparison": {
+        "mainFeatures": {
+          "title": "Main Features of the Package",
+          "starter": {
+            "transactions": "10 Free Payment Transactions",
+            "einvoicing": "Free subscription to E-Invoicing service (GoInvoice)"
+          },
+          "basic": {
+            "transactions": "20 Free Payment Transactions",
+            "einvoicing": "Free subscription to E-Invoicing service (GoInvoice)"
+          },
+          "pro": {
+            "transactions": "50 Free Payment Transactions",
+            "einvoicing": "Free subscription to E-Invoicing service (GoInvoice)"
+          }
+        },
+        "paymentFeatures": {
+          "title": "Payment Features",
+          "recurring": "Recurring Payment",
+          "partial": "Partial Payment",
+          "advanced": "Advanced Payment"
+        },
+        "notifications": {
+          "title": "Notification & Messaging",
+          "starter": "20 Free Notifications (SMS & Email)",
+          "basic": "40 Free Notifications (SMS & Email)",
+          "pro": "100 Free Notifications (SMS & Email)",
+          "customSender": "Custom Sender Name"
+        },
+        "mobileApps": {
+          "title": "Mobile Apps",
+          "merchant": "Merchant App",
+          "customer": "Customer App"
+        },
+        "marketing": {
+          "title": "Marketing & Advertising",
+          "goads": "GoAds Advertising Service"
+        },
+        "limits": {
+          "title": "Subscription Limits & Fees",
+          "minimum": "25 ﷼ minimum transaction value",
+          "maximum": "50,000 ﷼ maximum transaction value"
+        },
+        "transactionPricing": {
+          "title": "Transaction Pricing After Package Quota is Consumed",
+          "starter": {
+            "transaction": "16 ﷼ per paid transaction",
+            "notification": "0.5 ﷼ per paid notification"
+          },
+          "basic": {
+            "transaction": "14 ﷼ per paid transaction",
+            "notification": "0.5 ﷼ per paid notification"
+          },
+          "pro": {
+            "transaction": "12 ﷼ per paid transaction",
+            "notification": "0.5 ﷼ per paid notification"
+          }
+        },
+        "validity": {
+          "title": "Package Validity",
+          "duration": "6 months package validity"
+        }
+      }
+    },
+    "goInvoices": {
+      "badge": "Pricing",
+      "titlePart1": "Go",
+      "titlePart2": "Invoices Plans",
+      "description": "Choose the perfect plan for your business invoicing needs"
     }
   },
   "cta": {
