@@ -245,7 +245,30 @@ These are invoices or payment claims issued with a fixed SADAD number assigned b
 The unpaid amount will remain under the same SADAD number until the invoice or payment claim is fully settled.
 
 For recurring invoices:
-The outstanding amount will accumulate under the customer’s SADAD number, either as a debit or credit balance, depending on the due invoices and amounts already paid.`,
+The outstanding amount will accumulate under the customer's SADAD number, either as a debit or credit balance, depending on the due invoices and amounts already paid.`,
+    },
+    {
+      question:
+        "How long does it take for settlements and collected payments to be transferred to the company's bank account?",
+      answer:
+        "GoPay settles and transfers amounts collected from customers into the company's bank account one business day after receiving the payment from the SADAD system. (Settlement duration may vary depending on the nature of the business and contractual arrangements with the company.)",
+    },
+    {
+      question: "Does GoPay allow partial payments for customers?",
+      answer:
+        "Yes. GoPay provides the option for partial payments of invoices and claims. Businesses can enable this feature and set the minimum amount allowed for settling the issued invoice or claim.",
+    },
+    {
+      question:
+        "How can the end-customer know the remaining balance if payments are made partially?",
+      answer:
+        "The customer can access the invoice or payment link sent by the business to view details of all outstanding and settled invoices. They can also download the GoPay mobile app to get all related account information.",
+    },
+    {
+      question:
+        "Will the company's name appear in the customer's bank account when searching with the SADAD number?",
+      answer:
+        "No. The company's name appears only in the SMS and email notifications sent to the customer. Customers can match the invoice or claim amount with the figure shown in their bank account when searching by the SADAD number provided.",
     },
   ];
 
