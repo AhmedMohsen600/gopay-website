@@ -292,6 +292,36 @@ The outstanding amount will accumulate under the customer's SADAD number, either
       answer:
         "Yes, GoPay provides businesses with a comprehensive integration guide for direct electronic integration with the service.",
     },
+    {
+      question:
+        "What are the required steps for direct electronic integration with GoPay?",
+      answer: `Open a payments account and subscribe to the service.
+
+Select the services and features required for direct integration.
+
+Pay the electronic integration service fee.
+
+Receive access credentials for the testing environment to begin integration.
+
+Provide a dedicated link from the business’s software platform to receive payment notifications.
+
+Apply security standards for receiving payment notifications (Digital Signature).
+
+Conduct testing to verify that payments are processed correctly.
+
+Connect to the live production environment to receive payments from the SADAD system.`,
+    },
+    {
+      question: "Does GoPay provide a graphical interface for billers?",
+      answer:
+        "Yes, GoPay provides a graphical user interface (GUI) that allows billers to create and manage payment claims, as well as access detailed reports on payments and claims.",
+    },
+    {
+      question:
+        "Can GoPay split collected amounts and transfer them into multiple bank accounts for the business?",
+      answer:
+        "Yes, GoPay offers a feature that allows businesses to add multiple bank accounts so that collected amounts can be transferred and deposited according to the setup defined during service registration.",
+    },
   ];
 
   return (
