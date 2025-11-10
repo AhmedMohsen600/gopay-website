@@ -351,6 +351,28 @@ Connect to the live production environment to receive payments from the SADAD sy
       answer:
         "If the company issues the invoice or payment claim and attaches the customer's identity information, the number may be recognized in some banks that support this feature.",
     },
+    {
+      question:
+        "If GoPay is electronically integrated with the company’s system, will all data entered in the company’s system (such as customer or invoice information) be automatically reflected in GoPay without the need for re-entry?",
+      answer:
+        "Yes, GoPay automatically reflects and updates all transactions entered from the company’s system, synchronizing its database with the information and commands received.",
+    },
+    {
+      question:
+        "Can a company’s customer pay invoices and claims without registering in GoPay?",
+      answer: (
+        <>
+          Yes, the customer can pay invoices and claims without registering for
+          the service. The company simply issues the invoice or claim, and GoPay
+          sends the invoice details and SADAD number to the customer’s mobile
+          number or email for settlement.
+          <br />
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            For more details, click here.
+          </a>
+        </>
+      ),
+    },
   ];
 
   return (
