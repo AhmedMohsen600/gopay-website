@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, ReactNode } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { PlusIcon } from "@phosphor-icons/react";
 import { cn } from "@/lib/utils";
@@ -8,7 +8,7 @@ import { Typography } from "./typography";
 
 interface AccordionItemProps {
   question: string;
-  answer: string;
+  answer: string | ReactNode;
   isOpen: boolean;
   onToggle: () => void;
   className?: string;
@@ -58,13 +58,21 @@ function AccordionItem({
             className="overflow-hidden"
             onClick={onToggle}
           >
-            <div className="px-6 pb-6">
-              <Typography
-                variant="p16"
-                className="text-text-3 leading-relaxed cursor-pointer"
-              >
-                {answer}
-              </Typography>
+            <div className="px-3.5 pb-6 md:px-4.5 xl:px-5">
+              <div className="text-text-3 leading-relaxed cursor-pointer [&_a]:text-link [&_a]:underline [&_a]:hover:opacity-80 [&_a]:transition-opacity [&_ol]:list-decimal [&_ol]:list-inside [&_ol]:space-y-2 [&_ul]:list-disc [&_ul]:list-inside [&_ul]:space-y-2">
+                {typeof answer === "string" ? (
+                  <Typography
+                    variant="p16"
+                    className="text-text-3 leading-relaxed"
+                  >
+                    {answer}
+                  </Typography>
+                ) : (
+                  <div className="xl:text-base md:text-sm text-xs text-text-3 leading-tighter">
+                    {answer}
+                  </div>
+                )}
+              </div>
             </div>
           </motion.div>
         )}
@@ -74,7 +82,7 @@ function AccordionItem({
 }
 
 interface AccordionProps {
-  items: Array<{ question: string; answer: string }>;
+  items: Array<{ question: string; answer: string | ReactNode }>;
   className?: string;
   allowMultiple?: boolean;
 }

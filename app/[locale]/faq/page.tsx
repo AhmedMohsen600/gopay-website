@@ -40,8 +40,161 @@ Customer: The end-user who receives the (service or product) from the biller and
     },
     {
       question: 'What is the "SADAD" payment system?',
+      answer: (
+        <>
+          It is a centralized system for presenting and paying bills through the
+          local banking network. The system&apos;s infrastructure was developed
+          by the Saudi Central Bank to enable businesses to issue invoices and
+          financial claims and link them with banking systems, allowing
+          customers to pay and settle their outstanding amounts.
+          <br />
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-block"
+          >
+            for more help, please click
+          </a>
+        </>
+      ),
+    },
+    {
+      question:
+        "Is GoPay limited to providing payment services through the “SADAD” system, or does it also support other electronic payment services?",
       answer:
-        "It is a centralized system for presenting and paying bills through the local banking network. The system’s infrastructure was developed by the Saudi Central Bank to enable businesses to issue invoices and financial claims and link them with banking systems, allowing customers to pay and settle their outstanding amounts.",
+        "GoPay is specialized in offering payment services through the “SADAD” system. However, it can also provide other electronic payment services upon a separate request, in which the business specifies the types of payment services required in order to integrate additional payment options into the system.",
+    },
+    {
+      question: "What are the features of the GoPay service?",
+      answer: (
+        <>
+          You can find information about the service features through the link
+          <br />
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-block"
+          >
+            click here
+          </a>
+          .
+        </>
+      ),
+    },
+    {
+      question: "How can I use the GoPay service?",
+      answer: (
+        <>
+          You can use GoPay by opening a payments account and subscribing to the
+          service.
+          <br />
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            For more details on how to join, Click here.
+          </a>
+        </>
+      ),
+    },
+    {
+      question:
+        "What documents are required from the business to obtain the GoPay service?",
+      answer: (
+        <ol className="space-y-0!">
+          <li>
+            A copy of the authorization letter – for assistance and more
+            details,{" "}
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              Click here.
+            </a>
+          </li>
+          <li>A copy of the authorized person&apos;s ID.</li>
+          <li>
+            A copy of the company&apos;s registration document. For assistance
+            and more details,{" "}
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              Click here.
+            </a>
+          </li>
+          <li>
+            A copy of the national address – for assistance and more details,{" "}
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              Click here.
+            </a>
+          </li>
+          <li>
+            A copy of the bank certificate – for assistance and more details,
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              Click here.
+            </a>
+          </li>
+        </ol>
+      ),
+    },
+    {
+      question:
+        "Does the GoPay service require any setup or software installation on the company's servers?",
+      answer:
+        "You can use GoPay by opening a payments account and subscribing to the service.",
+    },
+    {
+      question: "How can I carry out transactions through GoPay?",
+      answer: (
+        <div className="space-y-2">
+          <p>
+            You can execute transactions through GoPay using one of the
+            following options:
+          </p>
+          <p>
+            - Via the service&apos;s website (Web Portal) using your username
+            and password to access the system.
+          </p>
+          <p>
+            - Through electronic integration (APIs) between the GoPay system and
+            your company&apos;s system.
+          </p>
+        </div>
+      ),
+    },
+    {
+      question: "How does GoPay work in bill payments and financial claims?",
+      answer: (
+        <>
+          You can find information about the bill payment process through this
+          link <br />
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-block"
+          >
+            Click here.
+          </a>
+        </>
+      ),
+    },
+    {
+      question: "What is the pricing mechanism for GoPay?",
+      answer: (
+        <>
+          You can find information about the pricing mechanism through this link{" "}
+          <br />
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-block"
+          >
+            Click here.
+          </a>
+        </>
+      ),
+    },
+    {
+      question:
+        "Can GoPay be directly integrated with the compan's internal system?",
+      answer:
+        "Yes, GoPay allows electronic integration (APIs) between the GoPay system and your company's system.",
     },
   ];
 
