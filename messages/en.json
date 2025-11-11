@@ -345,6 +345,18 @@
           "pro": {
             "transactions": "50 Free Payment Transactions",
             "einvoicing": "Free subscription to E-Invoicing service (GoInvoice)"
+          },
+          "proPlus": {
+            "transactions": "100 Free Payment Transactions",
+            "einvoicing": "6 months Free subscription to (GoInvoice) service"
+          },
+          "premium": {
+            "transactions": "500 Free Payment Transactions",
+            "einvoicing": "12 months Free subscription to (GoInvoice) service"
+          },
+          "premiumPlus": {
+            "transactions": "1,000 Free Payment Transactions",
+            "einvoicing": "12 months Free subscription to (GoInvoice) service"
           }
         },
         "paymentFeatures": {
@@ -358,6 +370,9 @@
           "starter": "20 Free Notifications (SMS & Email)",
           "basic": "40 Free Notifications (SMS & Email)",
           "pro": "100 Free Notifications (SMS & Email)",
+          "proPlus": "200 Free Notifications (SMS & Email)",
+          "premium": "1,000 Free Notifications (SMS & Email)",
+          "premiumPlus": "2,000 Free Notifications (SMS & Email)",
           "customSender": "Custom Sender Name"
         },
         "mobileApps": {
@@ -367,12 +382,16 @@
         },
         "marketing": {
           "title": "Marketing & Advertising",
-          "goads": "GoAds Advertising Service"
+          "goads": "GoAds Advertising Service",
+          "proPlus": "3 months subscription to the GoAds advertising service",
+          "premium": "6 months subscription to the GoAds advertising service",
+          "premiumPlus": "12 months subscription to the GoAds advertising service"
         },
         "limits": {
           "title": "Subscription Limits & Fees",
           "minimum": "25 ﷼ minimum transaction value",
-          "maximum": "50,000 ﷼ maximum transaction value"
+          "maximum": "50,000 ﷼ maximum transaction value",
+          "maximumBusiness": "100,000 ﷼ maximum transaction value"
         },
         "transactionPricing": {
           "title": "Transaction Pricing After Package Quota is Consumed",
@@ -387,12 +406,30 @@
           "pro": {
             "transaction": "12 ﷼ per paid transaction",
             "notification": "0.5 ﷼ per paid notification"
+          },
+          "proPlus": {
+            "transaction": "10 ﷼ per paid transaction",
+            "notification": "0.45 ﷼ per paid notification"
+          },
+          "premium": {
+            "transaction": "14 ﷼ per paid transaction",
+            "notification": "0.4 ﷼ per paid notification"
+          },
+          "premiumPlus": {
+            "transaction": "9 ﷼ per paid transaction",
+            "notification": "0.35 ﷼ per paid notification"
           }
         },
         "validity": {
           "title": "Package Validity",
-          "duration": "6 months package validity"
+          "duration": "6 months package validity",
+          "durationBusiness": "12 months package validity"
         }
+      },
+      "enterprise": {
+        "title": "Enterprise Excellence",
+        "description": "Get tailored payment solutions designed for your unique business needs. Unlock advanced features, dedicated support, and scalable tools to drive growth and efficiency.",
+        "buttonText": "Contact Us"
       }
     },
     "goInvoices": {
