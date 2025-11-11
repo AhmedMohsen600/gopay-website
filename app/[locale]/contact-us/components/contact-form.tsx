@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -19,23 +20,20 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
-const contactFormSchema = z.object({
-  fullName: z.string().min(2, "Please tell us your full name."),
-  email: z.string().email("Please enter a valid email address."),
-  phone: z
-    .string()
-    .min(7, "Please add a phone number we can reach you on.")
-    .regex(
-      /^[\d+()\-\s]{7,}$/,
-      "Phone numbers may include digits, spaces, dashes, parentheses, or a leading +."
-    ),
-  city: z.string().min(2, "Please tell us where you are located."),
-  message: z
-    .string()
-    .min(10, "A short message helps us prepare the right response."),
-});
+const buildContactFormSchema = (t: (key: string) => string) =>
+  z.object({
+    fullName: z.string().min(2, t("errors.fullName")),
+    email: z.string().email(t("errors.email")),
+    phone: z
+      .string()
+      .min(7, t("errors.phoneMin"))
+      .regex(/^[\d+()\-\s]{7,}$/, t("errors.phoneFormat")),
+    city: z.string().min(2, t("errors.city")),
+    message: z.string().min(10, t("errors.message")),
+  });
 
-type ContactFormValues = z.infer<typeof contactFormSchema>;
+type ContactFormSchema = ReturnType<typeof buildContactFormSchema>;
+type ContactFormValues = z.infer<ContactFormSchema>;
 
 interface ContactFormProps {
   className?: string;
@@ -51,7 +49,10 @@ const cardVariants = {
 };
 
 export function ContactForm({ className }: ContactFormProps) {
+  const t = useTranslations("contact.form");
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const contactFormSchema = useMemo(() => buildContactFormSchema(t), [t]);
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -101,7 +102,7 @@ export function ContactForm({ className }: ContactFormProps) {
             name="fullName"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Full Name*</FormLabel>
+                <FormLabel>{t("fields.fullName")}</FormLabel>
                 <FormControl>
                   <Input {...field} />
                 </FormControl>
@@ -114,7 +115,7 @@ export function ContactForm({ className }: ContactFormProps) {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email*</FormLabel>
+                <FormLabel>{t("fields.email")}</FormLabel>
                 <FormControl>
                   <Input type="email" {...field} />
                 </FormControl>
@@ -127,7 +128,7 @@ export function ContactForm({ className }: ContactFormProps) {
             name="phone"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Phone Number*</FormLabel>
+                <FormLabel>{t("fields.phone")}</FormLabel>
                 <FormControl>
                   <Input {...field} />
                 </FormControl>
@@ -140,7 +141,7 @@ export function ContactForm({ className }: ContactFormProps) {
             name="city"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>City*</FormLabel>
+                <FormLabel>{t("fields.city")}</FormLabel>
                 <FormControl>
                   <Input {...field} />
                 </FormControl>
@@ -154,10 +155,10 @@ export function ContactForm({ className }: ContactFormProps) {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Message*</FormLabel>
+                <FormLabel>{t("fields.message")}</FormLabel>
                 <FormControl>
                   <Textarea
-                    placeholder="Your message..."
+                    placeholder={t("placeholders.message")}
                     rows={4}
                     {...field}
                     className="bg-white placeholder:text-[#999999]"
@@ -176,7 +177,7 @@ export function ContactForm({ className }: ContactFormProps) {
                 disabled={isSubmitting || !form.formState.isValid}
                 size={"default"}
               >
-                {isSubmitting ? "Submitting..." : "Submit"}
+                {isSubmitting ? t("button.submitting") : t("button.submit")}
               </Button>
             </div>
           </div>
