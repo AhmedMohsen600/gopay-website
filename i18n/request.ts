@@ -38,6 +38,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const namespaceFiles = [
     "whoWeAre",
     "features",
+    "pricing",
     // Add more namespaces here as you split them:
     // "common", "header", "home", "cta", "footer"
   ];
