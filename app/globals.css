@@ -6,67 +6,67 @@
 @theme inline {
   /* Fonts */
   --font-sans: var(--font-figtree, --font-tajawal);
-  
+
   /* Primary - #282D4E */
   --color-primary: var(--primary);
-  
+
   /* Secondary - #EC9510 */
   --color-secondary: var(--secondary);
-  
+
   /* Black - #000000 */
   --color-black: var(--black);
-  
+
   /* Dark - #1A1D21 */
   --color-dark: var(--dark);
-  
+
   /* White - #FFFFFF */
   --color-white: var(--white);
-  
+
   /* BG - #F4F4FA */
   --color-bg: var(--bg);
-  
+
   /* BG Grey - #FAFAFA */
   --color-bg-grey: var(--bg-grey);
-  
+
   /* Text 5 - #0C0E17 */
   --color-text-5: var(--text-5);
-  
+
   /* Text 4 - #20243E */
   --color-text-4: var(--text-4);
-  
+
   /* Text 3 - #535771 */
   --color-text-3: var(--text-3);
-  
+
   /* Text 2 - #7E8195 */
   --color-text-2: var(--text-2);
-  
+
   /* Text White - #FFFFFF */
   --color-text-white: var(--text-white);
-  
+
   /* Stroke 1 - #E9EAED */
   --color-stroke-1: var(--stroke-1);
-  
+
   /* Stroke 2 - #C2C2C2 */
   --color-stroke-2: var(--stroke-2);
-  
+
   /* Link - #2F4CF4 */
   --color-link: var(--link);
-  
+
   /* Popover colors for select/dropdown */
   --color-popover: var(--white);
   --color-popover-foreground: var(--text-5);
-  
+
   /* Accent colors for hover states */
   --color-accent: var(--bg-grey);
   --color-accent-foreground: var(--text-5);
-  
+
   /* Muted colors */
   --color-muted: var(--bg-grey);
   --color-muted-foreground: var(--text-3);
-  
+
   /* Input colors */
   --color-input: var(--stroke-1);
-  
+
   /* Border Radius */
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -76,98 +76,98 @@
 
 :root {
   --radius: 0.625rem;
-  
+
   /* Primary - #282D4E */
-  --primary: #282D4E;
-  
+  --primary: #282d4e;
+
   /* Secondary - #EC9510 */
-  --secondary: #EC9510;
-  
+  --secondary: #ec9510;
+
   /* Black - #000000 */
   --black: #000000;
-  
+
   /* Dark - #1A1D21 */
-  --dark: #1A1D21;
-  
+  --dark: #1a1d21;
+
   /* White - #FFFFFF */
-  --white: #FFFFFF;
-  
+  --white: #ffffff;
+
   /* BG - #F4F4FA */
-  --bg: #F4F4FA;
-  
+  --bg: #f4f4fa;
+
   /* BG Grey - #FAFAFA */
-  --bg-grey: #FAFAFA;
-  
+  --bg-grey: #fafafa;
+
   /* Text 5 - #0C0E17 */
-  --text-5: #0C0E17;
-  
+  --text-5: #0c0e17;
+
   /* Text 4 - #20243E */
-  --text-4: #20243E;
-  
+  --text-4: #20243e;
+
   /* Text 3 - #535771 */
   --text-3: #535771;
-  
+
   /* Text 2 - #7E8195 */
-  --text-2: #7E8195;
-  
+  --text-2: #7e8195;
+
   /* Text White - #FFFFFF */
-  --text-white: #FFFFFF;
-  
+  --text-white: #ffffff;
+
   /* Stroke 1 - #E9EAED */
-  --stroke-1: #E9EAED;
-  
+  --stroke-1: #e9eaed;
+
   /* Stroke 2 - #C2C2C2 */
-  --stroke-2: #C2C2C2;
-  
+  --stroke-2: #c2c2c2;
+
   /* Link - #2F4CF4 */
-  --link: #2F4CF4;
+  --link: #5c95ff;
 }
 
 .dark {
   /* Primary - lighter for dark mode */
-  --primary: #5B49E9;
-  
+  --primary: #5b49e9;
+
   /* Secondary - same */
-  --secondary: #EC9510;
-  
+  --secondary: #ec9510;
+
   /* Black - same */
   --black: #000000;
-  
+
   /* Dark - same */
-  --dark: #1A1D21;
-  
+  --dark: #1a1d21;
+
   /* White - same */
-  --white: #FFFFFF;
-  
+  --white: #ffffff;
+
   /* BG - inverted to dark */
-  --bg: #1A1D21;
-  
+  --bg: #1a1d21;
+
   /* BG Grey - darker */
-  --bg-grey: #20243E;
-  
+  --bg-grey: #20243e;
+
   /* Text 5 - inverted to white */
-  --text-5: #FFFFFF;
-  
+  --text-5: #ffffff;
+
   /* Text 4 - lighter */
-  --text-4: #FAFAFA;
-  
+  --text-4: #fafafa;
+
   /* Text 3 - lighter */
-  --text-3: #C2C2C2;
-  
+  --text-3: #c2c2c2;
+
   /* Text 2 - same */
-  --text-2: #7E8195;
-  
+  --text-2: #7e8195;
+
   /* Text White - same */
-  --text-white: #FFFFFF;
-  
+  --text-white: #ffffff;
+
   /* Stroke 1 - darker */
   --stroke-1: #535771;
-  
+
   /* Stroke 2 - darker */
-  --stroke-2: #7E8195;
-  
+  --stroke-2: #7e8195;
+
   /* Link - brighter for dark mode */
-  --link: #5B49E9;
+  --link: #5c95ff;
 }
 
 @layer base {

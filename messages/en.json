@@ -301,5 +301,31 @@
     "rights": "All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about GoPay services, licensing, and how it works.",
+    "items": {
+      "whatIsGopay": {
+        "question": "What is GoPay Service?",
+        "answer": "GoPay is a comprehensive B2B billing and collection ecosystem designed to streamline payment processes, drive cash flow visibility, and ensure regulatory compliance in Saudi Arabia. It's a SADAD-integrated solution for issuing invoices and collecting payments across all sectors."
+      },
+      "isGopayLicensed": {
+        "question": "Is GoPay licensed by the Saudi Central Bank?",
+        "answer": "Yes, GoPay is licensed and regulated by the Saudi Central Bank (License No. 43033966). We operate under strict regulatory compliance to ensure secure and compliant financial transactions."
+      },
+      "targetAudience": {
+        "question": "Who is the target audience of GoPay?",
+        "answer": "GoPay serves businesses of all sizes across various sectors in Saudi Arabia. Our target audience includes billers (companies that issue invoices), customers (those who pay invoices), marketplaces, gig platforms, and enterprises looking to digitize their receivables and payment processes."
+      },
+      "billerVsCustomer": {
+        "question": "What is the difference between the Biller and the Customer?",
+        "answer": "A Biller is a business or organization that issues invoices and collects payments through GoPay. They use GoPay to send invoices, track payments, and manage their receivables. A Customer is an individual or business that receives invoices and makes payments through GoPay's payment channels, including SADAD, online gateways, and other supported methods."
+      },
+      "sadadPaymentSystem": {
+        "question": "What is the \"SADAD\" payment system?",
+        "answer": "SADAD is Saudi Arabia's national electronic bill presentment and payment system. It allows customers to pay bills through various channels including bank ATMs, online banking, mobile banking, and retail outlets. GoPay is fully integrated with SADAD, enabling billers to issue invoices that customers can pay through the SADAD network, providing a secure and widely accessible payment solution."
+      }
+    }
   }
 }
