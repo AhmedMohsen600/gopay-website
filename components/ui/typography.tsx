@@ -6,7 +6,7 @@ const typographyVariants = cva("", {
   variants: {
     variant: {
       // H1 - 62px / 1.2
-      h1: "font-medium xl:text-[62px] md:text-[50px] text-[34px]  leading-tight tracking-tight",
+      h1: "font-medium xl:text-[62px] md:text-[50px] text-[34px]  leading-[1.2em]! -tracking-[0.03em]",
 
       // H2 - 50px / 1.1
       h2: "xl:text-[50px] md:text-[36px] text-[24px] font-medium leading-none tracking-tight text-text-5",
@@ -18,7 +18,7 @@ const typographyVariants = cva("", {
       h4: "xl:text-[26px] md:text-[17px] text-sm font-normal leading-none tracking-tight text-text-4",
 
       // H5 - 24px / 1.1
-      h5: "text-[16px] md:text-[24px] font-medium leading-[1.1]",
+      h5: "text-base md:text-lg xl:text-2xl font-medium leading-[1.4em] -tracking-[0.03em]",
 
       // H6 - 20px / 1.1
       h6: "xl:text-xl md:text-[15px] text-[13px] font-medium leading-none tracking-tight",
