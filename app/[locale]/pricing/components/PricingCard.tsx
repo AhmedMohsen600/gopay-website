@@ -110,12 +110,14 @@ export function PricingCard({
         </motion.div>
 
         {/* Description - Hidden when scrolled */}
-        <AnimatePresence>
+        <AnimatePresence initial={false}>
           {!isScrolled && description && (
             <motion.div
-              initial={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
+              initial={{ opacity: 0, maxHeight: 0 }}
+              animate={{ opacity: 1, maxHeight: 100 }}
+              exit={{ opacity: 0, maxHeight: 0 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              style={{ overflow: "hidden" }}
             >
               <Typography
                 variant="p14"
@@ -129,13 +131,15 @@ export function PricingCard({
       </div>
 
       {/* Features List - Hidden when scrolled */}
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         {!isScrolled && (
           <motion.div
-            initial={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            initial={{ opacity: 0, maxHeight: 0 }}
+            animate={{ opacity: 1, maxHeight: 500 }}
+            exit={{ opacity: 0, maxHeight: 0 }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
             className="flex-1 mb-5"
+            style={{ overflow: "hidden" }}
           >
             <ul className="space-y-2">
               {features.map((feature, index) => (
