@@ -19,7 +19,9 @@
     "contactUs": "Contact Us",
     "signIn": "Sign In",
     "getStarted": "Get started",
-    "language": "Language"
+    "language": "Language",
+    "gopay": "GoPay",
+    "goInvoices": "Go Invoices"
   },
   "home": {
     "title": "Everything you need to",

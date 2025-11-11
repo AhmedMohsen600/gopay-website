@@ -63,8 +63,8 @@ export function HeroSection() {
           <HeroBlurBackgrounds />
           <div className="relative z-10 max-w-5xl mx-auto text-center">
             <Typography
-              variant="h2"
-              className="text-4xl md:text-6xl lg:text-[75px] tracking-tight leading-tight font-normal"
+              variant="h1"
+              className="text-[33px] md:text-[75px] tracking-tight leading-tight font-normal"
             >
               {/* Title appears first */}
               <motion.span
@@ -109,7 +109,7 @@ export function HeroSection() {
                 delay: 1.3, // After all title words
               }}
             >
-              <Typography className="text-dark" variant="p18">
+              <Typography className="text-dark mt-2" variant="p18">
                 {t("subtitle")}
               </Typography>
             </motion.div>

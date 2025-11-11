@@ -13,6 +13,7 @@ import { List, X, CaretDown } from "@phosphor-icons/react/dist/ssr";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [pricingDropdownOpen, setPricingDropdownOpen] = useState(false);
   const t = useTranslations("header");
   const pathname = usePathname();
 
@@ -25,6 +26,12 @@ export function Header() {
     { label: t("faq"), href: "/faq" },
     { label: t("newsAndBlog"), href: "/news", hasDropdown: true },
     { label: t("contactUs"), href: "/contact" },
+  ];
+
+  // Pricing dropdown items
+  const pricingDropdownItems = [
+    { label: t("gopay"), href: "/pricing/gopay" },
+    { label: t("goInvoices"), href: "/pricing/go-invoices" },
   ];
 
   const isActive = (href: string) => {
@@ -54,53 +61,113 @@ export function Header() {
 
           {/* Desktop Nav Items */}
           <div className="hidden lg:flex items-center gap-6 justify-start">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`group flex items-center gap-1 text-base font-normal transition-colors ${
-                  isActive(item.href) ? "text-secondary" : "text-text-5"
-                }`}
-              >
-                {!item.hasDropdown ? (
-                  <motion.span
-                    className="relative inline-block overflow-hidden"
-                    initial="rest"
-                    whileHover="hover"
+            {navItems.map((item) => {
+              // Special handling for Pricing dropdown
+              if (item.hasDropdown && item.href === "/pricing") {
+                return (
+                  <div
+                    key={item.href}
+                    className="relative"
+                    onMouseEnter={() => setPricingDropdownOpen(true)}
+                    onMouseLeave={() => setPricingDropdownOpen(false)}
                   >
-                    <motion.span
-                      className="inline-block"
-                      variants={{
-                        rest: { y: 0, opacity: 1 },
-                        hover: { y: "-100%", opacity: 0 },
-                      }}
-                      transition={{ duration: 0.3, ease: "easeOut" }}
+                    <button
+                      className={`group flex items-center gap-1 text-base font-normal transition-colors ${
+                        isActive(item.href) ? "text-secondary" : "text-text-5"
+                      }`}
                     >
                       {item.label}
-                    </motion.span>
+                      <CaretDown
+                        size={16}
+                        weight="bold"
+                        className="text-text-5"
+                      />
+                    </button>
+
+                    {/* Dropdown Menu */}
+                    <AnimatePresence>
+                      {pricingDropdownOpen && (
+                        <motion.div
+                          initial={{ opacity: 0, y: -10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -10 }}
+                          transition={{ duration: 0.2 }}
+                          className="absolute top-full left-0 mt-2 w-[200px] bg-white rounded-xl border border-stroke-1 shadow-lg overflow-hidden z-50"
+                        >
+                          {pricingDropdownItems.map((dropdownItem) => (
+                            <Link
+                              key={dropdownItem.href}
+                              href={dropdownItem.href}
+                              className="block px-4 py-3 text-sm font-normal text-text-5 hover:bg-bg-grey transition-colors"
+                            >
+                              <Typography
+                                variant="p16"
+                                className={
+                                  dropdownItem.href === "/pricing/gopay"
+                                    ? "text-secondary"
+                                    : "text-dark"
+                                }
+                              >
+                                {dropdownItem.label}
+                              </Typography>
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                );
+              }
+
+              // Regular navigation items
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`group flex items-center gap-1 text-base font-normal transition-colors ${
+                    isActive(item.href) ? "text-secondary" : "text-text-5"
+                  }`}
+                >
+                  {!item.hasDropdown ? (
                     <motion.span
-                      className="absolute top-0 left-0 inline-block"
-                      variants={{
-                        rest: { y: "100%", opacity: 0 },
-                        hover: { y: 0, opacity: 1 },
-                      }}
-                      transition={{ duration: 0.3, ease: "easeOut" }}
+                      className="relative inline-block overflow-hidden"
+                      initial="rest"
+                      whileHover="hover"
                     >
-                      {item.label}
+                      <motion.span
+                        className="inline-block"
+                        variants={{
+                          rest: { y: 0, opacity: 1 },
+                          hover: { y: "-100%", opacity: 0 },
+                        }}
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                      >
+                        {item.label}
+                      </motion.span>
+                      <motion.span
+                        className="absolute top-0 left-0 inline-block"
+                        variants={{
+                          rest: { y: "100%", opacity: 0 },
+                          hover: { y: 0, opacity: 1 },
+                        }}
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                      >
+                        {item.label}
+                      </motion.span>
                     </motion.span>
-                  </motion.span>
-                ) : (
-                  <>
-                    {item.label}
-                    <CaretDown
-                      size={16}
-                      weight="bold"
-                      className="text-text-5"
-                    />
-                  </>
-                )}
-              </Link>
-            ))}
+                  ) : (
+                    <>
+                      {item.label}
+                      <CaretDown
+                        size={16}
+                        weight="bold"
+                        className="text-text-5"
+                      />
+                    </>
+                  )}
+                </Link>
+              );
+            })}
             <LanguageSwitcher />
           </div>
 

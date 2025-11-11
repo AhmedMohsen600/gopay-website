@@ -15,7 +15,7 @@ export function GoPayImpactShowcaseSection() {
   };
 
   return (
-    <section className="relative bg-primary py-[120px]">
+    <section className="relative bg-primary py-[56px] md:py-[120px]">
       {/* Header */}
       <div className="container px-6 md:px-0 flex flex-col max-w-[800px] mx-auto items-center justify-center mb-8 md:mb-16">
         <motion.div
@@ -57,7 +57,7 @@ export function GoPayImpactShowcaseSection() {
 
       {/* Impact Cards Grid */}
       <div className="container mx-auto px-6 md:px-0 max-w-[1000px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {impactCardsData.map((card, index) => (
             <ImpactCard
               key={card.id}
