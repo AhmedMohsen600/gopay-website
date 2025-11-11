@@ -39,6 +39,14 @@ export function PricingCard({
 
   useEffect(() => {
     const handleScroll = () => {
+      // Only apply scroll hiding on desktop (md breakpoint and up)
+      const isDesktop = window.innerWidth >= 768;
+
+      if (!isDesktop) {
+        setIsScrolled(false);
+        return;
+      }
+
       if (cardRef.current) {
         const cardTop = cardRef.current.getBoundingClientRect().top;
 
@@ -47,8 +55,13 @@ export function PricingCard({
       }
     };
 
+    handleScroll(); // Check on mount
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
   }, [isScrolled]);
 
   return (
@@ -59,7 +72,7 @@ export function PricingCard({
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
       className={cn(
-        "relative bg-white rounded-[24px] p-6 flex flex-1 flex-col h-full transition-all duration-300",
+        "relative bg-white rounded-[24px] p-[18px] md:p-6 flex flex-1 flex-col h-full transition-all duration-300",
         isPopular
           ? "border border-[#F2994A]"
           : "border border-stroke-1 hover:border-[#F2994A]/30"
@@ -70,7 +83,10 @@ export function PricingCard({
         <div className="flex items-start justify-between mb-[6px]">
           {/* Plan Name with Popular Badge */}
           <div className="flex items-center self-center gap-3">
-            <Typography variant="h6" className="text-dark font-semibold">
+            <Typography
+              variant="h6"
+              className="text-dark text-[20px] font-semibold"
+            >
               {name}
             </Typography>
             {isPopular && (
@@ -81,10 +97,12 @@ export function PricingCard({
           </div>
 
           {/* Price */}
-          <div className="text-right">
-            <div className="flex items-start gap-1">
+          <div>
+            <div className="flex items-center">
               <SarIcon width={18} height={18} className="text-dark" />
-              <Typography variant="h6">{price}</Typography>
+              <Typography className="text-[20px]" variant="h6">
+                {price}
+              </Typography>
             </div>
             <Typography variant="p13" className="text-[#FF9A06]">
               {billingPeriod}
