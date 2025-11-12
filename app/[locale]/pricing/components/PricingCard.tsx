@@ -20,6 +20,8 @@ interface PricingCardProps {
   onSubscribe?: () => void;
   delay?: number;
   index?: number;
+  disableScrollHiding?: boolean;
+  className?: string;
 }
 
 export function PricingCard({
@@ -33,11 +35,16 @@ export function PricingCard({
   ctaText,
   onSubscribe,
   delay = 0,
+  disableScrollHiding = false,
+  className,
 }: PricingCardProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Skip scroll handling if disabled
+    if (disableScrollHiding) return;
+
     const handleScroll = () => {
       // Only apply scroll hiding on desktop (md breakpoint and up)
       const isDesktop = window.innerWidth >= 768;
@@ -62,7 +69,7 @@ export function PricingCard({
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleScroll);
     };
-  }, [isScrolled]);
+  }, [isScrolled, disableScrollHiding]);
 
   return (
     <motion.div
@@ -75,7 +82,8 @@ export function PricingCard({
         "relative bg-white rounded-[24px] p-[18px] md:p-6 flex flex-1 flex-col h-full transition-all duration-300",
         isPopular
           ? "border border-[#F2994A]"
-          : "border border-stroke-1 hover:border-[#F2994A]/30"
+          : "border border-stroke-1 hover:border-[#F2994A]/30",
+        className
       )}
     >
       {/* Header */}

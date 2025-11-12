@@ -178,9 +178,35 @@
   },
   "goInvoices": {
     "badge": "الأسعار",
-    "titlePart1": "جو",
-    "titlePart2": "خطط الفواتير",
-    "description": "اختر الخطة المثالية لاحتياجات فوترة عملك"
+    "titlePart1": "GoInvoice",
+    "titlePart2": "الخطط",
+    "description": "اختر الخطة المثالية لاحتياجات فوترة عملك",
+    "tabs": {
+      "monthly": "شهري",
+      "yearly": "سنوي"
+    },
+    "billedMonthly": "الدفع شهري",
+    "billedYearly": "الدفع سنوي",
+    "subscribe": "اشترك",
+    "packages": {
+      "basic": {
+        "name": "الأساسي",
+        "priceMonthly": "59",
+        "priceYearly": "599",
+        "subtitle": "ميزات أساسية للفوترة",
+        "features": ["خيار التكامل مع API بسعر خاص"]
+      },
+      "advance": {
+        "name": "المتقدم",
+        "priceMonthly": "89",
+        "priceYearly": "899",
+        "subtitle": "يشمل جميع ميزات الأساسي، بالإضافة إلى:",
+        "features": [
+          "100 رسالة SMS شهريًا",
+          "اشتراك GoPay مع 30 معاملة مجانية",
+          "خيار التكامل مع API بسعر خاص"
+        ]
+      }
+    }
   }
 }
-

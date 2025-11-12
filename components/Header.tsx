@@ -176,7 +176,7 @@ export function Header() {
             <Button
               variant="secondary"
               asChild
-              className="font-normal max-w-[73.73px]"
+              className="font-normal whitespace-nowrap"
             >
               <a
                 href="https://app.gopay.sa/wbiller/#/login"
@@ -186,7 +186,7 @@ export function Header() {
                 {t("signIn")}
               </a>
             </Button>
-            <Button asChild className="font-normal max-w-[104.74px]">
+            <Button asChild className="font-normal whitespace-nowrap">
               <a
                 href="https://app.gopay.sa/registration.html"
                 target="_blank"
