@@ -1,0 +1,44 @@
+{
+    "badge": "Our Blog",
+    "titlePart1": "GoPay",
+    "titlePart2": "Blog",
+    "description": "Read the latest insights, tips, and updates from GoPay. Learn about payment solutions, industry trends, and best practices for your business.",
+    "blog": {
+        "0": {
+            "imageAlt": "Media Coverage of GoPay Booth at School Expo",
+            "title": "Media Coverage of GoPay Booth at #School_Expo",
+            "description": "Media coverage of the GoPay booth at #School_Expo, held for four days at Riyadh Front for Conferences and Exhibitions in August.",
+            "date": "Aug 24, 2025"
+        },
+        "1": {
+            "imageAlt": "GoPay Participation in Seamless Exhibition",
+            "title": "GoPay Participation in Seamless Exhibition",
+            "description": "Media coverage of the GoPay booth at #School_Expo, held for four days at Riyadh Front for Conferences and Exhibitions in August.",
+            "date": "Jan 9, 2025"
+        },
+        "2": {
+            "imageAlt": "Strategic Partnership with PayTabs",
+            "title": "Strategic Partnership with PayTabs",
+            "description": "GoPay entered into a strategic partnership with PayTabs as part of its participation in the Seamless Exhibition.",
+            "date": "Jan 8, 2025"
+        },
+        "3": {
+            "imageAlt": "Memorandum of Understanding with Alinma Bank",
+            "title": "Memorandum of Understanding with Alinma Bank",
+            "description": "GoPay signed a memorandum of understanding with Alinma Bank during its participation in the Seamless Exhibition.",
+            "date": "Jan 4, 2025"
+        },
+        "4": {
+            "imageAlt": "Memorandum of Understanding with Banque Saudi Fransi",
+            "title": "Memorandum of Understanding with Banque Saudi Fransi",
+            "description": "GoPay signed a memorandum of understanding with Banque Saudi Fransi, as part of the company's efforts to strengthen its strategic partnerships.",
+            "date": "Jan 3, 2025"
+        },
+        "5": {
+            "imageAlt": "GoPay Participation in Seamless Exhibition",
+            "title": "GoPay Participation in Seamless Exhibition",
+            "description": "Media coverage of the GoPay booth at #School_Expo, held for four days at Riyadh Front for Conferences and Exhibitions in August.",
+            "date": "Jan 4, 2025"
+        }
+    }
+}
