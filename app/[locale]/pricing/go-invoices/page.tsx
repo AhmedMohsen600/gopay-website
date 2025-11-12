@@ -101,7 +101,7 @@ export default function GoInvoicesPricingPage() {
                 ctaText={t("subscribe")}
                 delay={index * 0.1}
                 disableScrollHiding={true}
-                className="min-h-[271.13px]"
+                className="min-h-[279px]"
               />
             ))}
           </div>
