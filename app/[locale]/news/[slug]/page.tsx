@@ -32,28 +32,31 @@ export default function NewsDetailPage({
 
   return (
     <div>
-      <section className=" pt-[160px] pb-[100px]">
+      <section className="px-6 pt-[100px] pb-16 md:pt-[160px] md:pb-[100px] md:px-16">
         <div className="max-w-[800px] mx-auto space-y-4">
           {/* Title */}
-          <Typography variant="h3" className="text-center ">
+          <Typography
+            variant="h3"
+            className="text-center max-w-[600px] mx-auto font-medium"
+          >
             {t(`news.${newsIndex}.title`)}
           </Typography>
 
           {/* Description */}
           <Typography
-            variant="p18"
-            className="text-center text-text-4  max-w-[700px] mx-auto"
+            variant="p16"
+            className="text-center   max-w-[600px] mx-auto"
           >
             {t(`news.${newsIndex}.description`)}
           </Typography>
 
           {/* Date */}
-          <Typography variant="p16" className="text-center text-text-3 ">
+          <Typography variant="p16" className="text-center text-[#1a1d21] ">
             {t(`news.${newsIndex}.date`)}
           </Typography>
 
           {/* Main Image */}
-          <div className="relative w-full min-h-[400px] md:min-h-[500px] rounded-3xl overflow-hidden ">
+          <div className="relative w-full min-h-[360px] md:min-h-[480px] rounded-3xl overflow-hidden  ">
             <Image
               src={newsItem.imageSrc}
               alt={t(`news.${newsIndex}.imageAlt`)}
