@@ -98,7 +98,7 @@ export function HeroSection({
         {typeof title === "string" ? (
           <Typography
             variant="h1"
-            className={cn(heroTitleVariants({ variant }))}
+            className={cn(heroTitleVariants({ variant }), "text-secondary")}
           >
             {title}
           </Typography>

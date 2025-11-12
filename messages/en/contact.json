@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "badge": "Have A Question?",
+    "title": "Contact Us",
+    "headline": "The future of your business is in safe hands.",
+    "body": "We are delighted by your trust and the opportunity to provide our innovative services and solutions, and to be part of your ecosystem as we work together to achieve your goals."
+  },
+  "form": {
+    "fields": {
+      "fullName": "Full Name*",
+      "email": "Email*",
+      "phone": "Phone Number*",
+      "city": "City*",
+      "message": "Message*"
+    },
+    "placeholders": {
+      "fullName": "Shehab Mohsen Mahmoud",
+      "email": "you@email.com",
+      "phone": "+20 1012 514 07",
+      "city": "19 Faisel Street, Giza, Egypt",
+      "message": "Tell us how we can help your business grow."
+    },
+    "button": {
+      "submit": "Submit",
+      "submitting": "Submitting..."
+    },
+    "errors": {
+      "fullName": "Please tell us your full name.",
+      "email": "Please enter a valid email address.",
+      "phoneMin": "Please add a phone number we can reach you on.",
+      "phoneFormat": "Phone numbers may include digits, spaces, dashes, parentheses, or a leading +.",
+      "city": "Please tell us where you are located.",
+      "message": "A short message helps us prepare the right response."
+    }
+  }
+}
+

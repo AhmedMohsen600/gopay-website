@@ -25,7 +25,7 @@ export function Header() {
     { label: t("pricing"), href: "/pricing", hasDropdown: true },
     { label: t("faq"), href: "/faq" },
     { label: t("newsAndBlog"), href: "/news", hasDropdown: true },
-    { label: t("contactUs"), href: "/contact" },
+    { label: t("contactUs"), href: "/contact-us" },
   ];
 
   // Pricing dropdown items
