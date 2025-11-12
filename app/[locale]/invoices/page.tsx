@@ -130,7 +130,7 @@ export default function InvoicesPage() {
               {/* Connector Line */}
               {index < currentSteps.length - 1 && (
                 <motion.div
-                  className="w-[2px] h-[100px] mx-auto my-0 border-l-2 border-dashed border-[#F2994A]"
+                  className="w-[2px] h-[100px] mx-auto my-0 border-s-2 border-dashed border-[#F2994A]"
                   initial={{ scaleY: 0, opacity: 0 }}
                   whileInView={{ scaleY: 1, opacity: 1 }}
                   viewport={{ once: true }}
