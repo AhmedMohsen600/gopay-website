@@ -1,0 +1,62 @@
+{
+  "badge": "How To",
+  "title": "Invoices",
+  "tabs": {
+    "recurring": "Recurring Payments",
+    "onetime": "One Time Payments"
+  },
+  "recurring": {
+    "step1": {
+      "title": "Step 1",
+      "description": "Through the GoPay service, the biller creates a new SADAD account for the customer."
+    },
+    "step2": {
+      "title": "Step 2",
+      "description": "When issuing an invoice or a payment request, the biller selects the customer's SADAD account, fills in the required details, and uploads them to the SADAD system."
+    },
+    "step3": {
+      "title": "Step 3",
+      "description": "GoPay then notifies the customer of the invoice or payment request via (SMS – email), including the customer's SADAD account number."
+    },
+    "step4": {
+      "title": "Step 4",
+      "description": "The customer logs into their bank account, selects SADAD Payments, and chooses \"Add Bill\" to add and register the new SADAD account. (This step is required only once.)"
+    },
+    "step5": {
+      "title": "Step 5",
+      "description": "The customer selects the biller name GoPay and biller code 902, then enters the new SADAD account details received from GoPay. If the account is already added to the customer's bank account, they can directly go to the \"My Bills\" section in SADAD Payments and check the outstanding balance for this account."
+    },
+    "step6": {
+      "title": "Step 6",
+      "description": "The customer verifies the invoice or payment request details and the outstanding SADAD account balance in order to complete the payment."
+    },
+    "step7": {
+      "title": "Step 7",
+      "description": "GoPay immediately notifies the biller once the customer completes the payment of the invoice or request and updates the customer's account balance."
+    }
+  },
+  "onetime": {
+    "step1": {
+      "title": "Step 1",
+      "description": "The biller fills in the invoice or payment request details and submits them through the SADAD system."
+    },
+    "step2": {
+      "title": "Step 2",
+      "description": "GoPay notifies the customer of the invoice or payment request details via (SMS – email), along with the SADAD number."
+    },
+    "step3": {
+      "title": "Step 3",
+      "description": "The customer logs into their bank account, selects SADAD Payments to make a one-time payment, and chooses the biller name GoPay with the biller code 902."
+    },
+    "step4": {
+      "title": "Step 4",
+      "description": "The customer enters the SADAD number, verifies the amount and invoice or payment request details, and proceeds with the payment."
+    },
+    "step5": {
+      "title": "Step 5",
+      "description": "GoPay immediately notifies the biller once the customer completes the payment of the invoice or payment request."
+    }
+  }
+}
+
+
