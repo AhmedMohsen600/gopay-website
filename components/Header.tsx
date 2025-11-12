@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
@@ -24,6 +24,7 @@ export function Header() {
   );
   const t = useTranslations("header");
   const pathname = usePathname();
+  const locale = useLocale();
 
   // Navigation items with optional children for dropdowns
   const navItems: NavItem[] = [
@@ -102,7 +103,9 @@ export function Header() {
                     onMouseLeave={() => setDropdownOpen(item.href, false)}
                   >
                     <button
-                      className={`group flex items-center gap-1 text-base font-normal transition-colors ${
+                      className={`group flex items-center gap-1 text-base font-${
+                        locale === "ar" ? "bold" : "normal"
+                      } transition-colors ${
                         isActive(item.href) ? "text-secondary" : "text-text-5"
                       }`}
                     >
@@ -164,7 +167,9 @@ export function Header() {
                     whileHover="hover"
                   >
                     <motion.span
-                      className="inline-block"
+                      className={`inline-block ${
+                        locale === "ar" ? "font-bold" : "font-normal"
+                      }`}
                       variants={{
                         rest: { y: 0, opacity: 1 },
                         hover: { y: "-100%", opacity: 0 },
@@ -174,7 +179,9 @@ export function Header() {
                       {item.label}
                     </motion.span>
                     <motion.span
-                      className="absolute top-0 left-0 inline-block"
+                      className={`absolute top-0 left-0 inline-block ${
+                        locale === "ar" ? "font-bold" : "font-normal"
+                      }`}
                       variants={{
                         rest: { y: "100%", opacity: 0 },
                         hover: { y: 0, opacity: 1 },
