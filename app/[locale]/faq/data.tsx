@@ -150,12 +150,7 @@ Customer: The end-user who receives the (service or product) from the biller and
       <>
         You can find information about the bill payment process through this
         link <br />
-        <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-2 inline-block"
-        >
+        <a href="/invoices" className="mt-2 inline-block">
           Click here.
         </a>
       </>
@@ -558,12 +553,7 @@ const faqItemsAr: FAQItem[] = [
       <>
         يمكنك التعرف على آلية تحصيل المدفوعات عبر الرابط
         <br />
-        <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-2 inline-block"
-        >
+        <a href="/invoices" className="mt-2 inline-block">
           اضغط هنا.
         </a>
       </>
