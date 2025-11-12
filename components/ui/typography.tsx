@@ -12,7 +12,7 @@ const typographyVariants = cva("", {
       h2: "xl:text-[50px] md:text-[36px] text-[24px] font-medium leading-none tracking-tight text-text-5",
 
       // H3 - 35px / 1.1
-      h3: "text-[18px] md:text-[35px] font-semibold leading-[1.1]",
+      h3: "text-[18px] md:text-[26px] xl:text-[35px] font-semibold leading-[1.1em] -tracking-[0.04em]",
 
       // H4 - 26px / 1.1
       h4: "xl:text-[26px] md:text-[17px] text-sm font-normal leading-none tracking-tight text-text-4",
