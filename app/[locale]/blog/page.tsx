@@ -33,6 +33,7 @@ export default function BlogPage() {
           {blogsData.map((news, index) => (
             <NewsCard
               key={index}
+              href={`/blog/${news.slug}`}
               imageSrc={news.imageSrc}
               imageAlt={t(`blog.${index}.imageAlt`)}
               title={t(`blog.${index}.title`)}
