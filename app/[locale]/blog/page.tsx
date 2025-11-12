@@ -14,18 +14,18 @@ export default function BlogPage() {
         className="md:min-h-[75vh]"
         badge={t("badge")}
         title={
-          <Typography variant="h2">
-            <span className="text-secondary">{t("titlePart1")}</span>{" "}
-            {t("titlePart2")}
-          </Typography>
-        }
-        description={
-          <div className="max-w-[700px] mx-auto text-center">
-            <Typography variant="p18" className="tracking-normal">
-              {t("description")}
+          <div className="text center space-y-4">
+            <Typography variant="h2" className="text-center">
+              <span className="text-secondary">{t("titlePart1")}</span>{" "}
+              {t("titlePart2")}
+            </Typography>
+            <Typography variant="h5" className="text-center leading-[1.1em]">
+              {t("subtitlePart1")} <br />
+              {t("subtitlePart2")}
             </Typography>
           </div>
         }
+        description={t("description")}
       />
 
       <section className="px-6 md:px-16 xl:pb-[120px] pb-20  pt-6 md:pt-0">

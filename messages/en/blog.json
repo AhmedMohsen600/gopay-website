@@ -2,7 +2,9 @@
     "badge": "Our Blog",
     "titlePart1": "GoPay",
     "titlePart2": "Blog",
-    "description": "Read the latest insights, tips, and updates from GoPay. Learn about payment solutions, industry trends, and best practices for your business.",
+    "subtitlePart1": "Everything You Need to Know About",
+    "subtitlePart2": "Electronic Payments and Billing Solutions",
+    "description": "We are pleased to share with you our specialized articles and analyses that matter to every biller relying on fintech to enhance and improve the efficiency of billing and electronic payment management, while applying the best modern and advanced practices. Follow us and stay up to date with the latest developments.",
     "blog": {
         "0": {
             "imageAlt": "Media Coverage of GoPay Booth at School Expo",
