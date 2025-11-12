@@ -117,7 +117,7 @@ export function HeroSection({
         {typeof description === "string" ? (
           <Typography
             variant="p18"
-            className={cn(heroDescriptionVariants({ variant }))}
+            className={cn(heroDescriptionVariants({ variant }), "text-center")}
           >
             {description}
           </Typography>

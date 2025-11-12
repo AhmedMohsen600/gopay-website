@@ -18,13 +18,13 @@ const typographyVariants = cva("", {
       h4: "xl:text-[26px] md:text-[17px] text-sm font-normal leading-none tracking-tight text-text-4",
 
       // H5 - 24px / 1.1
-      h5: "text-base md:text-lg xl:text-2xl font-medium leading-[1.4em] -tracking-[0.03em]",
+      h5: "text-base md:text-lg xl:text-[24px] font-medium leading-[1.4em] -tracking-[0.04em]",
 
       // H6 - 20px / 1.1
       h6: "xl:text-xl md:text-[15px] text-[13px] font-medium leading-none tracking-tight",
 
       // P - 18px / 1.4
-      p18: "xl:text-lg md:text-[15px] text-[13px]  font-normal text-text-4 leading-tight tracking-tight",
+      p18: "xl:text-lg md:text-[15px] text-[13px]  font-normal text-text-4 leading-[1.4em] -tracking-[0.03em]",
 
       // P - 16px / 1.4
       p16: "xl:text-base md:text-sm text-xs font-normal text-text-3 leading-[1.4em] -tracking-[0.03em]",
