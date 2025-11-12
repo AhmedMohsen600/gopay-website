@@ -33,6 +33,7 @@ export default function NewsPage() {
           {newsData.map((news, index) => (
             <NewsCard
               key={index}
+              href={`/news/${news.slug}`}
               imageSrc={news.imageSrc}
               imageAlt={t(`news.${index}.imageAlt`)}
               title={t(`news.${index}.title`)}
