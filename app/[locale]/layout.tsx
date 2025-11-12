@@ -50,13 +50,18 @@ export default async function LocaleLayout({
   // side is the easiest way to get started
   const messages = await getMessages();
 
-  // Select font based on locale
-  const fontClass = locale === "ar" ? tajawal.variable : figtree.variable;
-
   return (
-    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
+    <html
+      lang={locale}
+      dir={locale === "ar" ? "rtl" : "ltr"}
+      className={`${figtree.variable} ${tajawal.variable}`}
+    >
       <body
-        className={`${fontClass} font-sans antialiased bg-white text-text-5`}
+        className="antialiased bg-white text-text-5"
+        style={{
+          fontFamily:
+            locale === "ar" ? "var(--font-tajawal)" : "var(--font-figtree)",
+        }}
       >
         <NextIntlClientProvider messages={messages}>
           <Header />
