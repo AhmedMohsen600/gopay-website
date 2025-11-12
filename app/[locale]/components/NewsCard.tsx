@@ -28,7 +28,7 @@ export function NewsCard({
   return (
     <article
       className={cn(
-        "group h-full bg-[#fafafa] overflow-hidden rounded-[28px]",
+        "group h-full bg-[#fafafa] overflow-hidden rounded-3xl",
         className
       )}
     >
@@ -54,7 +54,7 @@ export function NewsCard({
         )}
       >
         <div className="flex-1 ">
-          <Typography className="mb-2 tracking-tight" variant="h5">
+          <Typography className="mb-2" variant="h5">
             {title}
           </Typography>
 
@@ -63,7 +63,7 @@ export function NewsCard({
           </Typography>
         </div>
 
-        <Typography variant="p14" className="text-text-4">
+        <Typography variant="p14" className="text-text-text-2">
           {date}
         </Typography>
       </div>
