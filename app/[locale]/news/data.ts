@@ -1,4 +1,5 @@
 export interface NewsItem {
+  slug: string;
   imageSrc: string;
   imageAltKey: string;
   titleKey: string;
@@ -11,6 +12,7 @@ export interface NewsItem {
 
 export const newsData: NewsItem[] = [
   {
+    slug: "media-coverage-of-gopay-booth-at-school-expo",
     imageSrc:
       "https://framerusercontent.com/images/pwOCQ86eV6uTDBY7fWUfJB09WU.jpg",
     imageAltKey: "news.0.imageAlt",
@@ -22,6 +24,7 @@ export const newsData: NewsItem[] = [
     contentContainerClassName: "md:min-h-[163px]",
   },
   {
+    slug: "gopay-participation-in-seamless-exhibition-1",
     imageSrc:
       "https://framerusercontent.com/images/hjAP4425jhk2cRYV1pkS6Z2y70.jpg",
     imageAltKey: "news.1.imageAlt",
@@ -30,6 +33,7 @@ export const newsData: NewsItem[] = [
     dateKey: "news.1.date",
   },
   {
+    slug: "gopay-participation-in-seamless-exhibition-2",
     imageSrc:
       "https://framerusercontent.com/images/axzz6ysTvd1Zc4C0TIq1eoKfy28.jpg?width=3936&height=2624",
     imageAltKey: "news.2.imageAlt",
@@ -38,6 +42,7 @@ export const newsData: NewsItem[] = [
     dateKey: "news.2.date",
   },
   {
+    slug: "strategic-partnership-with-paytabs",
     imageSrc:
       "https://framerusercontent.com/images/9ce2k8cqOlGJfrJg6XNTd13Hg.jpg?scale-down-to=1024&width=1344&height=896",
     imageAltKey: "news.3.imageAlt",
@@ -46,6 +51,7 @@ export const newsData: NewsItem[] = [
     dateKey: "news.3.date",
   },
   {
+    slug: "memorandum-of-understanding-with-alinma-bank",
     imageSrc:
       "https://framerusercontent.com/images/IHxbAFonDVAryRhTPcL2nK1d9g.png?width=1024&height=1024",
     imageAltKey: "news.4.imageAlt",
@@ -54,6 +60,7 @@ export const newsData: NewsItem[] = [
     dateKey: "news.4.date",
   },
   {
+    slug: "gopay-participation-in-seamless-exhibition-3",
     imageSrc:
       "https://framerusercontent.com/images/oSm8gjptu9UhI2VAZWmFxtcsc.png?width=1856&height=2464",
     imageAltKey: "news.5.imageAlt",
@@ -62,6 +69,7 @@ export const newsData: NewsItem[] = [
     dateKey: "news.5.date",
   },
   {
+    slug: "memorandum-of-understanding-with-banque-saudi-fransi",
     imageSrc:
       "https://framerusercontent.com/images/ovtVSKkCRIqiatRPO2CwFF3k88.png?scale-down-to=2048&width=1792&height=2688",
     imageAltKey: "news.6.imageAlt",

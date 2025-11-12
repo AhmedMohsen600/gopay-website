@@ -1,10 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import { Link } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 import { Typography } from "@/components/ui/typography";
 
 export interface NewsCardProps {
+  href?: string;
   imageSrc: string;
   imageAlt: string;
   title: string;
@@ -16,6 +18,7 @@ export interface NewsCardProps {
 }
 
 export function NewsCard({
+  href,
   imageSrc,
   imageAlt,
   title,
@@ -25,13 +28,8 @@ export function NewsCard({
   imageContainerClassName,
   contentContainerClassName,
 }: NewsCardProps) {
-  return (
-    <article
-      className={cn(
-        "group h-full bg-[#fafafa] overflow-hidden rounded-3xl",
-        className
-      )}
-    >
+  const content = (
+    <>
       <div
         className={cn(
           "relative w-full min-h-[300px] overflow-hidden",
@@ -67,6 +65,31 @@ export function NewsCard({
           {date}
         </Typography>
       </div>
+    </>
+  );
+
+  if (href) {
+    return (
+      <Link
+        href={href}
+        className={cn(
+          "group h-full bg-[#fafafa] overflow-hidden rounded-3xl block",
+          className
+        )}
+      >
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <article
+      className={cn(
+        "group h-full bg-[#fafafa] overflow-hidden rounded-3xl",
+        className
+      )}
+    >
+      {content}
     </article>
   );
 }
