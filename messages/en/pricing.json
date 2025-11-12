@@ -178,9 +178,38 @@
   },
   "goInvoices": {
     "badge": "Pricing",
-    "titlePart1": "Go",
-    "titlePart2": "Invoices Plans",
-    "description": "Choose the perfect plan for your business invoicing needs"
+    "titlePart1": "GoInvoice",
+    "titlePart2": "Plans",
+    "description": "Choose the perfect plan for your business invoicing needs",
+    "tabs": {
+      "monthly": "Monthly",
+      "yearly": "Yearly"
+    },
+    "billedMonthly": "Billed monthly",
+    "billedYearly": "Billed yearly",
+    "subscribe": "Subscribe",
+    "packages": {
+      "basic": {
+        "name": "Basic",
+        "priceMonthly": "59",
+        "priceYearly": "599",
+        "subtitle": "Essential features for invoicing",
+        "features": [
+          "API integration option at a special rate"
+        ]
+      },
+      "advance": {
+        "name": "Advance",
+        "priceMonthly": "89",
+        "priceYearly": "899",
+        "subtitle": "Includes all Basic features, plus:",
+        "features": [
+          "100 SMS messages per month",
+          "GoPay subscription with 30 free transactions",
+          "API integration option at a special rate"
+        ]
+      }
+    }
   }
 }
 
