@@ -92,7 +92,7 @@ export default function InvoicesPage() {
       <div className="max-w-[1000x] mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <Badge>{t("badge")}</Badge>
+          <Badge className="bg-[#9ea0a6]">{t("badge")}</Badge>
 
           <Typography variant="h1" className="text-[#F2994A] mt-6 mb-9">
             {t("title")}
