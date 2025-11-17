@@ -42,6 +42,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     "contact",
     "news",
     "blog",
+    "invoices",
     // Add more namespaces here as you split them:
     // "common", "header", "home", "cta", "footer"
   ];
