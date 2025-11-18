@@ -96,10 +96,10 @@ export function ProductCard({
         </div>
 
         {/* Button */}
-        <Button className="w-fit mt-4" onClick={onButtonClick}>
+        {/* <Button className="w-fit mt-4" onClick={onButtonClick}>
           {buttonText}
           <AnimatedArrow rtlIcon={CaretLeft} icon={CaretRight} />
-        </Button>
+        </Button> */}
       </div>
 
       <motion.div
