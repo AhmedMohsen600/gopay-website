@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
+import { Link, usePathname } from "@/i18n/routing";
 import Image from "next/image";
 import { Typography } from "@/components/ui/typography";
 import { CTASection } from "./CTASection";
@@ -11,9 +11,14 @@ import {
   InstagramLogoIcon,
   LinkedinLogoIcon,
 } from "@phosphor-icons/react/dist/ssr";
+import { cn } from "@/lib/utils";
 
 export function Footer() {
   const t = useTranslations("footer");
+  const pathname = usePathname();
+
+  // Check if current route is home
+  const isHome = pathname === "/" || pathname.match(/^\/(en|ar)$/);
 
   const footerColumns = [
     {
@@ -78,10 +83,14 @@ export function Footer() {
   ];
 
   return (
-    <footer className=" relative">
+    <footer
+      className={cn(
+        " relative flex flex-col gap-10 md:gap-16 xl:gap-20 ",
+        isHome ? "bg-bg" : "bg-white"
+      )}
+    >
       {/* CTA Section */}
       <CTASection />
-
       {/* Footer Links Section */}
       <section className="p-8 md:py-16 md:px-10 bg-primary relative overflow-hidden z-20">
         {/* Gopay ad IFS logos div */}
