@@ -19,10 +19,10 @@ export default function Home() {
     <>
       <HeroSection />
       <PaymentChannelSection />
+      <OurClientsSection />
       <GopayProductSuiteSection />
       <GoPayImpactShowcaseSection />
       <HowGopayWorksSection />
-      <OurClientsSection />
       <WhyClientsSection />
       <GopayInNumbersSection />
       <GopaySolutionsSection />
