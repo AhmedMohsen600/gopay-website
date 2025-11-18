@@ -5,7 +5,6 @@ import { Link, usePathname } from "@/i18n/routing";
 import Image from "next/image";
 import { Typography } from "@/components/ui/typography";
 import { CTASection } from "./CTASection";
-import { GoPayLogo } from "@/components/GoPayLogo";
 import {
   XLogoIcon,
   InstagramLogoIcon,
@@ -93,24 +92,13 @@ export function Footer() {
       <CTASection />
       {/* Footer Links Section */}
       <section className="p-8 md:py-16 md:px-10 bg-primary relative overflow-hidden z-20">
-        {/* Gopay ad IFS logos div */}
-        <div className="container mx-auto max-w-[1200px] mb-8 flex items-center  md:justify-between gap-13">
-          <GoPayLogo className="md:h-9 w-auto h-7" />
-          <Image
-            src="https://framerusercontent.com/images/XYe5lLtYXj7Q9SIpZmNGSWGEfYc.png?scale-down-to=512&width=3024&height=905"
-            alt="IFS Logo"
-            width={3024}
-            height={905}
-            className="md:h-14 h-8 w-auto"
-          />
-        </div>
         <div className="container mx-auto max-w-[1200px] mb-12">
           <div className="grid grid-cols-2  md:grid-cols-4 gap-8 lg:gap-12">
             {footerColumns.map((column) => (
               <div key={column.id}>
                 <Typography
-                  variant="p16"
-                  className="text-white font-bold mb-4 xl:text-base md:text-sm text-xs"
+                  variant="h5"
+                  className="text-white font-bold mb-4  "
                 >
                   {t(column.titleKey)}
                 </Typography>
@@ -120,7 +108,7 @@ export function Footer() {
                       {link.isInternal ? (
                         <Link
                           href={link.href}
-                          className="text-white hover:text-white transition-colors md:text-sm text-[13px]  "
+                          className="text-white hover:text-white hover:opacity-80 hover:underline transition-colors text-xs md:text-sm  xl:text-base  "
                         >
                           {t(link.labelKey)}
                         </Link>
@@ -129,7 +117,7 @@ export function Footer() {
                           href={link.href}
                           target="_blank"
                           rel="noopener"
-                          className="text-white/80 hover:text-white transition-colors text-sm"
+                          className="text-white/80 hover:text-white hover:opacity-80 hover:underline transition-colors text-xs md:text-sm  xl:text-base"
                         >
                           {t(link.labelKey)}
                         </a>
@@ -141,7 +129,16 @@ export function Footer() {
             ))}
           </div>
         </div>
-
+        {/* Gopay ad IFS logos div */}
+        <div className="container mx-auto max-w-[1200px] mb-8 flex items-center  md:justify-between gap-13">
+          <Image
+            src="https://framerusercontent.com/images/XYe5lLtYXj7Q9SIpZmNGSWGEfYc.png?scale-down-to=512&width=3024&height=905"
+            alt="IFS Logo"
+            width={3024}
+            height={905}
+            className="md:h-14 h-8 w-auto"
+          />
+        </div>
         {/* Third row - Company Info & Social */}
         <div className="container mx-auto max-w-[1200px] mt-12  ">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:justify-items-center justify-items-start">
