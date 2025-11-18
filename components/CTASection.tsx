@@ -17,7 +17,7 @@ export function CTASection() {
 
   return (
     <section
-      className="relative py-16 sm:py-[72px] lg:py-[72px] xl:py-[100px] overflow-hidden isolate"
+      className="relative py-8  md:py-14 xl:py-[70px] overflow-hidden isolate w-[88%] md:-w-[90%] xl:-w-[85%] mx-auto rounded-3xl xl:rounded-[48px] max-w-[1200px]"
       style={{
         background:
           "linear-gradient(179deg, rgb(32, 37, 71) 0%, rgb(40, 45, 78) 90.40153434684684%)",
@@ -39,7 +39,7 @@ export function CTASection() {
           >
             <Typography
               variant="h2"
-              className="text-white text-[24px] sm:text-[36px]  xl:text-[50px] font-medium leading-tight tracking-tighter "
+              className="text-white text-[24px] sm:text-[36px]  xl:text-[50px] font-medium leading-[1.1em] tracking-tighter "
             >
               {t("title")}
             </Typography>
