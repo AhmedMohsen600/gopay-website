@@ -19,7 +19,7 @@ export function GopayProductSuiteSection() {
   const getContainerPadding = (productId: string) => {
     switch (productId) {
       case "gopay":
-        return "p-0 sm:p-0 md:p-0 md:p-0 min-h-[200px] sm:min-h-[250px] md:min-h-[310px] flex items-end justify-center";
+        return "p-0 sm:p-0 md:p-0 min-h-[300px] sm:min-h-[350px] md:min-h-[400px] flex items-center justify-center";
       case "goinvoice":
         return "";
       case "gosplit":
@@ -37,11 +37,11 @@ export function GopayProductSuiteSection() {
   const getImageHeight = (productId: string) => {
     switch (productId) {
       case "gopay":
-        return "max-h-[200px] sm:max-h-[250px] md:max-h-[309.81px]";
+        return "w-full sm:h-full xl:h-[602.05px] max-h-[300px] sm:max-h-[350px] md:max-h-[603px]";
       case "goinvoice":
         return "";
       case "gosplit":
-        return "h-[80px] sm:h-[110px] md:h-[144px]";
+        return "sm:h-[110px] md:h-[144px]";
       case "goonline":
         return "max-h-[120px] sm:max-h-[160px] w-[360px] md:max-h-[150px]";
       case "gopayPlus":
@@ -93,18 +93,22 @@ export function GopayProductSuiteSection() {
       <div className="container mx-auto max-w-[1000px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
           {productSuiteData.map((product, index) => (
-            <ProductCard
+            <div
               key={product.id}
-              tag={t(`products.${product.id}.tag`)}
-              title={t(`products.${product.id}.title`)}
-              description={t(`products.${product.id}.description`)}
-              buttonText={t("buttonText")}
-              delay={index * 0.1}
-              alt={t(`products.${product.id}.title`)}
-              imgUrl={product.imagePath!}
-              imageContainerClassName={getContainerPadding(product.id)}
-              imageClassName={getImageHeight(product.id)}
-            />
+              className={index === 0 ? "md:col-span-2" : ""}
+            >
+              <ProductCard
+                tag={t(`products.${product.id}.tag`)}
+                title={t(`products.${product.id}.title`)}
+                description={t(`products.${product.id}.description`)}
+                buttonText={t("buttonText")}
+                delay={index * 0.1}
+                alt={t(`products.${product.id}.title`)}
+                imgUrl={product.imagePath!}
+                imageContainerClassName={getContainerPadding(product.id)}
+                imageClassName={getImageHeight(product.id)}
+              />
+            </div>
           ))}
         </div>
       </div>
