@@ -8,8 +8,10 @@ import { useRef, useEffect, useState } from "react";
 export function HowGopayWorksSection() {
   const t = useTranslations("home.howGopayWorks");
   const sectionRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const [startWidth, setStartWidth] = useState(1209.6);
   const [maxScale, setMaxScale] = useState(1.2);
+  const [videoError, setVideoError] = useState(false);
 
   // Calculate responsive width and scale
   useEffect(() => {
@@ -54,21 +56,29 @@ export function HowGopayWorksSection() {
       {/* Video Section - scales from start width to full viewport width */}
       <div className="flex justify-center">
         <motion.div
-          style={{ scale, width: startWidth }}
+          style={{ scale, width: startWidth, transformOrigin: "center top" }}
           className="relative overflow-hidden"
         >
-          <video
-            className="w-full h-auto"
-            controls
-            playsInline
-            poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%23000000' width='1920' height='1080'/%3E%3C/svg%3E"
-          >
-            <source
-              src="https://ifs.sa/wp-content/uploads/2022/11/GoPay_intro.mp4"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
+          {videoError ? (
+            <div className="w-full aspect-video bg-gray-100 flex items-center justify-center text-gray-500">
+              <p>Unable to load video. Please check your connection.</p>
+            </div>
+          ) : (
+            <video
+              ref={videoRef}
+              className="w-full h-auto"
+              controls
+              playsInline
+              preload="metadata"
+              onError={() => setVideoError(true)}
+            >
+              <source
+                src="https://ifs.sa/wp-content/uploads/2022/11/GoPay_intro.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          )}
         </motion.div>
       </div>
     </section>
