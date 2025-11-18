@@ -6,7 +6,7 @@ const typographyVariants = cva("", {
   variants: {
     variant: {
       // H1 - 62px / 1.2
-      h1: "font-medium xl:text-[62px] md:text-[50px] text-[34px]  leading-[1.2em]! -tracking-[0.03em]",
+      h1: "font-medium xl:text-[75px] md:text-[50px] text-[33px] leading-[1.2em]! -tracking-[0.03em]",
 
       // H2 - 50px / 1.1
       h2: "xl:text-[50px] md:text-[36px] text-[24px] font-medium leading-none tracking-tight text-text-5",

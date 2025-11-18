@@ -55,24 +55,30 @@ export function ImpactCard({
       </div>
       <div>
         {/* Metric Section */}
-        <div className="flex items-center gap-2">
-          {/* Icon */}
-          {iconType === "up" ? (
-            <ArrowCircleUpRight size={32} color="#70e76d" />
-          ) : (
-            <ArrowCircleDownLeft size={32} color="#e6c66b" />
-          )}
-
+        <div className="flex items-end justify-between gap-4">
           {/* Metric and Label */}
-          <div className="flex  flex-col">
+          <div className="flex flex-col">
             <Typography variant="h2" className="text-white font-bold">
               {metric}
             </Typography>
+            <Typography variant="p16" className="text-white">
+              {metricLabel}
+            </Typography>
           </div>
+
+          {/* Icon */}
+          {iconType === "up" ? (
+            <ArrowCircleUpRight
+              className="w-[46px] h-[46px] md:w-[64px] md:h-[64px]"
+              color="#70e76d"
+            />
+          ) : (
+            <ArrowCircleDownLeft
+              className="md:w-[64px] h-[46px] w-[46px] md:h-[64px]"
+              color="#e6c66b"
+            />
+          )}
         </div>
-        <Typography variant="p16" className="text-white">
-          {metricLabel}
-        </Typography>
       </div>
     </motion.div>
   );

@@ -64,7 +64,7 @@ export function HeroSection() {
           <div className="relative z-10 max-w-5xl mx-auto text-center">
             <Typography
               variant="h1"
-              className="text-[33px] md:text-[75px] tracking-tight leading-tight font-normal"
+              className="tracking-tight leading-tight font-normal"
             >
               {/* Title appears first */}
               <motion.span
