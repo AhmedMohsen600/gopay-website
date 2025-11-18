@@ -136,20 +136,17 @@ export function Footer() {
             {/* Address */}
             <div className=" col-span-2">
               <Typography variant="h5" className="text-white font-bold mb-4">
-                Address
+                {t("address")}
               </Typography>
               <Typography variant="p14" className="text-white/80">
-                IFS Company, Commercial Registration No. 1010895871, License No.
-                43033966.
-                <br />
-                Licensed and regulated by the Saudi Central Bank
+                {t("companyInfo.addressText")}
               </Typography>
             </div>
 
             {/* Get In Touch */}
             <div className="">
               <Typography variant="h5" className="text-white font-bold mb-4">
-                Get In Touch
+                {t("getInTouch")}
               </Typography>
               <div>
                 <a
@@ -170,7 +167,7 @@ export function Footer() {
             {/* Social Media Links */}
             <div className="">
               <Typography variant="h5" className="text-white font-bold mb-4">
-                Social Media
+                {t("socialMedia")}
               </Typography>
               <div className="flex gap-5">
                 <a
@@ -228,10 +225,10 @@ export function Footer() {
           {/* Copyright */}
           <div className="mt-8 text-center flex-1">
             <Typography variant="p14" className="text-white text-xs md:text-sm">
-              © All rights reserved to
+              © {t("copyrightText")}
             </Typography>
             <Typography variant="p14" className="text-white text-xs md:text-sm">
-              Inclusive Financial Solutions Co.
+              {t("companyName")}
             </Typography>
           </div>
           {/* SADAD Certification Badge */}
