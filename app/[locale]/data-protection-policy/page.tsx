@@ -138,11 +138,11 @@ export default function DataProtectionPolicyPage() {
         {/* 3. Data Collection */}
         <div className="space-y-2">
           <Typography variant="h3">3. Data We Collect</Typography>
-          <Typography variant="p16">
+          <Typography variant="p16" className="mb-4">
             We collect and process various types of personal data to provide and
             improve our services:
           </Typography>
-          <div>
+          <div className="space-y-4">
             <div className="space-y-2">
               <Typography variant="p16" className="font-bold text-text-4">
                 1.<span className="ms-2">Personal Information</span>
@@ -168,6 +168,24 @@ export default function DataProtectionPolicyPage() {
               >
                 Bank account data: Name in bank, bank name, account number, bank
                 certificate, owner data.
+              </Typography>
+            </div>
+            <div className="space-y-2">
+              <Typography variant="p16" className="font-bold text-text-4">
+                2.<span className="ms-2">Contact Data:</span>
+              </Typography>
+              <Typography variant="p16" className="text-text-4">
+                Information provided during your communication with customer
+                support via chats, phone calls, or email.
+              </Typography>
+            </div>
+            <div className="space-y-2">
+              <Typography variant="p16" className="font-bold text-text-4">
+                3.<span className="ms-2">Technical Data:</span>
+              </Typography>
+              <Typography variant="p16" className="text-text-4">
+                Cookies and similar technologies to improve website
+                functionality and analyze performance.
               </Typography>
             </div>
           </div>
