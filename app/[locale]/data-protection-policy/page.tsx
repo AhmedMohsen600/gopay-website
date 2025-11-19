@@ -1,9 +1,7 @@
 import { HeroSection } from "@/components/HeroSection";
 import { Typography } from "@/components/ui/typography";
-import { useTranslations } from "next-intl";
 
 export default function DataProtectionPolicyPage() {
-  const t = useTranslations("dataProtectionPolicy");
   return (
     <div>
       <HeroSection
@@ -226,6 +224,85 @@ export default function DataProtectionPolicyPage() {
                 services.
               </Typography>
             </div>
+          </div>
+        </div>
+        {/* 5. Sharing Your Data */}
+        <div className="space-y-2 w-[90%]">
+          <Typography variant="h3">5. Sharing Your Data</Typography>
+          <Typography variant="p16" className="mb-5 text-text-4">
+            The client undertakes and declares, being of full legal capacity,
+            the following:
+          </Typography>
+          <div className="space-y-1.5">
+            <Typography
+              variant="p16"
+              className="leading-[1.4em] text-text-4 pl-5 relative before:content-['1.'] before:absolute before:left-0 before:top-0 before:font-normal"
+            >
+              That they are not legally prohibited from dealing with the
+              company, and that all data provided by them is correct, reliable,
+              and updated.
+            </Typography>
+            <Typography
+              variant="p16"
+              className="leading-[1.4em] text-text-4 pl-5 relative before:content-['2.'] before:absolute before:left-0 before:top-0 before:font-normal"
+            >
+              That they are responsible before the competent authorities for
+              funds deposited in their account with their knowledge, and those
+              deposited in their account without their knowledge, whether they
+              personally disposed of them or not, if they do not officially
+              report them upon knowing of their presence in their account.
+            </Typography>
+            <Typography
+              variant="p16"
+              className="leading-[1.4em] text-text-4 pl-5 relative before:content-['3.'] before:absolute before:left-0 before:top-0 before:font-normal"
+            >
+              That the funds deposited in the account are derived from
+              legitimate activities and that they are responsible for their
+              validity. If{" "}
+              <span className="font-bold">
+                Inclusive Financial Solutions Company
+              </span>{" "}
+              receives any illicit or counterfeit funds from them, it is not
+              entitled to recover them or be compensated for them.
+            </Typography>
+            <Typography
+              variant="p16"
+              className="leading-[1.4em] text-text-4 pl-5 relative before:content-['4.'] before:absolute before:left-0 before:top-0 before:font-normal"
+            >
+              That{" "}
+              <span className="font-bold">
+                Inclusive Financial Solutions Company
+              </span>{" "}
+              has the right to freeze the account or any of the amounts credited
+              to it and notify the competent authorities if there is suspicion
+              that the amounts result from financial fraud or illegal operations
+              in accordance with applicable regulations and instructions.
+            </Typography>
+            <Typography
+              variant="p16"
+              className="leading-[1.4em] text-text-4 pl-5 relative before:content-['5.'] before:absolute before:left-0 before:top-0 before:font-normal"
+            >
+              That they are the true beneficiary of the account.
+            </Typography>
+            <Typography
+              variant="p16"
+              className="leading-[1.4em] text-text-4 pl-5 relative before:content-['6.'] before:absolute before:left-0 before:top-0 before:font-normal"
+            >
+              That they are fully aware and knowledgeable that it is prohibited
+              to transfer to unknown persons or entities according to applicable
+              regulations and instructions, and that all transfers they make are
+              to known persons and entities and for known and legitimate
+              commercial purposes.
+            </Typography>
+            <Typography
+              variant="p16"
+              className="leading-[1.4em] text-text-4 pl-5 relative before:content-['7.'] before:absolute before:left-0 before:top-0 before:font-normal"
+            >
+              That they have read and understood the terms and conditions set
+              forth in this Agreement, and that they will read the terms and
+              conditions specific to the services and products associated with
+              the account, as published on the company&apos;s website.
+            </Typography>
           </div>
         </div>
       </section>
