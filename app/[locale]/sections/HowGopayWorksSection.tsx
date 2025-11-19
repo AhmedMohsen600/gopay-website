@@ -10,26 +10,25 @@ export function HowGopayWorksSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [startWidth, setStartWidth] = useState(1209.6);
-  const [maxScale, setMaxScale] = useState(1.2);
+  const [endWidth, setEndWidth] = useState(window.innerWidth);
   const [videoError, setVideoError] = useState(false);
 
-  // Calculate responsive width and scale
+  // Calculate responsive width
   useEffect(() => {
-    const calculateScale = () => {
+    const calculateWidths = () => {
       const viewportWidth = window.innerWidth;
 
       // On mobile/tablet, start at 80% width, on desktop use 1209.6px
       const initialWidth = viewportWidth < 1024 ? viewportWidth * 0.8 : 1209.6;
       setStartWidth(initialWidth);
 
-      // Calculate scale to reach 100% viewport width
-      const calculatedScale = viewportWidth / initialWidth;
-      setMaxScale(calculatedScale);
+      // End width is always 100% of viewport
+      setEndWidth(viewportWidth);
     };
 
-    calculateScale();
-    window.addEventListener("resize", calculateScale);
-    return () => window.removeEventListener("resize", calculateScale);
+    calculateWidths();
+    window.addEventListener("resize", calculateWidths);
+    return () => window.removeEventListener("resize", calculateWidths);
   }, []);
 
   // Track scroll progress of the section
@@ -38,11 +37,11 @@ export function HowGopayWorksSection() {
     offset: ["start end", "center center"], // Start when entering viewport, end when centered
   });
 
-  // As you scroll DOWN, video grows from small (1) to large (maxScale)
-  const scale = useTransform(scrollYProgress, [0, 1], [1, maxScale]);
+  // As you scroll DOWN, video grows from start width to full viewport width
+  const width = useTransform(scrollYProgress, [0, 1], [startWidth, endWidth]);
 
   return (
-    <section ref={sectionRef} className="bg-white py-14 md:py-40 min-h-screen">
+    <section ref={sectionRef} className="bg-white py-14 md:py-40">
       {/* Title Section */}
       <div className="container mx-auto px-4">
         <div className="text-center mb-28">
@@ -53,12 +52,9 @@ export function HowGopayWorksSection() {
         </div>
       </div>
 
-      {/* Video Section - scales from start width to full viewport width */}
+      {/* Video Section - animates from start width to full viewport width */}
       <div className="flex justify-center">
-        <motion.div
-          style={{ scale, width: startWidth, transformOrigin: "center top" }}
-          className="relative overflow-hidden"
-        >
+        <motion.div style={{ width }} className="relative overflow-hidden">
           {videoError ? (
             <div className="w-full aspect-video bg-gray-100 flex items-center justify-center text-gray-500">
               <p>Unable to load video. Please check your connection.</p>
