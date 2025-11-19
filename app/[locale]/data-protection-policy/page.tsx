@@ -190,6 +190,44 @@ export default function DataProtectionPolicyPage() {
             </div>
           </div>
         </div>
+        {/* 4. Processing Your Data */}
+        <div className="space-y-2">
+          <Typography variant="h3" className="text-text-4">
+            4. Processing Your Data
+          </Typography>
+          <Typography variant="p16" className="text-text-4 mb-5">
+            The purpose of its processing is only after the explicit consent of
+            its owner in accordance with Article (5) of the Personal Data
+            Protection System for specific purposes, which include:
+          </Typography>
+          <div className="space-y-4">
+            <div className="space-y-2">
+              <Typography
+                variant="p16"
+                className="leading-[1em] text-text-4 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.4em] before:w-1 before:h-1 before:bg-text-4 before:rounded-full"
+              >
+                <span className="font-bold me-2">Service Providers:</span>{" "}
+                External companies that help provide our services, such as
+                payment processors and cloud storage providers.
+              </Typography>
+              <Typography
+                variant="p16"
+                className="leading-[1em] text-text-4 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.4em] before:w-1 before:h-1 before:bg-text-4 before:rounded-full"
+              >
+                <span className="font-bold me-2">Regulatory Bodies:</span> To
+                comply with legal obligations or based on official requests.
+              </Typography>
+              <Typography
+                variant="p16"
+                className="leading-[1em] text-text-4 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.4em] before:w-1 before:h-1 before:bg-text-4 before:rounded-full"
+              >
+                <span className="font-bold me-2">Business Partners:</span> When
+                needed to complete financial transactions or provide related
+                services.
+              </Typography>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );
