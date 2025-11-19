@@ -299,8 +299,14 @@
       "commercialReg": "Commercial Registration No. 1010895871",
       "license": "Licensed and regulated by the Saudi Central Bank | License No. 43033966",
       "phone": "8001180024",
-      "email": "care@gopay.sa"
+      "email": "care@gopay.sa",
+      "addressText": "IFS Company, Commercial Registration No. 1010895871, License No. 43033966. Licensed and regulated by the Saudi Central Bank"
     },
+    "address": "Address",
+    "getInTouch": "Get In Touch",
+    "socialMedia": "Social Media",
+    "copyrightText": "All rights reserved to",
+    "companyName": "Inclusive Financial Solutions Co.",
     "copyright": "All rights reserved to Integrated Financial Solutions Company",
     "rights": "All rights reserved.",
     "privacy": "Privacy Policy",

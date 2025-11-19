@@ -1,19 +1,23 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
+import { Link, usePathname } from "@/i18n/routing";
 import Image from "next/image";
 import { Typography } from "@/components/ui/typography";
 import { CTASection } from "./CTASection";
-import { GoPayLogo } from "@/components/GoPayLogo";
 import {
   XLogoIcon,
   InstagramLogoIcon,
   LinkedinLogoIcon,
 } from "@phosphor-icons/react/dist/ssr";
+import { cn } from "@/lib/utils";
 
 export function Footer() {
   const t = useTranslations("footer");
+  const pathname = usePathname();
+
+  // Check if current route is home
+  const isHome = pathname === "/" || pathname.match(/^\/(en|ar)$/);
 
   const footerColumns = [
     {
@@ -78,30 +82,23 @@ export function Footer() {
   ];
 
   return (
-    <footer className=" relative">
+    <footer
+      className={cn(
+        " relative flex flex-col gap-10 md:gap-16 xl:gap-20 ",
+        isHome ? "bg-bg" : "bg-white"
+      )}
+    >
       {/* CTA Section */}
       <CTASection />
-
       {/* Footer Links Section */}
-      <section className="p-8 md:py-16 md:px-10 bg-primary relative overflow-hidden z-20">
-        {/* Gopay ad IFS logos div */}
-        <div className="container mx-auto max-w-[1200px] mb-8 flex items-center  md:justify-between gap-13">
-          <GoPayLogo className="md:h-9 w-auto h-7" />
-          <Image
-            src="https://framerusercontent.com/images/XYe5lLtYXj7Q9SIpZmNGSWGEfYc.png?scale-down-to=512&width=3024&height=905"
-            alt="IFS Logo"
-            width={3024}
-            height={905}
-            className="md:h-14 h-8 w-auto"
-          />
-        </div>
+      <section className="p-8 md:pt-14 md:pb-10 md:px-10 bg-primary relative overflow-hidden z-20">
         <div className="container mx-auto max-w-[1200px] mb-12">
           <div className="grid grid-cols-2  md:grid-cols-4 gap-8 lg:gap-12">
             {footerColumns.map((column) => (
               <div key={column.id}>
                 <Typography
-                  variant="p16"
-                  className="text-white font-bold mb-4 xl:text-base md:text-sm text-xs"
+                  variant="h5"
+                  className="text-white font-bold mb-4  "
                 >
                   {t(column.titleKey)}
                 </Typography>
@@ -111,7 +108,7 @@ export function Footer() {
                       {link.isInternal ? (
                         <Link
                           href={link.href}
-                          className="text-white hover:text-white transition-colors md:text-sm text-[13px]  "
+                          className="text-white hover:text-white hover:opacity-80 hover:underline transition-colors text-xs md:text-sm  xl:text-base  "
                         >
                           {t(link.labelKey)}
                         </Link>
@@ -120,7 +117,7 @@ export function Footer() {
                           href={link.href}
                           target="_blank"
                           rel="noopener"
-                          className="text-white/80 hover:text-white transition-colors text-sm"
+                          className="text-white/80 hover:text-white hover:opacity-80 hover:underline transition-colors text-xs md:text-sm  xl:text-base"
                         >
                           {t(link.labelKey)}
                         </a>
@@ -133,68 +130,55 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Third row - Company Info & Social */}
-        <div className="container mx-auto max-w-[1200px] mt-12  ">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:justify-items-center justify-items-start">
-            {/* Company Information */}
+        {/* Third row - Address, Get In Touch & Social */}
+        <div className="container mx-auto max-w-[1200px] mt-16  ">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8  ">
+            {/* Address */}
+            <div className=" col-span-2">
+              <Typography variant="h5" className="text-white font-bold mb-4">
+                {t("address")}
+              </Typography>
+              <Typography variant="p14" className="text-white/80">
+                {t("companyInfo.addressText")}
+              </Typography>
+            </div>
+
+            {/* Get In Touch */}
             <div className="">
-              <Typography
-                variant="p14"
-                className="text-[#7e8195] font-semibold text-xs sm:text-sm"
-              >
-                {t("companyInfo.name")}
+              <Typography variant="h5" className="text-white font-bold mb-4">
+                {t("getInTouch")}
               </Typography>
-              <Typography
-                variant="p14"
-                className="text-[#7e8195] text-xs sm:text-sm"
-              >
-                {t("companyInfo.commercialReg")}
-              </Typography>
-              <Typography
-                variant="p14"
-                className="text-[#7e8195] text-xs sm:text-sm"
-              >
-                {t("companyInfo.license")}
-              </Typography>
-              <div className="pt-2.5 space-y-2.5">
+              <div>
                 <a
                   href={`tel:${t("companyInfo.phone")}`}
-                  className="block text-[#0059ff] hover:text-[#3A7BC8] transition-colors text-xs sm:text-sm underline"
+                  className="block text-[#96bbff] hover:underline transition-colors text-sm underline sm:text-base"
                 >
                   {t("companyInfo.phone")}
                 </a>
                 <a
                   href={`mailto:${t("companyInfo.email")}`}
-                  className="block text-[#0059ff] hover:text-[#3A7BC8] transition-colors text-xs sm:text-sm"
+                  className="block text-[#96bbff] hover:underline transition-colors text-sm underline sm:text-base"
                 >
                   {t("companyInfo.email")}
                 </a>
               </div>
             </div>
 
-            {/* SADAD Certification Badge */}
-            <div className="flex justify-center items-start">
-              <Image
-                src="https://framerusercontent.com/images/XloR1snWZTYPShXYFBKP2Qh1Bk.png?width=300&height=300"
-                alt="Certified By SADAD"
-                width={300}
-                height={300}
-                className="w-[110px] h-[110px] md:w-[150px] md:h-[150px]"
-              />
-            </div>
-
             {/* Social Media Links */}
-            <div className="flex md:justify-end items-end justify-self-end">
+            <div className="">
+              <Typography variant="h5" className="text-white font-bold mb-4">
+                {t("socialMedia")}
+              </Typography>
               <div className="flex gap-5">
                 <a
                   href="https://twitter.com/gopay"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-[50px] h-[50px] flex items-center justify-center   transition-colors"
+                  className="w-6 h-6 flex items-center justify-center transition-colors"
                   aria-label="Twitter"
                 >
                   <XLogoIcon
-                    className="size-[17px] text-white hover:text-white/80"
+                    className="size-6 text-white hover:text-white/80"
                     weight="bold"
                   />
                 </a>
@@ -202,11 +186,11 @@ export function Footer() {
                   href="https://instagram.com/gopay"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-[50px] h-[50px] flex items-center justify-center   transition-colors"
+                  className="size-6 flex items-center justify-center transition-colors"
                   aria-label="Instagram"
                 >
                   <InstagramLogoIcon
-                    className="size-[17px] text-white hover:text-white/80"
+                    className="size-6 text-white hover:text-white/80"
                     weight="bold"
                   />
                 </a>
@@ -214,11 +198,11 @@ export function Footer() {
                   href="https://linkedin.com/company/gopay"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-[50px] h-[50px] flex items-center justify-center   transition-colors"
+                  className="size-6 flex items-center justify-center transition-colors"
                   aria-label="LinkedIn"
                 >
                   <LinkedinLogoIcon
-                    className="w-5 h-5 text-white hover:text-white/80"
+                    className="size-6 text-white hover:text-white/80"
                     weight="bold"
                   />
                 </a>
@@ -227,14 +211,36 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-8 text-center">
-          <Typography
-            variant="p14"
-            className="text-[#7e8195] text-xs md:text-sm"
-          >
-            © {t("copyright")}
-          </Typography>
+        {/* Gopay ad IFS logos div */}
+        <div className="container mx-auto max-w-[1200px] flex items-center  md:justify-between gap-13 border-t border-white/10 mt-16 pt-4">
+          <div className="flex-1 flex items-center  ">
+            <Image
+              src="https://framerusercontent.com/images/XYe5lLtYXj7Q9SIpZmNGSWGEfYc.png?scale-down-to=512&width=3024&height=905"
+              alt="IFS Logo"
+              width={3024}
+              height={905}
+              className="md:h-[59px] h-8 w-auto"
+            />
+          </div>
+          {/* Copyright */}
+          <div className="mt-8 text-center flex-1">
+            <Typography variant="p14" className="text-white text-xs md:text-sm">
+              © {t("copyrightText")}
+            </Typography>
+            <Typography variant="p14" className="text-white text-xs md:text-sm">
+              {t("companyName")}
+            </Typography>
+          </div>
+          {/* SADAD Certification Badge */}
+          <div className="flex justify-end items-center flex-1">
+            <Image
+              src="https://framerusercontent.com/images/XloR1snWZTYPShXYFBKP2Qh1Bk.png?width=300&height=300"
+              alt="Certified By SADAD"
+              width={300}
+              height={300}
+              className="w-[110px] h-[110px] md:w-[140px] md:h-[140px]"
+            />
+          </div>
         </div>
       </section>
     </footer>
