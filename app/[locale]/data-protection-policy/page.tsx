@@ -147,31 +147,28 @@ export default function DataProtectionPolicyPage() {
               <Typography variant="p16" className="font-bold text-text-4">
                 1.<span className="ms-2">Personal Information</span>
               </Typography>
-              <div className="flex items-center gap-3">
-                <div className="w-1 h-1 bg-text-4 rounded-full"></div>
-                <Typography variant="p16" className="leading-[1em] text-text-4">
-                  Account data: Establishment name, establishment type, activity
-                  type, sector type, commercial name, national address.
-                </Typography>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-1 h-1 bg-text-4 rounded-full"></div>
-                <Typography
-                  variant="p16"
-                  className="leading-[1em] text-text-4 tracking-wide"
-                >
-                  Identity verification data: Copy of national ID, passport, or
-                  any other documents necessary for regulatory compliance
-                  (commercial registration, license, etc.).
-                </Typography>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-1 h-1 bg-text-4 rounded-full"></div>
-                <Typography variant="p16" className="leading-[1em] text-text-4">
-                  Bank account data: Name in bank, bank name, account number,
-                  bank certificate, owner data.
-                </Typography>
-              </div>
+              <Typography
+                variant="p16"
+                className="leading-[1em] text-text-4 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.4em] before:w-1 before:h-1 before:bg-text-4 before:rounded-full"
+              >
+                Account data: Establishment name, establishment type, activity
+                type, sector type, commercial name, national address.
+              </Typography>
+              <Typography
+                variant="p16"
+                className="leading-[1em] text-text-4 tracking-wide pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.4em] before:w-1 before:h-1 before:bg-text-4 before:rounded-full"
+              >
+                Identity verification data: Copy of national ID, passport, or
+                any other documents necessary for regulatory compliance
+                (commercial registration, license, etc.).
+              </Typography>
+              <Typography
+                variant="p16"
+                className="leading-[1em] text-text-4 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.4em] before:w-1 before:h-1 before:bg-text-4 before:rounded-full"
+              >
+                Bank account data: Name in bank, bank name, account number, bank
+                certificate, owner data.
+              </Typography>
             </div>
           </div>
         </div>
