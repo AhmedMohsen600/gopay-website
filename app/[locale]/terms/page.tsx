@@ -17,16 +17,16 @@ export default function TermsPage() {
     <>
       {/* Hero Section */}
       <HeroSection
-        badge="Terms"
+        badge={t("hero.badge")}
         title={
           <Typography
             variant="h1"
             className="text-center leading-tight tracking-tight"
           >
-            <span className="text-[#FF9500]">GoPay</span>{" "}
-            <span className="text-secondary">
-              Terms &amp; <br />
-              Conditions
+            <span className="text-secondary">{t("hero.gopay")}</span>{" "}
+            <span className="text-black">
+              {t("hero.title")} <br />
+              {t("hero.subtitle")}
             </span>
           </Typography>
         }
