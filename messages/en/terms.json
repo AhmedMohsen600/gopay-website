@@ -1,4 +1,10 @@
 {
+  "hero": {
+    "badge": "Terms",
+    "gopay": "GoPay",
+    "title": "Terms &",
+    "subtitle": "Conditions"
+  },
   "intro": {
     "title": "Go Pay Payment Service",
     "description": "Go Pay is a product offered by Inclusive Financial Solutions Company for the business sector. This service targets all segments and sizes of establishments in the Saudi market (small, medium, large). The service provides the necessary electronic technologies and tools to enable the establishment to automatically upload invoices and financial claims and settle them through the \"SADAD\" payment system. The service also notifies the establishment's customers of the issuance of the invoice (summary - detailed) and sends it to them electronically via SMS or email.",
