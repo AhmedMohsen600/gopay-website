@@ -6,8 +6,11 @@ import {
   CreditCard,
   CalendarCheck,
 } from "@phosphor-icons/react/dist/ssr";
+import { useTranslations } from "next-intl";
 
-export const getBasicPackages = (t: any) => [
+type TranslationFunction = ReturnType<typeof useTranslations>;
+
+export const getBasicPackages = (t: TranslationFunction) => [
   {
     name: t("basicPackages.starter.name"),
     price: t("basicPackages.starter.price"),
@@ -44,7 +47,7 @@ export const getBasicPackages = (t: any) => [
   },
 ];
 
-export const getBusinessPackages = (t: any) => [
+export const getBusinessPackages = (t: TranslationFunction) => [
   {
     name: t("businessPackages.proPlus.name"),
     price: t("businessPackages.proPlus.price"),
@@ -83,7 +86,7 @@ export const getBusinessPackages = (t: any) => [
   },
 ];
 
-export const getBasicFeaturesComparison = (t: any) => [
+export const getBasicFeaturesComparison = (t: TranslationFunction) => [
   {
     icon: <Stack size={24} weight="duotone" />,
     title: t("featuresComparison.mainFeatures.title"),
@@ -387,7 +390,7 @@ export const getBasicFeaturesComparison = (t: any) => [
   },
 ];
 
-export const getBusinessFeaturesComparison = (t: any) => [
+export const getBusinessFeaturesComparison = (t: TranslationFunction) => [
   {
     icon: <Stack size={24} weight="duotone" />,
     title: t("featuresComparison.mainFeatures.title"),
