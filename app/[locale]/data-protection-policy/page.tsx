@@ -151,46 +151,48 @@ export default function DataProtectionPolicyPage() {
               <Typography variant="p16" className="font-bold text-text-4">
                 1.<span className="ms-2">Personal Information</span>
               </Typography>
-              <Typography
-                variant="p16"
-                className="leading-[1em] text-text-4 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.4em] before:w-1 before:h-1 before:bg-text-4 before:rounded-full"
-              >
-                Account data: Establishment name, establishment type, activity
-                type, sector type, commercial name, national address.
-              </Typography>
-              <Typography
-                variant="p16"
-                className="leading-[1em] text-text-4 tracking-wide pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.4em] before:w-1 before:h-1 before:bg-text-4 before:rounded-full"
-              >
-                Identity verification data: Copy of national ID, passport, or
-                any other documents necessary for regulatory compliance
-                (commercial registration, license, etc.).
-              </Typography>
-              <Typography
-                variant="p16"
-                className="leading-[1em] text-text-4 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.4em] before:w-1 before:h-1 before:bg-text-4 before:rounded-full"
-              >
-                Bank account data: Name in bank, bank name, account number, bank
-                certificate, owner data.
-              </Typography>
-            </div>
-            <div className="space-y-2">
-              <Typography variant="p16" className="font-bold text-text-4">
-                2.<span className="ms-2">Contact Data:</span>
-              </Typography>
-              <Typography variant="p16" className="text-text-4">
-                Information provided during your communication with customer
-                support via chats, phone calls, or email.
-              </Typography>
-            </div>
-            <div className="space-y-2">
-              <Typography variant="p16" className="font-bold text-text-4">
-                3.<span className="ms-2">Technical Data:</span>
-              </Typography>
-              <Typography variant="p16" className="text-text-4">
-                Cookies and similar technologies to improve website
-                functionality and analyze performance.
-              </Typography>
+              <div className="space-y-2">
+                <Typography
+                  variant="p16"
+                  className="leading-[1em] text-text-4 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.4em] before:w-1 before:h-1 before:bg-text-4 before:rounded-full"
+                >
+                  Account data: Establishment name, establishment type, activity
+                  type, sector type, commercial name, national address.
+                </Typography>
+                <Typography
+                  variant="p16"
+                  className="leading-[1em] text-text-4 tracking-wide pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.4em] before:w-1 before:h-1 before:bg-text-4 before:rounded-full"
+                >
+                  Identity verification data: Copy of national ID, passport, or
+                  any other documents necessary for regulatory compliance
+                  (commercial registration, license, etc.).
+                </Typography>
+                <Typography
+                  variant="p16"
+                  className="leading-[1em] text-text-4 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.4em] before:w-1 before:h-1 before:bg-text-4 before:rounded-full"
+                >
+                  Bank account data: Name in bank, bank name, account number,
+                  bank certificate, owner data.
+                </Typography>
+              </div>
+              <div>
+                <Typography variant="p16" className="font-bold text-text-4">
+                  2.<span className="ms-2">Contact Data:</span>
+                </Typography>
+                <Typography variant="p16" className="text-text-4">
+                  Information provided during your communication with customer
+                  support via chats, phone calls, or email.
+                </Typography>
+              </div>
+              <div>
+                <Typography variant="p16" className="font-bold text-text-4">
+                  3.<span className="ms-2">Technical Data:</span>
+                </Typography>
+                <Typography variant="p16" className="text-text-4">
+                  Cookies and similar technologies to improve website
+                  functionality and analyze performance.
+                </Typography>
+              </div>
             </div>
           </div>
         </div>
@@ -241,7 +243,7 @@ export default function DataProtectionPolicyPage() {
             The client undertakes and declares, being of full legal capacity,
             the following:
           </Typography>
-          <div className="space-y-1.5">
+          <div className="">
             <Typography
               variant="p16"
               className="leading-[1.4em] text-text-4 pl-5 relative before:content-['1.'] before:absolute before:left-0 before:top-0 before:font-normal"
@@ -432,15 +434,17 @@ export default function DataProtectionPolicyPage() {
           <Typography variant="h3" className="text-text-4">
             10. Policy Updates
           </Typography>
-          <Typography variant="p16" className="text-text-4">
-            This Privacy Policy may be updated periodically to reflect changes
-            in our practices or compliance requirements. The updated version
-            will be available on our website, and you will be contacted
-            regarding important updates.
-          </Typography>
-          <Typography variant="p16" className="text-text-4">
-            Effective Date: January 7, 2025
-          </Typography>
+          <div>
+            <Typography variant="p16" className="text-text-4">
+              This Privacy Policy may be updated periodically to reflect changes
+              in our practices or compliance requirements. The updated version
+              will be available on our website, and you will be contacted
+              regarding important updates.
+            </Typography>
+            <Typography variant="p16" className="text-text-4">
+              Effective Date: January 7, 2025
+            </Typography>
+          </div>
         </div>
 
         {/* 11. Contact Us */}
