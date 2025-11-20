@@ -23,7 +23,9 @@ export default function DataProtectionPolicyPage() {
       />
       <section className="max-w-[1200px] mx-auto px-8 pb-[100px] space-y-16">
         <div className="space-y-2">
-          <Typography variant="h3">Introduction</Typography>
+          <Typography variant="h3" className="text-text-4">
+            Introduction
+          </Typography>
           <Typography variant="p16" className="text-text-4">
             Inclusive Financial Solutions Company is committed to protecting
             your personal information and ensuring the privacy of your data in
@@ -34,7 +36,9 @@ export default function DataProtectionPolicyPage() {
           </Typography>
         </div>
         <div className="space-y-2">
-          <Typography variant="h3">1. Scope</Typography>
+          <Typography variant="h3" className="text-text-4">
+            1. Scope
+          </Typography>
           <Typography variant="p16" className="text-text-4">
             This Personal Data Protection Policy applies to all users of
             Inclusive Financial Solutions Company&apos;s services and platforms,
@@ -43,7 +47,7 @@ export default function DataProtectionPolicyPage() {
           </Typography>
         </div>
         <div className="space-y-2">
-          <Typography variant="h3">
+          <Typography variant="h3" className="text-text-4">
             2. Personal Data Protection Principles
           </Typography>
           <div className="space-y-6 mt-6">
@@ -135,7 +139,9 @@ export default function DataProtectionPolicyPage() {
 
         {/* 3. Data Collection */}
         <div className="space-y-2">
-          <Typography variant="h3">3. Data We Collect</Typography>
+          <Typography variant="h3" className="text-text-4">
+            3. Data We Collect
+          </Typography>
           <Typography variant="p16" className="mb-4 text-text-4">
             We collect and process various types of personal data to provide and
             improve our services:
@@ -228,7 +234,9 @@ export default function DataProtectionPolicyPage() {
         </div>
         {/* 5. Sharing Your Data */}
         <div className="space-y-2 w-[90%]">
-          <Typography variant="h3">5. Sharing Your Data</Typography>
+          <Typography variant="h3" className="text-text-4">
+            5. Sharing Your Data
+          </Typography>
           <Typography variant="p16" className="mb-5 text-text-4">
             The client undertakes and declares, being of full legal capacity,
             the following:
@@ -308,7 +316,9 @@ export default function DataProtectionPolicyPage() {
 
         {/* 6. Protecting Your Data */}
         <div className="space-y-2">
-          <Typography variant="h3">6. Protecting Your Data</Typography>
+          <Typography variant="h3" className="text-text-4">
+            6. Protecting Your Data
+          </Typography>
           <Typography variant="p16" className="mb-4 text-text-4">
             We implement strong security measures to protect your data,
             including:
@@ -341,7 +351,9 @@ export default function DataProtectionPolicyPage() {
 
         {/* 7. Data Retention */}
         <div className="space-y-2">
-          <Typography variant="h3">7. Data Retention</Typography>
+          <Typography variant="h3" className="text-text-4">
+            7. Data Retention
+          </Typography>
           <Typography variant="p16" className="text-text-4">
             The company retains your personal data only as long as necessary to
             achieve the purposes outlined in this policy or to comply with legal
@@ -351,7 +363,9 @@ export default function DataProtectionPolicyPage() {
 
         {/* 8. Your Rights */}
         <div className="space-y-2">
-          <Typography variant="h3">8. Your Rights</Typography>
+          <Typography variant="h3" className="text-text-4">
+            8. Your Rights
+          </Typography>
           <Typography variant="p16" className="mb-4 text-text-4">
             Under the Personal Data Protection System, you have the following
             rights:
@@ -404,7 +418,9 @@ export default function DataProtectionPolicyPage() {
 
         {/* 9. International Data Transfer */}
         <div className="space-y-2">
-          <Typography variant="h3">9. International Data Transfer</Typography>
+          <Typography variant="h3" className="text-text-4">
+            9. International Data Transfer
+          </Typography>
           <Typography variant="p16" className="text-text-4">
             The company primarily stores data within the Kingdom of Saudi
             Arabia, and it is not transferred or processed outside the Kingdom.
@@ -413,7 +429,9 @@ export default function DataProtectionPolicyPage() {
 
         {/* 10. Policy Updates */}
         <div className="space-y-2">
-          <Typography variant="h3">10. Policy Updates</Typography>
+          <Typography variant="h3" className="text-text-4">
+            10. Policy Updates
+          </Typography>
           <Typography variant="p16" className="text-text-4">
             This Privacy Policy may be updated periodically to reflect changes
             in our practices or compliance requirements. The updated version
@@ -427,7 +445,9 @@ export default function DataProtectionPolicyPage() {
 
         {/* 11. Contact Us */}
         <div className="space-y-2">
-          <Typography variant="h3">11. Contact Us</Typography>
+          <Typography variant="h3" className="text-text-4">
+            11. Contact Us
+          </Typography>
           <Typography variant="p16" className="mb-4 text-text-4">
             If you have any inquiries regarding this privacy policy or your
             data:
