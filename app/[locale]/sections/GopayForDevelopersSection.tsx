@@ -45,7 +45,7 @@ export function GopayForDevelopersSection() {
   const featureItems = Array.isArray(features) ? (features as string[]) : [];
 
   return (
-    <section className="relative overflow-hidden bg-bg py-14 px-6 md:px-0 md:py-[120px]">
+    <section className="relative overflow-hidden bg-bg py-14 md:py-[80px] md:px-[64px] px-6 xl:px-0 xl:py-[120px]">
       <div className="container mx-auto max-w-[1000px]">
         <div className="mx-auto mb-12 max-w-[760px] text-center md:mb-16">
           <Typography variant="h2" className="mb-2 font-semibold text-text-4">
