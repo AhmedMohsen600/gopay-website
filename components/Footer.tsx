@@ -66,7 +66,7 @@ export function Footer() {
         { href: "/faq", labelKey: "resources.faqs", isInternal: true },
         { href: "/terms", labelKey: "resources.terms", isInternal: true },
         {
-          href: "/privacy",
+          href: "/data-protection-policy",
           labelKey: "resources.dataProtection",
           isInternal: true,
         },
