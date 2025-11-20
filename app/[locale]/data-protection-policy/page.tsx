@@ -305,6 +305,39 @@ export default function DataProtectionPolicyPage() {
             </Typography>
           </div>
         </div>
+
+        {/* 6. Protecting Your Data */}
+        <div className="space-y-2">
+          <Typography variant="h3">6. Protecting Your Data</Typography>
+          <Typography variant="p16" className="mb-4">
+            We implement strong security measures to protect your data,
+            including:
+          </Typography>
+          <div className="space-y-2">
+            <Typography
+              variant="p16"
+              className="leading-[1em] text-text-4 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.4em] before:w-1 before:h-1 before:bg-text-4 before:rounded-full"
+            >
+              Encrypting sensitive information during transmission.
+            </Typography>
+            <Typography
+              variant="p16"
+              className="leading-[1em] text-text-4 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.4em] before:w-1 before:h-1 before:bg-text-4 before:rounded-full"
+            >
+              Restricting data access based on need.
+            </Typography>
+            <Typography
+              variant="p16"
+              className="leading-[1em] text-text-4 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.4em] before:w-1 before:h-1 before:bg-text-4 before:rounded-full"
+            >
+              Conducting regular security reviews and updates.
+            </Typography>
+          </div>
+          <Typography variant="p16" className="mt-4 block">
+            In the event of a data breach, affected users will be immediately
+            notified in line with applicable regulations.
+          </Typography>
+        </div>
       </section>
     </div>
   );
