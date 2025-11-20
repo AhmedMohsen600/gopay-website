@@ -401,6 +401,64 @@ export default function DataProtectionPolicyPage() {
             .
           </Typography>
         </div>
+
+        {/* 9. International Data Transfer */}
+        <div className="space-y-2">
+          <Typography variant="h3">9. International Data Transfer</Typography>
+          <Typography variant="p16">
+            The company primarily stores data within the Kingdom of Saudi
+            Arabia, and it is not transferred or processed outside the Kingdom.
+          </Typography>
+        </div>
+
+        {/* 10. Policy Updates */}
+        <div className="space-y-2">
+          <Typography variant="h3">10. Policy Updates</Typography>
+          <Typography variant="p16">
+            This Privacy Policy may be updated periodically to reflect changes
+            in our practices or compliance requirements. The updated version
+            will be available on our website, and you will be contacted
+            regarding important updates.
+          </Typography>
+          <Typography variant="p16">Effective Date: January 7, 2025</Typography>
+        </div>
+
+        {/* 11. Contact Us */}
+        <div className="space-y-2">
+          <Typography variant="h3">11. Contact Us</Typography>
+          <Typography variant="p16" className="mb-4">
+            If you have any inquiries regarding this privacy policy or your
+            data:
+          </Typography>
+          <div className="space-y-2">
+            <Typography
+              variant="p16"
+              className="leading-[1em] text-text-4 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.4em] before:w-1 before:h-1 before:bg-text-4 before:rounded-full"
+            >
+              <span className=" me-2">Email:</span>
+              <a href="mailto:Care@gopay.sa" className="text-primary underline">
+                Care@gopay.sa
+              </a>
+            </Typography>
+            <Typography
+              variant="p16"
+              className="leading-[1em] text-text-4 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.4em] before:w-1 before:h-1 before:bg-text-4 before:rounded-full"
+            >
+              <span className=" me-2">Phone:</span> 8001180024
+            </Typography>
+            <Typography
+              variant="p16"
+              className="leading-[1em] text-text-4 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.4em] before:w-1 before:h-1 before:bg-text-4 before:rounded-full"
+            >
+              <span className=" me-2">Address:</span> Sultan Business Center, Al
+              Ma&apos;athar Al Shamali, Riyadh, Kingdom of Saudi Arabia.
+            </Typography>
+          </div>
+          <Typography variant="p16" className="mt-4 block">
+            We value your trust and are committed to protecting your privacy at
+            all times.
+          </Typography>
+        </div>
       </section>
     </div>
   );
