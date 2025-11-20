@@ -33,10 +33,7 @@ export function FeatureCard({
 
         {/* Title */}
         <div>
-          <Typography
-            variant="h5"
-            className="text-text-5 mb-1.5 md:mb-2.5 font-semibold"
-          >
+          <Typography variant="h5" className="text-text-5 mb-1.5 md:mb-2.5">
             {title}
           </Typography>
 
