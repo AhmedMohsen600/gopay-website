@@ -5,6 +5,9 @@ import { forwardRef, HTMLAttributes, ElementType } from "react";
 const typographyVariants = cva("", {
   variants: {
     variant: {
+      // H1 - 75px / 1.2
+      h175: "font-medium xl:text-[75px] md:text-[50px] text-[33px] leading-[1.2em]! -tracking-[0.03em]",
+
       // H1 - 62px / 1.2
       h1: "font-medium xl:text-[62px] md:text-[50px] text-[34px] leading-[1.2em]! tracking-[0em]",
 
@@ -50,6 +53,7 @@ type TypographyProps = VariantProps<typeof typographyVariants> &
   };
 
 const variantElementMap: Record<string, ElementType> = {
+  h175: "h1",
   h1: "h1",
   h2: "h2",
   h3: "h3",
