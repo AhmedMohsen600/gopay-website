@@ -1,7 +1,9 @@
+"use client";
+
 import { HeroSection } from "@/components/HeroSection";
 import { Typography } from "@/components/ui/typography";
-import * as data from "./data";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 const BulletItem = ({
   children,
@@ -51,10 +53,30 @@ const NumberedItem = ({
 );
 
 export default function DataProtectionPolicyPage() {
+  const t = useTranslations("dataProtection");
+
+  // We use t.raw to get arrays for iteration, then use keys for rendering to support rich text if needed
+  const principles = t.raw("sections.principles.items") as unknown[];
+  const dataCollectionSections = t.raw("sections.dataCollection.sections") as {
+    prefix: string;
+    title: string;
+    items: string[];
+  }[];
+  const processingItems = t.raw("sections.processing.items") as unknown[];
+  const sharingItems = t.raw("sections.sharing.items") as unknown[];
+  const protectingItems = t.raw("sections.protecting.items") as unknown[];
+  const rightsItems = t.raw("sections.rights.items") as unknown[];
+  const contactDetails = t.raw("sections.contact.details") as {
+    label: string;
+    value: string;
+    isLink?: boolean;
+    href?: string;
+  }[];
+
   return (
     <div>
       <HeroSection
-        badge="Policy"
+        badge={t("badge")}
         variant="secondary"
         className="min-h-[50vh] md:min-h-[50vh] lg:min-h-[60vh] pt-[120px] xl:px-[120px] px-6"
         title={
@@ -62,10 +84,8 @@ export default function DataProtectionPolicyPage() {
             variant="h1"
             className="leading-tight tracking-[0em] max-w-[700px] text-center"
           >
-            <span className="text-[#F2994A]">GoPay </span>
-            <span className="text-[#333333]">
-              Personal Data Protection Policy
-            </span>
+            <span className="text-[#F2994A]">{t("titlePart1")} </span>
+            <span className="text-[#333333]">{t("titlePart2")}</span>
           </Typography>
         }
         description={""}
@@ -74,33 +94,35 @@ export default function DataProtectionPolicyPage() {
         {/* Introduction */}
         <div className="space-y-2">
           <Typography variant="h3" className="text-text-4">
-            Introduction
+            {t("sections.introduction.title")}
           </Typography>
           <Typography variant="p16" className="text-text-4">
-            {data.INTRODUCTION}
+            {t("sections.introduction.content")}
           </Typography>
         </div>
 
         {/* 1. Scope */}
         <div className="space-y-2">
           <Typography variant="h3" className="text-text-4">
-            1. Scope
+            {t("sections.scope.title")}
           </Typography>
           <Typography variant="p16" className="text-text-4">
-            {data.SCOPE}
+            {t("sections.scope.content")}
           </Typography>
         </div>
 
         {/* 2. Principles */}
         <div className="space-y-2">
           <Typography variant="h3" className="text-text-4">
-            2. Personal Data Protection Principles
+            {t("sections.principles.title")}
           </Typography>
           <div className="space-y-6 mt-6">
-            {data.PRINCIPLES.map((principle, index) => (
+            {principles.map((_, index) => (
               <Typography key={index} variant="p16" className="text-text-4">
-                <span className="font-bold block">{principle.title}</span>
-                {principle.description}
+                <span className="font-bold block">
+                  {t(`sections.principles.items.${index}.title`)}
+                </span>
+                {t(`sections.principles.items.${index}.description`)}
               </Typography>
             ))}
           </div>
@@ -109,25 +131,26 @@ export default function DataProtectionPolicyPage() {
         {/* 3. Data Collection */}
         <div className="space-y-2">
           <Typography variant="h3" className="text-text-4">
-            3. Data We Collect
+            {t("sections.dataCollection.title")}
           </Typography>
           <Typography variant="p16" className="mb-4 text-text-4">
-            We collect and process various types of personal data to provide and
-            improve our services:
+            {t("sections.dataCollection.intro")}
           </Typography>
           <div className="space-y-4">
-            {data.DATA_COLLECTION.map((section, index) => (
+            {dataCollectionSections.map((section, index) => (
               <div key={index} className="space-y-2">
                 <Typography variant="p16" className="font-bold text-text-4">
-                  {section.prefix}
-                  <span className="ms-2">{section.title}</span>
+                  {t(`sections.dataCollection.sections.${index}.prefix`)}
+                  <span className="ms-2">
+                    {t(`sections.dataCollection.sections.${index}.title`)}
+                  </span>
                 </Typography>
-                {section.items.map((item, i) => (
+                {section.items.map((_, i) => (
                   <BulletItem
                     key={i}
                     className={index === 0 && i === 1 ? "tracking-wide" : ""}
                   >
-                    {item}
+                    {t(`sections.dataCollection.sections.${index}.items.${i}`)}
                   </BulletItem>
                 ))}
               </div>
@@ -138,17 +161,19 @@ export default function DataProtectionPolicyPage() {
         {/* 4. Processing */}
         <div className="space-y-2">
           <Typography variant="h3" className="text-text-4">
-            4. Processing Your Data
+            {t("sections.processing.title")}
           </Typography>
           <Typography variant="p16" className="text-text-4 mb-5">
-            {data.PROCESSING_DATA.intro}
+            {t("sections.processing.intro")}
           </Typography>
           <div className="space-y-4">
             <div className="space-y-2">
-              {data.PROCESSING_DATA.items.map((item, index) => (
+              {processingItems.map((_, index) => (
                 <BulletItem key={index}>
-                  <span className="font-bold me-2">{item.title}</span>{" "}
-                  {item.description}
+                  <span className="font-bold me-2">
+                    {t(`sections.processing.items.${index}.title`)}
+                  </span>{" "}
+                  {t(`sections.processing.items.${index}.description`)}
                 </BulletItem>
               ))}
             </div>
@@ -158,15 +183,17 @@ export default function DataProtectionPolicyPage() {
         {/* 5. Sharing */}
         <div className="space-y-2 w-[90%]">
           <Typography variant="h3" className="text-text-4">
-            5. Sharing Your Data
+            {t("sections.sharing.title")}
           </Typography>
           <Typography variant="p16" className="mb-5 text-text-4">
-            {data.SHARING_DATA.intro}
+            {t("sections.sharing.intro")}
           </Typography>
           <div className="">
-            {data.SHARING_DATA.items.map((item, index) => (
+            {sharingItems.map((_, index) => (
               <NumberedItem key={index} index={index + 1}>
-                {item}
+                {t.rich(`sections.sharing.items.${index}`, {
+                  bold: (chunks) => <span className="font-bold">{chunks}</span>,
+                })}
               </NumberedItem>
             ))}
           </div>
@@ -175,54 +202,58 @@ export default function DataProtectionPolicyPage() {
         {/* 6. Protecting */}
         <div className="space-y-2">
           <Typography variant="h3" className="text-text-4">
-            6. Protecting Your Data
+            {t("sections.protecting.title")}
           </Typography>
           <Typography variant="p16" className="mb-4 text-text-4">
-            {data.PROTECTING_DATA.intro}
+            {t("sections.protecting.intro")}
           </Typography>
           <div className="space-y-2">
-            {data.PROTECTING_DATA.items.map((item, index) => (
-              <BulletItem key={index}>{item}</BulletItem>
+            {protectingItems.map((_, index) => (
+              <BulletItem key={index}>
+                {t(`sections.protecting.items.${index}`)}
+              </BulletItem>
             ))}
           </div>
           <Typography variant="p16" className="mt-4 block text-text-4">
-            {data.PROTECTING_DATA.footer}
+            {t("sections.protecting.footer")}
           </Typography>
         </div>
 
         {/* 7. Data Retention */}
         <div className="space-y-2">
           <Typography variant="h3" className="text-text-4">
-            7. Data Retention
+            {t("sections.retention.title")}
           </Typography>
           <Typography variant="p16" className="text-text-4">
-            {data.DATA_RETENTION}
+            {t("sections.retention.content")}
           </Typography>
         </div>
 
         {/* 8. Your Rights */}
         <div className="space-y-2">
           <Typography variant="h3" className="text-text-4">
-            8. Your Rights
+            {t("sections.rights.title")}
           </Typography>
           <Typography variant="p16" className="mb-4 text-text-4">
-            {data.YOUR_RIGHTS.intro}
+            {t("sections.rights.intro")}
           </Typography>
           <div className="space-y-2">
-            {data.YOUR_RIGHTS.items.map((item, index) => (
+            {rightsItems.map((_, index) => (
               <BulletItem key={index}>
-                <span className="font-bold me-2">{item.title}</span>
-                {item.description}
+                <span className="font-bold me-2">
+                  {t(`sections.rights.items.${index}.title`)}
+                </span>
+                {t(`sections.rights.items.${index}.description`)}
               </BulletItem>
             ))}
           </div>
           <Typography variant="p16" className="mt-4 block text-text-4">
-            {data.YOUR_RIGHTS.footer.text}
+            {t("sections.rights.footer.text")}
             <a
-              href={`mailto:${data.YOUR_RIGHTS.footer.email}`}
+              href={`mailto:${t("sections.rights.footer.email")}`}
               className="text-primary underline"
             >
-              {data.YOUR_RIGHTS.footer.email}
+              {t("sections.rights.footer.email")}
             </a>
             .
           </Typography>
@@ -231,24 +262,24 @@ export default function DataProtectionPolicyPage() {
         {/* 9. International Data Transfer */}
         <div className="space-y-2">
           <Typography variant="h3" className="text-text-4">
-            9. International Data Transfer
+            {t("sections.transfer.title")}
           </Typography>
           <Typography variant="p16" className="text-text-4">
-            {data.INTERNATIONAL_TRANSFER}
+            {t("sections.transfer.content")}
           </Typography>
         </div>
 
         {/* 10. Policy Updates */}
         <div className="space-y-2">
           <Typography variant="h3" className="text-text-4">
-            10. Policy Updates
+            {t("sections.updates.title")}
           </Typography>
           <div>
             <Typography variant="p16" className="text-text-4">
-              {data.POLICY_UPDATES.text}
+              {t("sections.updates.text")}
             </Typography>
             <Typography variant="p16" className="text-text-4">
-              {data.POLICY_UPDATES.date}
+              {t("sections.updates.date")}
             </Typography>
           </div>
         </div>
@@ -256,27 +287,35 @@ export default function DataProtectionPolicyPage() {
         {/* 11. Contact Us */}
         <div className="space-y-2">
           <Typography variant="h3" className="text-text-4">
-            11. Contact Us
+            {t("sections.contact.title")}
           </Typography>
           <Typography variant="p16" className="mb-4 text-text-4">
-            {data.CONTACT_US.intro}
+            {t("sections.contact.intro")}
           </Typography>
           <div className="space-y-2">
-            {data.CONTACT_US.details.map((detail, index) => (
+            {contactDetails.map((detail: any, index: number) => (
               <BulletItem key={index}>
-                <span className="me-2">{detail.label}</span>
-                {detail.isLink ? (
-                  <a href={detail.href} className="text-primary underline">
-                    {detail.value}
+                <span className="me-2">
+                  {t(`sections.contact.details.${index}.label`)}
+                </span>
+                {detail.isLink || detail.value?.includes("@") ? (
+                  <a
+                    href={
+                      detail.href ||
+                      `mailto:${t(`sections.contact.details.${index}.value`)}`
+                    }
+                    className="text-primary underline"
+                  >
+                    {t(`sections.contact.details.${index}.value`)}
                   </a>
                 ) : (
-                  detail.value
+                  t(`sections.contact.details.${index}.value`)
                 )}
               </BulletItem>
             ))}
           </div>
           <Typography variant="p16" className="mt-4 block text-text-4">
-            {data.CONTACT_US.footer}
+            {t("sections.contact.footer")}
           </Typography>
         </div>
       </section>
