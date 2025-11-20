@@ -63,7 +63,7 @@ export function HeroSection() {
           <HeroBlurBackgrounds />
           <div className="relative z-10 max-w-5xl mx-auto text-center">
             <Typography
-              variant="h1"
+              variant="h175"
               className="tracking-tight leading-tight font-normal"
             >
               {/* Title appears first */}
