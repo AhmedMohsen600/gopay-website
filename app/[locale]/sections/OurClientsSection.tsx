@@ -15,7 +15,7 @@ export function OurClientsSection() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-white p-[50px_16px]">
+    <section className="relative overflow-hidden bg-white pt-[50px] px-4">
       <div className="container mx-auto px-4">
         <motion.div
           className="w-full flex flex-col items-center justify-center"
