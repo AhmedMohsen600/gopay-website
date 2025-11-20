@@ -338,6 +338,69 @@ export default function DataProtectionPolicyPage() {
             notified in line with applicable regulations.
           </Typography>
         </div>
+
+        {/* 7. Data Retention */}
+        <div className="space-y-2">
+          <Typography variant="h3">7. Data Retention</Typography>
+          <Typography variant="p16">
+            The company retains your personal data only as long as necessary to
+            achieve the purposes outlined in this policy or to comply with legal
+            and regulatory obligations.
+          </Typography>
+        </div>
+
+        {/* 8. Your Rights */}
+        <div className="space-y-2">
+          <Typography variant="h3">8. Your Rights</Typography>
+          <Typography variant="p16" className="mb-4">
+            Under the Personal Data Protection System, you have the following
+            rights:
+          </Typography>
+          <div className="space-y-2">
+            <Typography
+              variant="p16"
+              className="leading-[1em] text-text-4 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.4em] before:w-1 before:h-1 before:bg-text-4 before:rounded-full"
+            >
+              <span className="font-bold me-2">Access:</span> Request a copy of
+              the personal data we hold about you.
+            </Typography>
+            <Typography
+              variant="p16"
+              className="leading-[1em] text-text-4 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.4em] before:w-1 before:h-1 before:bg-text-4 before:rounded-full"
+            >
+              <span className="font-bold me-2">Correction:</span> Request
+              correction of inaccurate or incomplete data.
+            </Typography>
+            <Typography
+              variant="p16"
+              className="leading-[1em] text-text-4 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.4em] before:w-1 before:h-1 before:bg-text-4 before:rounded-full"
+            >
+              <span className="font-bold me-2">Deletion:</span> Request deletion
+              of your data, unless there are legal obligations preventing this.
+            </Typography>
+            <Typography
+              variant="p16"
+              className="leading-[1em] text-text-4 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.4em] before:w-1 before:h-1 before:bg-text-4 before:rounded-full"
+            >
+              <span className="font-bold me-2">Objection:</span> Object to
+              certain processing activities.
+            </Typography>
+            <Typography
+              variant="p16"
+              className="leading-[1em] text-text-4 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.4em] before:w-1 before:h-1 before:bg-text-4 before:rounded-full"
+            >
+              <span className="font-bold me-2">Withdraw Consent:</span> Revoke
+              your consent to the processing of your data (where possible).
+            </Typography>
+          </div>
+          <Typography variant="p16" className="mt-4 block">
+            To exercise your rights, please contact us via email at{" "}
+            <a href="mailto:Care@gopay.sa" className="text-primary underline">
+              Care@gopay.sa
+            </a>
+            .
+          </Typography>
+        </div>
       </section>
     </div>
   );
