@@ -293,7 +293,7 @@ export default function DataProtectionPolicyPage() {
             {t("sections.contact.intro")}
           </Typography>
           <div className="space-y-2">
-            {contactDetails.map((detail: any, index: number) => (
+            {contactDetails.map((detail, index) => (
               <BulletItem key={index}>
                 <span className="me-2">
                   {t(`sections.contact.details.${index}.label`)}
