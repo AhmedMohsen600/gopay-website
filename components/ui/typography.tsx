@@ -6,13 +6,13 @@ const typographyVariants = cva("", {
   variants: {
     variant: {
       // H1 - 62px / 1.2
-      h1: "font-medium xl:text-[75px] md:text-[50px] text-[33px] leading-[1.2em]! -tracking-[0.03em]",
+      h1: "font-medium xl:text-[62px] md:text-[50px] text-[34px] leading-[1.2em]! tracking-[0em]",
 
       // H2 - 50px / 1.1
       h2: "xl:text-[50px] md:text-[36px] text-[24px] font-medium leading-none tracking-tight text-text-5",
 
       // H3 - 35px / 1.1
-      h3: "text-[18px] md:text-[26px] xl:text-[35px] font-semibold leading-[1.1em] -tracking-[0.04em]",
+      h3: "text-[18px] md:text-[26px] xl:text-[35px] font-medium leading-[1.1em] -tracking-[0.04em]",
 
       // H4 - 26px / 1.1
       h4: "xl:text-[26px] md:text-[17px] text-sm font-normal leading-none tracking-tight text-text-4",

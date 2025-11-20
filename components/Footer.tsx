@@ -59,14 +59,14 @@ export function Footer() {
       titleKey: "resources.title",
       links: [
         {
-          href: "/service-license",
+          href: "/who-we-are",
           labelKey: "resources.serviceLicense",
           isInternal: true,
         },
         { href: "/faq", labelKey: "resources.faqs", isInternal: true },
         { href: "/terms", labelKey: "resources.terms", isInternal: true },
         {
-          href: "/privacy",
+          href: "/data-protection-policy",
           labelKey: "resources.dataProtection",
           isInternal: true,
         },
