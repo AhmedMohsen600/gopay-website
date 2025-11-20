@@ -80,7 +80,7 @@ export function GopayInNumbersSection() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(142deg,#182130_5%,#282d4e_75%)] shadow-[0_25px_45px_#9882fb4d] p-[56px_24px] md:p-[100px_120px_120px]">
+    <section className="relative overflow-hidden bg-[linear-gradient(142deg,#182130_5%,#282d4e_75%)] shadow-[0_25px_45px_#9882fb4d] p-[56px_24px] md:p-[80px_64px] xl:p-[100px_120px_120px]">
       <div className="container mx-auto">
         {/* Section Title */}
         <motion.div
