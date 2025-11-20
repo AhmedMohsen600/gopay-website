@@ -59,7 +59,7 @@ export function Footer() {
       titleKey: "resources.title",
       links: [
         {
-          href: "/service-license",
+          href: "/who-we-are",
           labelKey: "resources.serviceLicense",
           isInternal: true,
         },
