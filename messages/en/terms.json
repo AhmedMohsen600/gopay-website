@@ -1,0 +1,148 @@
+{
+  "hero": {
+    "badge": "Terms",
+    "gopay": "GoPay",
+    "title": "Terms &",
+    "subtitle": "Conditions"
+  },
+  "intro": {
+    "title": "Go Pay Payment Service",
+    "description": "Go Pay is a product offered by Inclusive Financial Solutions Company for the business sector. This service targets all segments and sizes of establishments in the Saudi market (small, medium, large). The service provides the necessary electronic technologies and tools to enable the establishment to automatically upload invoices and financial claims and settle them through the \"SADAD\" payment system. The service also notifies the establishment's customers of the issuance of the invoice (summary - detailed) and sends it to them electronically via SMS or email.",
+    "subtitle": "Thus, the \"Go Pay\" service saves the establishment exorbitant costs, effort, and time required to build a technical system and provide a specialized team to manage billing operations, follow up on fund collection, and reconcile accounting settlements."
+  },
+  "section1": {
+    "title": "1. Definitions and Clarifications",
+    "subsectionA": {
+      "title": "A - Definitions:",
+      "intro": "The following words and phrases – wherever they appear in this Agreement – shall have the meanings set forth opposite each of them, unless the context requires otherwise:",
+      "company": {
+        "title": "Inclusive Financial Solutions Company:",
+        "description": "The company whose data is specified in Clause (First) of this Agreement."
+      },
+      "client": {
+        "title": "Client:",
+        "description": "The company's client (natural/legal entity) whose data is specified in Clause (First) of this Agreement, and who signed this Agreement by proxy or by resolution of the partners/board of directors. The definition includes the agent or authorized representative of the client."
+      },
+      "paymentAccount": {
+        "title": "Payment Account:",
+        "description": "An accounting record opened by the Company and created under this Agreement at the client's request, resulting in rights and obligations for both parties. These rights and obligations include accounting entries made by the Company in accordance with applicable regulations, rules, and payment customs."
+      }
+    },
+    "subsectionB": {
+      "title": "B - Clarifications:",
+      "intro": "In this Agreement, unless the context requires otherwise:",
+      "item1": "Reference to years, months, and days refers to them according to the Hijri calendar.",
+      "item2": "Reference to the Agreement refers to Clause (First), Clause (Second), Clause (Third), and the appendices of the Agreement, and includes any amendments or additions thereto."
+    }
+  },
+  "section2": {
+    "title": "2. Preamble",
+    "content": "Whereas the client wishes to open a payment account with Inclusive Financial Solutions Company, and whereas Inclusive Financial Solutions Company has approved the client's request, the two parties, being of full legal capacity, have agreed to conclude this Agreement. It is subject to the provisions of relevant laws, regulations, and instructions, such as the Anti-Money Laundering Law, the Law for Combating Terrorism Crimes and its Financing, and their executive regulations, and the Payments and Services Law and its executive regulations, and instructions issued by the Saudi Central Bank, such as bank account rules and regulatory rules for payment service providers. In case of conflict between the provisions of the Agreement and the provisions of laws and instructions, the provisions of the laws and instructions shall prevail.",
+    "note": "The above preamble is an integral part of this Agreement."
+  },
+  "section3": {
+    "title": "3. Rights and Obligations of the Parties",
+    "subsectionA": {
+      "title": "A - Company's Obligations:",
+      "item1": {
+        "title": "Inclusive Financial Solutions",
+        "description": "Company undertakes to open a payment account for the client and exercise due diligence in executing their orders on the account within the limits of payment-related regulations, rules, and customs. Inclusive Financial Solutions Company shall not be liable for any damage arising from the execution of these orders unless such damage results from its gross negligence, intentional misconduct, or failure to exercise due diligence, which for the purposes of applying the Agreement means the care, skill, prudence, and diligence expected – reasonably – from any establishment under the circumstances."
+      },
+      "item2": {
+        "title": "Inclusive Financial Solutions",
+        "description": "Company may collect a specified fee from the client for the services it provides to them, and it may collect these directly without referring to the client, provided that these fees do not conflict with what is issued by the Saudi Central Bank and that the client is notified via email – or any other means determined by the company – 30 days prior to the application of the fees."
+      },
+      "item3": {
+        "title": "Inclusive Financial Solutions",
+        "description": "Company shall notify the client via SMS to the mobile phone number listed in the Agreement – or any other means determined by the company – of the following: All operations executed on their account immediately upon their occurrence. Prior to any change in account status or suspension of authorized representative powers, with sufficient notice. The secret number and password for their account via SMS to the phone listed in the Agreement. Access to the client's account is through the company's electronic channels."
+      },
+      "item4": {
+        "title": "Inclusive Financial Solutions",
+        "description": "Company may send SMS messages, communicate by phone, or send marketing publications to the client regarding the services and products offered by the company, unless the client expresses a desire not to receive such messages and marketing publications."
+      },
+      "item5": {
+        "title": "Inclusive Financial Solutions",
+        "description": "Company shall not be liable to the client for any delay or non-delivery of bank transfers to the client due to an error or malfunction in technical systems beyond the control of Inclusive Financial Solutions Company, or in case of incomplete client information, non-existence, or any other reason beyond the company's control, unless the delay or non-delivery of the bank transfer results from the company's failure to exercise due diligence or its gross negligence."
+      },
+      "item6": {
+        "title": "Inclusive Financial Solutions",
+        "description": "Company may amend the Agreement from time to time – without prejudice to the instructions of the Saudi Central Bank – provided that the company undertakes to inform the client of the amendments 30 days prior to their effective date, and the amendments shall apply after the expiration of the period referred to in this paragraph, starting from the date of their publication on the company's website. Failure to withdraw from the Agreement shall be considered as the client's approval and acceptance of the amendments."
+      },
+      "item7": {
+        "title": "Inclusive Financial Solutions",
+        "description": "Company may suspend the powers of authorized signatories if their identities expire unless the client provides an update."
+      },
+      "item8": {
+        "title": "Inclusive Financial Solutions",
+        "description": "Company may close the account if no orders are executed on it for a period of 90 days from the account opening date, with due regard to notifying the client via SMS to the mobile phone number listed in the Agreement – or any other means – with sufficient notice before closing the account."
+      },
+      "item9": {
+        "title": "Inclusive Financial Solutions",
+        "description": "Company must maintain the confidentiality of all data and account information provided by the client. This excludes what the company discloses for specific professional and operational purposes and to competent government authorities, including the Central Bank, in accordance with relevant regulations and controls."
+      },
+      "item10": {
+        "title": "Inclusive Financial Solutions",
+        "description": "Company may retain all documents related to the client's account for a minimum of ten years from the date of termination of the Agreement or any other period that the Central Bank may subsequently determine."
+      }
+    },
+    "subsectionB": {
+      "title": "B - Client's Obligations:",
+      "item1": "The client is prohibited from using the account for any unlawful purpose or activity, and must notify Inclusive Financial Solutions Company if there is any objection or suspicion regarding operations on their account. The lapse of 30 days from the date of execution of any operation without the client's objection shall be considered as their approval and confirmation of its validity.",
+      "item2": "The client shall bear any expenses or taxes imposed by the state on any of the services or products provided by the company to the client, whether currently imposed or to be imposed in the future.",
+      "item3": "The client undertakes to update their proof document, such as a commercial registration or identity, or its equivalent, and their information recorded in the Agreement if updated or changed. Inclusive Financial Solutions Company may, in case of violation and for the purpose of compliance with applicable regulations, freeze the account.",
+      "item4": "The client agrees that Inclusive Financial Solutions Company, for the purposes of opening and operating the account and complying with applicable regulations, may obtain updated proof document data and information through services provided by the National Information Center or any other reliable and independent entity.",
+      "item5": "The client may terminate this Agreement for any reason by providing 30 days' prior written notice to Inclusive Financial Solutions Company via email.",
+      "item6": "In the event that the client wishes to cancel or add an authorized representative to their account with Inclusive Financial Solutions Company, or amend the signature specimen of any authorized representative on their account held by the Company; this shall be done through forms prepared by Inclusive Financial Solutions Company. In this case, the company will approve any operation carried out by the client on their account before the company receives instructions for amendment or cancellation from the client or which were issued on a date prior to the date of these instructions, and the company's approval of the amendments will be on the day following the date of receipt of these amendments."
+    },
+    "subsectionC": {
+      "title": "C - General Provisions:",
+      "notification": "A party who has failed or neglected to notify the other party of a change in their contact addresses or one of them may not excuse themselves by claiming lack of knowledge of the notification or non-receipt thereof.",
+      "dataSharing": {
+        "intro": "For the purpose of activation and subscription to payment services provided in the instant payment system, payment account information will be automatically and confidentially shared with Saudi Payments Company (the national operator of the system) as needed. The information to be shared is:",
+        "items": {
+          "clientName": "Client's Name.",
+          "accountNumber": "Account Number.",
+          "mobileNumber": "Mobile Phone Number.",
+          "commercialReg": "Commercial Registration Number or its equivalent.",
+          "taxCertificate": "Tax Certificate.",
+          "email": "Email Address.",
+          "other": "Any other information required to be provided upon request by Saudi Payments Company."
+        }
+      },
+      "severability": "The invalidity, unlawfulness, or unenforceability of any clause of the Agreement shall not invalidate the remaining clauses of the Agreement, provided that both parties undertake to amend the clause in accordance with relevant regulations and controls.",
+      "duration": "This Agreement shall remain in force until the account is closed by either party.",
+      "jurisdiction": "This Agreement is subject to the laws of the Kingdom of Saudi Arabia, and any dispute arising between the parties shall be settled amicably. If the dispute cannot be resolved amicably, either party has the right to refer it to the competent judicial authority in Riyadh.",
+      "language": "This Agreement has been prepared in Arabic and is the authoritative language for its interpretation and execution. The client is also entitled to receive an English copy – upon request – and in case of any discrepancy between the texts, the Arabic text shall prevail as the original."
+    }
+  },
+  "section4": {
+    "title": "4. Undertakings and Declarations of Inclusive Financial Solutions Company",
+    "intro": "The Company undertakes and declares to the client the following:",
+    "fairTreatment": "Fair and equitable treatment, and adherence to the principle of disclosure and transparency.",
+    "confidentiality": "Maintaining the confidentiality of all data and account information provided by the client, with the exception of what the company discloses for specific professional and operational purposes, and to competent government authorities, including the Central Bank, in accordance with relevant regulations and controls. Protecting information privacy and not using it except for specific purposes – after obtaining the client's consent – with the exception of what the company discloses to competent government authorities, including the Central Bank, in accordance with relevant regulations and controls.",
+    "security": "To take all necessary technical and organizational measures to protect its information technology systems and customer data in its operations, and that it has exercised due diligence and made reasonable efforts in establishing, maintaining, implementing, and adhering to information technology, information security, and cybersecurity controls, policies, and procedures, including supervisory and access control operations to systems, encryption, virtual and physical protection, and has necessary business continuity plans, recovery plans, and security plans designed to protect against any penetration, loss, destruction, alteration, or exploitation."
+  },
+  "section5": {
+    "title": "5. Undertakings and Declarations of the Client",
+    "intro": "The client undertakes and declares, being of full legal capacity, the following:",
+    "legalCompliance": "That they are not legally prohibited from dealing with the company, and that all data provided by them is correct, reliable, and updated.",
+    "responsibility": "That they are responsible before the competent authorities for funds deposited in their account with their knowledge, and those deposited in their account without their knowledge, whether they personally disposed of them or not, if they do not officially report them upon knowing of their presence in their account.",
+    "legitimateFunds": "That the funds deposited in the account are derived from legitimate activities and that they are responsible for their validity. If Inclusive Financial Solutions Company receives any illicit or counterfeit funds from them, it is not entitled to recover them or be compensated for them.",
+    "freezeRight": "That Inclusive Financial Solutions Company has the right to freeze the account or any of the amounts credited to it and notify the competent authorities if there is suspicion that the amounts result from financial fraud or illegal operations in accordance with applicable regulations and instructions.",
+    "beneficiary": "That they are the true beneficiary of the account.",
+    "knownTransfers": "That they are fully aware and knowledgeable that it is prohibited to transfer to unknown persons or entities according to applicable regulations and instructions, and that all transfers they make are to known persons and entities and for known and legitimate commercial purposes.",
+    "acknowledgment": "That they have read and understood the terms and conditions set forth in this Agreement, and that they will read the terms and conditions specific to the services and products associated with the account, as published on the company's website."
+  },
+  "section6": {
+    "title": "6. Financial Terms and Conditions for GoPay Service",
+    "bankFees": "If the establishment's bank account is outside \"Riyad Bank\", the establishment shall bear the costs of \"SARIE\" fees or any other additional fees, or any government fees (current or future).",
+    "aggregation": "The full value of executed operations and collected amounts from invoice and financial claim settlements will be aggregated through a single transfer and then transferred to the establishment's bank account.",
+    "settlementDuration": "The duration of settlement operations and transfer of collected amounts to the establishment's bank account is within a period of two business days (T+2). Other settlement periods may be determined by agreement and the signed contract between the service provider and the establishment.",
+    "invoiceLimits": "The limits for the value of invoices and financial claims uploaded to the system, which the establishment is allowed to issue to its customers through the GoPay service, are according to the selected package limits.",
+    "minimumValue": "If an operation is executed for less than the minimum value of amounts uploaded for the GoPay service, the executed operation will be counted from the total number of operations in the package or the agreed-upon fees after the package operations are exhausted.",
+    "packageValidity": "The package validity period is one calendar year from the date of subscription, and remaining operations cannot be utilized after the package expires.",
+    "renewalFees": "If the number of executed operations in the package is completed and not renewed, the fee per operation will be according to the pay-per-use fees after the selected package operations are exhausted.",
+    "vatExclusive": "All operation fees and subscriptions for provided services or any costs mentioned in this offer are exclusive of Value Added Tax (VAT).",
+    "nonRefundable": "If the establishment requests to cancel the service for any reason, all fees paid by the establishment are non-refundable."
+  }
+}
