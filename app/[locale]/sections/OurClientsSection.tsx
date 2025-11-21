@@ -35,7 +35,7 @@ export function OurClientsSection() {
 
           {/* Partners Logos Marquee */}
           <div className="p-2.5">
-            <LogosMarquee logos={clientLogos} speed={50} />
+            <LogosMarquee direction="right" logos={clientLogos} />
           </div>
         </motion.div>
       </div>
