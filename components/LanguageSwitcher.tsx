@@ -12,7 +12,11 @@ const languages = [
   { code: "ar", name: "عربي" },
 ];
 
-export default function LanguageSwitcher() {
+interface LanguageSwitcherProps {
+  mobile?: boolean;
+}
+
+export default function LanguageSwitcher({ mobile }: LanguageSwitcherProps) {
   const [isOpen, setIsOpen] = useState(false);
   const locale = useLocale();
   const router = useRouter();
@@ -22,6 +26,56 @@ export default function LanguageSwitcher() {
     router.replace(pathname, { locale: newLocale });
     setIsOpen(false);
   };
+
+  const toggleOpen = () => setIsOpen(!isOpen);
+
+  if (mobile) {
+    return (
+      <div className="w-full">
+        <button
+          onClick={toggleOpen}
+          className="flex items-center gap-2 py-2 text-lg font-medium text-text-5 transition-colors"
+        >
+          <Globe className="size-[24px]" />
+          <span className="text-lg">
+            {locale === "ar" ? "Language" : "Language"}
+          </span>
+          <CaretDown
+            size={20}
+            weight="bold"
+            className={`text-text-3 transition-transform ${
+              isOpen ? "rotate-180" : ""
+            }`}
+          />
+        </button>
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="overflow-hidden pl-8"
+            >
+              <div className="flex flex-col gap-2 pt-2">
+                {languages.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => handleLanguageChange(lang.code)}
+                    className={`text-left text-base font-medium transition-colors ${
+                      locale === lang.code ? "text-secondary" : "text-text-5"
+                    }`}
+                  >
+                    {lang.name}
+                  </button>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    );
+  }
 
   return (
     <div
