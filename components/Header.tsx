@@ -35,7 +35,7 @@ export function Header() {
       label: t("pricing"),
       href: "/pricing",
       children: [
-        { label: t("gopay"), href: "/pricing/gopay", highlight: true },
+        { label: t("gopay"), href: "/pricing/gopay" },
         { label: t("goInvoices"), href: "/pricing/go-invoices" },
       ],
     },
@@ -82,7 +82,7 @@ export function Header() {
         className="fixed top-6 inset-x-0 mx-auto z-50 w-full max-w-[1200px]"
       >
         <nav
-          className="backdrop-blur-xl h-[66.4px] bg-white/24 lg:w-[1200px] lg:rounded-xl px-6 py-3 flex items-center sm:justify-between gap-[10px]"
+          className="backdrop-blur-xl h-[66.4px] bg-white/24 xl:w-[1200px] xl:rounded-xl px-6 py-3 flex items-center sm:justify-between gap-[10px]"
           style={{ backdropFilter: "blur(20px)" }}
         >
           {/* Brand/Logo */}
@@ -91,7 +91,7 @@ export function Header() {
           </Link>
 
           {/* Desktop Nav Items */}
-          <div className="hidden lg:flex items-center gap-6 justify-start">
+          <div className="hidden xl:flex items-center gap-6 justify-start">
             {navItems.map((item) => {
               // Items with dropdown menu
               if (item.children && item.children.length > 0) {
@@ -113,7 +113,9 @@ export function Header() {
                       <CaretDown
                         size={16}
                         weight="bold"
-                        className="text-text-5"
+                        className={
+                          isActive(item.href) ? "text-secondary" : "text-text-5"
+                        }
                       />
                     </button>
 
@@ -136,6 +138,7 @@ export function Header() {
                               <Typography
                                 variant="p16"
                                 className={
+                                  isActive(childItem.href) ||
                                   childItem.highlight
                                     ? "text-secondary"
                                     : "text-dark"
@@ -198,7 +201,7 @@ export function Header() {
           </div>
 
           {/* Desktop Actions */}
-          <div className="hidden lg:flex lg:flex-1 items-center justify-end gap-2">
+          <div className="hidden xl:flex xl:flex-1 items-center justify-end gap-2">
             <Button
               variant="secondary"
               asChild
@@ -226,7 +229,7 @@ export function Header() {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-bg-grey transition-colors"
+            className="xl:hidden p-2 rounded-lg hover:bg-bg-grey transition-colors"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? (
@@ -248,7 +251,7 @@ export function Header() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setMobileMenuOpen(false)}
-              className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 lg:hidden"
+              className="fixed inset-0 bg-[#FFFFFF80] backdrop-blur-md z-40 xl:hidden"
             />
 
             {/* Menu Panel */}
@@ -256,120 +259,120 @@ export function Header() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-              className="fixed top-24 left-1/2 -translate-x-1/2 w-[95%] max-w-md z-50 lg:hidden"
+              transition={{ duration: 0.2 }}
+              className="fixed top-0 inset-x-0 z-40 bg-white xl:hidden flex flex-col max-h-[85dvh]"
             >
-              <div className="backdrop-blur-xl bg-white/95 rounded-xl border border-stroke-1 p-6 shadow-lg">
-                <div className="flex flex-col gap-4">
-                  {/* Navigation Links */}
-                  <nav className="flex flex-col gap-2 pb-4 border-b border-stroke-1">
-                    {navItems.map((item) => (
-                      <div key={item.href}>
-                        {item.children && item.children.length > 0 ? (
-                          <>
-                            <button
-                              onClick={() => toggleDropdown(item.href)}
-                              className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-bg-grey ${
-                                isActive(item.href)
-                                  ? "text-primary bg-bg-grey"
-                                  : "text-text-5"
-                              }`}
-                            >
-                              {item.label}
-                              <CaretDown
-                                size={16}
-                                weight="bold"
-                                className={`text-text-3 transition-transform ${
-                                  openDropdowns[item.href] ? "rotate-180" : ""
-                                }`}
-                              />
-                            </button>
-                            <AnimatePresence>
-                              {openDropdowns[item.href] && (
-                                <motion.div
-                                  initial={{ height: 0, opacity: 0 }}
-                                  animate={{ height: "auto", opacity: 1 }}
-                                  exit={{ height: 0, opacity: 0 }}
-                                  transition={{ duration: 0.2 }}
-                                  className="overflow-hidden"
-                                >
-                                  <div className="pl-4 pt-2 flex flex-col gap-1">
-                                    {item.children.map((childItem) => (
-                                      <Link
-                                        key={childItem.href}
-                                        href={childItem.href}
-                                        onClick={() => setMobileMenuOpen(false)}
-                                        className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-bg-grey ${
-                                          isActive(childItem.href)
-                                            ? "text-primary bg-bg-grey"
-                                            : childItem.highlight
-                                            ? "text-secondary"
-                                            : "text-text-5"
-                                        }`}
-                                      >
-                                        {childItem.label}
-                                      </Link>
-                                    ))}
-                                  </div>
-                                </motion.div>
-                              )}
-                            </AnimatePresence>
-                          </>
-                        ) : (
-                          <Link
-                            href={item.href}
-                            onClick={() => setMobileMenuOpen(false)}
-                            className={`flex items-center justify-between px-3 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-bg-grey ${
+              <div className="h-[100px] shrink-0" />
+              <div className="overflow-y-auto px-6 pb-8 flex flex-col gap-8">
+                {/* Navigation Links */}
+                <nav className="flex flex-col gap-4">
+                  {navItems.map((item) => (
+                    <div key={item.href}>
+                      {item.children && item.children.length > 0 ? (
+                        <>
+                          <button
+                            onClick={() => toggleDropdown(item.href)}
+                            className={`flex items-center gap-2 py-2 text-lg font-medium transition-colors ${
                               isActive(item.href)
-                                ? "text-primary bg-bg-grey"
+                                ? "text-secondary"
                                 : "text-text-5"
                             }`}
                           >
                             {item.label}
-                          </Link>
-                        )}
-                      </div>
-                    ))}
-                  </nav>
+                            <CaretDown
+                              size={20}
+                              weight="bold"
+                              className={`transition-transform ${
+                                isActive(item.href)
+                                  ? "text-secondary"
+                                  : "text-text-3"
+                              } ${
+                                openDropdowns[item.href] ? "rotate-180" : ""
+                              }`}
+                            />
+                          </button>
+                          <AnimatePresence>
+                            {openDropdowns[item.href] && (
+                              <motion.div
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: "auto", opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.2 }}
+                                className="overflow-hidden"
+                              >
+                                <div className="pl-4 pt-2 flex flex-col gap-3">
+                                  {item.children.map((childItem) => (
+                                    <Link
+                                      key={childItem.href}
+                                      href={childItem.href}
+                                      onClick={() => setMobileMenuOpen(false)}
+                                      className={`block py-1 text-base font-medium transition-colors ${
+                                        isActive(childItem.href)
+                                          ? "text-secondary"
+                                          : childItem.highlight
+                                          ? "text-secondary"
+                                          : "text-text-5"
+                                      }`}
+                                    >
+                                      {childItem.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={`block py-2 text-lg font-medium transition-colors ${
+                            isActive(item.href)
+                              ? "text-secondary"
+                              : "text-text-5"
+                          }`}
+                        >
+                          {item.label}
+                        </Link>
+                      )}
+                    </div>
+                  ))}
+                </nav>
 
-                  {/* Language Switcher */}
-                  <div className="pb-4 border-b border-stroke-1">
-                    <Typography variant="p14" className="text-text-3 mb-2">
-                      {t("language")}
-                    </Typography>
-                    <LanguageSwitcher />
-                  </div>
+                {/* Language Switcher */}
+                <div className="pt-0">
+                  <LanguageSwitcher mobile />
+                </div>
 
-                  {/* Action Buttons */}
-                  <div className="flex flex-col gap-3">
-                    <Button
-                      variant="secondary"
-                      className="w-full justify-center"
-                      asChild
-                      onClick={() => setMobileMenuOpen(false)}
+                {/* Action Buttons */}
+                <div className="flex flex-row gap-3">
+                  <Button
+                    variant="secondary"
+                    className="flex-1 justify-center"
+                    asChild
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <a
+                      href="https://app.gopay.sa/wbiller/#/login"
+                      target="_blank"
+                      rel="noopener"
                     >
-                      <a
-                        href="https://app.gopay.sa/wbiller/#/login"
-                        target="_blank"
-                        rel="noopener"
-                      >
-                        {t("signIn")}
-                      </a>
-                    </Button>
-                    <Button
-                      className="w-full justify-center"
-                      asChild
-                      onClick={() => setMobileMenuOpen(false)}
+                      {t("signIn")}
+                    </a>
+                  </Button>
+                  <Button
+                    className="flex-1 justify-center"
+                    asChild
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <a
+                      href="https://app.gopay.sa/registration.html"
+                      target="_blank"
+                      rel="noopener"
                     >
-                      <a
-                        href="https://app.gopay.sa/registration.html"
-                        target="_blank"
-                        rel="noopener"
-                      >
-                        {t("getStarted")}
-                      </a>
-                    </Button>
-                  </div>
+                      {t("getStarted")}
+                    </a>
+                  </Button>
                 </div>
               </div>
             </motion.div>
