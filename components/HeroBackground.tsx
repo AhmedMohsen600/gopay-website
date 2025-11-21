@@ -13,7 +13,6 @@ export function HeroBackground() {
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
-      size: Math.random() * 4 + 2,
       duration: Math.random() * 3 + 2,
       delay: Math.random() * 2,
     }))
@@ -25,7 +24,6 @@ export function HeroBackground() {
       id: i + 100,
       x: Math.random() * 100,
       y: Math.random() * 100,
-      size: Math.random() * 4 + 2,
       duration: Math.random() * 3 + 2,
       delay: Math.random() * 2,
     }))
@@ -65,8 +63,8 @@ export function HeroBackground() {
             style={{
               top: `${dot.y}%`,
               left: `${dot.x}%`,
-              width: `${dot.size}px`,
-              height: `${dot.size}px`,
+              width: `3px`,
+              height: `3px`,
             }}
             initial={{ opacity: 0 }}
             animate={
@@ -107,8 +105,8 @@ export function HeroBackground() {
             style={{
               top: `${dot.y}%`,
               left: `${dot.x}%`,
-              width: `${dot.size}px`,
-              height: `${dot.size}px`,
+              width: `3px`,
+              height: `3px`,
             }}
             initial={{ opacity: 0 }}
             animate={
