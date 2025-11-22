@@ -126,11 +126,11 @@ export function HeroSection() {
                 delay: 1.5,
               }}
             >
-              <Button className="w-fit text-base">
+              <Button className="w-fit">
                 {tc("getStarted")}
-                <AnimatedArrow />
+                <AnimatedArrow className="text-current" />
               </Button>
-              <Button variant="outline" className="text-base w-fit">
+              <Button variant="outline" className="w-fit">
                 {tc("pricingsPlans")}
                 <AnimatedArrow className="text-current" />
               </Button>
