@@ -34,16 +34,14 @@ export default function LanguageSwitcher({ mobile }: LanguageSwitcherProps) {
       <div className="w-full">
         <button
           onClick={toggleOpen}
-          className="flex items-center gap-2 py-2 text-lg font-medium text-text-5 transition-colors"
+          className="w-full flex items-center gap-1 xl:gap-2 xl:py-2 text-base font-medium text-text-5 transition-colors"
         >
           <Globe className="size-[24px]" />
-          <span className="text-lg">
-            {locale === "ar" ? "Language" : "Language"}
-          </span>
+
           <CaretDown
             size={20}
             weight="bold"
-            className={`text-text-3 transition-transform ${
+            className={`text-black transition-transform ${
               isOpen ? "rotate-180" : ""
             }`}
           />
