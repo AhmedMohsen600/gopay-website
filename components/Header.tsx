@@ -79,16 +79,37 @@ export function Header() {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, y: { duration: 0.5 } }}
-        className="fixed top-6 inset-x-0 mx-auto z-50 w-full max-w-[1200px]"
+        className="fixed top-6 inset-x-0 mx-auto z-50 w-[90%] xl:rounded-none xl:w-full max-w-[1200px]"
       >
-        <nav
-          className="backdrop-blur-xl h-[66.4px] bg-white/24 xl:w-[1200px] xl:rounded-xl px-6 py-3 flex items-center sm:justify-between gap-[10px]"
-          style={{ backdropFilter: "blur(20px)" }}
+        <motion.nav
+          initial={false}
+          animate={{
+            height: mobileMenuOpen ? "auto" : "auto",
+          }}
+          className={`bg-[#FFFFFF80] backdrop-blur-[15px] xl:h-[66.4px] xl:w-[1200px] ${
+            mobileMenuOpen ? "rounded-xl" : "rounded-xl"
+          } p-4 xl:px-6 xl:py-3 flex flex-col xl:flex-row items-start xl:items-center xl:justify-between xl:gap-[10px]`}
         >
-          {/* Brand/Logo */}
-          <Link href="/" className="flex flex-1 items-center shrink-0">
-            <Logo className="shrink-0" />
-          </Link>
+          {/* Top Bar - Logo and Menu Toggle */}
+          <div className="flex items-center justify-between w-full xl:flex-1 xl:justify-start">
+            {/* Brand/Logo */}
+            <Link href="/" className="flex items-center shrink-0">
+              <Logo className="shrink-0" />
+            </Link>
+
+            {/* Mobile Menu Toggle */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="xl:hidden p-2 rounded-lg transition-colors"
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? (
+                <X size={24} weight="bold" className="text-dark" />
+              ) : (
+                <List size={24} weight="bold" className="text-dark" />
+              )}
+            </button>
+          </div>
 
           {/* Desktop Nav Items */}
           <div className="hidden xl:flex items-center gap-6 justify-start">
@@ -127,7 +148,7 @@ export function Header() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -10 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-[200px] bg-white rounded-xl border border-stroke-1 shadow-lg overflow-hidden z-50"
+                          className="absolute top-full start-0 mt-2 w-[200px] bg-white rounded-xl border border-stroke-1 shadow-lg overflow-hidden z-50"
                         >
                           {item.children.map((childItem) => (
                             <Link
@@ -226,159 +247,133 @@ export function Header() {
             </Button>
           </div>
 
-          {/* Mobile Menu Toggle */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="xl:hidden p-2 rounded-lg hover:bg-bg-grey transition-colors"
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? (
-              <X size={24} weight="bold" className="text-dark" />
-            ) : (
-              <List size={24} weight="bold" className="text-dark" />
-            )}
-          </button>
-        </nav>
-      </motion.header>
-
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <>
-            {/* Backdrop */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setMobileMenuOpen(false)}
-              className="fixed inset-0 bg-[#FFFFFF80] backdrop-blur-md z-40 xl:hidden"
-            />
-
-            {/* Menu Panel */}
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.2 }}
-              className="fixed top-0 inset-x-0 z-40 bg-white xl:hidden flex flex-col max-h-[85dvh]"
-            >
-              <div className="h-[100px] shrink-0" />
-              <div className="overflow-y-auto px-6 pb-8 flex flex-col gap-8">
-                {/* Navigation Links */}
-                <nav className="flex flex-col gap-4">
-                  {navItems.map((item) => (
-                    <div key={item.href}>
-                      {item.children && item.children.length > 0 ? (
-                        <>
-                          <button
-                            onClick={() => toggleDropdown(item.href)}
-                            className={`flex items-center gap-2 py-2 text-lg font-medium transition-colors ${
+          {/* Mobile Menu Content */}
+          <AnimatePresence>
+            {mobileMenuOpen && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="xl:hidden w-full overflow-hidden"
+              >
+                <div className="flex flex-col gap-4 pt-4 border-t border-white mt-3">
+                  {/* Navigation Links */}
+                  <nav className="flex flex-col gap-4">
+                    {navItems.map((item) => (
+                      <div key={item.href}>
+                        {item.children && item.children.length > 0 ? (
+                          <>
+                            <button
+                              onClick={() => toggleDropdown(item.href)}
+                              className={`flex items-center gap-2 text-base font-medium transition-colors ${
+                                isActive(item.href)
+                                  ? "text-secondary"
+                                  : "text-text-5"
+                              }`}
+                            >
+                              {item.label}
+                              <CaretDown
+                                size={20}
+                                weight="bold"
+                                className={`transition-transform ${
+                                  isActive(item.href)
+                                    ? "text-secondary"
+                                    : "text-text-3"
+                                } ${
+                                  openDropdowns[item.href] ? "rotate-180" : ""
+                                }`}
+                              />
+                            </button>
+                            <AnimatePresence>
+                              {openDropdowns[item.href] && (
+                                <motion.div
+                                  initial={{ height: 0, opacity: 0 }}
+                                  animate={{ height: "auto", opacity: 1 }}
+                                  exit={{ height: 0, opacity: 0 }}
+                                  transition={{ duration: 0.2 }}
+                                  className="overflow-hidden"
+                                >
+                                  <div className="ps-4 pt-2 flex flex-col gap-3">
+                                    {item.children.map((childItem) => (
+                                      <Link
+                                        key={childItem.href}
+                                        href={childItem.href}
+                                        onClick={() => setMobileMenuOpen(false)}
+                                        className={`block text-base font-medium transition-colors ${
+                                          isActive(childItem.href)
+                                            ? "text-secondary"
+                                            : childItem.highlight
+                                            ? "text-secondary"
+                                            : "text-text-5"
+                                        }`}
+                                      >
+                                        {childItem.label}
+                                      </Link>
+                                    ))}
+                                  </div>
+                                </motion.div>
+                              )}
+                            </AnimatePresence>
+                          </>
+                        ) : (
+                          <Link
+                            href={item.href}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className={`block text-base font-medium transition-colors ${
                               isActive(item.href)
                                 ? "text-secondary"
                                 : "text-text-5"
                             }`}
                           >
                             {item.label}
-                            <CaretDown
-                              size={20}
-                              weight="bold"
-                              className={`transition-transform ${
-                                isActive(item.href)
-                                  ? "text-secondary"
-                                  : "text-text-3"
-                              } ${
-                                openDropdowns[item.href] ? "rotate-180" : ""
-                              }`}
-                            />
-                          </button>
-                          <AnimatePresence>
-                            {openDropdowns[item.href] && (
-                              <motion.div
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={{ height: "auto", opacity: 1 }}
-                                exit={{ height: 0, opacity: 0 }}
-                                transition={{ duration: 0.2 }}
-                                className="overflow-hidden"
-                              >
-                                <div className="pl-4 pt-2 flex flex-col gap-3">
-                                  {item.children.map((childItem) => (
-                                    <Link
-                                      key={childItem.href}
-                                      href={childItem.href}
-                                      onClick={() => setMobileMenuOpen(false)}
-                                      className={`block py-1 text-base font-medium transition-colors ${
-                                        isActive(childItem.href)
-                                          ? "text-secondary"
-                                          : childItem.highlight
-                                          ? "text-secondary"
-                                          : "text-text-5"
-                                      }`}
-                                    >
-                                      {childItem.label}
-                                    </Link>
-                                  ))}
-                                </div>
-                              </motion.div>
-                            )}
-                          </AnimatePresence>
-                        </>
-                      ) : (
-                        <Link
-                          href={item.href}
-                          onClick={() => setMobileMenuOpen(false)}
-                          className={`block py-2 text-lg font-medium transition-colors ${
-                            isActive(item.href)
-                              ? "text-secondary"
-                              : "text-text-5"
-                          }`}
-                        >
-                          {item.label}
-                        </Link>
-                      )}
-                    </div>
-                  ))}
-                </nav>
+                          </Link>
+                        )}
+                      </div>
+                    ))}
+                  </nav>
 
-                {/* Language Switcher */}
-                <div className="pt-0">
-                  <LanguageSwitcher mobile />
-                </div>
+                  {/* Language Switcher */}
+                  <div className="pb-2">
+                    <LanguageSwitcher mobile />
+                  </div>
 
-                {/* Action Buttons */}
-                <div className="flex flex-row gap-3">
-                  <Button
-                    variant="secondary"
-                    className="flex-1 justify-center"
-                    asChild
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    <a
-                      href="https://app.gopay.sa/wbiller/#/login"
-                      target="_blank"
-                      rel="noopener"
+                  {/* Action Buttons */}
+                  <div className="flex flex-row gap-3">
+                    <Button
+                      variant="secondary"
+                      className="flex-1 justify-center"
+                      asChild
+                      onClick={() => setMobileMenuOpen(false)}
                     >
-                      {t("signIn")}
-                    </a>
-                  </Button>
-                  <Button
-                    className="flex-1 justify-center"
-                    asChild
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    <a
-                      href="https://app.gopay.sa/registration.html"
-                      target="_blank"
-                      rel="noopener"
+                      <a
+                        href="https://app.gopay.sa/wbiller/#/login"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        {t("signIn")}
+                      </a>
+                    </Button>
+                    <Button
+                      className="flex-1 justify-center"
+                      asChild
+                      onClick={() => setMobileMenuOpen(false)}
                     >
-                      {t("getStarted")}
-                    </a>
-                  </Button>
+                      <a
+                        href="https://app.gopay.sa/registration.html"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        {t("getStarted")}
+                      </a>
+                    </Button>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.nav>
+      </motion.header>
     </>
   );
 }
