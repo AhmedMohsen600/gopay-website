@@ -87,12 +87,6 @@ export function ProductCard({
             {description}
           </Typography>
         </div>
-
-        {/* Button */}
-        {/* <Button className="w-fit mt-4" onClick={onButtonClick}>
-          {buttonText}
-          <AnimatedArrow rtlIcon={CaretLeft} icon={CaretRight} />
-        </Button> */}
       </div>
 
       <motion.div
