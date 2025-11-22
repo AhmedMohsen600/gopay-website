@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
 import { Logo } from "@/components/Logo";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import { List, X, CaretDown } from "@phosphor-icons/react/dist/ssr";
+import { CaretDown } from "@phosphor-icons/react/dist/ssr";
 
 type NavItem = {
   label: string;
@@ -86,9 +86,11 @@ export function Header() {
           animate={{
             height: mobileMenuOpen ? "auto" : "auto",
           }}
-          className={`bg-[#FFFFFF80] backdrop-blur-[15px] xl:h-[66.4px] xl:w-[1200px] ${
+          className={`bg-[#FFFFFF80] transition-all duration-300 backdrop-blur-[15px] xl:h-[66.4px] xl:w-[1200px] ${
             mobileMenuOpen ? "rounded-xl" : "rounded-xl"
-          } p-4 xl:px-6 xl:py-3 flex flex-col xl:flex-row items-start xl:items-center xl:justify-between xl:gap-[10px]`}
+          } ${
+            mobileMenuOpen ? "p-4 " : "py-3 px-4"
+          } xl:px-6 xl:py-3 flex flex-col xl:flex-row items-start xl:items-center xl:justify-between xl:gap-[10px]`}
         >
           {/* Top Bar - Logo and Menu Toggle */}
           <div className="flex items-center justify-between w-full xl:flex-1 xl:justify-start">
@@ -100,14 +102,31 @@ export function Header() {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="xl:hidden p-2 rounded-lg transition-colors"
+              className="xl:hidden p-2 rounded-lg transition-colors relative w-10 h-10 flex items-center justify-center"
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? (
-                <X size={24} weight="bold" className="text-dark" />
-              ) : (
-                <List size={24} weight="bold" className="text-dark" />
-              )}
+              <div className="w-6 relative flex items-center justify-center">
+                {/* Top Line */}
+                <motion.span
+                  animate={{
+                    rotate: mobileMenuOpen ? 45 : 0,
+                    y: mobileMenuOpen ? 0 : -5,
+                  }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="w-[22px] rounded-full h-[2.5px] bg-dark absolute"
+                  style={{ transformOrigin: "center" }}
+                />
+                {/* Bottom Line */}
+                <motion.span
+                  animate={{
+                    rotate: mobileMenuOpen ? -45 : 0,
+                    y: mobileMenuOpen ? 0 : 5,
+                  }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="w-[22px] rounded-full h-[2.5px] bg-dark absolute"
+                  style={{ transformOrigin: "center" }}
+                />
+              </div>
             </button>
           </div>
 
@@ -135,7 +154,7 @@ export function Header() {
                         size={16}
                         weight="bold"
                         className={
-                          isActive(item.href) ? "text-secondary" : "text-text-5"
+                          isActive(item.href) ? "text-secondary" : "text-dark"
                         }
                       />
                     </button>
@@ -255,13 +274,13 @@ export function Header() {
                 animate={{ height: "auto", opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="xl:hidden w-full overflow-hidden"
+                className="xl:hidden w-full overflow-visible"
               >
                 <div className="flex flex-col gap-4 pt-4 border-t border-white mt-3">
                   {/* Navigation Links */}
                   <nav className="flex flex-col gap-4">
                     {navItems.map((item) => (
-                      <div key={item.href}>
+                      <div key={item.href} className="relative">
                         {item.children && item.children.length > 0 ? (
                           <>
                             <button
@@ -279,7 +298,7 @@ export function Header() {
                                 className={`transition-transform ${
                                   isActive(item.href)
                                     ? "text-secondary"
-                                    : "text-text-3"
+                                    : "text-dark"
                                 } ${
                                   openDropdowns[item.href] ? "rotate-180" : ""
                                 }`}
@@ -288,30 +307,35 @@ export function Header() {
                             <AnimatePresence>
                               {openDropdowns[item.href] && (
                                 <motion.div
-                                  initial={{ height: 0, opacity: 0 }}
-                                  animate={{ height: "auto", opacity: 1 }}
-                                  exit={{ height: 0, opacity: 0 }}
+                                  initial={{ opacity: 0, y: -10 }}
+                                  animate={{ opacity: 1, y: 0 }}
+                                  exit={{ opacity: 0, y: -10 }}
                                   transition={{ duration: 0.2 }}
-                                  className="overflow-hidden"
+                                  className="absolute top-full left-0 mt-2 w-[200px] bg-white rounded-xl border border-stroke-1 shadow-lg overflow-hidden z-50"
                                 >
-                                  <div className="ps-4 pt-2 flex flex-col gap-3">
-                                    {item.children.map((childItem) => (
-                                      <Link
-                                        key={childItem.href}
-                                        href={childItem.href}
-                                        onClick={() => setMobileMenuOpen(false)}
-                                        className={`block text-base font-medium transition-colors ${
-                                          isActive(childItem.href)
+                                  {item.children.map((childItem) => (
+                                    <Link
+                                      key={childItem.href}
+                                      href={childItem.href}
+                                      onClick={() => {
+                                        setMobileMenuOpen(false);
+                                        setDropdownOpen(item.href, false);
+                                      }}
+                                      className="block px-4 py-3 text-sm font-normal text-text-5 hover:bg-bg-grey transition-colors"
+                                    >
+                                      <Typography
+                                        variant="p16"
+                                        className={
+                                          isActive(childItem.href) ||
+                                          childItem.highlight
                                             ? "text-secondary"
-                                            : childItem.highlight
-                                            ? "text-secondary"
-                                            : "text-text-5"
-                                        }`}
+                                            : "text-dark"
+                                        }
                                       >
                                         {childItem.label}
-                                      </Link>
-                                    ))}
-                                  </div>
+                                      </Typography>
+                                    </Link>
+                                  ))}
                                 </motion.div>
                               )}
                             </AnimatePresence>
