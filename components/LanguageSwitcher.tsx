@@ -31,7 +31,7 @@ export default function LanguageSwitcher({ mobile }: LanguageSwitcherProps) {
 
   if (mobile) {
     return (
-      <div className="w-full">
+      <div className="w-full relative">
         <button
           onClick={toggleOpen}
           className="w-full flex items-center gap-1 xl:gap-2 xl:py-2 text-base font-medium text-text-5 transition-colors"
@@ -41,7 +41,7 @@ export default function LanguageSwitcher({ mobile }: LanguageSwitcherProps) {
           <CaretDown
             size={20}
             weight="bold"
-            className={`text-black transition-transform ${
+            className={`text-dark transition-transform ${
               isOpen ? "rotate-180" : ""
             }`}
           />
@@ -49,25 +49,32 @@ export default function LanguageSwitcher({ mobile }: LanguageSwitcherProps) {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
-              className="overflow-hidden pl-8"
+              className="absolute top-full left-0 mt-2 w-[140px] bg-white rounded-xl border border-stroke-1 shadow-lg overflow-hidden z-50"
             >
-              <div className="flex flex-col gap-2 pt-2">
-                {languages.map((lang) => (
-                  <button
-                    key={lang.code}
-                    onClick={() => handleLanguageChange(lang.code)}
-                    className={`text-left text-base font-medium transition-colors ${
-                      locale === lang.code ? "text-secondary" : "text-text-5"
-                    }`}
+              {languages.map((lang) => (
+                <button
+                  key={lang.code}
+                  onClick={() => handleLanguageChange(lang.code)}
+                  className={`w-full block px-4 py-3 text-sm font-normal transition-colors text-left ${
+                    locale === lang.code
+                      ? "bg-secondary text-white hover:bg-secondary hover:text-white"
+                      : "text-dark hover:bg-bg-grey hover:text-dark"
+                  }`}
+                >
+                  <Typography
+                    variant="p16"
+                    className={
+                      locale === lang.code ? "text-white" : "text-dark"
+                    }
                   >
                     {lang.name}
-                  </button>
-                ))}
-              </div>
+                  </Typography>
+                </button>
+              ))}
             </motion.div>
           )}
         </AnimatePresence>
@@ -83,7 +90,7 @@ export default function LanguageSwitcher({ mobile }: LanguageSwitcherProps) {
     >
       <button className="flex items-center gap-1 p-2 rounded-lg">
         <Globe className="text-text-5 size-[22px]" />
-        <CaretDown size={16} weight="bold" className="text-text-5" />
+        <CaretDown size={16} weight="bold" className="text-dark" />
       </button>
 
       {/* Dropdown Menu */}
