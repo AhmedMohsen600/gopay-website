@@ -3,9 +3,6 @@
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { Typography } from "@/components/ui/typography";
-import { Button } from "@/components/ui/button";
-import { AnimatedArrow } from "@/components/ui/animated-arrow";
-import { CaretLeft, CaretRight } from "@phosphor-icons/react/dist/ssr";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -40,7 +37,7 @@ export function ProductCard({
   };
 
   const imageSlideUpVariants = {
-    hidden: { y: 220 },
+    hidden: { y: 60 },
     visible: { y: 0 },
   };
 
