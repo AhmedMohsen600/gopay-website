@@ -37,7 +37,7 @@ export function ProductCard({
   };
 
   const imageSlideUpVariants = {
-    hidden: { y: 60 },
+    hidden: { y: 66 },
     visible: { y: 0 },
   };
 
