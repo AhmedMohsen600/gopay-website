@@ -75,7 +75,7 @@ export function Footer() {
       id: "contact",
       titleKey: "contact.title",
       links: [
-        { href: "/contact", labelKey: "contact.helpSupport", isInternal: true },
+        { href: "/contact-us", labelKey: "contact.helpSupport", isInternal: true },
       ],
     },
   ];
