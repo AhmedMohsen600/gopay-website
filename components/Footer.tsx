@@ -102,7 +102,7 @@ export function Footer() {
                   {t(column.titleKey)}
                 </Typography>
                 <ul className="space-y-1.5">
-                  {column.links.map((link, index) => (
+                  {column.links.map((link: { href: string; labelKey: string; isInternal?: boolean }, index) => (
                     <li key={index}>
                       {link?.isInternal ? (
                         <Link
