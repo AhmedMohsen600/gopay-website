@@ -63,7 +63,7 @@ export function HeroSection() {
           <HeroBlurBackgrounds />
           <div className="relative z-10 max-w-5xl mx-auto text-center">
             <Typography
-              variant="h1"
+              variant="h175"
               className="tracking-tight leading-tight font-normal"
             >
               {/* Title appears first */}
@@ -126,11 +126,11 @@ export function HeroSection() {
                 delay: 1.5,
               }}
             >
-              <Button className="w-fit text-base">
+              <Button className="w-fit">
                 {tc("getStarted")}
-                <AnimatedArrow />
+                <AnimatedArrow className="text-current" />
               </Button>
-              <Button variant="outline" className="text-base w-fit">
+              <Button variant="outline" className="w-fit">
                 {tc("pricingsPlans")}
                 <AnimatedArrow className="text-current" />
               </Button>

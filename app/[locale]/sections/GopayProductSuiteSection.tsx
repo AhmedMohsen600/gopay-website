@@ -19,7 +19,7 @@ export function GopayProductSuiteSection() {
   const getContainerPadding = (productId: string) => {
     switch (productId) {
       case "gopay":
-        return "p-0 sm:p-0 md:p-0 min-h-[300px] sm:min-h-[350px] md:min-h-[400px] flex items-center justify-center";
+        return "p-0 sm:p-0 md:p-0 min-h-[212px] md:min-h-[250px] xl:min-h-[400px] flex items-center justify-center";
       case "goinvoice":
         return "";
       case "gosplit":
@@ -52,7 +52,7 @@ export function GopayProductSuiteSection() {
   };
 
   return (
-    <section className="relative p-[80px_20px_60px] sm:p-[120px_32px_80px] md:p-[180px_40px_100px] lg:p-[240px_40px_120px]">
+    <section className="relative p-[80px_20px_60px] md:p-[160px_56px_80px] xl:p-[240px_40px_120px]">
       {/* Header */}
       <div className="container flex flex-col max-w-[700px] mx-auto items-center justify-center mb-8 sm:mb-10 md:mb-[56px]">
         <motion.div
@@ -101,7 +101,6 @@ export function GopayProductSuiteSection() {
                 tag={t(`products.${product.id}.tag`)}
                 title={t(`products.${product.id}.title`)}
                 description={t(`products.${product.id}.description`)}
-                buttonText={t("buttonText")}
                 delay={index * 0.1}
                 alt={t(`products.${product.id}.title`)}
                 imgUrl={product.imagePath!}

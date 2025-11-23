@@ -41,7 +41,7 @@ export function HowGopayWorksSection() {
   const width = useTransform(scrollYProgress, [0, 1], [startWidth, endWidth]);
 
   return (
-    <section ref={sectionRef} className="bg-white py-14 md:py-40">
+    <section ref={sectionRef} className="bg-white py-14 md:py-[80px] xl:py-40">
       {/* Title Section */}
       <div className="container mx-auto px-4">
         <div className="text-center mb-28">

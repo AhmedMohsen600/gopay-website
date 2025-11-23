@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
+import { useRef } from "react";
 import { Typography } from "@/components/ui/typography";
 import { SarIcon } from "./icons";
 
@@ -19,53 +19,21 @@ export function StatNumberCard({
   showSarIcon,
 }: StatNumberCardProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  // Extract number from value string (e.g., "5B+" -> 5, "351K+" -> 351)
-  const numericValue = parseFloat(value.replace(/[^0-9.]/g, ""));
-  const suffix = value.replace(/[0-9.]/g, "");
-
-  // Motion value for counting animation
-  const motionValue = useMotionValue(0);
-  const springValue = useSpring(motionValue, {
-    damping: 60,
-    stiffness: 100,
-  });
-  const [displayValue, setDisplayValue] = useState(0);
-
-  useEffect(() => {
-    if (isInView) {
-      motionValue.set(numericValue);
-    }
-  }, [isInView, motionValue, numericValue]);
-
-  useEffect(() => {
-    return springValue.on("change", (latest) => {
-      setDisplayValue(latest);
-    });
-  }, [springValue]);
-
-  const fadeInUpVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
-  const paddingVariants = {
-    hidden: { padding: "8px" },
-    visible: {
-      padding: window.innerWidth >= 768 ? "24px 24px 16px" : "16px 16px 12px",
-    },
+  const fadeInVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
   };
 
   return (
     <motion.div
       ref={ref}
-      variants={fadeInUpVariants}
+      variants={fadeInVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.6, ease: "easeOut", delay }}
-      className="group relative w-full rounded-[18px] border border-dotted transition-all duration-300 overflow-hidden"
+      transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1], delay }}
+      className="group relative w-full h-full rounded-[18px] border border-dotted transition-all duration-300 overflow-hidden"
       style={{
         borderColor: "rgba(255, 255, 255, 0.15)",
         background:
@@ -82,13 +50,7 @@ export function StatNumberCard({
       />
 
       {/* Content */}
-      <motion.div
-        className="relative z-10 flex h-full min-h-[130px] md:min-h-[274px] w-full flex-col justify-between"
-        variants={paddingVariants}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        transition={{ duration: 0.6, ease: "easeOut", delay }}
-      >
+      <div className="relative z-10 flex h-full min-h-[130px] md:min-h-[171px] xl:min-h-[274px] w-full flex-col justify-between p-4 md:p-4 md:pb-3 xl:p-6 xl:pb-4">
         <Typography variant="h5" className="font-medium text-[#b4b5c8]">
           {title}
         </Typography>
@@ -101,11 +63,10 @@ export function StatNumberCard({
             variant="h2"
             className="font-semibold leading-none text-white"
           >
-            <motion.span>{Math.floor(displayValue)}</motion.span>
-            {suffix}
+            {value}
           </Typography>
         </div>
-      </motion.div>
+      </div>
     </motion.div>
   );
 }

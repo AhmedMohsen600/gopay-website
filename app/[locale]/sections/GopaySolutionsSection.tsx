@@ -94,7 +94,7 @@ export function GopaySolutionsSection() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-white py-[56px] px-[24px] md:py-[120px] md:px-[40px]">
+    <section className="relative overflow-hidden bg-white py-[56px] px-[24px] md:py-[80px] xl:py-[120px] md:px-[64px]">
       <div className="container mx-auto max-w-[1000px]">
         {/* Section Title */}
         <motion.div

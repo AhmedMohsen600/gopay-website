@@ -3,9 +3,6 @@
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { Typography } from "@/components/ui/typography";
-import { Button } from "@/components/ui/button";
-import { AnimatedArrow } from "@/components/ui/animated-arrow";
-import { CaretLeft, CaretRight } from "@phosphor-icons/react/dist/ssr";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -14,8 +11,6 @@ interface ProductCardProps {
   tagClassName?: string;
   title: string | ReactNode;
   description: string;
-  buttonText?: string;
-  onButtonClick?: () => void;
   imgUrl: string;
   className?: string;
   imageContainerClassName?: string;
@@ -29,8 +24,6 @@ export function ProductCard({
   tagClassName,
   title,
   description,
-  buttonText = "Know More",
-  onButtonClick,
   imgUrl,
   className,
   imageContainerClassName,
@@ -44,7 +37,7 @@ export function ProductCard({
   };
 
   const imageSlideUpVariants = {
-    hidden: { y: 220 },
+    hidden: { y: 66 },
     visible: { y: 0 },
   };
 
@@ -60,7 +53,7 @@ export function ProductCard({
         delay,
       }}
       className={cn(
-        "bg-[#f7f7f7] rounded-3xl overflow-hidden p-4 sm:p-6 md:p-8 flex flex-col",
+        "bg-[#f7f7f7] rounded-3xl overflow-hidden p-4 md:p-6 xl:p-8 flex flex-col",
         className
       )}
     >
@@ -81,25 +74,19 @@ export function ProductCard({
           {/* Title */}
           <Typography
             variant="h3"
-            className="text-text-5 text-[24px] sm:text-[28px] md:text-[35px] tracking-tighter leading-[1.2]"
+            className="text-text-5 tracking-tighter leading-[1.2]"
           >
             {title}
           </Typography>
 
           {/* Description */}
           <Typography
-            variant="p14"
-            className="text-text-3 sm:text-[14px] md:text-base mt-2 tracking-tight leading-[1.2]"
+            variant="p16"
+            className="text-text-3 mt-2 tracking-tight leading-[1.2]"
           >
             {description}
           </Typography>
         </div>
-
-        {/* Button */}
-        {/* <Button className="w-fit mt-4" onClick={onButtonClick}>
-          {buttonText}
-          <AnimatedArrow rtlIcon={CaretLeft} icon={CaretRight} />
-        </Button> */}
       </div>
 
       <motion.div

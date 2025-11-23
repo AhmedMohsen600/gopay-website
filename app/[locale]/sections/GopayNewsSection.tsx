@@ -56,7 +56,7 @@ export function GopayNewsSection() {
   };
 
   return (
-    <section className="md:py-[120px] py-14 bg-white px-6 md:px-10">
+    <section className="xl:py-[120px] md:py-[80px] py-14 bg-white px-6 md:px-[64px]">
       <div className="container mx-auto">
         <div className="mb-10 flex flex-col items-center justify-center">
           <Typography className="mb-3 font-semibold" variant="h2">

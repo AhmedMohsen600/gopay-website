@@ -16,12 +16,14 @@ interface LogosMarqueeProps {
   pauseOnHover?: boolean;
   gradient?: boolean;
   className?: string;
+  direction?: "left" | "right"; // "left" = moves left (default), "right" = moves right
 }
 
 export function LogosMarquee({
   logos,
-  speed = 100,
+  speed = 50,
   className,
+  direction = "left",
 }: LogosMarqueeProps) {
   const locale = useLocale();
   const isRTL = locale === "ar";
@@ -33,20 +35,30 @@ export function LogosMarquee({
     const scroller = scrollerRef.current;
     if (!scroller) return;
 
-    let position = 0;
+    // Determine scroll direction: "right" means scrolling right (left-to-right), "left" means scrolling left (right-to-left)
+    const shouldScrollRight =
+      direction === "right" || (direction === "left" && isRTL);
+
+    const resetPoint = scroller.scrollWidth / 3;
+    let position = shouldScrollRight ? -resetPoint : 0;
     let animationId: number;
 
     const animate = () => {
-      position += speed / 100;
-
-      const resetPoint = scroller.scrollWidth / 3;
-      if (position >= resetPoint) {
-        position = 0;
+      if (shouldScrollRight) {
+        // Scrolling right (left-to-right)
+        position += speed / 100;
+        if (position >= 0) {
+          position = -resetPoint;
+        }
+      } else {
+        // Scrolling left (right-to-left)
+        position -= speed / 100;
+        if (position <= -resetPoint) {
+          position = 0;
+        }
       }
 
-      scroller.style.transform = `translateX(${
-        isRTL ? position : -position
-      }px)`;
+      scroller.style.transform = `translateX(${position}px)`;
       animationId = requestAnimationFrame(animate);
     };
 
@@ -55,7 +67,7 @@ export function LogosMarquee({
     return () => {
       cancelAnimationFrame(animationId);
     };
-  }, [speed, isRTL]);
+  }, [speed, isRTL, direction]);
 
   return (
     <div

@@ -43,12 +43,75 @@ export function PricingFeaturesTable({ sections }: PricingFeaturesTableProps) {
             <Typography variant="p18">{section.title}</Typography>
           </div>
 
-          {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 bg-white">
+          {/* Mobile: Feature text on top, icons below in 3 columns */}
+          <div className="bg-white md:hidden">
+            {section.columns[0]?.features.map((_, featureIndex) => {
+              const firstColumnFeature =
+                section.columns[0].features[featureIndex];
+              // Parse text to insert SAR icon after the number
+              const text = firstColumnFeature.text.replace(/﷼/g, "").trim();
+              const hasSar = firstColumnFeature.text.includes("﷼");
+              const parts = text.match(/^(\d+[,\d]*\.?\d*)\s+(.+)$/);
+
+              return (
+                <div
+                  key={featureIndex}
+                  className="py-3 px-2 border-b border-[#E5E5E5] last:border-b-0"
+                >
+                  {/* Feature Text - Full Width */}
+                  <Typography variant="p13" className="text-[#535771] mb-2">
+                    {parts && hasSar ? (
+                      <>
+                        {parts[1]}{" "}
+                        <SarIcon
+                          width={14}
+                          height={14}
+                          className="inline-block me-2"
+                        />
+                        {parts[2]}
+                      </>
+                    ) : (
+                      text
+                    )}
+                  </Typography>
+
+                  {/* Column Icons - 3 columns below text */}
+                  <div className="grid grid-cols-3 gap-2">
+                    {section.columns.map((column, columnIndex) => {
+                      const feature = column.features[featureIndex];
+                      return (
+                        <div
+                          key={columnIndex}
+                          className={`flex items-center justify-start`}
+                        >
+                          {feature.included ? (
+                            <Check
+                              size={16}
+                              weight="bold"
+                              className="text-[#27AE60]"
+                            />
+                          ) : (
+                            <X
+                              size={16}
+                              weight="bold"
+                              className="text-[#1F1F1F] opacity-50"
+                            />
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Desktop: Column-based layout (3 columns with text + icon) */}
+          <div className="hidden md:grid md:grid-cols-3 bg-white">
             {section.columns.map((column, columnIndex) => (
               <div
                 key={columnIndex}
-                className={`space-y-4 px-6 pt-6 pb-[30px] md:pb-[60px] ${
+                className={`space-y-4 px-6 pt-6 pb-[30px] lg:pb-[60px] ${
                   columnIndex === 1 ? "bg-[#fafafa]" : ""
                 }`}
               >

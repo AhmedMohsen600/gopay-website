@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { Typography } from "@/components/ui/typography";
 import { StatNumberCard } from "../components";
 
@@ -9,34 +9,18 @@ export function GopayInNumbersSection() {
   const t = useTranslations("home.gopayInNumbers");
 
   const fadeInUpVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
   };
 
   const gridContainerVariants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
+    visible: { opacity: 1 },
   };
 
-  const shuffleVariants: Variants = {
-    hidden: (index: number) => ({
-      opacity: 0,
-      x: index % 2 === 0 ? -50 : 50,
-      y: index % 3 === 0 ? -30 : 30,
-      rotate: index % 2 === 0 ? -5 : 5,
-    }),
-    visible: {
-      opacity: 1,
-      x: 0,
-      y: 0,
-      rotate: 0,
-    },
+  const cardWrapperVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
   };
 
   const allStats = [
@@ -80,7 +64,7 @@ export function GopayInNumbersSection() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(142deg,#182130_5%,#282d4e_75%)] shadow-[0_25px_45px_#9882fb4d] p-[56px_24px] md:p-[100px_120px_120px]">
+    <section className="relative overflow-hidden bg-[linear-gradient(142deg,#182130_5%,#282d4e_75%)] shadow-[0_25px_45px_#9882fb4d] p-[56px_24px] md:p-[80px_64px] xl:p-[100px_120px_120px]">
       <div className="container mx-auto">
         {/* Section Title */}
         <motion.div
@@ -104,20 +88,20 @@ export function GopayInNumbersSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
           {allStats.map((stat, index) => (
             <motion.div
               key={stat.id}
               className={stat.colSpan}
-              custom={index}
-              variants={shuffleVariants}
-              transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+              variants={cardWrapperVariants}
+              transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
             >
               <StatNumberCard
                 title={t(stat.titleKey)}
                 value={stat.value}
                 showSarIcon={stat.showSarIcon}
-                delay={0}
+                delay={index * 0.1}
               />
             </motion.div>
           ))}

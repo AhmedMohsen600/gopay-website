@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
 import { Logo } from "@/components/Logo";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import { List, X, CaretDown } from "@phosphor-icons/react/dist/ssr";
+import { CaretDown } from "@phosphor-icons/react/dist/ssr";
 
 type NavItem = {
   label: string;
@@ -35,7 +35,7 @@ export function Header() {
       label: t("pricing"),
       href: "/pricing",
       children: [
-        { label: t("gopay"), href: "/pricing/gopay", highlight: true },
+        { label: t("gopay"), href: "/pricing/gopay" },
         { label: t("goInvoices"), href: "/pricing/go-invoices" },
       ],
     },
@@ -79,19 +79,59 @@ export function Header() {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, y: { duration: 0.5 } }}
-        className="fixed top-6 inset-x-0 mx-auto z-50 w-full max-w-[1200px]"
+        className="fixed top-6 inset-x-0 mx-auto z-50 w-[90%] xl:rounded-none xl:w-full max-w-[1200px]"
       >
-        <nav
-          className="backdrop-blur-xl h-[66.4px] bg-white/24 lg:w-[1200px] lg:rounded-xl px-6 py-3 flex items-center sm:justify-between gap-[10px]"
-          style={{ backdropFilter: "blur(20px)" }}
+        <motion.nav
+          initial={false}
+          animate={{
+            height: mobileMenuOpen ? "auto" : "auto",
+          }}
+          className={`bg-[#FFFFFF80] transition-all duration-300 backdrop-blur-[15px] xl:h-[66.4px] xl:w-[1200px] ${
+            mobileMenuOpen ? "rounded-xl" : "rounded-xl"
+          } ${
+            mobileMenuOpen ? "p-4 " : "py-3 px-4"
+          } xl:px-6 xl:py-3 flex flex-col xl:flex-row items-start xl:items-center xl:justify-between xl:gap-[10px]`}
         >
-          {/* Brand/Logo */}
-          <Link href="/" className="flex flex-1 items-center shrink-0">
-            <Logo className="shrink-0" />
-          </Link>
+          {/* Top Bar - Logo and Menu Toggle */}
+          <div className="flex items-center justify-between w-full xl:flex-1 xl:justify-start">
+            {/* Brand/Logo */}
+            <Link href="/" className="flex items-center shrink-0">
+              <Logo className="shrink-0" />
+            </Link>
+
+            {/* Mobile Menu Toggle */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="xl:hidden p-2 rounded-lg transition-colors relative w-10 h-10 flex items-center justify-center"
+              aria-label="Toggle menu"
+            >
+              <div className="w-6 relative flex items-center justify-center">
+                {/* Top Line */}
+                <motion.span
+                  animate={{
+                    rotate: mobileMenuOpen ? 45 : 0,
+                    y: mobileMenuOpen ? 0 : -5,
+                  }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="w-[22px] rounded-full h-[2.5px] bg-dark absolute"
+                  style={{ transformOrigin: "center" }}
+                />
+                {/* Bottom Line */}
+                <motion.span
+                  animate={{
+                    rotate: mobileMenuOpen ? -45 : 0,
+                    y: mobileMenuOpen ? 0 : 5,
+                  }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="w-[22px] rounded-full h-[2.5px] bg-dark absolute"
+                  style={{ transformOrigin: "center" }}
+                />
+              </div>
+            </button>
+          </div>
 
           {/* Desktop Nav Items */}
-          <div className="hidden lg:flex items-center gap-6 justify-start">
+          <div className="hidden xl:flex items-center gap-6 justify-start">
             {navItems.map((item) => {
               // Items with dropdown menu
               if (item.children && item.children.length > 0) {
@@ -113,7 +153,9 @@ export function Header() {
                       <CaretDown
                         size={16}
                         weight="bold"
-                        className="text-text-5"
+                        className={
+                          isActive(item.href) ? "text-secondary" : "text-dark"
+                        }
                       />
                     </button>
 
@@ -125,7 +167,7 @@ export function Header() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -10 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-[200px] bg-white rounded-xl border border-stroke-1 shadow-lg overflow-hidden z-50"
+                          className="absolute top-full start-0 mt-2 w-[200px] bg-white rounded-xl border border-stroke-1 shadow-lg overflow-hidden z-50"
                         >
                           {item.children.map((childItem) => (
                             <Link
@@ -136,6 +178,7 @@ export function Header() {
                               <Typography
                                 variant="p16"
                                 className={
+                                  isActive(childItem.href) ||
                                   childItem.highlight
                                     ? "text-secondary"
                                     : "text-dark"
@@ -198,7 +241,7 @@ export function Header() {
           </div>
 
           {/* Desktop Actions */}
-          <div className="hidden lg:flex lg:flex-1 items-center justify-end gap-2">
+          <div className="hidden xl:flex xl:flex-1 items-center justify-end gap-2">
             <Button
               variant="secondary"
               asChild
@@ -223,63 +266,40 @@ export function Header() {
             </Button>
           </div>
 
-          {/* Mobile Menu Toggle */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-bg-grey transition-colors"
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? (
-              <X size={24} weight="bold" className="text-dark" />
-            ) : (
-              <List size={24} weight="bold" className="text-dark" />
-            )}
-          </button>
-        </nav>
-      </motion.header>
-
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <>
-            {/* Backdrop */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setMobileMenuOpen(false)}
-              className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 lg:hidden"
-            />
-
-            {/* Menu Panel */}
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-              className="fixed top-24 left-1/2 -translate-x-1/2 w-[95%] max-w-md z-50 lg:hidden"
-            >
-              <div className="backdrop-blur-xl bg-white/95 rounded-xl border border-stroke-1 p-6 shadow-lg">
-                <div className="flex flex-col gap-4">
+          {/* Mobile Menu Content */}
+          <AnimatePresence>
+            {mobileMenuOpen && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="xl:hidden w-full overflow-visible"
+              >
+                <div className="flex flex-col gap-4 pt-4 border-t border-white mt-3">
                   {/* Navigation Links */}
-                  <nav className="flex flex-col gap-2 pb-4 border-b border-stroke-1">
+                  <nav className="flex flex-col gap-4">
                     {navItems.map((item) => (
-                      <div key={item.href}>
+                      <div key={item.href} className="relative">
                         {item.children && item.children.length > 0 ? (
                           <>
                             <button
                               onClick={() => toggleDropdown(item.href)}
-                              className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-bg-grey ${
+                              className={`flex items-center gap-2 text-base font-medium transition-colors ${
                                 isActive(item.href)
-                                  ? "text-primary bg-bg-grey"
+                                  ? "text-secondary"
                                   : "text-text-5"
                               }`}
                             >
                               {item.label}
                               <CaretDown
-                                size={16}
+                                size={20}
                                 weight="bold"
-                                className={`text-text-3 transition-transform ${
+                                className={`transition-transform ${
+                                  isActive(item.href)
+                                    ? "text-secondary"
+                                    : "text-dark"
+                                } ${
                                   openDropdowns[item.href] ? "rotate-180" : ""
                                 }`}
                               />
@@ -287,30 +307,35 @@ export function Header() {
                             <AnimatePresence>
                               {openDropdowns[item.href] && (
                                 <motion.div
-                                  initial={{ height: 0, opacity: 0 }}
-                                  animate={{ height: "auto", opacity: 1 }}
-                                  exit={{ height: 0, opacity: 0 }}
+                                  initial={{ opacity: 0, y: -10 }}
+                                  animate={{ opacity: 1, y: 0 }}
+                                  exit={{ opacity: 0, y: -10 }}
                                   transition={{ duration: 0.2 }}
-                                  className="overflow-hidden"
+                                  className="absolute top-full left-0 mt-2 w-[200px] bg-white rounded-xl border border-stroke-1 shadow-lg overflow-hidden z-50"
                                 >
-                                  <div className="pl-4 pt-2 flex flex-col gap-1">
-                                    {item.children.map((childItem) => (
-                                      <Link
-                                        key={childItem.href}
-                                        href={childItem.href}
-                                        onClick={() => setMobileMenuOpen(false)}
-                                        className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-bg-grey ${
-                                          isActive(childItem.href)
-                                            ? "text-primary bg-bg-grey"
-                                            : childItem.highlight
+                                  {item.children.map((childItem) => (
+                                    <Link
+                                      key={childItem.href}
+                                      href={childItem.href}
+                                      onClick={() => {
+                                        setMobileMenuOpen(false);
+                                        setDropdownOpen(item.href, false);
+                                      }}
+                                      className="block px-4 py-3 text-sm font-normal text-text-5 hover:bg-bg-grey transition-colors"
+                                    >
+                                      <Typography
+                                        variant="p16"
+                                        className={
+                                          isActive(childItem.href) ||
+                                          childItem.highlight
                                             ? "text-secondary"
-                                            : "text-text-5"
-                                        }`}
+                                            : "text-dark"
+                                        }
                                       >
                                         {childItem.label}
-                                      </Link>
-                                    ))}
-                                  </div>
+                                      </Typography>
+                                    </Link>
+                                  ))}
                                 </motion.div>
                               )}
                             </AnimatePresence>
@@ -319,9 +344,9 @@ export function Header() {
                           <Link
                             href={item.href}
                             onClick={() => setMobileMenuOpen(false)}
-                            className={`flex items-center justify-between px-3 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-bg-grey ${
+                            className={`block text-base font-medium transition-colors ${
                               isActive(item.href)
-                                ? "text-primary bg-bg-grey"
+                                ? "text-secondary"
                                 : "text-text-5"
                             }`}
                           >
@@ -333,18 +358,15 @@ export function Header() {
                   </nav>
 
                   {/* Language Switcher */}
-                  <div className="pb-4 border-b border-stroke-1">
-                    <Typography variant="p14" className="text-text-3 mb-2">
-                      {t("language")}
-                    </Typography>
-                    <LanguageSwitcher />
+                  <div className="pb-2">
+                    <LanguageSwitcher mobile />
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-row gap-3">
                     <Button
                       variant="secondary"
-                      className="w-full justify-center"
+                      className="flex-1 justify-center"
                       asChild
                       onClick={() => setMobileMenuOpen(false)}
                     >
@@ -357,7 +379,7 @@ export function Header() {
                       </a>
                     </Button>
                     <Button
-                      className="w-full justify-center"
+                      className="flex-1 justify-center"
                       asChild
                       onClick={() => setMobileMenuOpen(false)}
                     >
@@ -371,11 +393,11 @@ export function Header() {
                     </Button>
                   </div>
                 </div>
-              </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.nav>
+      </motion.header>
     </>
   );
 }
