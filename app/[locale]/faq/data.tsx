@@ -38,7 +38,7 @@ Customer: The end-user who receives the (service or product) from the biller and
         to pay and settle their outstanding amounts.
         <br />
         <a
-          href="#"
+          href="https://gopay.sa/sadad/"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-2 inline-block"
@@ -451,7 +451,7 @@ const faqItemsAr: FAQItem[] = [
         دفع وتسوية المستحقات.
         <br />
         <a
-          href="#"
+          href="https://gopay.sa/sadad/"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-2 inline-block"
