@@ -39,7 +39,7 @@ export default function PaymentCard({
       variants={fadeInUpVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-0px" }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{
         duration: 0.6,
         ease: "easeOut",
