@@ -25,7 +25,7 @@ export function Footer() {
       titleKey: "aboutGoPay.title",
       links: [
         {
-          href: "/about",
+          href: "/#product-suite",
           labelKey: "aboutGoPay.whatIsGoPay",
           isInternal: true,
         },
@@ -46,12 +46,11 @@ export function Footer() {
       titleKey: "aboutIFS.title",
       links: [
         {
-          href: "/company",
+          href: "https://ifs.sa/",
           labelKey: "aboutIFS.aboutCompany",
-          isInternal: true,
-        },
-        { href: "/news", labelKey: "aboutIFS.news", isInternal: true },
-        { href: "/location", labelKey: "aboutIFS.location", isInternal: true },
+         },
+        { href: "https://ifs.sa/#news", labelKey: "aboutIFS.news" },
+        { href: "https://www.google.com/maps/place/2745+Prince+Sultan+Bin+Abdulaziz+Rd,+6780,+Al+Mathar+Ash+Shamali,+Riyadh+12312/@24.681805,46.6704267,21z/data=!4m5!3m4!1s0x3e2f034b4a5fda9b:0xdaeff1501e331986!8m2!3d24.6819942!4d46.6706919?shorturl=1", labelKey: "aboutIFS.location"},
       ],
     },
     {
@@ -105,7 +104,7 @@ export function Footer() {
                 <ul className="space-y-1.5">
                   {column.links.map((link, index) => (
                     <li key={index}>
-                      {link.isInternal ? (
+                      {link?.isInternal ? (
                         <Link
                           href={link.href}
                           className="text-white hover:text-white hover:opacity-80 hover:underline transition-colors text-xs md:text-sm  xl:text-base  "

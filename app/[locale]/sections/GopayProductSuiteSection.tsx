@@ -52,7 +52,7 @@ export function GopayProductSuiteSection() {
   };
 
   return (
-    <section className="relative p-[80px_20px_60px] md:p-[160px_56px_80px] xl:p-[240px_40px_120px]">
+    <section id="product-suite" className="relative p-[80px_20px_60px] md:p-[160px_56px_80px] xl:p-[240px_40px_120px]">
       {/* Header */}
       <div className="container flex flex-col max-w-[700px] mx-auto items-center justify-center mb-8 sm:mb-10 md:mb-[56px]">
         <motion.div
