@@ -23,7 +23,7 @@ export const SolutionsCard = ({
   return (
     <div
       className={cn(
-        "bg-[rgb(244,244,250)] rounded-2xl p-5 flex flex-col",
+        "bg-[#f8f9fc] rounded-2xl p-5 flex flex-col",
         className
       )}
       {...props}
@@ -37,7 +37,7 @@ export const SolutionsCard = ({
         )}
       >
         {icon}
-        <Typography variant="h4">{title}</Typography>
+        <Typography variant="h4" className="font-semibold md:font-medium">{title}</Typography>
       </div>
       <div
         className={cn(
