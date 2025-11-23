@@ -40,25 +40,56 @@ export function PricingCard({
 }: PricingCardProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
+  const isAnimatingRef = useRef(false);
+  const initialScrollY = useRef<number | null>(null);
 
   useEffect(() => {
     // Skip scroll handling if disabled
     if (disableScrollHiding) return;
 
     const handleScroll = () => {
+      // Don't change state if animation is in progress
+      if (isAnimatingRef.current) return;
+
       // Only apply scroll hiding on desktop (md breakpoint and up)
       const isDesktop = window.innerWidth >= 768;
 
       if (!isDesktop) {
         setIsScrolled(false);
+        initialScrollY.current = null;
         return;
       }
 
       if (cardRef.current) {
         const cardTop = cardRef.current.getBoundingClientRect().top;
+        const currentScrollY = window.scrollY;
 
-        if (cardTop <= 95 && !isScrolled) setIsScrolled(true);
-        else if (cardTop > 150 && isScrolled) setIsScrolled(false);
+        // Check if card is sticky (top is around 90px)
+        const isCardSticky = cardTop <= 100;
+
+        if (isCardSticky) {
+          // Record when card becomes sticky
+          if (initialScrollY.current === null) {
+            initialScrollY.current = currentScrollY;
+          }
+
+          // Calculate how much user has scrolled since card became sticky
+          const scrolledDistance = currentScrollY - initialScrollY.current;
+
+          // Collapse after scrolling down 250px from when card became sticky
+          if (scrolledDistance > 250 && !isScrolled) {
+            setIsScrolled(true);
+          } else if (scrolledDistance < 50 && isScrolled) {
+            // Only expand when scrolled way back up - larger gap prevents flickering
+            setIsScrolled(false);
+          }
+        } else {
+          // Reset if card is not sticky
+          initialScrollY.current = null;
+          if (isScrolled) {
+            setIsScrolled(false);
+          }
+        }
       }
     };
 
@@ -144,6 +175,8 @@ export function PricingCard({
               exit={{ opacity: 0, maxHeight: 0 }}
               transition={{ duration: 0.4, ease: "easeInOut" }}
               style={{ overflow: "hidden" }}
+              onAnimationStart={() => (isAnimatingRef.current = true)}
+              onAnimationComplete={() => (isAnimatingRef.current = false)}
             >
               <Typography
                 variant="p14"
@@ -166,6 +199,8 @@ export function PricingCard({
             transition={{ duration: 0.4, ease: "easeInOut" }}
             className="flex-1 mb-5"
             style={{ overflow: "hidden" }}
+            onAnimationStart={() => (isAnimatingRef.current = true)}
+            onAnimationComplete={() => (isAnimatingRef.current = false)}
           >
             <ul className="space-y-2">
               {features.map((feature, index) => (
