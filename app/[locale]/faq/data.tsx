@@ -9,13 +9,13 @@ export interface FAQItem {
 export const FAQ_LINKS = {
   sadad: "https://gopay.sa/sadad/",
   features: "/features",
-  join: "#",
-  authLetter: "#",
-  registration: "#",
-  nationalAddress: "#",
-  bankCertificate: "#",
-  billPayment: "#",
-  pricing: "#",
+  join: "/pricing/gopay",
+  authLetter: "https://e-faa.com.sa/helpdocs/authrizationletter.pdf",
+  registration: "https://e-faa.com.sa/helpdocs/cr.pdf",
+  nationalAddress: "https://e-faa.com.sa/helpdocs/iban.pdf",
+  bankCertificate: "https://e-faa.com.sa/helpdocs/bankcertificate.pdf",
+  billPayment: "/invoices",
+  pricing: "/pricing/gopay",
   payWithoutRegistration: "#",
   complaint: "#",
 };
@@ -92,9 +92,9 @@ Customer: The end-user who receives the (service or product) from the biller and
         You can use GoPay by opening a payments account and subscribing to the
         service.
         <br />
-        <a href={FAQ_LINKS.join} target="_blank" rel="noopener noreferrer">
+        <Link href={FAQ_LINKS.join} target="_blank" rel="noopener noreferrer">
           For more details on how to join, Click here.
-        </a>
+        </Link>
       </>
     ),
   },
@@ -163,9 +163,9 @@ Customer: The end-user who receives the (service or product) from the biller and
       <>
         You can find information about the bill payment process through this
         link <br />
-        <a href={FAQ_LINKS.billPayment} className="mt-2 inline-block">
+        <Link href={FAQ_LINKS.billPayment} className="mt-2 inline-block">
           Click here.
-        </a>
+        </Link>
       </>
     ),
   },
@@ -175,14 +175,14 @@ Customer: The end-user who receives the (service or product) from the biller and
       <>
         You can find information about the pricing mechanism through this link{" "}
         <br />
-        <a
+        <Link
           href={FAQ_LINKS.pricing}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-2 inline-block"
         >
           Click here.
-        </a>
+        </Link>
       </>
     ),
   },
@@ -502,9 +502,9 @@ const faqItemsAr: FAQItem[] = [
       <>
         يمكنك استخدام جو باي بفتح حساب مدفوعات والاشتراك في الخدمة.
         <br />
-        <a href={FAQ_LINKS.join} target="_blank" rel="noopener noreferrer">
+        <Link href={FAQ_LINKS.join} target="_blank" rel="noopener noreferrer">
           لمعرفة المزيد حول كيفية الانضمام، اضغط هنا.
-        </a>
+        </Link>
       </>
     ),
   },
@@ -564,9 +564,9 @@ const faqItemsAr: FAQItem[] = [
       <>
         يمكنك التعرف على آلية تحصيل المدفوعات عبر الرابط
         <br />
-        <a href={FAQ_LINKS.billPayment} className="mt-2 inline-block">
+        <Link href={FAQ_LINKS.billPayment} className="mt-2 inline-block">
           اضغط هنا.
-        </a>
+        </Link>
       </>
     ),
   },
@@ -576,14 +576,14 @@ const faqItemsAr: FAQItem[] = [
       <>
         يمكنك التعرف على آلية التسعير عبر الرابط
         <br />
-        <a
+        <Link
           href={FAQ_LINKS.pricing}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-2 inline-block"
         >
           اضغط هنا.
-        </a>
+        </Link>
       </>
     ),
   },
