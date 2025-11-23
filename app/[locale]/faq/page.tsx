@@ -43,7 +43,7 @@ export default function FAQPage() {
             animate="visible"
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
           >
-            <Accordion items={faqItems} allowMultiple={true} />
+            <Accordion items={faqItems}  />
           </motion.div>
         </div>
       </section>
