@@ -80,8 +80,7 @@ export function HeroSection({
       <motion.div
         variants={fadeInUpVariants}
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
+        animate="visible"
         transition={{ duration: 0.6, ease: "easeOut", delay: badgeDelay }}
         className="z-10"
       >
@@ -90,8 +89,7 @@ export function HeroSection({
       <motion.div
         variants={fadeInUpVariants}
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
+        animate="visible"
         transition={{ duration: 0.6, ease: "easeOut", delay: titleDelay }}
         className="z-10"
       >
@@ -109,8 +107,7 @@ export function HeroSection({
       <motion.div
         variants={fadeInUpVariants}
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
+        animate="visible"
         transition={{ duration: 0.6, ease: "easeOut", delay: descriptionDelay }}
         className="z-10"
       >
