@@ -14,7 +14,7 @@ export function GoPayVisionSection() {
     <section className="relative pt-[100px] xl:pt-[200px] md:pb-20 pb-14 xl:pb-[180px] bg-white px-6 md:px-16   ">
       <div className="max-w-[1000px] mx-auto space-y-4">
         {/* Badge and Title - Right Aligned */}
-        <div className="flex flex-col items-end  gap-4 ">
+        <div className="flex flex-col gap-4 ">
           <motion.div
             variants={fadeInUpVariants}
             initial="hidden"
@@ -35,7 +35,7 @@ export function GoPayVisionSection() {
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="flex justify-end"
+            className="flex "
           >
             <Typography
               variant="h2"
@@ -54,11 +54,11 @@ export function GoPayVisionSection() {
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-          className="flex justify-end"
+          className="flex "
         >
           <Typography
             variant="p18"
-            className="xl:text-lg  md:text-[15px] text-[13px] text-primary opacity-80 leading-tight tracking-tight max-w-[850px] text-right"
+            className="xl:text-lg  md:text-[15px] text-[13px]  text-primary opacity-80 leading-tight tracking-tight max-w-[850px] "
           >
             {t("description")}
           </Typography>
