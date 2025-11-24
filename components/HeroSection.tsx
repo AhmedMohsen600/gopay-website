@@ -41,7 +41,7 @@ const heroDescriptionVariants = cva(
 
 interface HeroSectionProps
   extends VariantProps<typeof heroTitleVariants>,
-    VariantProps<typeof heroDescriptionVariants> {
+  VariantProps<typeof heroDescriptionVariants> {
   badge: string | ReactNode;
   title: ReactNode;
   description: string | ReactNode;
@@ -80,7 +80,8 @@ export function HeroSection({
       <motion.div
         variants={fadeInUpVariants}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut", delay: badgeDelay }}
         className="z-10"
       >
@@ -89,7 +90,8 @@ export function HeroSection({
       <motion.div
         variants={fadeInUpVariants}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut", delay: titleDelay }}
         className="z-10"
       >
@@ -107,7 +109,8 @@ export function HeroSection({
       <motion.div
         variants={fadeInUpVariants}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut", delay: descriptionDelay }}
         className="z-10"
       >
