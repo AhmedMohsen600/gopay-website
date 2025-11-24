@@ -39,7 +39,7 @@ export default function PaymentCard({
       variants={fadeInUpVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-0px" }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{
         duration: 0.6,
         ease: "easeOut",
@@ -47,7 +47,7 @@ export default function PaymentCard({
       className={cn(
         "bg-[linear-gradient(180deg,rgb(247,247,247)_0%,rgb(244,244,250)_100%)] hover:bg-[linear-gradient(180deg,rgb(245,238,228)_0%,rgb(250,248,245)_100%)]  transition-colors duration-200 ",
         "cursor-pointer rounded-3xl xl:p-8 md:p-[26px] p-4 flex flex-col gap-4 group",
-        isFullRow && "md:col-span-2"
+        isFullRow && "sm:col-span-2"
       )}
     >
       {/* badge area */}

@@ -1,9 +1,24 @@
 import { ReactNode } from "react";
+import { Link } from "@/i18n/routing";
 
 export interface FAQItem {
   question: string;
   answer: ReactNode;
 }
+
+export const FAQ_LINKS = {
+  sadad: "https://gopay.sa/sadad/",
+  features: "/features",
+  join: "/pricing/gopay",
+  authLetter: "https://e-faa.com.sa/helpdocs/authrizationletter.pdf",
+  registration: "https://e-faa.com.sa/helpdocs/cr.pdf",
+  nationalAddress: "https://e-faa.com.sa/helpdocs/iban.pdf",
+  bankCertificate: "https://e-faa.com.sa/helpdocs/bankcertificate.pdf",
+  billPayment: "/invoices",
+  pricing: "/pricing/gopay",
+  payWithoutRegistration: "#",
+  complaint: "#",
+};
 
 const faqItemsEn: FAQItem[] = [
   {
@@ -38,7 +53,7 @@ Customer: The end-user who receives the (service or product) from the biller and
         to pay and settle their outstanding amounts.
         <br />
         <a
-          href="#"
+          href={FAQ_LINKS.sadad}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-2 inline-block"
@@ -60,14 +75,12 @@ Customer: The end-user who receives the (service or product) from the biller and
       <>
         You can find information about the service features through the link
         <br />
-        <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href={FAQ_LINKS.features}
           className="mt-2 inline-block"
         >
           click here
-        </a>
+        </Link>
         .
       </>
     ),
@@ -79,9 +92,9 @@ Customer: The end-user who receives the (service or product) from the biller and
         You can use GoPay by opening a payments account and subscribing to the
         service.
         <br />
-        <a href="#" target="_blank" rel="noopener noreferrer">
+        <Link href={FAQ_LINKS.join} target="_blank" rel="noopener noreferrer">
           For more details on how to join, Click here.
-        </a>
+        </Link>
       </>
     ),
   },
@@ -92,7 +105,7 @@ Customer: The end-user who receives the (service or product) from the biller and
       <ol className="space-y-0!">
         <li>
           A copy of the authorization letter – for assistance and more details,{" "}
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href={FAQ_LINKS.authLetter} target="_blank" rel="noopener noreferrer">
             Click here.
           </a>
         </li>
@@ -100,19 +113,19 @@ Customer: The end-user who receives the (service or product) from the biller and
         <li>
           A copy of the company&apos;s registration document. For assistance and
           more details,{" "}
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href={FAQ_LINKS.registration} target="_blank" rel="noopener noreferrer">
             Click here.
           </a>
         </li>
         <li>
           A copy of the national address – for assistance and more details,{" "}
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href={FAQ_LINKS.nationalAddress} target="_blank" rel="noopener noreferrer">
             Click here.
           </a>
         </li>
         <li>
           A copy of the bank certificate – for assistance and more details,
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href={FAQ_LINKS.bankCertificate} target="_blank" rel="noopener noreferrer">
             Click here.
           </a>
         </li>
@@ -150,9 +163,9 @@ Customer: The end-user who receives the (service or product) from the biller and
       <>
         You can find information about the bill payment process through this
         link <br />
-        <a href="#" className="mt-2 inline-block">
+        <Link href={FAQ_LINKS.billPayment} className="mt-2 inline-block">
           Click here.
-        </a>
+        </Link>
       </>
     ),
   },
@@ -162,14 +175,14 @@ Customer: The end-user who receives the (service or product) from the biller and
       <>
         You can find information about the pricing mechanism through this link{" "}
         <br />
-        <a
-          href="#"
+        <Link
+          href={FAQ_LINKS.pricing}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-2 inline-block"
         >
           Click here.
-        </a>
+        </Link>
       </>
     ),
   },
@@ -350,7 +363,7 @@ Connect to the live production environment to receive payments from the SADAD sy
         sends the invoice details and SADAD number to the customer’s mobile
         number or email for settlement.
         <br />
-        <a href="#" target="_blank" rel="noopener noreferrer">
+        <a href={FAQ_LINKS.payWithoutRegistration} target="_blank" rel="noopener noreferrer">
           For more details, click here.
         </a>
       </>
@@ -411,7 +424,7 @@ Connect to the live production environment to receive payments from the SADAD sy
         <br />- The customer clicks “Submit” to send the complaint.
         <br />
         <br />
-        <a href="#" target="_blank" rel="noopener noreferrer">
+        <a href={FAQ_LINKS.complaint} target="_blank" rel="noopener noreferrer">
           For more details, click here.
         </a>
       </>
@@ -451,7 +464,7 @@ const faqItemsAr: FAQItem[] = [
         دفع وتسوية المستحقات.
         <br />
         <a
-          href="#"
+          href={FAQ_LINKS.sadad}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-2 inline-block"
@@ -473,14 +486,12 @@ const faqItemsAr: FAQItem[] = [
       <>
         يمكنك الاطلاع على مميزات الخدمة عبر الرابط
         <br />
-        <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href={FAQ_LINKS.features}
           className="mt-2 inline-block"
         >
           اضغط هنا
-        </a>
+        </Link>
         .
       </>
     ),
@@ -491,9 +502,9 @@ const faqItemsAr: FAQItem[] = [
       <>
         يمكنك استخدام جو باي بفتح حساب مدفوعات والاشتراك في الخدمة.
         <br />
-        <a href="#" target="_blank" rel="noopener noreferrer">
+        <Link href={FAQ_LINKS.join} target="_blank" rel="noopener noreferrer">
           لمعرفة المزيد حول كيفية الانضمام، اضغط هنا.
-        </a>
+        </Link>
       </>
     ),
   },
@@ -503,26 +514,26 @@ const faqItemsAr: FAQItem[] = [
       <ol className="space-y-0!">
         <li>
           نسخة من خطاب التفويض – للمساعدة والمزيد من التفاصيل،{" "}
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href={FAQ_LINKS.authLetter} target="_blank" rel="noopener noreferrer">
             اضغط هنا.
           </a>
         </li>
         <li>نسخة من هوية الشخص المخول.</li>
         <li>
           نسخة من السجل التجاري للمنشأة – للمساعدة والمزيد من التفاصيل،{" "}
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href={FAQ_LINKS.registration} target="_blank" rel="noopener noreferrer">
             اضغط هنا.
           </a>
         </li>
         <li>
           نسخة من العنوان الوطني – للمساعدة والمزيد من التفاصيل،{" "}
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href={FAQ_LINKS.nationalAddress} target="_blank" rel="noopener noreferrer">
             اضغط هنا.
           </a>
         </li>
         <li>
           نسخة من شهادة البنك – للمساعدة والمزيد من التفاصيل،
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href={FAQ_LINKS.bankCertificate} target="_blank" rel="noopener noreferrer">
             اضغط هنا.
           </a>
         </li>
@@ -553,9 +564,9 @@ const faqItemsAr: FAQItem[] = [
       <>
         يمكنك التعرف على آلية تحصيل المدفوعات عبر الرابط
         <br />
-        <a href="#" className="mt-2 inline-block">
+        <Link href={FAQ_LINKS.billPayment} className="mt-2 inline-block">
           اضغط هنا.
-        </a>
+        </Link>
       </>
     ),
   },
@@ -565,14 +576,14 @@ const faqItemsAr: FAQItem[] = [
       <>
         يمكنك التعرف على آلية التسعير عبر الرابط
         <br />
-        <a
-          href="#"
+        <Link
+          href={FAQ_LINKS.pricing}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-2 inline-block"
         >
           اضغط هنا.
-        </a>
+        </Link>
       </>
     ),
   },
@@ -739,7 +750,7 @@ const faqItemsAr: FAQItem[] = [
         الشركة الفاتورة أو المطالبة، وتقوم جو باي بإرسال تفاصيل الفاتورة ورقم
         سداد إلى رقم جوال العميل أو بريده الإلكتروني للتسوية.
         <br />
-        <a href="#" target="_blank" rel="noopener noreferrer">
+        <a href={FAQ_LINKS.payWithoutRegistration} target="_blank" rel="noopener noreferrer">
           للمزيد من التفاصيل، اضغط هنا.
         </a>
       </>
@@ -768,6 +779,8 @@ const faqItemsAr: FAQItem[] = [
         <br />- في حال وجود مستندات داعمة، يزوّد الموظف العميل بالبريد المخصص
         للشكوى.
         <br />- التأكد من صحة قنوات الاتصال المسجلة وتحديثها عند الحاجة.
+        <br />- في حال وجود مستندات داعمة، يزوّد الموظف العميل بالبريد المخصص
+        للشكوى.
         <br />
         <br />
         عبر الموقع الإلكتروني:
@@ -790,7 +803,7 @@ const faqItemsAr: FAQItem[] = [
         <br />- الضغط على &quot;إرسال&quot; لتقديم الشكوى.
         <br />
         <br />
-        <a href="#" target="_blank" rel="noopener noreferrer">
+        <a href={FAQ_LINKS.complaint} target="_blank" rel="noopener noreferrer">
           للمزيد من التفاصيل، اضغط هنا.
         </a>
       </>

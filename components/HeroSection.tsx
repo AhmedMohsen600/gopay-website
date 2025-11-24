@@ -41,7 +41,7 @@ const heroDescriptionVariants = cva(
 
 interface HeroSectionProps
   extends VariantProps<typeof heroTitleVariants>,
-    VariantProps<typeof heroDescriptionVariants> {
+  VariantProps<typeof heroDescriptionVariants> {
   badge: string | ReactNode;
   title: ReactNode;
   description: string | ReactNode;

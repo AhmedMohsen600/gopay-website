@@ -27,13 +27,13 @@ const fadeInUpVariants = {
 
 // Icon map to convert icon names to actual components
 const iconMap: Record<string, React.ReactNode> = {
-  DatabaseIcon: <DatabaseIcon size={28} className="text-secondary" />,
-  CreditCardIcon: <CreditCardIcon size={28} className="text-secondary" />,
-  ChatDotsIcon: <ChatDotsIcon size={28} className="text-secondary" />,
-  BankIcon: <BankIcon size={28} className="text-secondary" />,
-  AlarmIcon: <AlarmIcon size={28} className="text-secondary" />,
-  ComputerTowerIcon: <ComputerTowerIcon size={28} className="text-secondary" />,
-  PentagonIcon: <PentagonIcon size={28} className="text-secondary" />,
+  DatabaseIcon: <DatabaseIcon  className="text-secondary   size-[18px] md:size-[28px] " />,
+  CreditCardIcon: <CreditCardIcon  className="text-secondary size-[18px] md:size-[28px] " />,
+  ChatDotsIcon: <ChatDotsIcon  className="text-secondary size-[18px] md:size-[28px] " />,
+  BankIcon: <BankIcon  className="text-secondary size-[18px] md:size-[28px] " />,
+  AlarmIcon: <AlarmIcon  className="text-secondary size-[18px] md:size-[28px] " />,
+  ComputerTowerIcon: <ComputerTowerIcon  className="text-secondary size-[18px] md:size-[28px] " />,
+  PentagonIcon: <PentagonIcon  className="text-secondary size-[18px] md:size-[28px] " />,
 };
 
 // Helper function to render image based on config
