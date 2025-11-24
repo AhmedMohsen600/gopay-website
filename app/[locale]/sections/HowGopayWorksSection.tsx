@@ -44,7 +44,7 @@ export function HowGopayWorksSection() {
     <section ref={sectionRef} className="bg-white py-14 md:py-[80px] xl:py-40">
       {/* Title Section */}
       <div className="container mx-auto px-4">
-        <div className="text-center mb-28">
+        <div className="text-center mb-4 md:mb-10 xl:mb-28">
           <Typography variant="h2" className="font-semibold tracking-tight">
             {t("title")} <span className="text-secondary">{t("gopay")}</span>{" "}
             {t("worksExplained")}
