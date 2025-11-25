@@ -48,9 +48,9 @@ export function Footer() {
         {
           href: "https://ifs.sa/",
           labelKey: "aboutIFS.aboutCompany",
-         },
+        },
         { href: "https://ifs.sa/#news", labelKey: "aboutIFS.news" },
-        { href: "https://www.google.com/maps/place/2745+Prince+Sultan+Bin+Abdulaziz+Rd,+6780,+Al+Mathar+Ash+Shamali,+Riyadh+12312/@24.681805,46.6704267,21z/data=!4m5!3m4!1s0x3e2f034b4a5fda9b:0xdaeff1501e331986!8m2!3d24.6819942!4d46.6706919?shorturl=1", labelKey: "aboutIFS.location"},
+        { href: "https://www.google.com/maps/place/2745+Prince+Sultan+Bin+Abdulaziz+Rd,+6780,+Al+Mathar+Ash+Shamali,+Riyadh+12312/@24.681805,46.6704267,21z/data=!4m5!3m4!1s0x3e2f034b4a5fda9b:0xdaeff1501e331986!8m2!3d24.6819942!4d46.6706919?shorturl=1", labelKey: "aboutIFS.location" },
       ],
     },
     {
@@ -211,18 +211,18 @@ export function Footer() {
         </div>
 
         {/* Gopay ad IFS logos div */}
-        <div className="container mx-auto max-w-[1200px] flex items-center  md:justify-between gap-13 border-t border-white/10 mt-16 pt-4">
-          <div className="flex-1 flex items-center  ">
+        <div className="container mx-auto grid grid-cols-2 justify-center max-w-[1200px] md:flex items-center  md:justify-between gap-2 md:gap-13 border-t border-white/10 mt-16 pt-4">
+          <div className="flex-1 flex items-center order-0">
             <Image
               src="https://framerusercontent.com/images/XYe5lLtYXj7Q9SIpZmNGSWGEfYc.png?scale-down-to=512&width=3024&height=905"
               alt="IFS Logo"
               width={3024}
               height={905}
-              className="md:h-[59px] h-8 w-auto"
+              className="md:h-[59px] h-12 w-auto"
             />
           </div>
           {/* Copyright */}
-          <div className="mt-8 text-center flex-1">
+          <div className="mt-8 text-center flex-1 order-1 md:order-0 col-span-2">
             <Typography variant="p14" className="text-white text-xs md:text-sm">
               © {t("copyrightText")}
             </Typography>
@@ -231,7 +231,7 @@ export function Footer() {
             </Typography>
           </div>
           {/* SADAD Certification Badge */}
-          <div className="flex justify-end items-center flex-1">
+          <div className="flex justify-end items-center flex-1 order-0">
             <Image
               src="https://framerusercontent.com/images/XloR1snWZTYPShXYFBKP2Qh1Bk.png?width=300&height=300"
               alt="Certified By SADAD"
