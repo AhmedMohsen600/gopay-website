@@ -94,7 +94,7 @@ export function LogosMarquee({
               alt={logo.alt}
               width={99}
               height={60}
-              className="h-12 w-[99px] object-contain"
+              className="h-[35px] md:h-12 w-auto object-contain"
               priority={index < logos.length}
             />
           </div>
