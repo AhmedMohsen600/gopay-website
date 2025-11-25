@@ -55,9 +55,9 @@ export function StatNumberCard({
           {title}
         </Typography>
 
-        <div className="flex items-baseline gap-1">
+        <div className="flex items-center gap-1">
           {showSarIcon && (
-            <SarIcon width={32} height={35} className="text-white" />
+            <SarIcon width={32} height={35} className="text-white h-6 w-[29px] md:w-8 md:h-[35px]" />
           )}
           <Typography
             variant="h2"
