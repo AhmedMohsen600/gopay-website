@@ -11,7 +11,7 @@ const CODE_CARD_IMAGE =
   "https://framerusercontent.com/images/ETpTQICv7le7q79QjMJE9KLHAQ.png?width=1120&height=972";
 
 const imageSlideUpVariants = {
-  hidden: { y: 220 },
+  hidden: { y: 80 },
   visible: { y: 0 },
 };
 
@@ -77,7 +77,7 @@ export function GopayForDevelopersSection() {
                 variants={imageSlideUpVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: "-50px" }}
+                viewport={{ once: true, margin: "-80px" }}
                 transition={{
                   duration: 0.5,
                   ease: "easeOut",
