@@ -6,14 +6,10 @@ import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
+import { useMediaQuery } from "@/hooks/use-media-query";
 
 const CODE_CARD_IMAGE =
   "https://framerusercontent.com/images/ETpTQICv7le7q79QjMJE9KLHAQ.png?width=1120&height=972";
-
-const imageSlideUpVariants = {
-  hidden: { y: 80 },
-  visible: { y: 0 },
-};
 
 const cardScaleVariants = {
   hidden: { opacity: 0, scale: 0.95 },
@@ -43,6 +39,16 @@ export function GopayForDevelopersSection() {
   const t = useTranslations("home.developers");
   const features = t.raw("features") as unknown;
   const featureItems = Array.isArray(features) ? (features as string[]) : [];
+  const isMobile = useMediaQuery("(max-width: 767px)");
+  const isTablet = useMediaQuery("(min-width: 768px) and (max-width: 1279px)");
+  const yOffset = isMobile ? 80 : isTablet ? 150 : 220;
+
+  console.log(yOffset);
+
+  const imageSlideUpVariants = {
+    hidden: { y: yOffset },
+    visible: { y: 0 },
+  };
 
   return (
     <section className="relative overflow-hidden bg-bg py-14 md:py-[80px] md:px-[64px] px-6 xl:px-0 xl:py-[120px]">
@@ -77,11 +83,12 @@ export function GopayForDevelopersSection() {
                 variants={imageSlideUpVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: "-80px" }}
+                viewport={{ once: true, margin: `-${yOffset}px` }}
                 transition={{
                   duration: 0.5,
                   ease: "easeOut",
                 }}
+                key={yOffset}
               >
                 <Image
                   src={CODE_CARD_IMAGE}
