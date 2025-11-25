@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
-export function HeroBlurBackgrounds() {
+export function HeroBlurBackgrounds({ className }: { className?: string }) {
   return (
-    <div className="absolute inset-0 h-screen">
+    <div className={cn("absolute inset-0 h-screen", className)}>
       {/* Blur 1 - Purple - 20% opacity */}
       <motion.div
         className="absolute rounded-full will-change-transform pointer-events-none "

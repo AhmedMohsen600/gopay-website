@@ -60,7 +60,7 @@ export function HeroSection() {
       <section className="relative p-[260px_16px_240px] overflow-hidden items-center">
         <div className="relative container mx-auto">
           {/* Animated blur backgrounds */}
-          <HeroBlurBackgrounds />
+          <HeroBlurBackgrounds className="opacity-75" />
           <div className="relative z-10 max-w-5xl mx-auto text-center">
             <Typography
               variant="h175"
@@ -78,7 +78,7 @@ export function HeroSection() {
               </motion.span>
               <br />
               {/* TitleHighlight words appear one by one */}
-              <span className="italic font-bold">
+              <span className="italic font-semibold">
                 {words.map((word, index) => (
                   <motion.span
                     key={index}
@@ -130,7 +130,10 @@ export function HeroSection() {
                 {tc("getStarted")}
                 <AnimatedArrow className="text-current" />
               </Button>
-              <Button variant="outline" className="w-fit text-text-4 font-normal bg-[#ffffff80]">
+              <Button
+                variant="outline"
+                className="w-fit text-text-4 font-normal bg-[#ffffff80]"
+              >
                 {tc("pricingsPlans")}
                 <AnimatedArrow className="text-current" />
               </Button>
