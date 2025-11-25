@@ -3,6 +3,7 @@ import { Typography } from "@/components/ui/typography";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { WHY_CHOOSE_FEATURES } from "../data";
+import { useMediaQuery } from "@/hooks/use-media-query";
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -12,8 +13,15 @@ interface FeatureCardProps {
 }
 
 function FeatureCard({ icon, title, description, delay }: FeatureCardProps) {
+  // Use media queries for responsive offset
+  const isMobile = useMediaQuery("(max-width: 767px)");
+  const isTablet = useMediaQuery("(min-width: 768px) and (max-width: 1279px)");
+
+  // Determine offset based on screen size
+  const yOffset = isMobile ? 60 : isTablet ? 100 : 120;
+
   const fadeInUpVariants = {
-    hidden: { opacity: 0, y: 200 },
+    hidden: { opacity: 0, y: yOffset },
     visible: { opacity: 1, y: 0 },
   };
 
@@ -23,7 +31,7 @@ function FeatureCard({ icon, title, description, delay }: FeatureCardProps) {
         variants={fadeInUpVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: `-${yOffset}px` }}
         transition={{ duration: 0.6, ease: "easeOut", delay }}
         className="bg-[#fffc] rounded-2xl  md:p-5 flex flex-col gap-4 h-[150px] md:h-[200px] xl:h-[243px] p-4 xl:p-5"
       >
