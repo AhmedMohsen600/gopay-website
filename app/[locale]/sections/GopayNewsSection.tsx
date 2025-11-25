@@ -4,9 +4,17 @@ import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Typography } from "@/components/ui/typography";
 import { NewsCard } from "../components";
+import { useMediaQuery } from "@/hooks/use-media-query";
 
 export function GopayNewsSection() {
   const t = useTranslations("home.news");
+
+  // Use media queries for responsive offset
+  const isMobile = useMediaQuery("(max-width: 767px)");
+  const isTablet = useMediaQuery("(min-width: 768px) and (max-width: 1279px)");
+
+  // Determine offset based on screen size
+  const yOffset = isMobile ? 50 : isTablet ? 80 : 110;
 
   const newsItems = [
     {
@@ -41,7 +49,7 @@ export function GopayNewsSection() {
   };
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 110, scale: 0.75 },
+    hidden: { opacity: 0, y: yOffset, scale: 0.75 },
     visible: {
       opacity: 1,
       y: 0,
@@ -71,7 +79,7 @@ export function GopayNewsSection() {
           variants={gridVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-120px", amount: 0.25 }}
+          viewport={{ once: true, margin: `-${yOffset}px`, amount: 0.25 }}
         >
           {newsItems.map((item) => (
             <motion.div key={item.id} variants={cardVariants}>
