@@ -4,15 +4,13 @@ import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { Typography } from "@/components/ui/typography";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { useMediaQuery } from "@/hooks/use-media-query";
 
 const fadeInUpVariants = {
   hidden: { opacity: 0, y: 100 },
   visible: { opacity: 1, y: 0 },
 };
-const fadeInUpVariants2 = {
-  hidden: { opacity: 0, y: 150 },
-  visible: { opacity: 1, y: 0 },
-};
+
 interface PaymentCardProps {
   isFullRow?: boolean;
   imageVariant: "dark-bg" | "light-1" | "light-2" | "light-3" | "light-4";
@@ -34,6 +32,19 @@ export default function PaymentCard({
   description,
 }: PaymentCardProps) {
   const t = useTranslations("features");
+
+  // Use media queries for responsive offset
+  const isMobile = useMediaQuery("(max-width: 767px)");
+  const isTablet = useMediaQuery("(min-width: 768px) and (max-width: 1279px)");
+
+  // Determine offset based on screen size
+  const yOffset = isMobile ? 50 : isTablet ? 80 : 120;
+
+  const fadeInUpVariants2 = {
+    hidden: { opacity: 0, y: yOffset },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <motion.div
       variants={fadeInUpVariants}
@@ -106,7 +117,7 @@ export default function PaymentCard({
               variants={fadeInUpVariants2}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "0px" }}
+              viewport={{ once: true, margin: `-${yOffset}px` }}
               transition={{
                 duration: 0.5,
                 delay: 0.3,
@@ -128,7 +139,7 @@ export default function PaymentCard({
                 variants={fadeInUpVariants2}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: "0px" }}
+                viewport={{ once: true, margin: `-${yOffset}px` }}
                 transition={{
                   duration: 0.5,
                   delay: 0.3,
@@ -151,7 +162,7 @@ export default function PaymentCard({
                 variants={fadeInUpVariants2}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: "0px" }}
+                viewport={{ once: true, margin: `-${yOffset}px` }}
                 transition={{
                   duration: 0.5,
                   delay: 0.3,
@@ -174,7 +185,7 @@ export default function PaymentCard({
                 variants={fadeInUpVariants2}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: "0px" }}
+                viewport={{ once: true, margin: `-${yOffset}px` }}
                 transition={{
                   duration: 0.5,
                   delay: 0.3,
@@ -197,7 +208,7 @@ export default function PaymentCard({
                 variants={fadeInUpVariants2}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: "0px" }}
+                viewport={{ once: true, margin: `-${yOffset}px` }}
                 transition={{
                   duration: 0.5,
                   delay: 0.3,
