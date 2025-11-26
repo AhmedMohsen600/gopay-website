@@ -33,7 +33,7 @@ export function StatNumberCard({
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1], delay }}
-      className="group relative w-full h-full rounded-[18px] border border-dotted transition-all duration-300 overflow-hidden"
+      className="group relative w-full h-full rounded-[14px] md:rounded-[18px] border border-dotted transition-all duration-300 overflow-hidden"
       style={{
         borderColor: "rgba(255, 255, 255, 0.15)",
         background:
@@ -57,7 +57,11 @@ export function StatNumberCard({
 
         <div className="flex items-center gap-1">
           {showSarIcon && (
-            <SarIcon width={32} height={35} className="text-white h-6 w-[29px] md:w-8 md:h-[35px]" />
+            <SarIcon
+              width={32}
+              height={35}
+              className="text-white h-6 w-[29px] md:w-8 md:h-[35px]"
+            />
           )}
           <Typography
             variant="h2"

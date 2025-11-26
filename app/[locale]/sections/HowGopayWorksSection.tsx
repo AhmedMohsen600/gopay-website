@@ -45,7 +45,7 @@ export function HowGopayWorksSection() {
       {/* Title Section */}
       <div className="container mx-auto px-4">
         <div className="text-center mb-4 md:mb-10 xl:mb-28">
-          <Typography variant="h2" className="font-semibold tracking-tight">
+          <Typography variant="h2" className="font-medium tracking-tight">
             {t("title")} <span className="text-secondary">{t("gopay")}</span>{" "}
             {t("worksExplained")}
           </Typography>

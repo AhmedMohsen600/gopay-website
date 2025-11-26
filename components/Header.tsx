@@ -96,7 +96,7 @@ export function Header() {
           <div className="flex items-center justify-between w-full xl:flex-1 xl:justify-start">
             {/* Brand/Logo */}
             <Link href="/" className="flex items-center shrink-0">
-              <Logo className="shrink-0" />
+              <Logo className="shrink-0 w-[90px] h-[19px] md:w-[117px] xl:h-[24px]" />
             </Link>
 
             {/* Mobile Menu Toggle */}
@@ -167,13 +167,13 @@ export function Header() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -10 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full start-0 mt-2 w-[200px] bg-white rounded-xl border border-stroke-1 shadow-lg overflow-hidden z-50"
+                          className="absolute top-full start-0 mt-2 min-w-[105px] bg-white rounded-xl border border-stroke-1 shadow-lg overflow-hidden z-50"
                         >
                           {item.children.map((childItem) => (
                             <Link
                               key={childItem.href}
                               href={childItem.href}
-                              className="block px-4 py-3 text-sm font-normal text-text-5 hover:bg-bg-grey transition-colors"
+                              className="block px-3 py-2 text-sm font-normal transition-colors whitespace-nowrap group"
                             >
                               <Typography
                                 variant="p16"
@@ -181,7 +181,7 @@ export function Header() {
                                   isActive(childItem.href) ||
                                   childItem.highlight
                                     ? "text-secondary"
-                                    : "text-dark"
+                                    : "text-dark group-hover:text-secondary"
                                 }
                               >
                                 {childItem.label}
@@ -311,7 +311,7 @@ export function Header() {
                                   animate={{ opacity: 1, y: 0 }}
                                   exit={{ opacity: 0, y: -10 }}
                                   transition={{ duration: 0.2 }}
-                                  className="absolute top-full left-0 mt-2 w-[200px] bg-white rounded-xl border border-stroke-1 shadow-lg overflow-hidden z-50"
+                                  className="absolute top-full left-0 mt-2 min-w-[105px] bg-white rounded-xl border border-stroke-1 shadow-lg overflow-hidden z-50"
                                 >
                                   {item.children.map((childItem) => (
                                     <Link
@@ -321,7 +321,7 @@ export function Header() {
                                         setMobileMenuOpen(false);
                                         setDropdownOpen(item.href, false);
                                       }}
-                                      className="block px-4 py-3 text-sm font-normal text-text-5 hover:bg-bg-grey transition-colors"
+                                      className="block px-3 py-2 text-sm font-normal transition-colors whitespace-nowrap group"
                                     >
                                       <Typography
                                         variant="p16"
@@ -329,7 +329,7 @@ export function Header() {
                                           isActive(childItem.href) ||
                                           childItem.highlight
                                             ? "text-secondary"
-                                            : "text-dark"
+                                            : "text-dark group-hover:text-secondary"
                                         }
                                       >
                                         {childItem.label}

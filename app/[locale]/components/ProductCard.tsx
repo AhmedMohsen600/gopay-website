@@ -53,7 +53,7 @@ export function ProductCard({
         delay,
       }}
       className={cn(
-        "bg-[#f7f7f7] rounded-3xl overflow-hidden p-4 md:p-6 xl:p-8 flex flex-col",
+        "bg-[#f7f7f7] rounded-[16px] md:rounded-3xl overflow-hidden p-4 md:p-6 xl:p-8 flex flex-col",
         className
       )}
     >
