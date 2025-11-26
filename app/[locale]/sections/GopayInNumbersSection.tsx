@@ -73,7 +73,7 @@ export function GopayInNumbersSection() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-center mb-10"
+          className="text-center mb-6 md:mb-8 xl:mb-10"
         >
           <Typography variant="h2" className="text-white">
             <span className="text-secondary">{t("gopay")}</span>{" "}
