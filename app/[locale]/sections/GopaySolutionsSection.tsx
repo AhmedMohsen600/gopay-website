@@ -103,7 +103,7 @@ export function GopaySolutionsSection() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-center mb-8 md:mb-12"
+          className="text-center mb-6 md:mb-8 xl:mb-12"
         >
           <Typography variant="h2" className="text-text-5 mb-3">
             <span className="text-secondary">{t("gopay")}</span>{" "}
