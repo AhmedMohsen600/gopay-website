@@ -76,10 +76,10 @@ export function PricingCard({
           // Calculate how much user has scrolled since card became sticky
           const scrolledDistance = currentScrollY - initialScrollY.current;
 
-          // Collapse after scrolling down 250px from when card became sticky
-          if (scrolledDistance > 250 && !isScrolled) {
+          // Collapse immediately when card becomes sticky
+          if (scrolledDistance > 1 && !isScrolled) {
             setIsScrolled(true);
-          } else if (scrolledDistance < 50 && isScrolled) {
+          } else if (scrolledDistance < -50 && isScrolled) {
             // Only expand when scrolled way back up - larger gap prevents flickering
             setIsScrolled(false);
           }
