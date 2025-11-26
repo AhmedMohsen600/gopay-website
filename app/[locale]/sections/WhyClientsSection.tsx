@@ -98,7 +98,7 @@ export function WhyClientsSection() {
         >
           <Typography
             variant="h2"
-            className="font-semibold md:max-w-[400px] xl:max-w-[590px] mx-auto tracking-tight mb-3"
+            className="font-medium md:max-w-[400px] xl:max-w-[590px] mx-auto tracking-tight mb-3"
           >
             {t("title.part1")}{" "}
             <span className="text-secondary">{t("title.gopay")}</span>{" "}
