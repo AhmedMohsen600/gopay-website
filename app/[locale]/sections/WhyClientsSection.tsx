@@ -90,7 +90,7 @@ export function WhyClientsSection() {
       <div className="container xl:mx-auto">
         {/* Title Section */}
         <motion.div
-          className="text-center mb-12 md:mb-16 mx-auto"
+          className="text-center mb-8 md:mb-10 xl:mb-16 mx-auto"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
