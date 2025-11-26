@@ -85,7 +85,7 @@ export function NewsCard({
   return (
     <article
       className={cn(
-        "group h-full bg-[#fafafa] overflow-hidden rounded-3xl",
+        "group h-full bg-[#fafafa] overflow-hidden rounded-[16px] md:rounded-3xl",
         className
       )}
     >
