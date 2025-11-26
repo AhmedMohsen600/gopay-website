@@ -54,7 +54,7 @@ export function GopayForDevelopersSection() {
     <section className="relative overflow-hidden bg-bg py-14 md:py-[80px] md:px-[64px] px-6 xl:px-0 xl:py-[120px]">
       <div className="container mx-auto max-w-[1000px]">
         <div className="mx-auto mb-12 max-w-[760px] text-center md:mb-16">
-          <Typography variant="h2" className="mb-2 font-semibold text-text-4">
+          <Typography variant="h2" className="mb-2 font-medium text-text-4">
             <span className="text-secondary">{t("title.highlight")}</span>{" "}
             {t("title.rest")}
           </Typography>
