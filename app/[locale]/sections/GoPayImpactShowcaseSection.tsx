@@ -66,7 +66,7 @@ export function GoPayImpactShowcaseSection() {
               metric={t(`${card.id}.metric`)}
               metricLabel={t(`${card.id}.metricLabel`)}
               iconType={card.iconType}
-              delay={0.3 + index * 0.1}
+              delay={0.1 + index * 0.1}
             />
           ))}
         </div>
