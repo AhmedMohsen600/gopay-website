@@ -67,7 +67,7 @@ export function GopayNewsSection() {
     <section className="xl:py-[120px] md:py-[80px] py-14 bg-white px-6 md:px-[64px]">
       <div className="container mx-auto">
         <div className="mb-10 flex flex-col items-center justify-center">
-          <Typography className="mb-3 font-semibold" variant="h2">
+          <Typography className="mb-3 font-medium" variant="h2">
             <span className="text-secondary">{t("title.highlight")}</span>{" "}
             {t("title.rest")}
           </Typography>
