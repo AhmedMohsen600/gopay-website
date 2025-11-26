@@ -25,11 +25,6 @@ export function PaymentStatsSection() {
     [0, 0.3, 0.6, 1],
     [0.7, 0.85, 0.95, 1]
   );
-  const opacity = useTransform(
-    scrollYProgress,
-    [0, 0.25, 0.5, 1],
-    [0.3, 0.6, 0.85, 1]
-  );
 
   const fadeInUpVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -41,11 +36,6 @@ export function PaymentStatsSection() {
     scrollYProgress,
     [0, 0.2, 0.5, 0.8, 1],
     [400, 250, 100, 30, 0]
-  );
-  const iphoneOpacity = useTransform(
-    scrollYProgress,
-    [0, 0.15, 0.35, 0.6, 0.85, 1],
-    [0, 0.2, 0.5, 0.75, 0.95, 1]
   );
   const iphoneScale = useTransform(
     scrollYProgress,
@@ -113,8 +103,7 @@ export function PaymentStatsSection() {
         <motion.div
           style={{
             scale,
-            opacity,
-            willChange: "transform, opacity",
+            willChange: "transform",
             boxShadow: "0 1px 20px 0 rgba(40, 45, 78, 0.05)",
           }}
           className="hidden lg:block bg-white rounded-xl p-6 space-y-[32px] relative"
@@ -122,18 +111,11 @@ export function PaymentStatsSection() {
           {paymentSections.map((section) => (
             <div key={section.sectionTitleKey}>
               {/* Section Title */}
-              <motion.div
-                variants={fadeInUpVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                className="mb-6"
-              >
+              <div className="mb-6">
                 <Typography variant="p16" className="text-text-5 font-bold">
                   {t(section.sectionTitleKey)}
                 </Typography>
-              </motion.div>
+              </div>
 
               {/* Stats Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -158,10 +140,9 @@ export function PaymentStatsSection() {
           <motion.div
             style={{
               y: iphoneY,
-              opacity: iphoneOpacity,
               scale: iphoneScale,
               rotate: iphoneRotate,
-              willChange: "transform, opacity",
+              willChange: "transform",
             }}
             transition={{
               type: "spring",
