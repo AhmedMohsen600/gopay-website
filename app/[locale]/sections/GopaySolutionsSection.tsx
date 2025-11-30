@@ -7,6 +7,7 @@ import { SolutionCard } from "../components/SolutionCard";
 
 import { Button } from "@/components/ui/button";
 import { AnimatedArrow } from "@/components/ui/animated-arrow";
+import { Link } from "@/i18n/routing";
 import {
   Alarm,
   Bank,
@@ -138,9 +139,11 @@ export function GopaySolutionsSection() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
           className="flex justify-center"
         >
-          <Button>
-            {t("buttonText")}
-            <AnimatedArrow icon={CaretRight} />
+          <Button asChild>
+            <Link href="/features">
+              {t("buttonText")}
+              <AnimatedArrow icon={CaretRight} />
+            </Link>
           </Button>
         </motion.div>
       </div>

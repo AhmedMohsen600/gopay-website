@@ -9,6 +9,7 @@ import { HeroBackground } from "@/components/HeroBackground";
 import { HeroBlurBackgrounds } from "@/components/HeroBlurBackgrounds";
 import { LogosMarquee } from "@/components/LogosMarquee";
 import { PaymentStatsSection } from "./PaymentStatsSection";
+import { Link } from "@/i18n/routing";
 
 const clientLogos = [
   { src: "/images/clients/01.png", alt: "Client 1" },
@@ -126,16 +127,25 @@ export function HeroSection() {
                 delay: 1.5,
               }}
             >
-              <Button className="w-fit  text-sm">
-                {tc("getStarted")}
-                <AnimatedArrow className="text-current" />
+              <Button asChild className="w-fit  text-sm">
+                <a
+                  href="https://app.gopay.sa/registration.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {tc("getStarted")}
+                  <AnimatedArrow className="text-current" />
+                </a>
               </Button>
               <Button
+                asChild
                 variant="outline"
                 className="w-fit text-text-4 font-normal bg-[#ffffff80]"
               >
-                {tc("pricingsPlans")}
-                <AnimatedArrow className="text-current" />
+                <Link href="/pricing/gopay">
+                  {tc("pricingsPlans")}
+                  <AnimatedArrow className="text-current" />
+                </Link>
               </Button>
             </motion.div>
           </div>
