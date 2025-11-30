@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { useTranslations } from "next-intl";
 import { StepCard } from "@/components/StepCard";
 import { PricingTabSwitcher } from "@/app/[locale]/pricing/components/PricingTabSwitcher";
-import { motion, type Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { Storefront, UserCircle } from "@phosphor-icons/react/dist/ssr";
 
 export default function InvoicesPage() {
@@ -84,7 +84,7 @@ export default function InvoicesPage() {
 
   return (
     <section
-      className="xl:px-[120px] xl:pt-[200px] xl:pb-[160px] md:px-16 md:pt-24 md:pb-20 px-6 pt-32 pb-16"
+      className="xl:px-[120px] xl:pt-[200px] xl:pb-[160px] md:px-16 md:pt-24 md:pb-20 px-6 pt-32 xl:mb-20 mb-5 md:mb-16 pb-16"
       style={{
         background: "linear-gradient(rgb(17, 23, 33) 0%, rgb(32, 37, 71) 100%)",
       }}
