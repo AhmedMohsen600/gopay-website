@@ -4,8 +4,6 @@ import { Typography } from "@/components/ui/typography";
 import { Check, X } from "@phosphor-icons/react/dist/ssr";
 import { motion } from "framer-motion";
 import { SarIcon } from "@/app/[locale]/components/icons/sarIcon";
-import { Button } from "@/components/ui/button";
-import { AnimatedArrow } from "@/components/ui/animated-arrow";
 
 interface FeatureItem {
   text: string;
@@ -107,11 +105,11 @@ export function PricingFeaturesTable({ sections }: PricingFeaturesTableProps) {
           </div>
 
           {/* Desktop: Column-based layout (3 columns with text + icon) */}
-          <div className="hidden md:grid md:grid-cols-3 bg-white">
+          <div className="hidden md:grid md:grid-cols-3 gap-6 bg-white">
             {section.columns.map((column, columnIndex) => (
               <div
                 key={columnIndex}
-                className={`space-y-4 px-6 pt-6 pb-[30px] lg:pb-[60px] ${
+                className={`space-y-4 px-3 pt-6 pb-[30px] lg:pb-[60px] ${
                   columnIndex === 1 ? "bg-[#fafafa]" : ""
                 }`}
               >
