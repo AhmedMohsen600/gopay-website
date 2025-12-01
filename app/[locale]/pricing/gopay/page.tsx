@@ -4,6 +4,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { Badge } from "@/components/ui/badge";
 import { Typography } from "@/components/ui/typography";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 import { PricingTabSwitcher } from "../components/PricingTabSwitcher";
 import { PricingCard } from "../components/PricingCard";
 import { PricingFeaturesTable } from "../components/PricingFeaturesTable";
@@ -149,10 +150,13 @@ export default function GopayPricingPage() {
           </div>
           <Button
             variant="outline"
+            asChild
             className="md:self-center self-start text-[12px] py-[6px] px-2 gap-1 md:text-[16px] md:h-[42.4px] h-[28.8px]"
           >
-            {t("enterprise.buttonText")}
-            <AnimatedArrow className="size-[11px] md:size-4" />
+            <Link href="/contact-us">
+              {t("enterprise.buttonText")}
+              <AnimatedArrow className="size-[11px] md:size-4" />
+            </Link>
           </Button>
         </div>
       </section>
