@@ -224,7 +224,7 @@ export function PricingCard({
       {/* CTA Button */}
       <Button
         onClick={onSubscribe}
-        className="py-2 px-[14px] text-sm h-[34px]"
+        className="py-2 xl:px-[14px] h-[34px]! text-sm xl:text-[14px]"
         variant="secondary"
       >
         {ctaText}
