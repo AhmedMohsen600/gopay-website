@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ZohoChat } from "@/components/ZohoChat";
 import "../globals.css";
 
 // English font - Figtree
@@ -68,6 +69,9 @@ export default async function LocaleLayout({
           <main>{children}</main>
           <Footer />
         </NextIntlClientProvider>
+
+        {/* Zoho Guided Conversations Chat Widget */}
+        <ZohoChat />
       </body>
     </html>
   );
