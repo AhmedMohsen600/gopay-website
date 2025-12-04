@@ -121,6 +121,9 @@
 
   /* Link - #2F4CF4 */
   --link: #5c95ff;
+
+  /* Zoho Chat Widget - Change this to customize the chat button/header color */
+  --zoho-chat-primary: #ff9b00; /* Using your primary color */
 }
 
 .dark {
