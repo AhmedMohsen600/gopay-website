@@ -90,10 +90,9 @@ export function ZohoChat() {
     });
 
     // Initial runs with delays to catch async widget loading
+    setTimeout(overrideAllZohoColors, 500);
     setTimeout(overrideAllZohoColors, 1000);
     setTimeout(overrideAllZohoColors, 2000);
-    setTimeout(overrideAllZohoColors, 3000);
-    setTimeout(overrideAllZohoColors, 5000);
 
     return () => {
       observer.disconnect();
@@ -104,7 +103,7 @@ export function ZohoChat() {
     <Script
       id="zoho-gc-chat"
       src="https://gc.zohopublic.sa/org/150000596454/flows/126000000002163/embed/script"
-      strategy="lazyOnload"
+      strategy="afterInteractive"
     />
   );
 }
