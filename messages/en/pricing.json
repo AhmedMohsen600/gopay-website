@@ -101,7 +101,8 @@
         "premiumPlus": {
           "transactions": "1,000 Free Payment Transactions",
           "einvoicing": "12 months Free subscription to (GoInvoice) service"
-        }
+        },
+        "apiIntegration": "API integration service"
       },
       "paymentFeatures": {
         "title": "Payment Features",

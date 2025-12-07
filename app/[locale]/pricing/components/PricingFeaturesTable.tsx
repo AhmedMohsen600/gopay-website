@@ -82,7 +82,7 @@ export function PricingFeaturesTable({ sections }: PricingFeaturesTableProps) {
                           key={columnIndex}
                           className={`flex items-center justify-start`}
                         >
-                          {feature.included ? (
+                          {feature?.included ? (
                             <Check
                               size={16}
                               weight="bold"

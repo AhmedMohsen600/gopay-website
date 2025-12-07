@@ -137,7 +137,7 @@ export function PricingCard({
 
           {/* Price */}
           <div className="flex flex-col items-end">
-            <div className="flex items-center">
+            <div className="flex items-center " dir="ltr">
               <SarIcon width={18} height={18} className="text-dark" />
               <Typography className="text-[20px]" variant="h6">
                 {price}

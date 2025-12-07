@@ -101,7 +101,8 @@
         "premiumPlus": {
           "transactions": "1,000 معاملة دفع مجانية",
           "einvoicing": "12 شهر اشتراك مجاني في خدمة (GoInvoice)"
-        }
+        },
+        "apiIntegration": "إضافة خدمة الربط التقني"
       },
       "paymentFeatures": {
         "title": "ميزات الدفع",
@@ -194,7 +195,9 @@
         "priceMonthly": "59",
         "priceYearly": "599",
         "subtitle": "ميزات أساسية للفوترة",
-        "features": ["خيار التكامل مع API بسعر خاص"]
+        "features": [
+          "خيار التكامل مع API بسعر خاص"
+        ]
       },
       "advance": {
         "name": "المتقدم",

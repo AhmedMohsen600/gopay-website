@@ -101,6 +101,10 @@ export const getBasicFeaturesComparison = (t: TranslationFunction) => [
             text: t("featuresComparison.mainFeatures.starter.einvoicing"),
             included: false,
           },
+          {
+            text: t("featuresComparison.mainFeatures.apiIntegration"),
+            included: false,
+          },
         ],
       },
       {
@@ -113,6 +117,10 @@ export const getBasicFeaturesComparison = (t: TranslationFunction) => [
             text: t("featuresComparison.mainFeatures.basic.einvoicing"),
             included: false,
           },
+          {
+            text: t("featuresComparison.mainFeatures.apiIntegration"),
+            included: false,
+          },
         ],
       },
       {
@@ -123,6 +131,10 @@ export const getBasicFeaturesComparison = (t: TranslationFunction) => [
           },
           {
             text: t("featuresComparison.mainFeatures.pro.einvoicing"),
+            included: false,
+          },
+          {
+            text: t("featuresComparison.mainFeatures.apiIntegration"),
             included: false,
           },
         ],
@@ -405,6 +417,10 @@ export const getBusinessFeaturesComparison = (t: TranslationFunction) => [
             text: t("featuresComparison.mainFeatures.proPlus.einvoicing"),
             included: true,
           },
+          {
+            text: t("featuresComparison.mainFeatures.apiIntegration"),
+            included: false,
+          },
         ],
       },
       {
@@ -417,6 +433,10 @@ export const getBusinessFeaturesComparison = (t: TranslationFunction) => [
             text: t("featuresComparison.mainFeatures.premium.einvoicing"),
             included: true,
           },
+          {
+            text: t("featuresComparison.mainFeatures.apiIntegration"),
+            included: false,
+          },
         ],
       },
       {
@@ -427,6 +447,10 @@ export const getBusinessFeaturesComparison = (t: TranslationFunction) => [
           },
           {
             text: t("featuresComparison.mainFeatures.premiumPlus.einvoicing"),
+            included: true,
+          },
+          {
+            text: t("featuresComparison.mainFeatures.apiIntegration"),
             included: true,
           },
         ],
