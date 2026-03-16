@@ -79,7 +79,7 @@ export function WhyChooseGoPay() {
             className="font-medium xl:text-[50px] md:text-[36px] text-2xl text-white tracking-tight leading-tight"
           >
             <span className="text-white">{t("titlePart1")} </span>
-            <span className="text-secondary">{t("titlePart2")}</span> ?
+            <span className="text-secondary">{t("titlePart2")}</span>
           </Typography>
         </motion.div>
 
