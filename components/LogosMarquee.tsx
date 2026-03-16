@@ -73,6 +73,8 @@ export function LogosMarquee({
     <div
       className="relative max-w-[1000px] w-full overflow-hidden"
       style={{
+        direction: "ltr",
+
         maskImage:
           "linear-gradient(to right, transparent, black 96px, black calc(100% - 96px), transparent)",
         WebkitMaskImage:
