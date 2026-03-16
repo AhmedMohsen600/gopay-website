@@ -20,7 +20,7 @@ type NavItem = {
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdowns, setOpenDropdowns] = useState<Record<string, boolean>>(
-    {}
+    {},
   );
   const t = useTranslations("header");
   const pathname = usePathname();
@@ -72,6 +72,8 @@ export function Header() {
     return pathname.includes(href);
   };
 
+  const isRtl = locale === "ar";
+
   return (
     <>
       {/* Desktop/Tablet Header */}
@@ -79,16 +81,20 @@ export function Header() {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, y: { duration: 0.5 } }}
-        className="fixed top-6 inset-x-0 mx-auto z-50 w-[90%] xl:rounded-none xl:w-full max-w-[1200px]"
+        className={`fixed top-6 inset-x-0 mx-auto z-50 ${
+          isRtl ? "w-[95%]" : "w-[90%]"
+        } xl:rounded-none xl:w-full ${
+          isRtl ? "max-w-[1400px]" : "max-w-[1200px]"
+        }`}
       >
         <motion.nav
           initial={false}
           animate={{
             height: mobileMenuOpen ? "auto" : "auto",
           }}
-          className={`bg-[#FFFFFF80] transition-all duration-300 backdrop-blur-[15px] xl:h-[66.4px] xl:w-[1200px] ${
-            mobileMenuOpen ? "rounded-xl" : "rounded-xl"
-          } ${
+          className={`bg-[#FFFFFF80] transition-all duration-300 backdrop-blur-[15px] xl:h-[66.4px] ${
+            isRtl ? "xl:w-[1400px]" : "xl:w-[1200px]"
+          } ${mobileMenuOpen ? "rounded-xl" : "rounded-xl"} ${
             mobileMenuOpen ? "p-4 " : "py-3 px-4"
           } xl:px-6 xl:py-3 flex flex-col xl:flex-row items-start xl:items-center xl:justify-between xl:gap-[10px]`}
         >
@@ -147,7 +153,7 @@ export function Header() {
                         locale === "ar" ? "bold" : "normal"
                       } transition-colors ${
                         isActive(item.href) ? "text-secondary" : "text-text-5"
-                      }`}
+                      } whitespace-nowrap`}
                     >
                       {item.label}
                       <CaretDown
@@ -202,7 +208,7 @@ export function Header() {
                   href={item.href}
                   className={`group flex items-center gap-1 text-base font-normal transition-colors ${
                     isActive(item.href) ? "text-secondary" : "text-text-5"
-                  }`}
+                  } whitespace-nowrap`}
                 >
                   <motion.span
                     className="relative inline-block overflow-hidden"
@@ -222,7 +228,7 @@ export function Header() {
                       {item.label}
                     </motion.span>
                     <motion.span
-                      className={`absolute top-0 left-0 inline-block ${
+                      className={`absolute top-0 start-0 inline-block ${
                         locale === "ar" ? "font-bold" : "font-normal"
                       }`}
                       variants={{
@@ -311,7 +317,7 @@ export function Header() {
                                   animate={{ opacity: 1, y: 0 }}
                                   exit={{ opacity: 0, y: -10 }}
                                   transition={{ duration: 0.2 }}
-                                  className="absolute top-full left-0 mt-2 min-w-[105px] bg-white rounded-xl border border-stroke-1 shadow-lg overflow-hidden z-50"
+                                  className="absolute top-full start-0 mt-2 min-w-[105px] bg-white rounded-xl border border-stroke-1 shadow-lg overflow-hidden z-50"
                                 >
                                   {item.children.map((childItem) => (
                                     <Link
