@@ -81,9 +81,7 @@ export function Header() {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, y: { duration: 0.5 } }}
-        className={`fixed top-6 inset-x-0 mx-auto z-50 ${
-          isRtl ? "w-[95%]" : "w-[90%]"
-        } xl:rounded-none xl:w-full ${
+        className={`fixed top-6 inset-x-0 mx-auto z-50 w-[95%] xl:rounded-none xl:w-full ${
           isRtl ? "max-w-[1400px]" : "max-w-[1200px]"
         }`}
       >
@@ -92,9 +90,9 @@ export function Header() {
           animate={{
             height: mobileMenuOpen ? "auto" : "auto",
           }}
-          className={`bg-[#FFFFFF80] transition-all duration-300 backdrop-blur-[15px] xl:h-[66.4px] ${
-            isRtl ? "xl:w-[1400px]" : "xl:w-[1200px]"
-          } ${mobileMenuOpen ? "rounded-xl" : "rounded-xl"} ${
+          className={`bg-[#FFFFFF80] transition-all duration-300 backdrop-blur-[15px] xl:h-[66.4px] xl:w-full ${
+            mobileMenuOpen ? "rounded-xl" : "rounded-xl"
+          } ${
             mobileMenuOpen ? "p-4 " : "py-3 px-4"
           } xl:px-6 xl:py-3 flex flex-col xl:flex-row items-start xl:items-center xl:justify-between xl:gap-[10px]`}
         >
@@ -137,7 +135,9 @@ export function Header() {
           </div>
 
           {/* Desktop Nav Items */}
-          <div className="hidden xl:flex items-center gap-6 justify-start">
+          <div
+            className={`hidden xl:flex items-center ${isRtl ? "gap-4.5" : "gap-6"} justify-start`}
+          >
             {navItems.map((item) => {
               // Items with dropdown menu
               if (item.children && item.children.length > 0) {
