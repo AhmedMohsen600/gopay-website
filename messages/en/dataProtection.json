@@ -65,8 +65,9 @@
                     "title": "Personal Information",
                     "items": [
                         "Account data: Establishment name, establishment type, activity type, sector type, commercial name, national address.",
-                        "Identity verification data: Copy of national ID, passport, or any other documents necessary for regulatory compliance (commercial registration, license, etc.).",
-                        "Bank account data: Name in bank, bank name, account number, bank certificate, owner data."
+                        "Identity verification data: Copy of national ID, or passport, or any other documents necessary for regulatory compliance (commercial registration, license, etc.).",
+                        "Bank account data: Name in bank, bank name, account number, bank certificate",
+                        "Owner data"
                     ]
                 },
                 {
@@ -87,33 +88,22 @@
         },
         "processing": {
             "title": "4. Processing Your Data",
-            "intro": "The purpose of its processing is only after the explicit consent of its owner in accordance with Article (5) of the Personal Data Protection System for specific purposes, which include:",
+            "intro": "The company is committed to not processing personal data or changing the purpose of its processing except after the explicit consent of its owner in accordance with Article (5) of the Personal Data Protection System for specific purposes, which include:",
             "items": [
-                {
-                    "title": "Service Providers:",
-                    "description": "External companies that help provide our services, such as payment processors and cloud storage providers."
-                },
-                {
-                    "title": "Regulatory Bodies:",
-                    "description": "To comply with legal obligations or based on official requests."
-                },
-                {
-                    "title": "Business Partners:",
-                    "description": "When needed to complete financial transactions or provide related services."
-                }
+                "Facilitating financial operations, including processing payments.",
+                "Ensuring compliance with legal and regulatory obligations, such as anti-fraud measures and Know Your Customer (KYC) requirements.",
+                "Improving the user experience through data analysis and service personalization.",
+                "Communicating with you regarding service updates or important notices.",
+                "Handling support inquiries or resolving disputes."
             ]
         },
         "sharing": {
             "title": "5. Sharing Your Data",
-            "intro": "The client undertakes and declares, being of full legal capacity, the following:",
+            "intro": "Inclusive Financial Solutions Company does not sell your personal data or share it for marketing purposes without your explicit consent. Your data may be shared with:",
             "items": [
-                "That they are not legally prohibited from dealing with the company, and that all data provided by them is correct, reliable, and updated.",
-                "That they are responsible before the competent authorities for funds deposited in their account with their knowledge, and those deposited in their account without their knowledge, whether they personally disposed of them or not, if they do not officially report them upon knowing of their presence in their account.",
-                "That the funds deposited in the account are derived from legitimate activities and that they are responsible for their validity. If <bold>Inclusive Financial Solutions Company</bold> receives any illicit or counterfeit funds from them, it is not entitled to recover them or be compensated for them.",
-                "That <bold>Inclusive Financial Solutions Company</bold> has the right to freeze the account or any of the amounts credited to it and notify the competent authorities if there is suspicion that the amounts result from financial fraud or illegal operations in accordance with applicable regulations and instructions.",
-                "That they are the true beneficiary of the account.",
-                "That they are fully aware and knowledgeable that it is prohibited to transfer to unknown persons or entities according to applicable regulations and instructions, and that all transfers they make are to known persons and entities and for known and legitimate commercial purposes.",
-                "That they have read and understood the terms and conditions set forth in this Agreement, and that they will read the terms and conditions specific to the services and products associated with the account, as published on the company's website."
+                "<bold>Service providers:</bold> External companies that help provide our services, such as payment processors and cloud storage providers.",
+                "<bold>Regulatory bodies:</bold> To comply with legal obligations or based on official requests.",
+                "<bold>Business partners:</bold> When needed to complete financial transactions or provide related services."
             ]
         },
         "protecting": {
@@ -153,6 +143,10 @@
                 {
                     "title": "Withdraw Consent:",
                     "description": "Revoke your consent to the processing of your data (where possible)."
+                },
+                {
+                    "title": "Stop marketing and awareness content:",
+                    "description": "Request to unsubscribe from receiving marketing and awareness materials without affecting the core services provided."
                 }
             ],
             "footer": {
