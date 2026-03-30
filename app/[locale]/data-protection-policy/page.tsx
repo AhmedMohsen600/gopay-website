@@ -16,7 +16,7 @@ const BulletItem = ({
   <Typography
     variant="p16"
     className={cn(
-      "leading-[1em] text-text-4 pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.4em] before:w-1 before:h-1 before:bg-text-4 before:rounded-full",
+      "leading-[1em] text-text-4 ps-4 relative before:content-[''] before:absolute before:start-0 before:top-[0.4em] before:w-1 before:h-1 before:bg-text-4 before:rounded-full",
       className
     )}
   >
@@ -48,7 +48,7 @@ const NumberedItem = ({
   <Typography
     variant="p16"
     className={cn(
-      "leading-[1.4em] text-text-4 pl-5 relative before:absolute before:left-0 before:top-0 before:font-normal",
+      "leading-[1.4em] text-text-4 ps-5 relative before:absolute before:start-0 before:top-0 before:font-normal",
       numberClasses[index] || ""
     )}
   >
@@ -184,10 +184,7 @@ export default function DataProtectionPolicyPage() {
               <div className="space-y-2">
                 {processingItems.map((_, index) => (
                   <BulletItem key={index}>
-                    <span className="font-bold me-2">
-                      {t(`sections.processing.items.${index}.title`)}
-                    </span>{" "}
-                    {t(`sections.processing.items.${index}.description`)}
+                    {t(`sections.processing.items.${index}`)}
                   </BulletItem>
                 ))}
               </div>
