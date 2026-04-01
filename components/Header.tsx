@@ -254,7 +254,7 @@ export function Header() {
               className="font-normal whitespace-nowrap"
             >
               <a
-                href="https://app.gopay.sa/wbiller/#/login"
+                href="https://app.gopay.sa/wbiller-v2/#/sign-in"
                 target="_blank"
                 rel="noopener"
               >
@@ -263,7 +263,7 @@ export function Header() {
             </Button>
             <Button asChild className="font-normal whitespace-nowrap">
               <a
-                href="https://app.gopay.sa/registration.html"
+                href="https://app.gopay.sa/wbiller-v2/#/kyc"
                 target="_blank"
                 rel="noopener"
               >
